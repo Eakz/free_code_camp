@@ -1,6 +1,9 @@
 const telephoneCheck = (str) => {
+    // matching to telephone REGEX with brackets on 1st trio of digits
     const matchy = str.match(/^1?\s?\d{3}\s?\-?\d{3}\-?\s?\d{4}/);
+    // matching to telephone REGEX without brackets on 1st trio of digits ( I totally retardingly lazy to write conditionals)
     const matchy2 = str.match(/^1?\s?\({1}\d{3}\){1}\s?\-?\d{3}\-?\s?\d{4}/);
+    // if either of the matches works then evaluate the input with the matched part
     if (matchy) {
         return matchy.input === matchy[0];
     } else if (matchy2) {
