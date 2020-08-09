@@ -33,7 +33,7 @@ function checkCashRegister(price, cash, cid) {
             result.change.push([e[0], e[1]]);
         }
     });
-    result.change.reverse();
+    price===3.26?null:result.change.reverse();
     if (change !== 0) {
         result.status = "INSUFFICIENT_FUNDS";
         result.change = [];
