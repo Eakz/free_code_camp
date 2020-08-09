@@ -1,6 +1,9 @@
 function checkCashRegister(price, cash, cid) {
+  // Converting the diff to cents (avoiding possible float point precission errors)
     let change = (cash - price) * 100;
+  // Saving initial amount to check later for "CLOSED" option
     let initialAmountOfCash = change;
+  // Value of bills in cents
     const coinsBills = {
         "ONE HUNDRED": 10000,
         TWENTY: 2000,
@@ -12,11 +15,14 @@ function checkCashRegister(price, cash, cid) {
         NICKEL: 5,
         PENNY: 1,
     };
+  // Initializing result object to be changed
     let result = {
         status: null,
         change: [],
     };
+  // Initializing varibale to calculate the totatl amount of cash in cashier
     let cashierSum = 0;
+  // Looping through available cash to find the match for the change + verifying if the amount is available
     cid.reverse().forEach((e) => {
         let currentBill = coinsBills[e[0]];
         cashierSum += e[1];
@@ -30,6 +36,7 @@ function checkCashRegister(price, cash, cid) {
             change -= cashAmount * 100;
             result.change.push([e[0], cashAmount]);
         } else if (e[1] === 0) {
+    // Pushing zero values
             result.change.push([e[0], e[1]]);
         }
     });
