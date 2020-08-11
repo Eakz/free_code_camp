@@ -5,25 +5,33 @@ class Category:
         self.ledger = []
         self.balance = 0
     # Using __str__ instead of __repr__ for explicit wordy console representation
+
     def __str__(self):
+        # Lambda expression to display amount dynamically for DRY
         def amount(i): return f"{float(i['amount']):.2f}"
+        # Long boring string with alot of hidden spaces to search - thank you FCC...took me 1.5 hours to match
         return f"{self.name.center(30,'*')}\n" + "\n".join([f"{i['description'][:23]}{(30-len(amount(i))-len(i['description'][:23]))*' '}{amount(i)}" for i in self.ledger])+f"\nTotal: {self.balance:.2f}"
-    
+    # Simple GETter for balance
+
     def get_balance(self):
         return self.balance
+    # Boolean sufficient/insufficient funds check
 
     def check_funds(self, amount):
         return amount <= self.balance
+    # Deposit
 
     def deposit(self, amount, description=""):
         self.balance += amount
         self.ledger.append({"amount": amount, "description": description})
+    # Withdraw (using deposit for DRY)
 
     def withdraw(self, amount, description=""):
         if(self.check_funds(amount)):
             self.deposit(-amount, description)
             return True
         return False
+    # Transfer method with Other
 
     def transfer(self, amount, other):
         transaction = self.withdraw(amount, f"Transfer to {other.name}")
@@ -32,17 +40,28 @@ class Category:
             return True
         return False
 
+# function to iterate through categories array and return graph of spending percentages
+
 
 def create_spend_chart(categories):
+    # Getting default percentage array
     percentages = [i for i in range(0, 110, 10)]
-    perCategory = [sum([j["amount"]*-1 for j in i.ledger if j['amount']<0]) for i in categories]
-    perCategory = [i/sum(perCategory)*100 for i in perCategory]
-    perc=perCategory
-    os = [reversed([f'o '  if perc[i]>=j else '  ' for j in percentages]) for i in range(len(categories))]
-    percentages = [f"{i}|".rjust(4,' ') for i in percentages]
+    # Sum of withdrawls for each Category
+    perCategory = [
+        sum([j["amount"]*-1 for j in i.ledger if j['amount'] < 0]) for i in categories]
+    # Mapping sums to percentages of total
+    perc = [i/sum(perCategory)*100 for i in perCategory]
+    # filling up matrix for future use
+    os = [reversed([f'o ' if perc[i] >= j else '  ' for j in percentages])
+          for i in range(len(categories))]
+    # padding percentages array
+    percentages = [f"{i}|".rjust(4, ' ') for i in percentages]
+    # taking max length of Category().name to padd all to same size
     max_length = max([len(i.name) for i in categories])
-    categories_names = [i.name.ljust(max_length,' ') for i in categories]
-    return "Percentage spent by category\n"+'\n'.join([''.join([f"{j} " for j in i]) for i in zip(reversed(percentages),*os)])+f'\n{4*" "}{(len(categories)*3+1)*"-"}\n'+'\n'.join([f"{' '*5}{''.join([f'{j}  ' for j in i])}" for i in zip(*[list(j) for j in categories_names])])
+    # padding each individual Category().name
+    categories_names = [i.name.ljust(max_length, ' ') for i in categories]
+    # Long boring string - took forever to match all spaces...ty FCC
+    return "Percentage spent by category\n"+'\n'.join([''.join([f"{j} " for j in i]) for i in zip(reversed(percentages), *os)])+f'\n{4*" "}{(len(categories)*3+1)*"-"}\n'+'\n'.join([f"{' '*5}{''.join([f'{j}  ' for j in i])}" for i in zip(*[list(j) for j in categories_names])])
 
 # test = Category('Vagina-Torments')
 # test2 = Category('Alonas-Anal')
