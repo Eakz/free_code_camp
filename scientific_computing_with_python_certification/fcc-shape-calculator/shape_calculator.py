@@ -1,11 +1,12 @@
 class Rectangle:
+    # Init with width/height
     def __init__(self, width, height):
         self.width = width
         self.height = height
-
+    # string repr
     def __str__(self):
         return f"Rectangle(width={self.width}, height={self.height})"
-
+        
     def set_width(self, value):
         self.width = value
 
