@@ -81,7 +81,8 @@ param(
     [switch]   $RestoreSavedVariables,
     [string[]] $OnlyAddon,
     [string]   $FromCharacter,
-    [string]   $ToCharacter,
+    [string[]] $ToCharacter,
+    [switch]   $RestoreAccountBindings,
     [switch]   $DisableCloudSync,
     [switch]   $ListShadowCopies,
     [string]   $BackupRoot
@@ -283,16 +284,20 @@ if ($svPairs.Count -eq 0) {
     foreach ($p in ($svPairs | Sort-Object Addon)) {
         $bakGood  = Is-PreReset $p.Bak
         $liveBad  = ($p.Live -eq $null) -or (-not (Is-PreReset $p.Live))
+        # Same addon appears once per scope (account-wide and per character),
+        # so show where each one lives or the list reads as duplicates.
+        $where = $p.Scope -replace '\\SavedVariables$','' -replace '^Account\\[^\\]+',''
+        if (-not $where) { $where = '(account-wide)' } else { $where = $where.TrimStart('\') }
         if ($bakGood -and $liveBad) {
             $eligible += $p
-            Write-Host ("   RECOVERABLE  {0,-24} .bak {1}" -f $p.Addon, (Get-Age $p.Bak)) `
+            Write-Host ("   RECOVERABLE  {0,-28} {1,-22} .bak {2}" -f $p.Addon, $where, (Get-Age $p.Bak)) `
                 -ForegroundColor Green
         } elseif (-not $bakGood) {
-            Write-Host ("   too new      {0,-24} .bak {1} - already overwritten" `
-                -f $p.Addon, (Get-Age $p.Bak)) -ForegroundColor Red
+            Write-Host ("   too new      {0,-28} {1,-22} .bak {2} - overwritten" `
+                -f $p.Addon, $where, (Get-Age $p.Bak)) -ForegroundColor Red
         } else {
-            Write-Host ("   already ok   {0,-24} live file predates the reset" `
-                -f $p.Addon) -ForegroundColor DarkGray
+            Write-Host ("   already ok   {0,-28} {1,-22} live file predates the reset" `
+                -f $p.Addon, $where) -ForegroundColor DarkGray
         }
     }
     Write-Host ''
@@ -396,13 +401,21 @@ if ($FromCharacter) {
     } elseif (-not $ToCharacter) {
         Write-Bad 'Specify -ToCharacter "Realm\Character", or "*" for all others.'
     } else {
-        $targets = if ($ToCharacter -eq '*') {
-            @($charFolders | Where-Object { $_.Key -ne $FromCharacter })
+        if ($ToCharacter -contains '*') {
+            $targets = @($charFolders | Where-Object { $_.Key -ne $FromCharacter })
+        } elseif ($ToCharacter -contains 'touched') {
+            # Only the characters the reset actually clobbered.
+            $targets = @($charFolders | Where-Object { $_.Touched -and $_.Key -ne $FromCharacter })
         } else {
-            @($charFolders | Where-Object { $_.Key -eq $ToCharacter })
+            $targets = @($charFolders | Where-Object { $ToCharacter -contains $_.Key })
+            foreach ($want in $ToCharacter) {
+                if (-not ($charFolders | Where-Object { $_.Key -eq $want })) {
+                    Write-Warn "No such character, skipped: $want"
+                }
+            }
         }
         if ($targets.Count -eq 0) {
-            Write-Bad "Destination character not found: $ToCharacter"
+            Write-Bad "No destination characters matched: $($ToCharacter -join ', ')"
         } else {
             Ensure-Backup | Out-Null
             $files = 'bindings-cache.wtf','layout-local.txt','macros-cache.txt','config-cache.wtf'
@@ -423,6 +436,53 @@ if ($FromCharacter) {
             if (-not $DisableCloudSync) {
                 Write-Warn 'Without -DisableCloudSync, Blizzard''s account-side copy can'
                 Write-Warn 'overwrite these files the moment you log in. Add that switch.'
+            }
+        }
+    }
+}
+
+# --------------------------------------------------------------------------
+# 6b. Action: restore ACCOUNT-WIDE keybindings from a character's copy
+#
+# WoW keeps keybindings in two places: Account\<ACCT>\bindings-cache.wtf for
+# account-wide binds, and <Character>\bindings-cache.wtf when a character was
+# switched to character-specific binds. A reset wipes the account-level file,
+# and that file has no .bak - so a surviving character-level copy is often the
+# only surviving record of your binds anywhere on disk.
+# --------------------------------------------------------------------------
+if ($RestoreAccountBindings) {
+    Write-Head 'Restoring account-wide keybindings'
+    if (-not $FromCharacter) {
+        Write-Bad 'Specify -FromCharacter "Realm\Character" as the source.'
+    } else {
+        $srcC = @($charFolders | Where-Object { $_.Key -eq $FromCharacter })
+        if ($srcC.Count -eq 0) {
+            Write-Bad "Source character not found: $FromCharacter"
+        } else {
+            $srcBind = Join-Path $srcC[0].Path 'bindings-cache.wtf'
+            if (-not (Test-Path $srcBind)) {
+                Write-Bad "$FromCharacter has no bindings-cache.wtf to copy."
+                Write-Info 'That character used account-wide binds, so it holds no'
+                Write-Info 'separate copy. Pick a character listed with [keybinds].'
+            } else {
+                $srcAge = Get-Age (Get-Item $srcBind)
+                Ensure-Backup | Out-Null
+                $acctDir  = Join-Path $wtf "Account\$($srcC[0].Account)"
+                $acctBind = Join-Path $acctDir 'bindings-cache.wtf'
+                Write-Act "Account\$($srcC[0].Account)\bindings-cache.wtf  <-  $FromCharacter (written $srcAge)"
+                if ($Apply) {
+                    if (Test-Path $acctBind) { Move-Item $acctBind "$acctBind.reset-state" -Force }
+                    Copy-Item $srcBind $acctBind -Force
+                    Write-Ok 'Account-wide keybindings restored.'
+                }
+                Write-Host ''
+                Write-Info 'Caveat worth knowing: this makes your account-wide binds a copy'
+                Write-Info "of $FromCharacter's. If that character used a different layout"
+                Write-Info 'from the rest of your roster, the rest of your roster now gets'
+                Write-Info 'this one. The previous file is kept as bindings-cache.wtf.reset-state'
+                if (-not $DisableCloudSync) {
+                    Write-Warn 'Add -DisableCloudSync or the server copy overwrites this at login.'
+                }
             }
         }
     }
