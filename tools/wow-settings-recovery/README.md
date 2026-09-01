@@ -11,12 +11,53 @@ trying to get back — including the `.bak` files this script restores from.
 
 ## Run it
 
-```powershell
-cd path\to\wow-settings-recovery
-powershell -ExecutionPolicy Bypass -File .\Restore-WowSettings.ps1 -ResetMinutesAgo 45
+### Option A — one command, from any directory, no install
+
+Put `Restore-WowSettings.ps1` anywhere (Downloads is fine) and run this in
+**cmd**, from whatever folder you happen to be in:
+
+```bat
+powershell -NoProfile -ExecutionPolicy Bypass -File "%USERPROFILE%\Downloads\Restore-WowSettings.ps1" -ResetMinutesAgo 90
 ```
 
-That is **report only** — nothing on disk changes. It finds your install,
+Adjust the path if you saved it elsewhere. Lost track of it?
+
+```bat
+where /r "%USERPROFILE%" Restore-WowSettings.ps1
+```
+
+### Option B — install it as a global `wowfix` command
+
+Run `Install.cmd` once (double-click, or run it from cmd). It copies the
+script to `%LOCALAPPDATA%\WowFix` and drops a launcher into
+`%LOCALAPPDATA%\Microsoft\WindowsApps`, which is already on your PATH — so no
+PATH editing, no admin rights, no registry changes.
+
+Then, from **any** directory in a **new** cmd window:
+
+```bat
+wowfix -ResetMinutesAgo 90
+```
+
+Every option below works the same way — `wowfix` just forwards them:
+
+```bat
+wowfix -ResetMinutesAgo 90 -RestoreSavedVariables -Apply
+```
+
+Need an elevated run (for `-ListShadowCopies`, or if WoW is under
+`C:\Program Files (x86)`):
+
+```bat
+powershell -NoProfile -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k wowfix -ListShadowCopies'"
+```
+
+To uninstall: delete `%LOCALAPPDATA%\WowFix` and
+`%LOCALAPPDATA%\Microsoft\WindowsApps\wowfix.cmd`.
+
+---
+
+Either way, the default run is **report only** — nothing on disk changes. It finds your install,
 timestamps every settings file against the moment of the reset, and tells you
 which ones are actually recoverable and how.
 
