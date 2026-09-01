@@ -11,6 +11,22 @@ trying to get back — including the `.bak` files this script restores from.
 
 ## Run it
 
+### Option 0 — nothing to download (PowerShell)
+
+Paste this into PowerShell from any directory. It fetches the script to your
+temp folder and runs a report-only scan:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [Net.ServicePointManager]::SecurityProtocol='Tls12'; $f="$env:TEMP\wowfix.ps1"; iwr 'https://raw.githubusercontent.com/Eakz/free_code_camp/claude/wow-settings-recovery-s82tbc/tools/wow-settings-recovery/Restore-WowSettings.ps1' -OutFile $f -UseBasicParsing; & $f -ResetMinutesAgo 90
+```
+
+To make `wowfix` permanent and global — run once, then `wowfix` works from any
+directory in both cmd and PowerShell, forever:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [Net.ServicePointManager]::SecurityProtocol='Tls12'; $b='https://raw.githubusercontent.com/Eakz/free_code_camp/claude/wow-settings-recovery-s82tbc/tools/wow-settings-recovery'; $d="$env:LOCALAPPDATA\WowFix"; ni $d -ItemType Directory -Force | Out-Null; iwr "$b/Restore-WowSettings.ps1" -OutFile "$d\Restore-WowSettings.ps1" -UseBasicParsing; iwr "$b/wowfix.cmd" -OutFile "$env:LOCALAPPDATA\Microsoft\WindowsApps\wowfix.cmd" -UseBasicParsing; Unblock-File "$d\Restore-WowSettings.ps1"; 'Installed - open a new window and run: wowfix -ResetMinutesAgo 90'
+```
+
 ### Option A — one command, from any directory, no install
 
 Put `Restore-WowSettings.ps1` anywhere (Downloads is fine) and run this in

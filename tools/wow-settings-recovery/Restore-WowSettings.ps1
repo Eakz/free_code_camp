@@ -264,12 +264,14 @@ foreach ($svDir in (Get-ChildItem $wtf -Recurse -Directory -Filter 'SavedVariabl
     foreach ($bak in (Get-ChildItem $svDir.FullName -Filter '*.lua.bak' -File `
                       -ErrorAction SilentlyContinue)) {
         $live = Join-Path $svDir.FullName ($bak.BaseName)   # strips .bak -> Name.lua
+        $liveItem = $null
+        if (Test-Path $live) { $liveItem = Get-Item $live }
         $svPairs += [pscustomobject]@{
             Addon    = [IO.Path]::GetFileNameWithoutExtension($bak.BaseName)
             Scope    = $svDir.FullName.Substring($wtf.Length).TrimStart('\')
             Bak      = $bak
             LivePath = $live
-            Live     = if (Test-Path $live) { Get-Item $live } else { $null }
+            Live     = $liveItem
         }
     }
 }
@@ -310,14 +312,20 @@ foreach ($acct in $accounts) {
             $layout = Join-Path $char.FullName 'layout-local.txt'
             $newest = @(Get-ChildItem $char.FullName -File -ErrorAction SilentlyContinue |
                         Sort-Object LastWriteTime -Descending | Select-Object -First 1)
+            $lastWrite = [datetime]::MinValue
+            $touched   = $false
+            if ($newest.Count -gt 0) {
+                $lastWrite = $newest[0].LastWriteTime
+                $touched   = -not (Is-PreReset $newest[0])
+            }
             $charFolders += [pscustomobject]@{
                 Key        = "$($realm.Name)\$($char.Name)"
                 Account    = $acct.Name
                 Path       = $char.FullName
                 HasBind    = Test-Path $bind
                 HasLayout  = Test-Path $layout
-                Touched    = ($newest.Count -gt 0) -and (-not (Is-PreReset $newest[0]))
-                LastWrite  = if ($newest.Count -gt 0) { $newest[0].LastWriteTime } else { [datetime]::MinValue }
+                Touched    = $touched
+                LastWrite  = $lastWrite
             }
         }
     }
@@ -452,7 +460,7 @@ if ($DisableCloudSync) {
         }
         if ($Apply) {
             $utf8 = New-Object System.Text.UTF8Encoding($false)
-            [IO.File]::WriteAllLines($cfg, $lines, $utf8)
+            [IO.File]::WriteAllLines($cfg, [string[]]$lines, $utf8)
             Write-Ok 'Config.wtf updated.'
         }
         Write-Host ''
