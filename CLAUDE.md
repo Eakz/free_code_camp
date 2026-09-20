@@ -96,6 +96,13 @@ Each of these was made in a real session, cost the user several rounds, and is n
 9. **Check crafted alternatives in EVERY slot.** Crafted PvE gear reaches 331 while dungeon gear
    stops at 321, so a crafted piece can win on item level alone. A third crafted item is legal —
    the two-embellishment cap limits embellishments, not crafted pieces.
+9b. **`crafted_stats=` in an export does NOT mean the item is crafted.** Dropped items can have
+   selectable stats too. The Slitherscale Girdle carries `crafted_stats=40/36` and the 24/25 stat
+   codes, and is a **Venomous Abyss raid trash drop**. It was wrongly assumed craftable, given a
+   crafted item level of 331 it has no claim to, and reported as +0.58%; at a defensible 321 it
+   is +0.08%, a tie. A real crafted piece in this player's bags also carries
+   **`crafting_quality=5`** and `content_tuning=3615` — check those, and confirm the item's
+   source, before applying any track cap to it. Never assign an item level a source cannot drop.
 10. **Filter by armour subclass before simming.** `item_class=4` with `item_subclass` 1=cloth,
    2=leather, 3=mail, 4=plate. Cloaks are subclass 1 for everyone. Feeding a mail belt to a
    druid aborts the whole run with "Invalid type" and wastes the batch.
@@ -153,8 +160,7 @@ damage done — a build that sims higher can be the one that gets you killed.
     13751/14004), those win and `crafted_stats=` does nothing.
   - If the bonus ids do NOT resolve them, the item sims with **zero secondary stats** and loses
     by a mile for no real reason. Slitherscale Girdle simmed at Crit 0 / Haste 0 / Mastery 0 /
-    Vers 0 and was reported as -2.2%; done properly it is **+0.58%**, the biggest single item
-    upgrade in the character's reach.
+    Vers 0 and was reported as -2.2%, which was meaningless.
   - Correct form: `waist=,id=271436,ilevel=331,crafted_stats=49/36,crafting_quality=5`.
   - **Always print an item's resolved secondaries before trusting its result.** A crafted item
     showing zeroes is a broken profile line, not a bad item.
