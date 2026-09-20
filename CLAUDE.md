@@ -88,6 +88,17 @@ Each of these was made in a real session, cost the user several rounds, and is n
    It must come back at 0.00% +/- the error bar. Every run in this project has one.
 7. **Single-change comparisons are Droptimizer, not Top Gear.** One change at a time misses
    combinations that only win together. When the user asks for "optimal", run the combinations too.
+8. **Sweep stat pairings, not just the items the player happens to own.** Bag items cluster
+   around the player's current stat mix, so testing only those returns a page of ties and hides
+   the answer. For every slot in question, pick one real item per distinct pairing
+   (Crit/Mastery, Mastery/Crit, Mastery/Haste, Haste/Mastery, Mastery/Vers, Crit/Vers,
+   Haste/Vers) and sim them all. That is what makes "chase this stat combination" sayable.
+9. **Check crafted alternatives in EVERY slot.** Crafted PvE gear reaches 331 while dungeon gear
+   stops at 321, so a crafted piece can win on item level alone. A third crafted item is legal —
+   the two-embellishment cap limits embellishments, not crafted pieces.
+10. **Filter by armour subclass before simming.** `item_class=4` with `item_subclass` 1=cloth,
+   2=leather, 3=mail, 4=plate. Cloaks are subclass 1 for everyone. Feeding a mail belt to a
+   druid aborts the whole run with "Invalid type" and wastes the batch.
 
 ### 3c. Season 2 item level facts (verified)
 
@@ -134,10 +145,19 @@ damage done — a build that sims higher can be the one that gets you killed.
 
 ### 6. Known SimC 1210-01 quirks — check these before trusting a result
 
-- **`crafted_stats=` is ignored.** The crafted stat pair is encoded in the bonus ids (type-23
-  entries such as 13751/13760/13766/14001/14004) and those win. Every `crafted_stats=` variant
-  sims identical to the baseline — that is a no-op, not a tie. Testing a recraft needs the bonus
-  ids, and the id-to-stat-pair mapping is not yet decoded.
+- **`crafted_stats=` WORKS, but only with `crafting_quality=5` AND without the stat-setting
+  bonus ids.** An earlier note in this file claimed it was ignored; that was wrong and it
+  invalidated every crafted-item comparison made under it.
+  - A crafted item's two stat slots show up as stat codes **24 and 25** in `item_data.inc`. If
+    the bonus id list already resolves them (the worn wrist's 13751/14001, the worn staff's
+    13751/14004), those win and `crafted_stats=` does nothing.
+  - If the bonus ids do NOT resolve them, the item sims with **zero secondary stats** and loses
+    by a mile for no real reason. Slitherscale Girdle simmed at Crit 0 / Haste 0 / Mastery 0 /
+    Vers 0 and was reported as -2.2%; done properly it is **+0.58%**, the biggest single item
+    upgrade in the character's reach.
+  - Correct form: `waist=,id=271436,ilevel=331,crafted_stats=49/36,crafting_quality=5`.
+  - **Always print an item's resolved secondaries before trusting its result.** A crafted item
+    showing zeroes is a broken profile line, not a bad item.
 - **Scale factors disagree with item-vs-item swaps.** Stats injected via `enchant_*_rating` (which
   is what `calculate_scale_factors` does internally) are worth measurably less than the same stats
   from a real item — two profiles with identical stat blocks came out 0.8% apart, order-independent,
