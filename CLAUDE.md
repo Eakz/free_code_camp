@@ -64,6 +64,40 @@ piece it would replace:
 An item compared raw against a gemmed, enchanted, upgraded incumbent is not a comparison, it is
 a foregone conclusion. If any of the three cannot be matched, say so in the answer.
 
+### 3b. Mistakes already made here — do not repeat any of them
+
+Each of these was made in a real session, cost the user several rounds, and is now a hard rule.
+
+1. **Try WebSearch before declaring the web unavailable.** `curl` and WebFetch are blocked by the
+   egress proxy for wowhead, wago, expcarry, conquestcapped, vercel apps and most fansites. The
+   **WebSearch tool is not blocked** and returns page content. Four rounds were wasted telling the
+   user dungeon loot tables were unobtainable without ever trying it. Test each channel separately;
+   never generalise one tool's failure to "no web access".
+2. **Never sim above a track's real cap.** A run comparing everything at 334/347 produced a chase
+   list of item levels dungeons cannot drop. Establish the cap first, then sim at it.
+3. **Do not invent a filter from a small sample.** Quality==3 was declared to identify M+ loot on
+   the strength of 31 of the player's own items. It only means "rare" and matched hundreds of
+   trinkets back to Warlords. Validate any classifier against the whole table before using it.
+4. **Sim gains are not always real gains.** Check what an item actually does before recommending
+   it. Sealed Chaos Urn simmed +0.81% and is a delve trinket that horrifies the wearer for 5s —
+   SimC models the buff, not the downside. Vaelgor's Final Stare simmed +0.99% and is a Season 1
+   raid drop that caps at 279, so it can never reach 321. Always check source and cap.
+5. **`crafted_stats=` does nothing** — see the quirks section. Variants using it are no-ops, not
+   ties, and must not be reported as "no difference".
+6. **Put a sanity actor in every run.** Re-declare one already-equipped item as its own variant.
+   It must come back at 0.00% +/- the error bar. Every run in this project has one.
+7. **Single-change comparisons are Droptimizer, not Top Gear.** One change at a time misses
+   combinations that only win together. When the user asks for "optimal", run the combinations too.
+
+### 3c. Season 2 item level facts (verified)
+
+- **M+ end-of-dungeon cache caps at 321.** Great Vault from M+ reaches 337. Dungeons never drop
+  Mythic-track gear. Confirmed in-game by the player and independently by search.
+- The player's own gear proves: crafted PvE reaches 331; two pieces sit at 334 from bonus rolls.
+- Published track tables (Champion 285-302, Myth 315-328, last two Mythic raid bosses 344) do not
+  fully reconcile with the player's actual item levels. **Trust the player's export and watermarks
+  over a fansite table**, and say which you used.
+
 ### 4. Run the comparison
 
 One run, many variants, shared RNG, via `name=` / `copy=`:
