@@ -36,11 +36,20 @@ comment — `# Graft of the Domanaar (321)` — and write `ilevel=321` on that l
 *candidate*, not an artefact. Before it is compared it must be brought to the same footing as the
 piece it would replace:
 
-- **Max item level.** Upgrade the candidate to the highest item level that slot can reach — at
-  minimum the slot's watermark (the equipped piece's ilevel is a safe floor for this; the export's
-  `slot_high_watermarks` line has the authoritative numbers). Then also sweep **+13 and +26** on
-  top, so the answer covers "what if I sink crests into this instead". Report the crossover:
-  how many item levels the candidate needs before it wins.
+- **Max item level — BOTH SIDES.** Every item in the comparison, the equipped one included, is
+  simmed at the top of its own upgrade track. The incumbent does not stay at the item level it
+  happens to be sitting at any more than the candidate does: if a worn ring is 315 and rings cap
+  at 321, it is simmed at 321. Never sweep past a track's real cap — that invents item levels the
+  player cannot obtain and produces a chase list they cannot act on.
+
+  Track caps for this character, Midnight Season 2:
+  - **M+ / dungeon (Hero) tops out at 321.** Dungeons do not drop Mythic. Anything worn below
+    321 that came from a dungeon goes to 321 on both sides of the comparison.
+  - Items already above 321 (crafted 331, raid/vault 334) are on higher tracks — leave them at
+    the item level they are, do not push them further without evidence of the cap.
+  - **Crafted PvE** is proven to 331 (the worn crafted wrist and staff sit there).
+  - **PvP crafted ("Thalassian Competitor's", "Venomous Gladiator's/Aspirant's")** stays at its
+    PvE item level — it scales in PvP only. Do not upgrade it in a PvE comparison.
 - **Enchant.** Copy the equipped piece's `enchant_id=` onto the candidate. Slots that take an
   enchant this expansion: head, shoulder, chest, legs, feet, both rings, weapon. Wrist, back,
   hands and waist have none — never recommend one there.
