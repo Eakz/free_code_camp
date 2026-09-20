@@ -64,6 +64,27 @@ piece it would replace:
 An item compared raw against a gemmed, enchanted, upgraded incumbent is not a comparison, it is
 a foregone conclusion. If any of the three cannot be matched, say so in the answer.
 
+### 3a. BUILD THE PROFILE WITH THE SCRIPT - never by hand
+
+`python3 tools/build_profile.py export.txt > char.simc`
+
+The max-item-level rule below was written, committed, and then broken anyway, twice, because
+it reads as a rule about *candidates* while the baseline profile was still being typed out by
+hand straight from the export - leaving the worn gear at whatever item level it happened to be
+sitting at. Both the Balance and Guardian profiles were built that way and every number from
+them had to be thrown out.
+
+So profile construction is no longer a judgement call:
+
+1. Run the script. It pins `ilevel=` on every slot at that item's track cap and prints a
+   RAW -> CAP table to stderr.
+2. **Paste that table into the answer, or at minimum read every row.** A slot showing
+   `RAW -> CAP` with an UPGRADE flag you did not expect means the profile is wrong.
+3. Only then sim. A result from a hand-written profile is not reportable.
+
+The script refuses to guess: if an item has no `# Name (ilvl)` comment above it in the export
+it aborts rather than inventing a level.
+
 ### 3b. Mistakes already made here — do not repeat any of them
 
 Each of these was made in a real session, cost the user several rounds, and is now a hard rule.
