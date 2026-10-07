@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/professions-crafting-orders-and-recrafting fetched: 2026-10-07T20:45:17.304266+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-crafting-orders-and-recrafting fetched: 2026-10-07T20:49:28.143788+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Crafting Orders and Recrafting Guide - World of Warcraft - Icy Veins
 

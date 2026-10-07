@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/how-to-farm-nocturnal-lotus-in-wow-midnight fetched: 2026-10-07T20:45:17.575984+00:00 -->
+<!-- source: https://www.method.gg/guides/how-to-farm-nocturnal-lotus-in-wow-midnight fetched: 2026-10-07T20:49:28.421088+00:00 -->
 <!-- page dates: none found -->
 # How To Farm Nocturnal Lotus in WoW Midnight
 

@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/professions-alchemy fetched: 2026-10-07T20:44:01.955889+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-alchemy fetched: 2026-10-07T20:48:12.679614+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Alchemy Guide for Midnight - World of Warcraft - Icy Veins
 

@@ -1,4 +1,4 @@
-<!-- source: https://boostroom.com/blog/wow-midnight-bountiful-delves-guide-for-season-2 fetched: 2026-10-07T20:45:28.182814+00:00 -->
+<!-- source: https://boostroom.com/blog/wow-midnight-bountiful-delves-guide-for-season-2 fetched: 2026-10-07T20:49:39.731537+00:00 -->
 <!-- page dates: none found -->
 # WoW Midnight Season 2 Bountiful Delves Guide | BoostRoom
 

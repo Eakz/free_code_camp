@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/where-to-farm-argentleaf-midnight-herbalism-route fetched: 2026-10-07T20:45:20.791595+00:00 -->
+<!-- source: https://www.method.gg/guides/where-to-farm-argentleaf-midnight-herbalism-route fetched: 2026-10-07T20:49:31.682059+00:00 -->
 <!-- page dates: none found -->
 # Where To Farm Argentleaf: Midnight Herbalism Route
 

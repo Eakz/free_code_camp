@@ -1,4 +1,4 @@
-<!-- source: https://expcarry.com/midnight-gold-farm-2026 fetched: 2026-10-07T20:45:26.218263+00:00 -->
+<!-- source: https://expcarry.com/midnight-gold-farm-2026 fetched: 2026-10-07T20:49:37.359843+00:00 -->
 <!-- page dates: article:modified_time=2026-02-06T14:37:46+02:00; msvalidate.01=8D606159D8DA6D2E347F33C8118D7D58 -->
 # WoW Midnight Gold Guide 2026: Best Farms and Routes
 

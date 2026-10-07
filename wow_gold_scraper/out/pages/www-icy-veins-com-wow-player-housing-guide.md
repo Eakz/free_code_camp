@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/player-housing-guide fetched: 2026-10-07T20:45:14.008235+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/player-housing-guide fetched: 2026-10-07T20:49:24.705573+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Player Housing Guide - World of Warcraft - Icy Veins
 

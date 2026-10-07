@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/delves-guide fetched: 2026-10-07T20:45:00.931291+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/delves-guide fetched: 2026-10-07T20:49:10.974847+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Delves Guide for Midnight Season 2 - World of Warcraft - Icy Veins
 

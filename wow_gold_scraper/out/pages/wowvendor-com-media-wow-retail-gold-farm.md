@@ -1,4 +1,4 @@
-<!-- source: https://wowvendor.com/media/wow/retail-gold-farm/ fetched: 2026-10-07T20:45:21.907073+00:00 -->
+<!-- source: https://wowvendor.com/media/wow/retail-gold-farm/ fetched: 2026-10-07T20:49:32.645312+00:00 -->
 <!-- page dates: article:modified_time=2026-08-20T17:26:52+03:00; article:published_time=2026-08-20T14:08:25+03:00; og:updated_time=2026-08-20T17:26:52+03:00; time=; time=2026-04-24T04:56:05+03:00; time=2026-08-20T14:08:25+03:00; time=2026-09-21T04:21:19+03:00 -->
 # WoW Midnight gold farm guide: Get rich solo and fast!
 

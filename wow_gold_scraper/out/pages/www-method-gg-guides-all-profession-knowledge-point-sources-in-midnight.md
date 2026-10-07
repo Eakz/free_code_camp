@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/all-profession-knowledge-point-sources-in-midnight fetched: 2026-10-07T20:44:31.745808+00:00 -->
+<!-- source: https://www.method.gg/guides/all-profession-knowledge-point-sources-in-midnight fetched: 2026-10-07T20:48:42.708743+00:00 -->
 <!-- page dates: none found -->
 # All Profession Knowledge Point Sources in Midnight
 

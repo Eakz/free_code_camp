@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/midnight-leatherworking-profession-guide fetched: 2026-10-07T20:44:25.298423+00:00 -->
+<!-- source: https://www.method.gg/guides/midnight-leatherworking-profession-guide fetched: 2026-10-07T20:48:36.194309+00:00 -->
 <!-- page dates: none found -->
 # Midnight Leatherworking Profession Guide
 

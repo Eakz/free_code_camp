@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/vaults-of-atalutek-guide fetched: 2026-10-07T20:45:10.721705+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/vaults-of-atalutek-guide fetched: 2026-10-07T20:49:21.272139+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Vaults of Atal'Utek Zone Guide - World of Warcraft - Icy Veins
 

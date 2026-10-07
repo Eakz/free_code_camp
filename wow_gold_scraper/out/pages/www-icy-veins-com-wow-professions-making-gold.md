@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/professions-making-gold fetched: 2026-10-07T20:43:58.669669+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-making-gold fetched: 2026-10-07T20:48:09.274385+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Best Professions to Make Gold in Midnight - World of Warcraft - Icy Veins
 

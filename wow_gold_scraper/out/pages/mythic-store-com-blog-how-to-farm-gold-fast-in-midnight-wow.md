@@ -1,4 +1,4 @@
-<!-- source: https://mythic-store.com/blog/how-to-farm-gold-fast-in-midnight-wow fetched: 2026-10-07T20:45:22.778705+00:00 -->
+<!-- source: https://mythic-store.com/blog/how-to-farm-gold-fast-in-midnight-wow fetched: 2026-10-07T20:49:33.618505+00:00 -->
 <!-- page dates: article:modified_time=2026-03-17T22:22:22.000Z; article:published_time=2026-03-17T22:06:44.000Z; time=2026-03-17T22:06:44.000Z; time=2026-09-03T15:49:42.272Z; time=2026-09-04T16:49:57.985Z; time=2026-09-04T19:26:53.936Z; time=2026-09-08T18:51:44.308Z -->
 # How to Farm Gold Fast in WoW Midnight (2026 Guide) | Mythic Store
 

@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/midnight-herb-and-mote-farming-routes fetched: 2026-10-07T20:44:15.625202+00:00 -->
+<!-- source: https://www.method.gg/guides/midnight-herb-and-mote-farming-routes fetched: 2026-10-07T20:48:26.421475+00:00 -->
 <!-- page dates: none found -->
 # Midnight Herb and Mote Farming Routes
 

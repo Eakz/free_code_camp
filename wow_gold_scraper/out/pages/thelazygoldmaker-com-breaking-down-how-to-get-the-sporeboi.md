@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/breaking-down-how-to-get-the-sporeboi/ fetched: 2026-10-07T20:46:15.585633+00:00 -->
+<!-- source: https://thelazygoldmaker.com/breaking-down-how-to-get-the-sporeboi/ fetched: 2026-10-07T20:51:09.471254+00:00 -->
 <!-- page dates: article:modified_time=2026-09-15T22:43:31+00:00; article:published_time=2026-09-15T22:43:29+00:00 -->
 # Breaking down how to get the Sporeboi! - The Lazy Goldmaker
 

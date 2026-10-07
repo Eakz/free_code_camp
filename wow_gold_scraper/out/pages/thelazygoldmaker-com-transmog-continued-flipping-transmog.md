@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/transmog-continued-flipping-transmog fetched: 2026-10-07T20:44:56.842949+00:00 -->
+<!-- source: https://thelazygoldmaker.com/transmog-continued-flipping-transmog fetched: 2026-10-07T20:49:06.891080+00:00 -->
 <!-- page dates: article:published_time=2017-05-10T20:50:50+00:00 -->
 # Transmog continued: Flipping transmog - The Lazy Goldmaker
 

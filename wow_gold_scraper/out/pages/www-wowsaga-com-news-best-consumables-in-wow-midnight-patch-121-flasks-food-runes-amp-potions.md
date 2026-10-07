@@ -1,4 +1,4 @@
-<!-- source: https://www.wowsaga.com/news/best-consumables-in-wow-midnight-patch-121-flasks-food-runes-amp-potions fetched: 2026-10-07T20:45:28.413593+00:00 -->
+<!-- source: https://www.wowsaga.com/news/best-consumables-in-wow-midnight-patch-121-flasks-food-runes-amp-potions fetched: 2026-10-07T20:49:39.955163+00:00 -->
 <!-- page dates: time=Jul 22 -->
 # Best Consumables in WoW Midnight Patch 12.1: Flasks, Food, Runes & Potions — MOUDI Guides for World of Wacraft gameplay, farming, collecting, gearing and more
 

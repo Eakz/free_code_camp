@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/prey-system-guide fetched: 2026-10-07T20:45:04.099015+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/prey-system-guide fetched: 2026-10-07T20:49:14.406231+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Midnight Prey System Guide for Midnight: How to Unlock, Difficulties, and Rewards - World of Warcraft - Icy Veins
 

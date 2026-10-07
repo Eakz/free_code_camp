@@ -1,4 +1,4 @@
-<!-- source: https://www.mmogah.com/news/wow/how-to-make-50000-wow-midnight-gold-per-hour-at-corins-crossing fetched: 2026-10-07T20:45:21.384177+00:00 -->
+<!-- source: https://www.mmogah.com/news/wow/how-to-make-50000-wow-midnight-gold-per-hour-at-corins-crossing fetched: 2026-10-07T20:49:31.994235+00:00 -->
 <!-- page dates: none found -->
 # How to Make 50,000 WoW Midnight Gold per Hour at Corin’s Crossing
 

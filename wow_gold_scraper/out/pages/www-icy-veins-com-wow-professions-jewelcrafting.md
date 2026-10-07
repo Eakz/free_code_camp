@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/professions-jewelcrafting fetched: 2026-10-07T20:44:08.481402+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-jewelcrafting fetched: 2026-10-07T20:48:19.313915+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Jewelcrafting Guide for Midnight - World of Warcraft - Icy Veins
 

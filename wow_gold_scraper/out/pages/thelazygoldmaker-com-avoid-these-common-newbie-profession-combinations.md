@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/avoid-these-common-newbie-profession-combinations/ fetched: 2026-10-07T20:45:42.280542+00:00 -->
+<!-- source: https://thelazygoldmaker.com/avoid-these-common-newbie-profession-combinations/ fetched: 2026-10-07T20:50:35.344918+00:00 -->
 <!-- page dates: article:modified_time=2026-10-07T10:31:41+00:00; article:published_time=2026-10-07T10:31:39+00:00 -->
 # Avoid these common newbie profession combinations - The Lazy Goldmaker
 

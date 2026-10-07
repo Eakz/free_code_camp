@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/cooking-the-easiest-mass-crafting-setup-in-12-1/ fetched: 2026-10-07T20:45:58.464278+00:00 -->
+<!-- source: https://thelazygoldmaker.com/cooking-the-easiest-mass-crafting-setup-in-12-1/ fetched: 2026-10-07T20:50:52.275532+00:00 -->
 <!-- page dates: article:modified_time=2026-09-22T21:47:03+00:00; article:published_time=2026-09-22T21:46:57+00:00 -->
 # Cooking: the easiest mass crafting setup in 12.1 - The Lazy Goldmaker
 

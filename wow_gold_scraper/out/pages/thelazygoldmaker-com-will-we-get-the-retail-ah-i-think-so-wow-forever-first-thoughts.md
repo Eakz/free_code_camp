@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/will-we-get-the-retail-ah-i-think-so-wow-forever-first-thoughts/ fetched: 2026-10-07T20:46:06.563719+00:00 -->
+<!-- source: https://thelazygoldmaker.com/will-we-get-the-retail-ah-i-think-so-wow-forever-first-thoughts/ fetched: 2026-10-07T20:51:00.861474+00:00 -->
 <!-- page dates: article:modified_time=2026-09-16T22:37:51+00:00; article:published_time=2026-09-16T22:37:49+00:00 -->
 # Will we get the retail AH (I think so) | WoW Forever first thoughts! - The Lazy Goldmaker
 

@@ -1,4 +1,4 @@
-<!-- source: https://www.elyxir.gg/guide/world-of-warcraft/best-wow-retail-cloth-farm-in-midnight-two-spot-group-route-for-fast-gold fetched: 2026-10-07T20:45:27.985680+00:00 -->
+<!-- source: https://www.elyxir.gg/guide/world-of-warcraft/best-wow-retail-cloth-farm-in-midnight-two-spot-group-route-for-fast-gold fetched: 2026-10-07T20:49:39.439096+00:00 -->
 <!-- page dates: none found -->
 # Best WoW Retail Cloth Farm in Midnight: Two-Spot Group Route for Fast Gold | Elyxir
 

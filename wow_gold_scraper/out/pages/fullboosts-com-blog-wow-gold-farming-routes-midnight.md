@@ -1,4 +1,4 @@
-<!-- source: https://fullboosts.com/blog/wow-gold-farming-routes-midnight fetched: 2026-10-07T20:45:23.808279+00:00 -->
+<!-- source: https://fullboosts.com/blog/wow-gold-farming-routes-midnight fetched: 2026-10-07T20:49:34.401810+00:00 -->
 <!-- page dates: article:modified_time=2026-07-11T16:50:56.969Z; article:published_time=2026-07-11T16:50:56.968Z -->
 # WoW Gold Farming Routes: Top Gold-per-Hour Methods in Midnight · FullBoosts
 

@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/midnight-blacksmithing-profession-guide fetched: 2026-10-07T20:44:28.515175+00:00 -->
+<!-- source: https://www.method.gg/guides/midnight-blacksmithing-profession-guide fetched: 2026-10-07T20:48:39.445398+00:00 -->
 <!-- page dates: none found -->
 # Midnight Blacksmithing Profession Guide
 

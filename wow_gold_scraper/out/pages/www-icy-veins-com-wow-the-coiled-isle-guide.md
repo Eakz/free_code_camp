@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/the-coiled-isle-guide fetched: 2026-10-07T20:45:07.418797+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/the-coiled-isle-guide fetched: 2026-10-07T20:49:17.841855+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # The Coiled Isle Zone Guide - World of Warcraft - Icy Veins
 
