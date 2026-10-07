@@ -19,6 +19,22 @@ SLOTS = ['head','neck','shoulder','back','chest','wrist','hands','waist','legs',
 DUNGEON_CAP = 321   # M+ / Hero track. Dungeons do not drop Mythic.
 CRAFTED_CAP = 331   # crafted PvE, proven by the worn crafted wrist and staff
 
+# Bonus ids of type 25 (crafted stat setters). In SimC they override crafted_stats=, but they
+# never match the player's real stat choice (5 of 5 crafted items in Mergegit's export disagree,
+# e.g. lantern 8791=Crit/Mastery vs chosen crafted_stats=49/36). crafted_stats= is the truth:
+# strip these whenever crafted_stats= is present.
+CRAFTED_STAT_BONUS = {6647, 6648, 6649, 6650, 6673, 6674, 6675, 8790, 8791, 8792, 8793, 8794,
+                      8795, 8862, 8948, 8949, 8950, 8951, 8952, 8953, 8954, 8955, 8956, 8957,
+                      11136, 11137, 11138, 11139, 11313}
+
+def strip_stat_bonus(rest):
+    if 'crafted_stats=' not in rest:
+        return rest
+    def fix(m):
+        ids = [b for b in m.group(1).split('/') if int(b) not in CRAFTED_STAT_BONUS]
+        return 'bonus_id=' + '/'.join(ids)
+    return re.sub(r'bonus_id=([0-9/]+)', fix, rest)
+
 def cap_for(line, raw):
     """Return (cap, why). Never invent an item level a source cannot produce."""
     if 'crafting_quality=' in line:
@@ -53,6 +69,7 @@ def main(path):
         cap, why = cap_for(s, raw)
         rest = re.sub(r',?\s*ilevel=\d+', '', rest)
         rest = re.sub(r',?\s*content_tuning=\d+', '', rest)
+        rest = strip_stat_bonus(rest)
         out.append(f"{slot}={rest.rstrip(',')},ilevel={cap}" if rest.strip(',') else f"{slot}=,ilevel={cap}")
         rows.append((slot, name, raw, cap, why))
     if not rows:

@@ -161,6 +161,11 @@ Each of these was made in a real session, cost the user several rounds, and is n
 14. **Check the whole export before saying an item is missing.** The "Gear from Bags" block is
    part of the export: a "new dagger" was Jan'thrazet, the Soul Fang in bags and was overlooked.
 15. **Never answer a gear question from guide-site stat priorities.** Sim it.
+16. **Crafted stat bonus ids (type 25: 8790-8795 etc.) lie.** In SimC they override
+   `crafted_stats=`, but on all 5 of Mergegit's crafted items they disagree with the export's
+   `crafted_stats=` (which matches what the player chose). `build_profile.py` now strips them
+   whenever `crafted_stats=` is present. Results before 2026-10-07 21:xx simmed the wrist as
+   Crit/Mastery instead of Vers/Crit and the staff as Mastery/Haste instead of Crit/Haste.
 10. **Filter by armour subclass before simming.** `item_class=4` with `item_subclass` 1=cloth,
    2=leather, 3=mail, 4=plate. Cloaks are subclass 1 for everyone. Feeding a mail belt to a
    druid aborts the whole run with "Invalid type" and wastes the batch.
@@ -254,6 +259,7 @@ damage done — a build that sims higher can be the one that gets you killed.
 
 - `tools/build_profile.py` — export -> capped profile (section 3a).
 - `tools/parse.py out.txt` — ranks actors, % vs the `A_` baseline with error.
+- `tools/lookup.py <simc_dir> "Exact Name" 12345 "~substr"` — item id, slot, armour type, stats.
 - `sims/<character>/` — one folder per character. For every question keep:
   `export_<date>.txt` (the raw addon export), `char_<date>.simc` (script output + consumables),
   `*_variants.simc` + `run_*.simc` (exact inputs), `out_*.txt` (raw SimC output),
