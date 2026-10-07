@@ -150,7 +150,12 @@ def cmd_pages(args) -> int:
         done.add(url)
         status, body, cached = fetcher.get(url)
         entry = {"url": url, "status": status, "cached": cached}
-        if status == 200:
+        if status == 200 and body.lstrip()[:1] in "[{":  # JSON endpoint: keep raw
+            name = re.sub(r"[^a-z0-9]+", "-", (urlparse(url).netloc + urlparse(url).path + urlparse(url).query).lower()).strip("-")[:120]
+            path = pages_dir / f"{name}.json"
+            path.write_text(body, encoding="utf-8")
+            entry.update(file=str(path), chars=len(body))
+        elif status == 200:
             doc = html_to_text(body, url)
             name = re.sub(r"[^a-z0-9]+", "-", (urlparse(url).netloc + urlparse(url).path).lower()).strip("-")[:120]
             path = pages_dir / f"{name}.md"
