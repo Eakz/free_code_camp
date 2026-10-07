@@ -26,3 +26,19 @@ Conclusion: dagger+lantern beats the staff from 334 up. Best lantern pair: Crit/
 Note: the user's crafted lantern line (`bonus_id=...8791..., crafted_stats=49/36`) resolves in SimC
 as Crit/Mastery because bonus 8791 is a type-25 stat setter (32/49) and wins over crafted_stats
 (`check_lantern.simc`). Confirm the real stats from the in-game tooltip.
+
+## 2026-10-07 — Best owned M+/raid set, enchants, talents, buffs, dungeon chase (21:24 export)
+Profile `char_2026-10-07_2124.simc` (all gear at cap; crafted stats from `crafted_stats=`).
+Inputs/outputs: `topgear/`, `dungeons/`, `consumables/`, `final/`. Queue: `run_queue.sh <simc>`.
+Phase runs 4000 it PW (±0.12%) / 3000 DS (±0.26%); final 15000 PW (±0.06%) / 8000 DS (±0.16%).
+
+- Owned gear: nothing in bags beats the equipped set (all swaps tie or lose). Spiritcudgel 334 −1.05/−1.72%,
+  Aln'hara Cane −1.71/−2.28%, Graft vs Yoke tie/−1.14% (M+).
+- Talents: 21:24 active = best; ra s2 ties; m+ s2 −2.0/−0.9%; old 20:59 active and blitz −13..−16%.
+- Enchants: current set is best or tied in every slot. Rings Eyes of the Eagle beat every alternative by 1.3–1.8%.
+- Buffs: Draught of Rampant Abandon > Light's Potential (+0.51% PW / +0.35% DS final run).
+  Flask of the Magisters, Harandar Celebration (Silvermoon Parade/Royal Roast tie), Void-Touched rune (+0.7/+1.1%),
+  Thalassian Phoenix Oil (Oil of Dawn −0.5/−0.65%).
+- Dungeon chase (vs current + Draught), final run:
+  raid: Pendant of Malefic Fury (Murder Row) +0.51%, + Desiccator's Blessed Gloves (Kings' Rest) +0.16% more.
+  M+: nothing beats current beyond error. No dungeon trinket or weapon beats current gear.
