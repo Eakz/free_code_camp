@@ -42,3 +42,22 @@ Phase runs 4000 it PW (±0.12%) / 3000 DS (±0.26%); final 15000 PW (±0.06%) / 
 - Dungeon chase (vs current + Draught), final run:
   raid: Pendant of Malefic Fury (Murder Row) +0.51%, + Desiccator's Blessed Gloves (Kings' Rest) +0.16% more.
   M+: nothing beats current beyond error. No dungeon trinket or weapon beats current gear.
+
+## 2026-10-07 — Guardian: which dungeons to farm (M+ S2, Hero 321)
+Profile `char_guardian_2026-10-07.simc`: shared gear from the 21:24 export, Toxin-Coated Warstaff 321,
+tier legs with Agi kit 8159, talents "m+ dps" (from the 2026-09-16 Guardian export), Guardian consumables.
+Patchwerk, one actor per run, 6000 it (DPS ±0.12%, DTPS ±0.37%). `guardian/runs`, `guardian/combo`, `tools/parse_tank.py`.
+Ranked by damage taken (negative = better), DPS second.
+
+| Dungeon | Item (slot) | DPS | Dmg taken |
+|---|---|---|---|
+| Den of Nalorakk | Pilfered Precious Band (ring) | +0.01 | −3.68 |
+| Blinding Vale | Branch of Pride (staff) | +0.04 | −2.40 |
+| Blinding Vale | Rootwalker Harness (waist) | +0.05 | −2.12 |
+| Ruby Life Pools | Crown of Roaring Storms (head, + tier gauntlets) | +0.08 | −1.96 |
+| Temple of Sethraliss | Twin-Strike Polearm (2H) | +0.22 | −1.28 |
+| Kings' Rest | Primal Dinomancer's Belt (waist) | +0.12 | −1.29 |
+| Temple of Sethraliss | Hood of the Slithering Loa (head, + tier gauntlets) | +0.35 | −0.75 |
+Owned now: Band of the Amani Warlord (bags, 315→321) ring2 + Ritual Binder's Ring ring1: +0.49 DPS / −3.04 dmg taken.
+Combos: owned rings + Pilfered + Polearm + Dinomancer + Hood: +0.84 / −8.53.
+Avoid: Tumor of the Swarm (+0.55 DPS but +6.1% dmg taken), all other dungeon trinkets lose DPS and survivability.
