@@ -161,6 +161,9 @@ Each of these was made in a real session, cost the user several rounds, and is n
 14. **Check the whole export before saying an item is missing.** The "Gear from Bags" block is
    part of the export: a "new dagger" was Jan'thrazet, the Soul Fang in bags and was overlooked.
 15. **Never answer a gear question from guide-site stat priorities.** Sim it.
+17. **A new export means a new baseline.** Talent changes move stat values a lot: the 21:24
+   talent string simmed ~+16% ST over the 20:59 one and turned Graft-vs-Yoke from +1.5% into a
+   tie. Never reuse a sweep made on an older export's talents; rerun it on the newest profile.
 16. **Crafted stat bonus ids (type 25: 8790-8795 etc.) lie.** In SimC they override
    `crafted_stats=`, but on all 5 of Mergegit's crafted items they disagree with the export's
    `crafted_stats=` (which matches what the player chose). `build_profile.py` now strips them
