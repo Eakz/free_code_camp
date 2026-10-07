@@ -1,163 +1,152 @@
-<!-- source: https://www.icy-veins.com/wow/professions-making-gold fetched: 2026-10-07T20:38:53.638645+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-enchanting fetched: 2026-10-07T20:39:06.826268+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
-# Best Professions to Make Gold in Midnight - World of Warcraft - Icy Veins
+# Enchanting Guide for Midnight - World of Warcraft - Icy Veins
 
-# Best Professions to Make Gold in Midnight
+# Enchanting Guide for Midnight
 Support Our Writers
-On this page, you will find a Goldmaking Tier List for Midnight 
-Professions, Goldmaking tips and helpful Goldmaking addons.
-## Professions Gold Making Tier List for Midnight
-All professions can make gold in Midnight, but some are stronger 
-for it than others, as displayed in the Tier list below:
-### S-Tier Professions
-- Inscription
-- Jewelcrafting
-- Tailoring
-- Alchemy (Potions)
-Inscription , Jewelcrafting , and Tailoring have 
-great Concentration builds for efficient consumable production, making them 
-the professions with high potential returns for multiple playstyles. Tailoring is 
-particularly notable due to the cooldown cloth crafting which has performed well 
-thus far and is expected to become even better as Season 2 combat gear crafting 
-begins.
-Inscription , Jewelcrafting , and Tailoring all have 
-good gear crafting potential once Season 2 starts, as players will be looking 
-to get 2h Intellect/Agility weapons, rings, and cloth gear (re)crafted.
-Alchemy has performed well so far for Concentration potion 
-crafting as the Rank 2 herbs tend to be considerably more expensive than their 
-Rank 1 versions.
-### A-Tier Professions
-- Enchanting
-- Alchemy (Flasks)
-- Blacksmithing
-- Engineering
-- Leatherworking
-Enchanting (and Alchemy's Flask crafting branch) have been relatively 
-weak so far, but should be picking up with the release of new high end content leading 
-to increased demand. Unfortunately, a lot of their costs are tied to materials with 
-no Quality such as Petrified Root and Nocturnal Lotus , and 
-high quality gathering materials are much easier to get this expansion, making Concentration builds weaker than usual.
-Blacksmithing , Engineering , and Leatherworking all have great gear crafting potential once Season 2 starts, but are lower than 
-their other gear crafting counterparts due to the lack of good Concentration consumable build options for players uninterested in Crafting Orders.
-### B-Tier Professions
-- Mining
-- Herbalism
-- Skinning
-- Cooking
-- Fishing
-Mining , Herbalism , and Skinning are expected to 
-return to being profitable with the launch of Season 2, although time will tell 
-if they can improve much, as there is a massive glut of material currently.
-Cooking and Fishing can be used by anyone and have too much 
-competition as there is no Quality at all involved with their products, making 
-margins razor slim on most days, which is only likely to marginally improve with 
-Season 2's release.
-## Making Gold with Professions in Midnight
-Making gold with Crafting Orders is very dependent on your server, how 
-many (and how generous) clients you can get for your wares, and on timing the public 
-Crafting Order market. Theoretically, the best gold from orders should be found in 
-the middle-to-late part of the week as many crafters will have exhausted their 
-weekly public crafting order quota already, but the panic to use what is left of 
-the quota before the weekly reset has not set in yet, either.
-Doing orders just before popular raid hours could also be a great gold-making 
-opportunity. Due to slackers who want to get their shiny new gear crafted quickly at 
-any cost and thus increase their commission to ensure speed in completion and the 
-same can be said about crafting after popular raid hours, as min-max-oriented players 
-will want to get their crests used ASAP before doing Mythic+ and other activities.
-With Concentration now being a thing, it is also likely an excellent idea 
-for gear crafter characters to save it for high volume periods where your competition 
-will run out of Concentration quickly and thus leave you able to extract 
-higher margins from whoever is still trying to get their gear crafted!
-When mass-producing and selling commodities, most of your profits will come 
-from timing the market in two steps:
-- Figure out your server's raid days. Wednesday, Sunday, and Tuesday are the typical
-candidates. On these days, it will be easier to sell consumables for higher prices .
-To make sure, track the worth of your crafts over time in your server with The Undermine Exchange website, and sell during 
-high price periods.
-- Before leaving the website, search for the materials used in the crafts. Take 
-note of when they are cheapest and aim to buy during these periods.
-Although it sounds simple, most players do not have the patience or knowledge
-to take advantage of timing the market, and doing so correctly is where your profit
-will come from in the long term. Buying materials to craft and selling the crafts 
-randomly could actually lead to losing money if you buy high and sell low, so take 
-a little bit of time to understand the market before you dive in!
-## Midnight Goldmaking Addons
-While the default Auction House is much easier to use nowadays and benefits 
-from not having the throttling imposed upon addons, these can still be essential 
-tools to automate crafting operations, understand price trends, and just know 
-what something is worth with just a glance at its tooltip.
-### Myu's Knowledge Points Tracker
-Myu's Knowledge Points Tracker creates an easy to use interface tracking all of your missing one-time and weekly 
-knowledge points, complete with directions if you click on one of the knowledge 
-lines listed.
-### CraftSim
-If you are a crafter, an important addon to install is CraftSim , which provides 
-profit calculations for all auctionable items based on material price info from 
-one of the previous addons. It can also simulate the effect of having more or different 
-crafting stats, additional professional knowledge points, simulating your top profession 
-gear for a given craft, and many more useful functionalities!
-### Auctionator
-If you want to take a more relaxed approach and mostly want simple, automated 
-posting, buying, and gold-making tooltips on your items, Auctionator is a 
-great lightweight solution!
-### TradeSkillMaster
-Our recommended addon for people looking for hardcore goldmaking is TradeSkillMaster , which allows you 
-to fine-customize every single aspect of your professions, crafting and selling 
-in the Auction House, but has the downside of requiring extensive configuration 
-and customization by the user before its power is truly unlocked.
-### Altoholic
-Altoholic allows 
-you to easily track all of your characters, no matter what realm they are on. While 
-addons such as TradeSkillMaster already provide the ability to track items and gold 
-within a realm, Altoholic allows you to see at a glance what items, gold, and even 
-crafts all of your characters have through a simple search window.
-### WeeklyKnowledge
-WeeklyKnowledge is an addon that allows you to track the status of various knowledge sources for 
-all of your characters simultaneously, allowing alt-o-holics the ability to easily 
-track which characters still need their weeklies done.
-### No Mats; No Make
-We would also like to recommend the No Mats; No Make addon. While its original purpose was to filter out Public Orders that did not provide 
-all materials, it now helps you track your NPC (Patron) Work Orders at a glance, 
-and even while not at the profession table, allowing you to more easily get the 
-ones that matter completed.
-### CraftScan
-CraftScan allows 
-you to set keyword filters for the various game chats and automated replies. When 
-properly setup, it can enable you to be the first respondent to crafting requests, 
-allowing you to make a lot of gold from work orders!
-### GlobalIgnoreList
-If you are regularly scouring the trade chat for good deals and players searching 
-for items, it might be helpful to set up Global Ignore List to ignore competitor crafter spam, whether directly or through their most commonly 
-used advertisement keywords.
-### BuyEmAll
-BuyEmAll is a simple 
-addon that improves the UI for buying things off vendors, allowing you to easily 
-buy more or less quantities than those offered by the Blizzard UI default.
-### Profession Shopping List
-The Profession Shopping List is an addon that will allow you to easily track the materials you need for a work 
-order or just regular crafting, making trips to the Auction House easier on your 
-memory. It will also show you how many knowledge points you have unlocked for each 
-of your professions relative to the maximum amount.
+This page covers the most important aspects of Enchanting in Midnight, 
+including talent builds and suggestions on how to make gold with the profession.
+## Enchanting in Midnight
+As usual, Enchanting will be responsible for disenchanting items into dust and 
+shards such as Dawn Crystal and using those to create enchants that improve 
+gear stats such as the new Enchant Ring - Eyes of the Eagle ring enchants, or 
+profession stats with the likes of Enchant Tool - Ren'dorei Ingenuity .
+Helms and shoulders can now be enchanted with tertiary stats and effects that 
+activate when you kill enemies through new enchants such as Enchant Helm - Empowered Rune of Avoidance and Enchant Shoulders - Amirdrassil's Grace .
+Enchanters also create combat wands such as Magister's Grand Focus , cosmetic 
+items such as Gleeful Glamour - Blood Elf , which return with Midnight versions 
+using new materials and counting as new first crafts, consumable oils such as Thalassian Phoenix Oil , House Decor like Ensorcelled Broom , and their 
+own Profession Tools, which include the powerful Runed Dazzling Thorium Rod !
+### Enchanting Changes in Season 2
+Enchanting can now learn the new Rite of the Hash'ey weapon enchant, and 
+some new Decor pieces with the new Formula: Keen Hex Mask , Formula: Enchanted Voidwell Fish , 
+and Formula: Furious Tiki Mask recipes.
+## Best Race for Enchanting in Midnight
+If you are a Horde player, Blood Elf will grant you +5 skill points, 
+while Alliance players can be Kul'Tiran for +2 skill points.
+## Best Crafting Stats for Enchanting in Midnight
+Enchanting can make great use of all four stats, but you might want to focus on 
+specific stats with different Enchanting specializations. We go into detail with 
+Enchanting stats and the gear you can use to boost them in the specialized guide below:
+## Leveling Enchanting in Midnight
+Increasing your skill is done by crafting items that grant skill points as usual, 
+and in order to be efficient, we recommend trying to get as many first-craft bonuses 
+while leveling as possible, which also grant experience if you are not at 
+maximum level.
+You can also level from disenchanting items until you hit 25 skill, which can 
+be useful early on while all materials are expensive in the Auction House, but 
+make sure to get the first-craft bonuses in between before they stop giving skill 
+ups!
+Besides learning basic enchants from the trainer as you level, remember to also 
+pick up Gleeful Glamour - Blood Elf and the many other Glamours crafts from Jennara Sunglow whom you can find at the top of a spire just west of the 
+Enchanting trainer. You can also learn extra recipes beyond the profession trainer 
+by buying them with Moxie from reputation vendors and the vendor next to the profession 
+table in Silvermoon. These will grant more first crafts and can occasionally be 
+the most efficient way to level in the later levels.
+## How to Level Enchanting in Midnight
+### Leveling Enchanting to 60 Skill
+As with most professions, getting to skill 60 can easily be done through trainer 
+recipes, with the remaining skill points being awarded by specialty crafts such 
+as Enchant Weapon - Acuity of the Ren'dorei and Runed Brilliant Silver Rod , 
+which you should do based on your choice of profession talents.
+Start by disenchanting cheap items until you get 25 skill points, with some 
+of those early skill points also being viable to get from first crafts that unlock 
+as you level up.
+In order to quickly level up the rest of the way after hitting level 25, ensure 
+you have the following materials:
+- 185 Eversinging Dust
+- 12 Radiant Shard
+With which you should craft:
+- 16 Enchant Ring - Nature's Wrath
+- 4 Thalassian Spellweaver's Wand
+- 9 Enchant Ring - Amani Mastery
+While you can also craft other enchants such as Enchant Weapon - Acuity of the Ren'dorei or profession gear such as Runed Brilliant Silver Rod , these will generally 
+be more efficient to craft towards the end of your leveling once regular trainer 
+recipes stop giving reliable skill points, as they are expensive to produce and 
+will generally only turn a profit when crafted at maximum rank with Concentration .
+### Leveling Enchanting Past 60 Skill
+Getting past Skill 60 will then vary heavily depending on which Profession talents 
+you invest into with your Enchanting Knowledge. Since skill-ups are more RNG as 
+you get closer to 100 Enchanting Skill, we recommend checking the Auction House 
+or using one of our recommended 
+crafting Addons to help you skill up without it eating into your wallet too much.
+Thankfully the process isn't too difficult, as you can craft the same type of 
+items all the way to 100, depending on your specialization. We recommend using the 
+following families of recipes:
+- Profession Tool Master: Runed Brilliant Silver Rod and its epic variant are the best options, 
+	and the rare version can occasionally be sold at a profit to reduce leveling 
+	costs.
+- Runed Brilliant Silver Rod and its epic variant are the best options, 
+	and the rare version can occasionally be sold at a profit to reduce leveling 
+	costs.
+- Enchant Master: Enchant prices vary, but you will generally want to find a profitable enchant 
+	that also grants skill up to 100 such as Enchant Weapon - Acuity of the Ren'dorei , 
+	and then proceed to craft it until you are maxed, using Concentration to make a profit out of it whenever possible.
+- Enchant prices vary, but you will generally want to find a profitable enchant 
+	that also grants skill up to 100 such as Enchant Weapon - Acuity of the Ren'dorei , 
+	and then proceed to craft it until you are maxed, using Concentration to make a profit out of it whenever possible.
+## Enchanting Knowledge in Midnight
+You will be able to track all weekly and one-time sources of profession knowledge 
+with Myu's Knowledge Points Tracker , 
+which has been converted to an addon in Midnight!
+There are also eight treasures around the world that you can loot to gain up 
+to 24 extra knowledge. You can find them all easily in-game with the aforementioned 
+addon.
+## Best Enchanting Specializations and Talents in Midnight
+The best specialization for you depends on what your goals are. Disenchanting Delegate and its sub-nodes are the best choice for players looking to get personal benefits 
+out of the profession, as investing here will allow you to disenchant unused bind 
+on pickup gear for much higher profits than if you were to sell them.
+You can specialize into disenchanting epic, rare, and uncommon gear and we recommend 
+investing into Shard Supplier for rare gear disenchanting if you want to 
+mass disenchant cheaply crafted rare gear from the various professions, or into Crystal Collector for disenchanting Darkmoon Decks or your own gear on characters 
+seeing a lot of gameplay.
+Notably, you will be able to convert one Dawn Crystal into at least three Radiant Shard right away in Midnight through the new Dawn Shatter craft, and further convert each these shards into at least three Eversinging Dust with Radiant Shatter . This means the strange situation we had in War Within 
+where dust was vastly more valuable than epic crystals midway through the expansion 
+will not be repeated, and there will be massive value in crystals all the way throughout!
+The Transitories, Tonics, and Tools tree can help you with optimizing 
+your oil crafts through the Excellent Expendables node, allow you to create 
+better Wands and Enchanting Rods through the Outstanding Outfits node and 
+its sub-nodes, and also helps making better illusions with the Mastering Mirages node, although this node will not teach you the Gleeful Glamour items this time.
+Afterwards if you want to make your crafts more efficient, put points into Spellbound Shatterer , which increases the temporary stats you get from Shattered Essence after shattering a Midnight Mote item with Shatter 
+Essence , and also your potential throughput when creating reagents with the Multicrafting Meticulously node.
+Finally, the Elevating Equipment tree is all about learning and gaining 
+skill when doing enchants, with the left side being dedicated to Thalassian enchantments, the bottom being about boosting Amani enchantments, and the 
+right side being about increasing you skill with Haranir enchantments. You 
+can enchant a full set of gear with enchantments that are exclusive to one of the 
+three faction trees, as all enchantment types are evenly distributed among the three.
+## Making Gold with Enchanting in Midnight
+Ideally, Enchanting allows you to convert cheap materials or unwanted gear into 
+expensive enchants, Wands, Rods, and other products. Due to its commodity nature 
+of enchants, it is very likely that the market will quickly get loaded with enchants 
+that are only marginally more expensive than the materials used to create them.
+Until you fully max out skill, gear, and knowledge for your desired crafts, you 
+will be reliant on Concentration to get maximum ranks out, which can quickly 
+be exhausted every day, so make sure to create some alts to increase your production 
+cap while it is still very profitable to do so! Even later on those can still be 
+useful as they will be able to create maximum rank items more cheaply than the 
+guaranteed method, which requires using the best reagents available.
+We have a specialized guide for Midnight gold-making below, which contains 
+a gold-making tier list and goes deeper into techniques and habits for successful 
+gold making, as well as websites and addons that can help you on your journey!
 This guide has been written by Seksi , member of Cursed Gifts and healing aficionado.
           You can find him answering questions and discussing Restoration Shaman gameplay
           on the Ancestral Guidance and Earthshrine Discords.
 ## Changelog
 - 11 Aug. 2026: Updated for Midnight Season 2 launch.
-- 14 Mar. 2026: Updated for Midnight Season 1 launch.
+- 21 Apr. 2026: Added a detailed leveling section.
 - 24 Feb. 2026: Updated for Midnight.
-- 05 Aug. 2025: Season 3 gold making meta updates.
-- 24 Feb. 2025: Season 2 gold making meta updates.
-- 26 Oct. 2024: Gold making meta updates as of the 11.0.5 patch.
-- 22 Aug. 2024: Updated for The War Within launch.
+- 24 Feb. 2025: Updated for Season 2 and Enchant Crest removal from the profession.
+- 26 Oct. 2024: Reviewed for Patch 11.0.5.
+- 25 Aug. 2024: Updated for The War Within launch.
 - 18 Apr. 2024: Reviewed for Season 4.
 - 19 Mar. 2024: Reviewed for Patch 10.2.6.
-- 08 Nov. 2023: Various typo fixes.
-- 07 Nov. 2023: Updated the profession tier list for the start of Season 3.
-- 05 Sep. 2023: Profession tier list update for the end of Season 2.
-- 04 Sep. 2023: Added a new section on buying 447 crafted gear in Dragonflight.
-- 21 May 2023: Revamped profession tiers for current Season 2 status.
-- 02 May 2023: New profession tier list for Season 2 and added CraftSim addon.
-- 27 Nov. 2022: Page added.
+- 07 Nov. 2023: Updated for Patch 10.2.
+- 04 Sep. 2023: Reviewed for Patch 10.1.7.
+- 27 Nov. 2022: Updated for Dragonflight.
+- 17 Feb. 2022: Updated for Patch 9.2.
+- 26 Jun. 2021: Updated for Patch 9.1.
+- 09 Mar. 2021: Removed journal mention.
+- 24 Nov. 2020: Guide added.
 ### In The Same Category
 
 ## LINKS
@@ -319,18 +308,8 @@ This guide has been written by Seksi , member of Cursed Gifts and healing aficio
 - [Player Housing](https://www.icy-veins.com/wow/player-housing-guide)
 - [Go Ad Free](https://www.icy-veins.com/premium)
 - [](https://discord.gg/AcTek6e)
-- [The Undermine Exchange](https://undermine.exchange/)
+- [Midnight Enchanting Stats and Gear Guide](https://www.icy-veins.com/wow/professions-enchanting-stats)
 - [Myu's Knowledge Points Tracker](https://www.curseforge.com/wow/addons/myus-knowledge-points-tracker)
-- [CraftSim](https://www.curseforge.com/wow/addons/craftsim)
-- [Auctionator](https://www.curseforge.com/wow/addons/auctionator)
-- [TradeSkillMaster](https://www.tradeskillmaster.com/)
-- [Altoholic](https://www.curseforge.com/wow/addons/altoholic)
-- [WeeklyKnowledge](https://www.curseforge.com/wow/addons/weeklyknowledge)
-- [No Mats; No Make](https://www.curseforge.com/wow/addons/nomatsnomake)
-- [CraftScan](https://www.curseforge.com/wow/addons/craftscan)
-- [Global Ignore List](https://www.curseforge.com/wow/addons/global-ignore-list)
-- [BuyEmAll](https://www.curseforge.com/wow/addons/buyemall)
-- [Profession Shopping List](https://www.curseforge.com/wow/addons/profession-shopping-list)
 - [](https://discord.gg/earthshrine)
 - [](https://discord.gg/focusedwill)
 - [Seksi](https://raider.io/characters/eu/tarren-mill/Seksixeny)

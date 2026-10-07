@@ -1,163 +1,170 @@
-<!-- source: https://www.icy-veins.com/wow/professions-making-gold fetched: 2026-10-07T20:38:53.638645+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-tailoring fetched: 2026-10-07T20:39:00.223945+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
-# Best Professions to Make Gold in Midnight - World of Warcraft - Icy Veins
+# Tailoring Guide for Midnight - World of Warcraft - Icy Veins
 
-# Best Professions to Make Gold in Midnight
+# Tailoring Guide for Midnight
 Support Our Writers
-On this page, you will find a Goldmaking Tier List for Midnight 
-Professions, Goldmaking tips and helpful Goldmaking addons.
-## Professions Gold Making Tier List for Midnight
-All professions can make gold in Midnight, but some are stronger 
-for it than others, as displayed in the Tier list below:
-### S-Tier Professions
-- Inscription
-- Jewelcrafting
-- Tailoring
-- Alchemy (Potions)
-Inscription , Jewelcrafting , and Tailoring have 
-great Concentration builds for efficient consumable production, making them 
-the professions with high potential returns for multiple playstyles. Tailoring is 
-particularly notable due to the cooldown cloth crafting which has performed well 
-thus far and is expected to become even better as Season 2 combat gear crafting 
-begins.
-Inscription , Jewelcrafting , and Tailoring all have 
-good gear crafting potential once Season 2 starts, as players will be looking 
-to get 2h Intellect/Agility weapons, rings, and cloth gear (re)crafted.
-Alchemy has performed well so far for Concentration potion 
-crafting as the Rank 2 herbs tend to be considerably more expensive than their 
-Rank 1 versions.
-### A-Tier Professions
-- Enchanting
-- Alchemy (Flasks)
-- Blacksmithing
-- Engineering
-- Leatherworking
-Enchanting (and Alchemy's Flask crafting branch) have been relatively 
-weak so far, but should be picking up with the release of new high end content leading 
-to increased demand. Unfortunately, a lot of their costs are tied to materials with 
-no Quality such as Petrified Root and Nocturnal Lotus , and 
-high quality gathering materials are much easier to get this expansion, making Concentration builds weaker than usual.
-Blacksmithing , Engineering , and Leatherworking all have great gear crafting potential once Season 2 starts, but are lower than 
-their other gear crafting counterparts due to the lack of good Concentration consumable build options for players uninterested in Crafting Orders.
-### B-Tier Professions
-- Mining
-- Herbalism
-- Skinning
-- Cooking
-- Fishing
-Mining , Herbalism , and Skinning are expected to 
-return to being profitable with the launch of Season 2, although time will tell 
-if they can improve much, as there is a massive glut of material currently.
-Cooking and Fishing can be used by anyone and have too much 
-competition as there is no Quality at all involved with their products, making 
-margins razor slim on most days, which is only likely to marginally improve with 
-Season 2's release.
-## Making Gold with Professions in Midnight
-Making gold with Crafting Orders is very dependent on your server, how 
-many (and how generous) clients you can get for your wares, and on timing the public 
-Crafting Order market. Theoretically, the best gold from orders should be found in 
-the middle-to-late part of the week as many crafters will have exhausted their 
-weekly public crafting order quota already, but the panic to use what is left of 
-the quota before the weekly reset has not set in yet, either.
-Doing orders just before popular raid hours could also be a great gold-making 
-opportunity. Due to slackers who want to get their shiny new gear crafted quickly at 
-any cost and thus increase their commission to ensure speed in completion and the 
-same can be said about crafting after popular raid hours, as min-max-oriented players 
-will want to get their crests used ASAP before doing Mythic+ and other activities.
-With Concentration now being a thing, it is also likely an excellent idea 
-for gear crafter characters to save it for high volume periods where your competition 
-will run out of Concentration quickly and thus leave you able to extract 
-higher margins from whoever is still trying to get their gear crafted!
-When mass-producing and selling commodities, most of your profits will come 
-from timing the market in two steps:
-- Figure out your server's raid days. Wednesday, Sunday, and Tuesday are the typical
-candidates. On these days, it will be easier to sell consumables for higher prices .
-To make sure, track the worth of your crafts over time in your server with The Undermine Exchange website, and sell during 
-high price periods.
-- Before leaving the website, search for the materials used in the crafts. Take 
-note of when they are cheapest and aim to buy during these periods.
-Although it sounds simple, most players do not have the patience or knowledge
-to take advantage of timing the market, and doing so correctly is where your profit
-will come from in the long term. Buying materials to craft and selling the crafts 
-randomly could actually lead to losing money if you buy high and sell low, so take 
-a little bit of time to understand the market before you dive in!
-## Midnight Goldmaking Addons
-While the default Auction House is much easier to use nowadays and benefits 
-from not having the throttling imposed upon addons, these can still be essential 
-tools to automate crafting operations, understand price trends, and just know 
-what something is worth with just a glance at its tooltip.
-### Myu's Knowledge Points Tracker
-Myu's Knowledge Points Tracker creates an easy to use interface tracking all of your missing one-time and weekly 
-knowledge points, complete with directions if you click on one of the knowledge 
-lines listed.
-### CraftSim
-If you are a crafter, an important addon to install is CraftSim , which provides 
-profit calculations for all auctionable items based on material price info from 
-one of the previous addons. It can also simulate the effect of having more or different 
-crafting stats, additional professional knowledge points, simulating your top profession 
-gear for a given craft, and many more useful functionalities!
-### Auctionator
-If you want to take a more relaxed approach and mostly want simple, automated 
-posting, buying, and gold-making tooltips on your items, Auctionator is a 
-great lightweight solution!
-### TradeSkillMaster
-Our recommended addon for people looking for hardcore goldmaking is TradeSkillMaster , which allows you 
-to fine-customize every single aspect of your professions, crafting and selling 
-in the Auction House, but has the downside of requiring extensive configuration 
-and customization by the user before its power is truly unlocked.
-### Altoholic
-Altoholic allows 
-you to easily track all of your characters, no matter what realm they are on. While 
-addons such as TradeSkillMaster already provide the ability to track items and gold 
-within a realm, Altoholic allows you to see at a glance what items, gold, and even 
-crafts all of your characters have through a simple search window.
-### WeeklyKnowledge
-WeeklyKnowledge is an addon that allows you to track the status of various knowledge sources for 
-all of your characters simultaneously, allowing alt-o-holics the ability to easily 
-track which characters still need their weeklies done.
-### No Mats; No Make
-We would also like to recommend the No Mats; No Make addon. While its original purpose was to filter out Public Orders that did not provide 
-all materials, it now helps you track your NPC (Patron) Work Orders at a glance, 
-and even while not at the profession table, allowing you to more easily get the 
-ones that matter completed.
-### CraftScan
-CraftScan allows 
-you to set keyword filters for the various game chats and automated replies. When 
-properly setup, it can enable you to be the first respondent to crafting requests, 
-allowing you to make a lot of gold from work orders!
-### GlobalIgnoreList
-If you are regularly scouring the trade chat for good deals and players searching 
-for items, it might be helpful to set up Global Ignore List to ignore competitor crafter spam, whether directly or through their most commonly 
-used advertisement keywords.
-### BuyEmAll
-BuyEmAll is a simple 
-addon that improves the UI for buying things off vendors, allowing you to easily 
-buy more or less quantities than those offered by the Blizzard UI default.
-### Profession Shopping List
-The Profession Shopping List is an addon that will allow you to easily track the materials you need for a work 
-order or just regular crafting, making trips to the Auction House easier on your 
-memory. It will also show you how many knowledge points you have unlocked for each 
-of your professions relative to the maximum amount.
+This page covers the most important aspects of Tailoring in Midnight, 
+including talent builds and suggestions on how to make gold with the profession.
+## Tailoring in Midnight
+Like always, Tailoring will be responsible for creating cloth gear for combat, 
+such as Arcanoweave Cloak , and gear for other professions, such as Thalassian Alchemy Coveralls . They can also make cosmetic gear such as Scout's Cape , 
+and some House Decor.
+Besides crafting cloth armor and profession gear, Tailors are able to make bags 
+like the Sunfire Silk Backpack , leg enchants for casters and healers, such 
+as Sunfire Silk Spellthread , and powerful embellishments such as Arcanoweave Lining .
+Tailors can also learn to loot much more cloth when killing enemies, and gain 
+a chance to loot high Quality cloth through some of their knowledge talents. 
+Finally, they have cooldown cloth transmutes and specialization trees for Arcanoweave Bolt and Sunfire Silk Bolt .
+### Tailoring Changes in Season 2
+Tailoring can now learn the new Snakeskin Lining Embellishment craft, 
+and the Pattern: Twilight's Blade Bedroll plus Pattern: Tortollan Slingsack Decor crafts.
+## Best Race for Tailoring in Midnight
+Alliance players can be Kul'Tiran for +2 skill points with Tailoring.
+As you need to be a Tailor to loot cloth from enemies, Tailoring also goes well 
+with traditional farmers who can pull and kill high amounts of hyperspawning cloth-rich enemies constantly in a 2x4 group farm format, such as Balance Druid s, Guardian Druid s or Beast Mastery Hunter s!
+## Best Crafting Stats for Tailoring in Midnight
+Tailoring can make great use of all four stats, but you might want to focus on 
+specific stats with different Tailoring specializations. We go into detail with 
+Tailoring stats and the gear you can use to boost them in the specialized guide below:
+## Leveling Tailoring in Midnight
+Increasing your skill is done by crafting items that grant skill points as usual, 
+and in order to be efficient, we recommend trying to get as many first-craft bonuses 
+while leveling as possible, which also grant experience if you are not at 
+maximum level.
+Besides learning basic recipes from the trainer, you can also learn extra recipes 
+beyond the profession trainer by buying them with Moxie from reputation vendors 
+and the vendor next to the profession table in Silvermoon. These will grant more 
+first crafts and can occasionally be the most efficient way to level in the later 
+levels.
+## How to Level Tailoring in Midnight
+### Leveling Tailoring to 60 Skill
+As with most professions, getting to skill 60 can easily be done through trainer 
+recipes, with the remaining skill points being awarded by specialty crafts such 
+as Adherent's Silken Shroud , Sunfire Silk Bolt , and Elegant Artisan's Alchemy Coveralls which you should do based on your choice of profession talents.
+In order to quickly level up uninterrupted, ensure you have the following materials:
+- 119 Silverleaf Thread
+- 20 Eversinging Dust
+- 20 Imbued Bright Linen Bolt
+- 14 Bright Linen
+- 29 Bright Linen Bolt
+- 46 Embroidery Floss
+Extra Eversinging Dust , Embroidery Floss , Imbued Bright Linen Bolt , Bright Linen Bolt , and Silverleaf Thread might be useful in order 
+to guarantee you can hit 60 Skill as some of the recommended recipes are not guaranteed 
+to grant skill-ups on their final crafts.
+With the materials above, craft the following items, learning new recipes from 
+the trainer as they become available:
+- 14 Bright Linen Bolt (use them on later crafts
+- 3 Courtly Slippers
+- 2 Courtly Cloak
+- 3 Courtly Pants
+- 5 Courtly Robes
+- 7+ Courtly Shoulders
+- 10+ Bright Linen Spellthread
+While you can start crafting end game recipes earlier instead of relying on the 
+Tailoring trainer, these will generally be more efficient to craft towards the 
+end of your leveling once regular trainer recipes stop giving reliable skill points, 
+as they are expensive to produce and will generally only turn a profit when crafted 
+at maximum rank with Concentration .
+### Leveling Tailoring Past 60 Skill
+Getting past Skill 60 will then vary heavily depending on which Profession talents 
+you invest into with your Tailoring Knowledge. Since skill-ups are more RNG as 
+you get closer to 100 Tailoring Skill, we recommend checking the Auction House 
+or using one of our recommended 
+crafting Addons to help you skill up without it eating into your wallet too much.
+Thankfully the process isn't too difficult, as you can craft the same type of 
+items all the way to 100, depending on your specialization. We recommend using the 
+following families of recipes:
+- Cooldown Cloths: Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
+	profit on minimum quality making them cheap ways to level up to 100, but the 
+	amount you can craft is time-limited making it a slow process.
+- Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
+	profit on minimum quality making them cheap ways to level up to 100, but the 
+	amount you can craft is time-limited making it a slow process.
+- Consumables: Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
+	consumables are great options for leveling up past 60 as they have solid demand 
+	and can be crafted at maximum quality for a profit immediately through Concentration .
+- Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
+	consumables are great options for leveling up past 60 as they have solid demand 
+	and can be crafted at maximum quality for a profit immediately through Concentration .
+- Combat Gear Master: Combat gear such as Adherent's Silken Shroud is often in demand and 
+	grants a large amount of skill points all the way to 100, but can be hard to 
+	get in quantity due to requiring Spark usage and the work order system.
+- Combat gear such as Adherent's Silken Shroud is often in demand and 
+	grants a large amount of skill points all the way to 100, but can be hard to 
+	get in quantity due to requiring Spark usage and the work order system.
+- Profession Gear Master: Tailoring can also craft gear for other professions, ranging from rare 
+	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
+	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
+	which requires the work order system.
+- Tailoring can also craft gear for other professions, ranging from rare 
+	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
+	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
+	which requires the work order system.
+## Tailoring Knowledge in Midnight
+You will be able to track all weekly and one-time sources of profession knowledge 
+with Myu's Knowledge Points Tracker , 
+which has been converted to an addon in Midnight!
+There are also eight treasures around the world that you can loot to gain up 
+to 24 extra knowledge. You can find them all easily in-game with the aforementioned 
+addon.
+## Best Tailoring Specializations and Talents in Midnight
+The best passive option is to max out the Fabric Specialist tree, as the 
+bonuses granted massively increase the amount of cloth you loot and also allow you 
+to loot high Quality cloth occasionally. Pick the Eastern Kingdoms Cloth sub-node if you want to maximize your cloth gathering in the Eversong Woods and 
+Zul'Aman zones, or Otherworldly Cloth if you are instead looking to farm 
+on Harandar or Voidstorm.
+Investment into the Nimble Needlework tree is the only way to enable 
+drops of Sunfire Silk and Arcanoweave when killing enemies. This 
+tree also teaches you how to craft some Embellished gear and the cooldown bolts, Arcanoweave Bolt and Sunfire Silk Bolt . While initially you can only 
+accumulate 10 crafts of each and it takes a day for their cooldown to be ready again, 
+you can learn how to accumulate up to 30 crafts and halve the cooldown by fully 
+investing into the leaf nodes.
+For cloth gear crafting, profession gear, and cloaks, invest into the Sin'dorei Finery tree, which will increase your skill at these crafts massively 
+and also unlock the generic epic gear recipes with its leaf nodes.
+Finally, the Fiber Arts tree is also very valuable for most tailors due 
+to the high stat gains it provides for all tailoring crafts. The Embroidery sub-tree is particularly notable because it grants stats and skill towards the 
+valuable Spellthread and Embellishment crafts despite being in the generic skill 
+tree.
+## Making Gold with Tailoring in Midnight
+Tailoring allows you to convert cheap cloth into expensive bolts, bags, and crafted 
+gear or leg enchants. High-end gear pieces and bind on pickup profession bags are 
+likely to fetch a good price in the Crafting Orders system, while everything 
+else can be sold at a profit on the auction house.
+It is particularly hard to unlock the crafting of Tailoring recipes at maximum 
+natural skill this time because the trees are configured in a way where the skill 
+increasing nodes are randomly located deep into otherwise useless trees, as is the 
+case in the Fabric Specialist tree, which has 15 skill increases, all locked 
+behind large knowledge point investments.
+As most Tailoring requirements for natural maximum rank crafting require the 
+usage of maximum rank materials and all knowledge skill increases, a gigantic amount 
+of knowledge is needed in order to unlock the best crafts, which will otherwise 
+be locked behind Concentration usage, providing a great opportunity for gold 
+making early on!
+Finally, you can make a lot of passive / farm gold with Tailoring by investing 
+into all the various cloth drop support nodes, as that will cause valuable cloth 
+to drop from whatever enemies you kill during your daily activities.
+We have a specialized guide for Midnight gold-making below, which contains 
+a gold-making tier list and goes deeper into techniques and habits for successful 
+gold making, as well as websites and addons that can help you on your journey!
 This guide has been written by Seksi , member of Cursed Gifts and healing aficionado.
           You can find him answering questions and discussing Restoration Shaman gameplay
           on the Ancestral Guidance and Earthshrine Discords.
 ## Changelog
 - 11 Aug. 2026: Updated for Midnight Season 2 launch.
-- 14 Mar. 2026: Updated for Midnight Season 1 launch.
+- 11 May 2026: Added a detailed leveling section.
 - 24 Feb. 2026: Updated for Midnight.
-- 05 Aug. 2025: Season 3 gold making meta updates.
-- 24 Feb. 2025: Season 2 gold making meta updates.
-- 26 Oct. 2024: Gold making meta updates as of the 11.0.5 patch.
-- 22 Aug. 2024: Updated for The War Within launch.
+- 26 Oct. 2024: Reviewed for Patch 11.0.5.
+- 24 Aug. 2024: Updated for The War Within launch.
 - 18 Apr. 2024: Reviewed for Season 4.
 - 19 Mar. 2024: Reviewed for Patch 10.2.6.
-- 08 Nov. 2023: Various typo fixes.
-- 07 Nov. 2023: Updated the profession tier list for the start of Season 3.
-- 05 Sep. 2023: Profession tier list update for the end of Season 2.
-- 04 Sep. 2023: Added a new section on buying 447 crafted gear in Dragonflight.
-- 21 May 2023: Revamped profession tiers for current Season 2 status.
-- 02 May 2023: New profession tier list for Season 2 and added CraftSim addon.
-- 27 Nov. 2022: Page added.
+- 07 Nov. 2023: Updated for Patch 10.2.
+- 04 Sep. 2023: Reviewed for Patch 10.1.7.
+- 01 Dec. 2022: Added more pages to the guide.
+- 27 Nov. 2022: Updated for Dragonflight.
+- 20 Feb. 2022: Updated for Patch 9.2.
+- 24 Jun. 2021: Updated for Patch 9.1.
+- 24 Nov. 2020: Guide added.
 ### In The Same Category
 
 ## LINKS
@@ -319,18 +326,8 @@ This guide has been written by Seksi , member of Cursed Gifts and healing aficio
 - [Player Housing](https://www.icy-veins.com/wow/player-housing-guide)
 - [Go Ad Free](https://www.icy-veins.com/premium)
 - [](https://discord.gg/AcTek6e)
-- [The Undermine Exchange](https://undermine.exchange/)
+- [Midnight Tailoring Stats and Gear Guide](https://www.icy-veins.com/wow/professions-tailoring-stats-and-gear)
 - [Myu's Knowledge Points Tracker](https://www.curseforge.com/wow/addons/myus-knowledge-points-tracker)
-- [CraftSim](https://www.curseforge.com/wow/addons/craftsim)
-- [Auctionator](https://www.curseforge.com/wow/addons/auctionator)
-- [TradeSkillMaster](https://www.tradeskillmaster.com/)
-- [Altoholic](https://www.curseforge.com/wow/addons/altoholic)
-- [WeeklyKnowledge](https://www.curseforge.com/wow/addons/weeklyknowledge)
-- [No Mats; No Make](https://www.curseforge.com/wow/addons/nomatsnomake)
-- [CraftScan](https://www.curseforge.com/wow/addons/craftscan)
-- [Global Ignore List](https://www.curseforge.com/wow/addons/global-ignore-list)
-- [BuyEmAll](https://www.curseforge.com/wow/addons/buyemall)
-- [Profession Shopping List](https://www.curseforge.com/wow/addons/profession-shopping-list)
 - [](https://discord.gg/earthshrine)
 - [](https://discord.gg/focusedwill)
 - [Seksi](https://raider.io/characters/eu/tarren-mill/Seksixeny)

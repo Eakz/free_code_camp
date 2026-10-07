@@ -1,163 +1,162 @@
-<!-- source: https://www.icy-veins.com/wow/professions-making-gold fetched: 2026-10-07T20:38:53.638645+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-alchemy fetched: 2026-10-07T20:38:56.919542+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
-# Best Professions to Make Gold in Midnight - World of Warcraft - Icy Veins
+# Alchemy Guide for Midnight - World of Warcraft - Icy Veins
 
-# Best Professions to Make Gold in Midnight
+# Alchemy Guide for Midnight
 Support Our Writers
-On this page, you will find a Goldmaking Tier List for Midnight 
-Professions, Goldmaking tips and helpful Goldmaking addons.
-## Professions Gold Making Tier List for Midnight
-All professions can make gold in Midnight, but some are stronger 
-for it than others, as displayed in the Tier list below:
-### S-Tier Professions
-- Inscription
-- Jewelcrafting
-- Tailoring
-- Alchemy (Potions)
-Inscription , Jewelcrafting , and Tailoring have 
-great Concentration builds for efficient consumable production, making them 
-the professions with high potential returns for multiple playstyles. Tailoring is 
-particularly notable due to the cooldown cloth crafting which has performed well 
-thus far and is expected to become even better as Season 2 combat gear crafting 
-begins.
-Inscription , Jewelcrafting , and Tailoring all have 
-good gear crafting potential once Season 2 starts, as players will be looking 
-to get 2h Intellect/Agility weapons, rings, and cloth gear (re)crafted.
-Alchemy has performed well so far for Concentration potion 
-crafting as the Rank 2 herbs tend to be considerably more expensive than their 
-Rank 1 versions.
-### A-Tier Professions
-- Enchanting
-- Alchemy (Flasks)
-- Blacksmithing
-- Engineering
-- Leatherworking
-Enchanting (and Alchemy's Flask crafting branch) have been relatively 
-weak so far, but should be picking up with the release of new high end content leading 
-to increased demand. Unfortunately, a lot of their costs are tied to materials with 
-no Quality such as Petrified Root and Nocturnal Lotus , and 
-high quality gathering materials are much easier to get this expansion, making Concentration builds weaker than usual.
-Blacksmithing , Engineering , and Leatherworking all have great gear crafting potential once Season 2 starts, but are lower than 
-their other gear crafting counterparts due to the lack of good Concentration consumable build options for players uninterested in Crafting Orders.
-### B-Tier Professions
-- Mining
-- Herbalism
-- Skinning
-- Cooking
-- Fishing
-Mining , Herbalism , and Skinning are expected to 
-return to being profitable with the launch of Season 2, although time will tell 
-if they can improve much, as there is a massive glut of material currently.
-Cooking and Fishing can be used by anyone and have too much 
-competition as there is no Quality at all involved with their products, making 
-margins razor slim on most days, which is only likely to marginally improve with 
-Season 2's release.
-## Making Gold with Professions in Midnight
-Making gold with Crafting Orders is very dependent on your server, how 
-many (and how generous) clients you can get for your wares, and on timing the public 
-Crafting Order market. Theoretically, the best gold from orders should be found in 
-the middle-to-late part of the week as many crafters will have exhausted their 
-weekly public crafting order quota already, but the panic to use what is left of 
-the quota before the weekly reset has not set in yet, either.
-Doing orders just before popular raid hours could also be a great gold-making 
-opportunity. Due to slackers who want to get their shiny new gear crafted quickly at 
-any cost and thus increase their commission to ensure speed in completion and the 
-same can be said about crafting after popular raid hours, as min-max-oriented players 
-will want to get their crests used ASAP before doing Mythic+ and other activities.
-With Concentration now being a thing, it is also likely an excellent idea 
-for gear crafter characters to save it for high volume periods where your competition 
-will run out of Concentration quickly and thus leave you able to extract 
-higher margins from whoever is still trying to get their gear crafted!
-When mass-producing and selling commodities, most of your profits will come 
-from timing the market in two steps:
-- Figure out your server's raid days. Wednesday, Sunday, and Tuesday are the typical
-candidates. On these days, it will be easier to sell consumables for higher prices .
-To make sure, track the worth of your crafts over time in your server with The Undermine Exchange website, and sell during 
-high price periods.
-- Before leaving the website, search for the materials used in the crafts. Take 
-note of when they are cheapest and aim to buy during these periods.
-Although it sounds simple, most players do not have the patience or knowledge
-to take advantage of timing the market, and doing so correctly is where your profit
-will come from in the long term. Buying materials to craft and selling the crafts 
-randomly could actually lead to losing money if you buy high and sell low, so take 
-a little bit of time to understand the market before you dive in!
-## Midnight Goldmaking Addons
-While the default Auction House is much easier to use nowadays and benefits 
-from not having the throttling imposed upon addons, these can still be essential 
-tools to automate crafting operations, understand price trends, and just know 
-what something is worth with just a glance at its tooltip.
-### Myu's Knowledge Points Tracker
-Myu's Knowledge Points Tracker creates an easy to use interface tracking all of your missing one-time and weekly 
-knowledge points, complete with directions if you click on one of the knowledge 
-lines listed.
-### CraftSim
-If you are a crafter, an important addon to install is CraftSim , which provides 
-profit calculations for all auctionable items based on material price info from 
-one of the previous addons. It can also simulate the effect of having more or different 
-crafting stats, additional professional knowledge points, simulating your top profession 
-gear for a given craft, and many more useful functionalities!
-### Auctionator
-If you want to take a more relaxed approach and mostly want simple, automated 
-posting, buying, and gold-making tooltips on your items, Auctionator is a 
-great lightweight solution!
-### TradeSkillMaster
-Our recommended addon for people looking for hardcore goldmaking is TradeSkillMaster , which allows you 
-to fine-customize every single aspect of your professions, crafting and selling 
-in the Auction House, but has the downside of requiring extensive configuration 
-and customization by the user before its power is truly unlocked.
-### Altoholic
-Altoholic allows 
-you to easily track all of your characters, no matter what realm they are on. While 
-addons such as TradeSkillMaster already provide the ability to track items and gold 
-within a realm, Altoholic allows you to see at a glance what items, gold, and even 
-crafts all of your characters have through a simple search window.
-### WeeklyKnowledge
-WeeklyKnowledge is an addon that allows you to track the status of various knowledge sources for 
-all of your characters simultaneously, allowing alt-o-holics the ability to easily 
-track which characters still need their weeklies done.
-### No Mats; No Make
-We would also like to recommend the No Mats; No Make addon. While its original purpose was to filter out Public Orders that did not provide 
-all materials, it now helps you track your NPC (Patron) Work Orders at a glance, 
-and even while not at the profession table, allowing you to more easily get the 
-ones that matter completed.
-### CraftScan
-CraftScan allows 
-you to set keyword filters for the various game chats and automated replies. When 
-properly setup, it can enable you to be the first respondent to crafting requests, 
-allowing you to make a lot of gold from work orders!
-### GlobalIgnoreList
-If you are regularly scouring the trade chat for good deals and players searching 
-for items, it might be helpful to set up Global Ignore List to ignore competitor crafter spam, whether directly or through their most commonly 
-used advertisement keywords.
-### BuyEmAll
-BuyEmAll is a simple 
-addon that improves the UI for buying things off vendors, allowing you to easily 
-buy more or less quantities than those offered by the Blizzard UI default.
-### Profession Shopping List
-The Profession Shopping List is an addon that will allow you to easily track the materials you need for a work 
-order or just regular crafting, making trips to the Auction House easier on your 
-memory. It will also show you how many knowledge points you have unlocked for each 
-of your professions relative to the maximum amount.
+This page covers the most important aspects of Alchemy in Midnight, 
+including talent builds and suggestions on how to make gold with the profession.
+## Alchemy in Midnight
+As has been the case since the start of World of Warcraft, Alchemy will be 
+responsible for creating most of the consumables used in the end game, 
+as well as some rare materials, through transmuting . Thaumaturgy and its ability to convert between basic materials is gone, making transmutation 
+the sole focus of the new Transmutation Authority talent tree.
+Besides short-duration combat potions, such as Light's Potential , Alchemists 
+can also make long-duration combat Flasks, such as Flask of the Shattered Sun , 
+profession Phials, such as Haranir Phial of Finesse , and transmute many items, 
+such as the new key item for crafting Cauldrons and House Decor items, Wondrous Synergist .
+Alchemy is also one of the few professions that provide combat bonuses , 
+in the form of double duration Flasks with just 15 profession knowledge points 
+required in the Fluent in Flasks base tree node.
+The Primal Philosopher's Stone is a new bind on pickup starter crafted 
+trinket option which can be created through Crafting Orders at a decent item 
+level by using Adventurer or Veteran crests and Alchemists are still able to create 
+the epic Magister's Alchemist Stone with sparks as usual.
+### Alchemy Changes in Season 2
+Alchemy can now learn the new Concentrated Silvermoon Health Potion healing 
+potion, which uses the regular Silvermoon Health Potion as part of its materials, 
+and also the new Alluring Nostrum and Liquid Luster combat potions.
+Alchemists will also be able to learn the new Recipe: Ersatz Venom Splatter Decor recipe.
+## Best Race for Alchemy in Midnight
+Due to its personal benefits, Alchemy is an excellent choice for any character 
+that cares about min-maxing its Raid and Mythic+ performance.
+If you are a Horde player, Goblin will grant you +5 skill points, while Alliance players can be Kul'Tiran for +2 skill points but for the most part 
+you will want to have it on whatever character(s) you play the most.
+## Best Crafting Stats for Alchemy in Midnight
+Alchemy can make great use of all four stats, but you might want to focus on 
+specific stats for different playstyles. We go into detail with Alchemy stats and 
+the gear you can use to boost them in the specialized guide below:
+## Leveling Alchemy in Midnight
+Increasing your skill is done by crafting items that grant skill points as usual, 
+and in order to be efficient, we recommend trying to get as many first-craft bonuses 
+while leveling as possible, which also grant experience if you are not at 
+maximum level.
+Remember to learn new recipes from the Alchemy Research cauldron in Silvermoon 
+as you unlock their requirements (account wide), as they are likely to be more 
+efficient for leveling than pure trainer recipes, especially once you hit the later 
+skill levels.
+In order to obtain Stabilized Derivate , which is a critical component 
+for learning most recipes, for cauldrons, and for transmutes, you will have to Recycle any spare flasks or potions you have with you, destroying them 
+in the process.
+## How to Level Alchemy in Midnight
+### Leveling Alchemy to 50 Skill
+As with most professions, getting to skill 50 can easily be done through trainer 
+recipes, with the remaining skill points being awarded by specialty crafts such 
+as Light's Potential , Flask of the Shattered Sun , or Wondrous Synergist transmutes, which you should do based on your choice of profession talents.
+In order to quickly level up, buy the following materials before starting:
+- 20 Mote of Light
+- 215 Sunglass Vial
+- 6 Oil of Heartwood
+- 244 Tranquility Bloom
+- 60 Argentleaf
+- 60 Azeroot
+With which you should craft:
+- 5 Silvermoon Health Potion
+- 4 Enlightenment Tonic
+- 3 casts of recycle on your Enlightenment Tonic s
+- 14 Entropic Extract
+- 20 Light's Potential
+While you can craft Flasks or Wondrous Synergist s for the final levels 
+as well, Light's Potential are the best option, as they are much cheaper 
+to produce and do not rely on the transmute cooldown.
+### Leveling Alchemy Past 50 Skill
+Getting past Skill 50 will then vary heavily depending on which Profession talents you
+  invest into with your Alchemy Knowledge. Since skill-ups are more RNG as you get closer
+  to 100 Alchemy Skill, we recommend checking the Auction House or using one of our recommended
+  crafting Addons to help you skill up without it eating into your wallet too much.
+Thankfully the process isn't too difficult, as you can craft the same items all the way
+  to 100, depending on your specialization. We recommend using the following recipes:
+- Potion Master: Light's Potential is your best option.
+- Light's Potential is your best option.
+- Flask Master: Flask of the Shattered Sun is the go-to choice, although prices of Flasks
+      may shift this occasionally.
+- Flask of the Shattered Sun is the go-to choice, although prices of Flasks
+      may shift this occasionally.
+- Transmutation Master: Wondrous Synergist is required by many recipes, and can get you all the
+      way to 100.
+- Wondrous Synergist is required by many recipes, and can get you all the
+      way to 100.
+## Alchemy Knowledge in Midnight
+You will be able to track all weekly and one-time sources of profession knowledge 
+with Myu's Knowledge Points Tracker , 
+which has been converted to an addon in Midnight!
+There are also eight treasures around the world that you can loot to gain up 
+to 24 extra knowledge. You can find them all easily in-game with the aforementioned 
+addon.
+## Best Alchemy Specializations and Talents in Midnight
+If you are going into Alchemy for the personal benefits or for Flask 
+crafting, unlock Fluent in Flasks , assign knowledge up to 15/30 and continue 
+into Sin'dorei Specialist , where you should assign 10/30 in order to unlock Flask Abundance , which is the best node to allocate points for gold making 
+purposes as they multiply the power of your Multicraft .
+The rest of the points in this tree are also excellent for crafting maximum rank 
+Flasks and Phials with Concentration , as they grant massive Ingenuity and reduce concentration usage.
+After unlocking the personal benefits for Flasks or if you want to focus on 
+Potions instead, unlock Potion Prowess , assign knowledge up to 10/30 and 
+continue down quickly in order to unlock one of the Prolific Potioneer nodes, 
+which are the Multicraft focused nodes of the potion tree, with the rest 
+of the tree also being helpful for optimizing Concentration usage later.
+The Transmutation Authority tree boosts the power of transmutations, which 
+are mostly used for creating Wondrous Synergist , a core reagent in Cauldron 
+and House Decor crafting, as well as the Magister's Alchemist Stone craft. 
+This special reagent is likely to be extremely valuable and points in this tree grant 
+massive Multicraft and Ingenuity bonuses to crafting it.
+It is also of note that the charge-based nature of transmuting synergizes perfectly 
+with the need to wait for Concentration recharging when using base materials 
+to create maximum rank Wondrous Synergist s!
+Finally, Alchemical Mastery is notable for providing skill increases that 
+apply to every Alchemy craft, and also for its three nodes Recycle , Reuse , 
+and Reduce which grant large Resourcefulness bonuses with flasks/phials, 
+potions, and other craft types, respectively.
+## Making Gold with Alchemy in Midnight
+Ideally, Alchemy allows you to convert cheap materials into expensive Potions, 
+Phials, Flasks, House Decor, and other reagents. You will initially have to use Concentration in order to get maximum Rank items, stopping you from mass 
+producing them, but eventually with maxed gear, talents, and skill you will be able 
+to produce natural maximum ranks, although doing so might not be profitable, 
+depending on the price of the maximum rank materials used in the process.
+Due to the commodity producing nature of Alchemy, it is very likely that the 
+consumable market will quickly get loaded with potions that are only marginally 
+more expensive than the materials used to create them, especially once mass maximum 
+Ranks can be produced, so focusing on Concentration usage alongside base 
+Rank materials on multiple alts is usually the most profitable way to play for 
+casual goldmakers where margins are critical to success.
+We have a specialized guide for Midnight gold-making below, 
+which contains a gold-making tier list and goes deeper into techniques and habits 
+for successful gold making, as well as websites and addons that can help you on 
+your journey!
 This guide has been written by Seksi , member of Cursed Gifts and healing aficionado.
           You can find him answering questions and discussing Restoration Shaman gameplay
           on the Ancestral Guidance and Earthshrine Discords.
 ## Changelog
 - 11 Aug. 2026: Updated for Midnight Season 2 launch.
-- 14 Mar. 2026: Updated for Midnight Season 1 launch.
+- 16 Apr. 2026: Typo fixes and improvements to the new leveling section.
+- 30 Mar. 2026: Added a detailed leveling section.
 - 24 Feb. 2026: Updated for Midnight.
-- 05 Aug. 2025: Season 3 gold making meta updates.
-- 24 Feb. 2025: Season 2 gold making meta updates.
-- 26 Oct. 2024: Gold making meta updates as of the 11.0.5 patch.
-- 22 Aug. 2024: Updated for The War Within launch.
+- 26 Oct. 2024: Reviewed for Patch 11.0.5.
+- 24 Aug. 2024: Updated for The War Within launch.
 - 18 Apr. 2024: Reviewed for Season 4.
 - 19 Mar. 2024: Reviewed for Patch 10.2.6.
-- 08 Nov. 2023: Various typo fixes.
-- 07 Nov. 2023: Updated the profession tier list for the start of Season 3.
-- 05 Sep. 2023: Profession tier list update for the end of Season 2.
-- 04 Sep. 2023: Added a new section on buying 447 crafted gear in Dragonflight.
-- 21 May 2023: Revamped profession tiers for current Season 2 status.
-- 02 May 2023: New profession tier list for Season 2 and added CraftSim addon.
-- 27 Nov. 2022: Page added.
+- 07 Nov. 2023: Updated for Patch 10.2.
+- 04 Sep. 2023: Reviewed for Patch 10.1.7.
+- 02 May 2023: Added new Season 2 Alchemy items and the new Alchemy knowledge farm section.
+- 27 Nov. 2022: Updated for Dragonflight.
+- 18 Feb. 2022: Updated for Patch 9.2.
+- 26 Jun. 2021: Updated for Patch 9.1.
+- 09 Mar. 2021: Removed journal mention.
+- 13 Jan. 2021: Fixed Potion of Unhindered Passing materials.
+- 22 Dec. 2020: Fixed another typo from user feedback.
+- 07 Dec. 2020: Fixed a typo from user feedback.
+- 01 Dec. 2020: Added a note on the gold making potential of Shadowghast Ingots.
+- 24 Nov. 2020: Guide added.
 ### In The Same Category
 
 ## LINKS
@@ -319,18 +318,8 @@ This guide has been written by Seksi , member of Cursed Gifts and healing aficio
 - [Player Housing](https://www.icy-veins.com/wow/player-housing-guide)
 - [Go Ad Free](https://www.icy-veins.com/premium)
 - [](https://discord.gg/AcTek6e)
-- [The Undermine Exchange](https://undermine.exchange/)
+- [Midnight Alchemy Stats and Gear Guide](https://www.icy-veins.com/wow/professions-alchemy-stats-and-gear)
 - [Myu's Knowledge Points Tracker](https://www.curseforge.com/wow/addons/myus-knowledge-points-tracker)
-- [CraftSim](https://www.curseforge.com/wow/addons/craftsim)
-- [Auctionator](https://www.curseforge.com/wow/addons/auctionator)
-- [TradeSkillMaster](https://www.tradeskillmaster.com/)
-- [Altoholic](https://www.curseforge.com/wow/addons/altoholic)
-- [WeeklyKnowledge](https://www.curseforge.com/wow/addons/weeklyknowledge)
-- [No Mats; No Make](https://www.curseforge.com/wow/addons/nomatsnomake)
-- [CraftScan](https://www.curseforge.com/wow/addons/craftscan)
-- [Global Ignore List](https://www.curseforge.com/wow/addons/global-ignore-list)
-- [BuyEmAll](https://www.curseforge.com/wow/addons/buyemall)
-- [Profession Shopping List](https://www.curseforge.com/wow/addons/profession-shopping-list)
 - [](https://discord.gg/earthshrine)
 - [](https://discord.gg/focusedwill)
 - [Seksi](https://raider.io/characters/eu/tarren-mill/Seksixeny)
