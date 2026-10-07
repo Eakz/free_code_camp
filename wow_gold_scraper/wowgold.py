@@ -23,7 +23,7 @@ import urllib.robotparser
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 import requests
 import yaml
@@ -93,9 +93,16 @@ class PoliteFetcher:
         return r.status_code, r.text, False
 
 
-def html_to_text(html: str) -> dict:
+def html_to_text(html: str, base_url: str = "") -> dict:
     """Reduce a guide page to title, update-date hints and readable text (headings, lists, tables)."""
     soup = BeautifulSoup(html, "html.parser")
+    links: list[tuple[str, str]] = []
+    seen_links: set[str] = set()
+    for a in soup.find_all("a", href=True):
+        href = urljoin(base_url, a["href"]).split("#")[0]
+        if href.startswith("http") and href not in seen_links:
+            seen_links.add(href)
+            links.append((a.get_text(" ", strip=True)[:120], href))
     for t in soup(["script", "style", "nav", "footer", "header", "aside", "form", "noscript", "svg"]):
         t.decompose()
     title = (soup.title.string or "").strip() if soup.title and soup.title.string else ""
@@ -120,7 +127,12 @@ def html_to_text(html: str) -> dict:
         lines.append(prefix + txt)
     # drop consecutive duplicates (nested li/p)
     out = [l for i, l in enumerate(lines) if i == 0 or l != lines[i - 1]]
-    return {"title": title, "dates": sorted(dates), "text": "\n".join(out)}
+    return {"title": title, "dates": sorted(dates), "text": "\n".join(out), "links": links}
+
+
+def looks_like_article(url: str) -> bool:
+    segs = [x for x in urlparse(url).path.split("/") if x]
+    return bool(segs) and "-" in segs[-1] and len(segs[-1]) > 15 and not re.search(r"/(tag|category|page|author|feed)/", url)
 
 
 def cmd_pages(args) -> int:
@@ -128,21 +140,34 @@ def cmd_pages(args) -> int:
     fetcher = PoliteFetcher(delay=args.delay, cache_hours=args.cache_hours)
     pages_dir = OUT / "pages"
     pages_dir.mkdir(parents=True, exist_ok=True)
-    report = []
-    for url in urls:
+    report, done, queue = [], set(), list(urls)
+    followed = 0
+    follow_hosts = set(args.follow or [])
+    while queue:
+        url = queue.pop(0)
+        if url in done:
+            continue
+        done.add(url)
         status, body, cached = fetcher.get(url)
         entry = {"url": url, "status": status, "cached": cached}
         if status == 200:
-            doc = html_to_text(body)
-            name = re.sub(r"[^a-z0-9]+", "-", (urlparse(url).netloc + urlparse(url).path).lower()).strip("-")
+            doc = html_to_text(body, url)
+            name = re.sub(r"[^a-z0-9]+", "-", (urlparse(url).netloc + urlparse(url).path).lower()).strip("-")[:120]
             path = pages_dir / f"{name}.md"
+            links_md = "\n".join(f"- [{t}]({h})" for t, h in doc["links"][:300])
             path.write_text(
                 f"<!-- source: {url} fetched: {datetime.now(timezone.utc).isoformat()} -->\n"
                 f"<!-- page dates: {'; '.join(doc['dates']) or 'none found'} -->\n"
-                f"# {doc['title']}\n\n{doc['text']}\n",
+                f"# {doc['title']}\n\n{doc['text']}\n\n## LINKS\n{links_md}\n",
                 encoding="utf-8",
             )
             entry.update(file=str(path), chars=len(doc["text"]), dates=doc["dates"])
+            if urlparse(url).netloc in follow_hosts and url in urls:  # only follow from seed pages
+                for _, href in doc["links"]:
+                    if (urlparse(href).netloc in follow_hosts and looks_like_article(href)
+                            and href not in done and href not in queue and followed < args.max_follow):
+                        queue.append(href)
+                        followed += 1
         elif status == -1:
             entry["error"] = "disallowed by robots.txt - skipped"
         else:
@@ -348,6 +373,8 @@ def main(argv=None) -> int:
     p.add_argument("--urls", default=str(ROOT / "urls.txt"))
     p.add_argument("--delay", type=float, default=3.0)
     p.add_argument("--cache-hours", type=float, default=12.0)
+    p.add_argument("--follow", action="append", help="host whose article links on seed pages are also fetched")
+    p.add_argument("--max-follow", type=int, default=15)
     p.set_defaults(fn=cmd_pages)
     sub.add_parser("token").set_defaults(fn=cmd_token)
     p = sub.add_parser("prices")

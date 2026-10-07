@@ -37,7 +37,7 @@ jobs:
       - name: Guide pages
         if: ${{ github.event_name == 'push' || inputs.pages }}
         continue-on-error: true
-        run: python wowgold.py pages
+        run: python wowgold.py pages --follow thelazygoldmaker.com --max-follow 15
       - name: Live EU prices
         if: ${{ github.event_name == 'push' || inputs.prices }}
         continue-on-error: true
