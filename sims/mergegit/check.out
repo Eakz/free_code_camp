@@ -1,0 +1,735 @@
+Implementation Not Yet Verified: Rune of Unleashed Fire: Procs are assumed to target the same unit that triggered them. Procs triggered by damage are assumed to proc damage. Procs triggered by healing/aura are assumed to proc heal.
+SimulationCraft 1210-01 for World of Warcraft 12.1.0.69933 Live (hotfix 2026-10-07/69933, git build midnight db768b5, no-networking)
+
+Simulating... ( iterations=20, threads=4, target_error=0.000, max_time=300, vary_combat_length=0.20, optimal_raid=1, fight_style=Patchwerk )
+
+Generating Baseline: 1/1 [===>................] 4/20 6.494Generating Baseline: 1/1 [========>...........] 9/20 10.392Generating Baseline: 1/1 [=============>......] 14/20 12.502Generating Baseline: 1/1 [==================>.] 19/20 14.388Generating Baseline: 1/1 [===================>] 20/20 15.143 330msec
+Merging data from thread-1 ...
+Merging data from thread-3 ...
+Merging data from thread-2 ...
+Analyzing actor data ...
+
+Generating reports...
+
+DPS Ranking:
+ 640526 100.0%  Raid
+ 166015  25.9%  Forced_CM
+ 164613  25.7%  Actual
+ 163976  25.6%  Forced_MH
+ 145921  22.8%  NoOH
+
+HPS Ranking:
+      0 100.0%%  Raid
+
+Player: Actual night_elf druid balance 90
+  DPS=164613.4820365295 DPS-Error=2038.2446978277117/1.24% DPS-Range=8741.584423695414/5.31%
+  DPR=19401.951837745262 RPS-Out=8.11264308012487 RPS-In=8.064692334373932 Resource=astral_power Waiting=0 ApM=65.21331945889699
+  Talents: CYGADBD3hSPCL9Y9gz68WcKvMAAAAAAAAAAAAAAAAAWoMLNjxMDwsNzMzMbmBMLjlZWmxMjZWmZZmZGshBAjtFjttZ2sMTzMLzEAAAgNzMPwYwmxMGDAzMYmBGA
+  Core Stats:    strength=265|265(265)  agility=622|622(622)  stamina=42712|40678(39114)  intellect=3460|3281(3125)  spirit=0|0(0)  health=854240|813560  mana=262500|262500
+  Generic Stats: mastery=22.37%|18.18%(747)  versatility=9.26%|9.26%(176)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=3460|3281(0)  hit=15.00%|15.00%(0)  crit=24.43%|24.43%(894)  haste=30.32%|22.94%(956)  speed=30.32%|22.94%  manareg=2560|2560(0)
+  Attack Stats:  power=0|0(0)  hit=7.50%|7.50%(0)  crit=24.43%|24.43%(894)  expertise=7.50%|7.50%(0)  haste=30.32%|22.94%(956)  speed=30.32%|22.94%
+  Defense Stats: armor=1087|1087(1087) miss=3.00%|3.00%  dodge=8.25%|8.25%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=4.63%|4.63%(176)
+  Priorities (actions.precombat):
+    snapshot_stats
+    variable,name=Starfall_talents,value=(spell_targets<3&(talent.starweaver&!talent.aetherial_kindling&!talent.meteorites&(talent.stellar_amplification&talent.power_of_goldrinn|talent.stellar_amplification&talent.power_of_goldrinn&talent.meteor_storm|talent.power_of_goldrinn&!talent.meteor_storm))|(talent.rattle_the_stars&!talent.meteorites&((talent.stellar_amplification|talent.power_of_goldrinn)&!talent.aetherial_kindling)))
+    variable,name=no_cd_talent,value=!talent.celestial_alignment&!talent.incarnation_chosen_of_elune|druid.no_cds
+    variable,name=ca_opener,op=set,value=1/variable,name=opener,op=set,value=1/variable,name=on_use_trinket,op=add,value=trinket.1.has_use_buff
+    variable,name=on_use_trinket,op=add,value=(trinket.2.has_use_buff)*2/moonkin_form/wrath/wrath/wrath,if=talent.dream_surge&enemies<=2
+    starfire,if=hero_tree.elunes_chosen|enemies>2
+  Priorities (actions.default):
+    potion,if=((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))|fight_remains<=30
+    use_items,if=!trinket.1.is.wraps_of_cosmic_madness&!trinket.2.is.wraps_of_cosmic_madness&!trinket.1.is.font_of_venomous_rage&!trinket.2.is.font_of_venomous_rage&((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))&(buff.harmony_of_the_grove.up|hero_tree.elunes_chosen)|fight_remains<20
+    use_item,name=wraps_of_cosmic_madness,if=!buff.eclipse.up/use_item,name=font_of_venomous_rage,if=!buff.eclipse.up
+    variable,name=cd_overflow,op=set,value=1,if=cooldown.ca_inc.charges_fractional>1.9|fight_remains<trinket.1.cooldown.remains
+    variable,name=cd_overflow,op=set,value=0,if=cooldown.ca_inc.charges_fractional<1
+    berserking,if=buff.ca_inc.up&(buff.harmony_of_the_grove.up|!talent.dream_surge)|fight_remains<cooldown.ca_inc.remains
+    invoke_external_buff,name=power_infusion,if=buff.ca_inc.up
+    variable,name=eclipse_timings,value=((cooldown.eclipse.full_recharge_time<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((buff.eclipse.duration+2)))|((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?(buff.eclipse.duration+2)))&(buff.eclipse.duration<=(cooldown.ca_inc.remains<?cooldown.fury_of_elune.remains<?cooldown.force_of_nature.remains)|!talent.fury_of_elune|hero_tree.elunes_chosen|talent.radiant_moonlight)|fight_remains<buff.eclipse.duration)&(buff.eclipse.remains<2&fight_style.dungeonroute|!fight_style.dungeonroute)
+    variable,name=opener,op=set,value=0,if=buff.ca_inc.up
+    variable,name=starfall_cosmos,value=(talent.starweaver&(talent.meteorites&(talent.incarnation_chosen_of_elune&talent.meteor_storm&!talent.power_of_goldrinn|buff.ca_inc.down&(talent.incarnation_chosen_of_elune|talent.stellar_amplification|!talent.power_of_goldrinn))|buff.eclipse.down&(talent.meteorites|talent.aetherial_kindling|talent.stellar_amplification&!talent.power_of_goldrinn))|buff.ca_inc.down&talent.meteorites&talent.aetherial_kindling&talent.stellar_amplification&!talent.power_of_goldrinn|buff.eclipse.down&talent.meteorites&(talent.aetherial_kindling|talent.stellar_amplification|!talent.power_of_goldrinn))&buff.touch_the_cosmos.react&!buff.starweavers_weft.react
+    variable,name=cds,op=set,value=1,if=((((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<?(buff.eclipse.remains-(10*(buff.bloodlust.up*buff.ascendant_stars.down)))<?buff.ca_inc.remains)<1)&(active_dot.moonfire>=active_enemies|active_dots.moonfire>=10|spell_targets=1&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&spell_targets=1))&target.time_to_die>20
+    variable,name=cds,op=set,value=0,if=buff.ca_inc.up
+    variable,name=mini,op=set,value=1,if=(((cooldown.eclipse.remains<?cooldown.force_of_nature.remains<?cooldown.fury_of_elune.remains<?buff.eclipse.remains)<1)&((((trinket.1.cooldown.remains*!variable.cd_overflow)<?cooldown.ca_inc.remains)+10)>(cooldown.force_of_nature.duration<?cooldown.fury_of_elune.duration-15)))&hero_tree.keeper_of_the_grove
+    variable,name=mini,op=set,value=0,if=prev_gcd.1.eclipse/run_action_list,name=opener,if=variable.opener
+    run_action_list,name=mini,if=variable.mini&!variable.opener/run_action_list,name=cooldowns,if=variable.cds&!variable.opener
+    run_action_list,name=ec_st,if=hero_tree.elunes_chosen&spell_targets=1/run_action_list,name=kotg_st,if=spell_targets=1
+    run_action_list,name=aoe,if=spell_targets>1
+  Priorities (actions.cooldowns):
+    moonfire,target_if=hero_tree.elunes_chosen&dot.moonfire.remains<12&spell_targets=1&cooldown.fury_of_elune.remains<1,line_cd=20
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1
+    sunfire,if=dot.sunfire.remains<18&cooldown.fury_of_elune.remains<1&(cooldown.force_of_nature.remains<1&hero_tree.keeper_of_the_grove|!hero_tree.keeper_of_the_grove),line_cd=10
+    fury_of_elune/force_of_nature,if=hero_tree.keeper_of_the_grove/celestial_alignment,add_queue_lag=1
+  Priorities (actions.kotg_st):
+    sunfire,target_if=remains<2|refreshable&buff.eclipse.down&target.time_to_die>10
+    moonfire,target_if=buff.harmony_of_the_grove.down&(remains<2|refreshable&!buff.eclipse.up&!cooldown.force_of_nature.remains<dot.moonfire.remains)&target.time_to_die>10
+    celestial_alignment,if=fight_remains<=buff.ca_inc.duration
+    fury_of_elune,if=fight_remains<20|cooldown.force_of_nature.remains>cooldown.fury_of_elune.duration/force_of_nature,if=fight_remains<20
+    convoke_the_spirits,if=astral_power<40&buff.harmony_of_the_grove.up|fight_remains<10
+    eclipse,if=variable.eclipse_timings&(astral_power>60|charges_fractional=2)|fight_remains<(15+(buff.ca_inc.duration*(cooldown.ca_inc.remains<fight_remains-20)))
+    starfall,if=buff.starweavers_warp.react/starfall,if=variable.starfall_cosmos
+    starsurge,if=buff.eclipse.down&astral_power.deficit<20|buff.eclipse.up&action.starsurge.cost>1&(astral_power.deficit<10|cooldown.force_of_nature.remains>5+buff.eclipse.remains|buff.ascendant_stars.up)|buff.touch_the_cosmos.react|buff.starweavers_weft.react
+    new_moon,if=astral_power.deficit>energize_amount/half_moon,if=astral_power.deficit>energize_amount
+    full_moon,if=astral_power.deficit>energize_amount
+    wild_mushroom,if=buff.eclipse.up|cooldown.wild_mushroom.full_recharge_time<cooldown.ca_inc.remains/wrath
+  Priorities (actions.mini):
+    fury_of_elune/force_of_nature/eclipse
+  Priorities (actions.opener):
+    moonfire,if=!talent.convoke_the_spirits,line_cd=999
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1/sunfire,line_cd=999
+    eclipse,if=!talent.convoke_the_spirits,line_cd=999
+    starsurge,if=buff.ascendant_stars.up&hero_tree.elunes_chosen&!talent.lunation&spell_targets=1
+    wrath,if=astral_power<80&hero_tree.keeper_of_the_grove&spell_targets.starfire<3&!talent.convoke_the_spirits
+    starfire,if=!talent.convoke_the_spirits&(astral_power<80&spell_targets>=3&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&(buff.ascendant_fires.up&talent.lunation|!talent.lunation&(astral_power<80&spell_targets=1)))
+    moonfire,if=!talent.convoke_the_spirits&(dot.moonfire.remains<15-(8*talent.aetherial_kindling))&cooldown.force_of_nature.ready&hero_tree.elunes_chosen&cooldown.fury_of_elune.ready,line_cd=999
+    sunfire,if=!talent.convoke_the_spirits&dot.sunfire.remains<15&cooldown.force_of_nature.ready&cooldown.fury_of_elune.ready,line_cd=999
+    fury_of_elune/force_of_nature/celestial_alignment,add_queue_lag=1
+  Actions:
+    ascendant_eclipses                     Count=  15.2|  0.000sec  DPE=188483| 0.00%  DPET=518808  DPR=     0  pDPS=    0
+    astral_smolder                         Count= 474.6|  0.658sec  DPE= 10268| 9.77%  DPET=     0  DPR=     0  pDPS=16097  TickCount=   140  MissTick= 0.00%  Tick= 34677|  3054|114772  UpTime= 92.13%
+    dream_burst                            Count=  17.3| 17.164sec  DPE= 82424| 2.85%  DPET=     0  DPR=     0  pDPS= 4678  Miss= 0.00%  Hit= 57046| 44315| 80863  Crit=119943| 98611|166620|40.24%
+    eclipse                                Count=  11.1| 28.301sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    force_of_nature                        Count=   5.8| 56.836sec  DPE=929700| 0.00%  DPET=896272  DPR=     0  pDPS=    0
+    fungal_growth                          Count=   9.3| 28.641sec  DPE= 29777| 0.56%  DPET=     0  DPR=     0  pDPS=  906  TickCount=    41  MissTick= 0.00%  Tick=  4805|  3265| 10288  CritTick= 10259|  6820| 21762|35.14%  UpTime= 26.85%
+    fury_of_elune                          Count=   5.4| 61.152sec  DPE=174810| 1.90%  DPET=170013  DPR=     0  pDPS= 3142  Miss= 0.00%  Hit=  3654|  2174|  6459  Crit=  8844|  4584| 13535|55.87%
+    incarnation_chosen_of_elune            Count=   4.2| 80.774sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    lunar_bolt                             Count=  12.5| 22.066sec  DPE= 32491| 0.81%  DPET=     0  DPR=     0  pDPS= 1348  Miss= 0.00%  Crit= 32900| 28400| 43729|100.00%
+    moonfire                               Count=   9.8| 29.105sec  DPE=112956| 2.22%  DPET=112228  DPR=     0  pDPS= 3653  Miss= 0.00%  Hit=  7321|  6012|  8634  Crit= 15161| 12509| 16640|30.65%  TickCount=   122  MissTick= 0.00%  Tick=  6503|  5218| 10710  CritTick= 13549| 10857| 21999|25.36%  UpTime= 40.98%
+    moonfire_treants                       Count=  34.7| 21.750sec  DPE= 79876| 5.56%  DPET=     0  DPR=     0  pDPS= 9161  Miss= 0.00%  Hit=  9398|  6832| 14645  Crit= 21732| 14347| 30474|38.03%  TickCount=   197  MissTick= 0.00%  Tick=  7933|  5950| 13469  CritTick= 17824| 12384| 27951|36.46%  UpTime= 58.83%
+    potion                                 Count=   1.5|300.108sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire                 Count=  48.1|  6.495sec  DPE=  8422| 0.62%  DPET=     0  DPR=     0  pDPS= 1029  Miss= 0.00%  Hit=  6450|  6223|  7669
+    rune_of_unleashed_fire_heal            Count=   4.1| 40.287sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering  Count=   4.1| 40.287sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0  TickCount=    30  UpTime=  9.85%
+    rune_of_unleashed_fire_lingering       Count=  48.1|  6.495sec  DPE=  1968| 0.19%  DPET=     0  DPR=     0  pDPS=  313  TickCount=   234  MissTick= 0.00%  Tick=   403|   389|   479  UpTime= 77.21%
+    shooting_stars                         Count=   0.0|  0.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    shooting_stars_moonfire                Count=  87.2|  3.691sec  DPE= 23078| 4.03%  DPET=     0  DPR=     0  pDPS= 6627  MissTick= 0.00%  Tick= 15212|  8986| 30203  CritTick= 34724| 18698| 63440|40.70%
+    shooting_stars_sunfire                 Count=  83.5|  3.579sec  DPE= 23541| 3.94%  DPET=     0  DPR=     0  pDPS= 6486  MissTick= 0.00%  Tick= 15180|  8986| 30773  CritTick= 35199| 18698| 63440|42.27%
+    solar_bolt                             Count=  15.2| 20.361sec  DPE=161838| 4.94%  DPET=     0  DPR=     0  pDPS= 8107  Miss= 0.00%  Crit=162522|140885|244561|100.00%
+    starsurge                              Count= 104.7|  2.904sec  DPE=175564|36.85%  DPET=187822  DPR=  7509  pDPS=60736  Miss= 0.00%  Hit=107764| 64046|220846  Crit=251467|133961|445811|47.55%
+    sunfire                                Count=  18.5| 16.478sec  DPE=188500| 7.00%  DPET=191438  DPR=     0  pDPS=11520  Miss= 0.00%  Hit=  7588|  5465| 11846  Crit= 16189| 11372| 24991|30.40%  TickCount=   318  MissTick= 0.00%  Tick=  7333|  4743| 12133  CritTick= 15851|  9870| 25479|35.67%  UpTime= 99.49%
+    sunseeker_mushroom                     Count=   9.4| 28.641sec  DPE= 76693| 0.88%  DPET=     0  DPR=     0  pDPS= 1440  Miss= 0.00%  Hit= 33088| 25173| 54711  Crit= 70503| 52380|104542|37.85%
+    sylvan_beckoning                       Count=  14.1| 21.977sec  DPE= 87112| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    sylvan_beckoning_starfall_driver       Count=   0.0|  0.000sec  DPE=     0| 0.71%  DPET=     0  DPR=     0  pDPS= 1165  MissTick= 0.00%  Tick=  2863|  2661|  3871  CritTick=  5954|  5538|  7918|25.24%
+    wrath                                  Count= 167.4|  1.815sec  DPE= 38526|12.93%  DPET= 40271  DPR=     0  pDPS=21270  Miss= 0.00%  Hit= 27758| 16030| 48181  Crit= 59864| 33528|100995|33.41%
+   Sylvan Beckoning (DPS=7849.148844330034)
+    starsurge                              Count=  69.5|  4.219sec  DPE= 12579| 1.75%  DPET=  9307  DPR=     0  pDPS= 7849  Miss= 0.00%  Hit=  9643|  8989| 12854  Crit= 20044| 18705| 24786|28.54%
+   Treant (DPS=21366.082229818152)
+    melee                                  Count= 152.6|  1.904sec  DPE=  8087| 2.47%  DPET=  7529  DPR=     0  pDPS=21366  Miss= 0.00%  Hit=  6032|  5521|  8018  Crit= 12692| 11489| 16683|30.32%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/blessing_of_the_bronze/flask_of_the_magisters/harandar_celebration/lycaras_teachings_mast/mark_of_the_wild
+    moonkin_form/power_word_fortitude/skyfury/voidtouched
+  Dynamic Buffs:
+    50lb_midnight_salmon           : start=  2.7 refresh=  0.2 interval= 76.4 trigger= 71.4 duration= 11.8 uptime= 10.45%
+    akilzons_clarity               : start= 14.1 refresh=100.8 interval= 22.2 trigger= 15.9 duration= 16.4 uptime= 75.99%  benefit= 79.37%
+    akilzons_rite                  : start=  1.9 refresh=  0.4 interval= 74.5 trigger= 54.0 duration= 16.2 uptime=  9.93%
+    arcanoweave_insight            : start=  5.6 refresh=  5.4 interval= 53.1 trigger= 25.4 duration= 27.8 uptime= 51.96%
+    arcanoweave_insight_ally       : start=  3.1 refresh=  1.0 interval= 81.5 trigger= 55.7 duration= 22.7 uptime= 22.82%
+    arcanoweave_insight_ally       : start=  3.1 refresh=  0.9 interval= 68.4 trigger= 49.9 duration= 22.3 uptime= 22.41%
+    arcanoweave_insight_ally       : start=  3.1 refresh=  0.3 interval= 69.0 trigger= 60.1 duration= 19.9 uptime= 19.48%
+    ascendant_fires                : start= 15.2 refresh=  4.2 interval= 20.6 trigger= 15.9 duration=  3.4 uptime= 17.21%  benefit=  9.09%
+    ascendant_stars                : start= 14.2 refresh=  5.2 interval= 22.2 trigger= 15.9 duration=  4.1 uptime= 18.40%  benefit= 40.09%
+    astral_communion               : start= 14.2 refresh=  5.2 interval= 22.1 trigger= 15.9 duration=  1.0 uptime=  4.50%
+    balance_of_all_things_arcane   : start=  4.2 refresh=  0.0 interval= 82.1 trigger= 82.1 duration=  9.8 uptime= 13.51%
+    balance_of_all_things_nature   : start= 14.1 refresh=  1.1 interval= 22.2 trigger= 20.5 duration= 10.1 uptime= 46.96%
+    bloodlust                      : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration= 40.0 uptime= 13.35%
+    blooming_infusion_heal         : start= 13.4 refresh=  7.2 interval= 22.8 trigger= 14.7 duration= 15.8 uptime= 70.08%
+    blooming_infusion_heal_counter : start= 21.3 refresh= 83.4 interval= 14.3 trigger=  2.9 duration= 11.4 uptime= 80.08%
+    brittle_torga_totem            : start=  2.9 refresh=  0.3 interval= 84.1 trigger= 73.2 duration= 12.5 uptime= 12.07%
+    cenarius_might                 : start= 14.1 refresh=  5.3 interval= 22.2 trigger= 15.9 duration=  6.2 uptime= 28.90%
+    critical_ritual                : start=  3.7 refresh=  0.5 interval= 57.8 trigger= 49.2 duration= 15.7 uptime= 19.05%
+    debilitating_venom_Crit        : start=  0.6 refresh=  0.0 interval=166.9 trigger=166.9 duration= 14.2 uptime=  2.99%
+    debilitating_venom_Haste       : start=  0.6 refresh=  0.0 interval=165.6 trigger=165.6 duration= 14.3 uptime=  3.04%
+    debilitating_venom_Mastery     : start=  1.1 refresh=  0.0 interval=204.6 trigger=204.6 duration= 15.0 uptime=  5.06%
+    debilitating_venom_Vers        : start=  0.5 refresh=  0.0 interval=  0.0 trigger=  0.0 duration= 15.0 uptime=  2.30%
+    dream_burst                    : start=  5.8 refresh=  0.0 interval= 57.6 trigger= 57.6 duration= 10.0 uptime= 19.47%
+    eclipse_lunar                  : start=  4.2 refresh=  0.0 interval= 82.1 trigger= 82.1 duration= 19.5 uptime= 26.80%  benefit= 37.84%
+    eclipse_solar                  : start= 14.1 refresh=  1.2 interval= 22.2 trigger= 20.5 duration= 16.4 uptime= 75.99%  benefit= 80.15%
+    empowering_venom_Crit          : start=  1.0 refresh=  0.0 interval=143.3 trigger=143.3 duration= 14.8 uptime=  4.84%
+    empowering_venom_Haste         : start=  0.8 refresh=  0.0 interval=149.4 trigger=149.4 duration= 14.9 uptime=  3.86%
+    empowering_venom_Mastery       : start=  0.7 refresh=  0.0 interval=146.9 trigger=146.9 duration= 13.9 uptime=  3.32%
+    empowering_venom_Vers          : start=  0.5 refresh=  0.0 interval=183.6 trigger=183.6 duration= 15.0 uptime=  2.42%
+    fury_of_elune                  : start=  5.4 refresh=  0.0 interval= 61.3 trigger= 61.3 duration=  7.9 uptime= 14.18%
+    halazzis_rite                  : start=  2.8 refresh=  0.0 interval= 51.9 trigger= 51.9 duration= 10.9 uptime=  9.58%
+    harmony_of_the_grove           : start=  5.8 refresh= 11.7 interval= 57.6 trigger= 16.9 duration= 10.2 uptime= 19.58%  benefit= 28.57%
+    hasty_ritual                   : start=  3.5 refresh=  0.7 interval= 67.1 trigger= 51.8 duration= 16.4 uptime= 18.26%
+    incarnation_chosen_of_elune    : start=  4.2 refresh=  0.0 interval= 82.1 trigger= 82.1 duration= 19.5 uptime= 26.80%
+    janalais_rite                  : start=  6.1 refresh=  3.6 interval= 49.2 trigger= 29.9 duration= 18.5 uptime= 37.36%
+    lights_potential               : start=  1.5 refresh=  0.0 interval=306.2 trigger=306.2 duration= 26.9 uptime= 13.07%
+    lycaras_teachings_haste        : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    masterful_ritual               : start=  3.3 refresh=  0.7 interval= 61.7 trigger= 49.3 duration= 16.0 uptime= 17.88%
+    nalorakks_rite                 : start=  1.7 refresh=  0.2 interval= 73.0 trigger= 63.9 duration= 15.8 uptime=  9.19%
+    rotting_voidfin                : start=  2.2 refresh=  0.2 interval= 82.2 trigger= 75.1 duration= 12.1 uptime=  8.62%
+    rune_of_burning_haste          : start= 11.4 refresh= 40.6 interval= 19.5 trigger=  5.7 duration= 22.9 uptime= 87.36%
+    seriously_sharp_seashell       : start=  2.7 refresh=  0.2 interval= 67.4 trigger= 63.1 duration= 11.9 uptime= 10.78%
+    slick_and_slimy_gralstone      : start=  2.9 refresh=  0.2 interval= 68.7 trigger= 62.3 duration= 12.2 uptime= 11.68%
+    solstice                       : start= 19.4 refresh=  0.0 interval= 15.9 trigger= 15.9 duration=  5.8 uptime= 28.90%  benefit= 29.40%
+    soul_fang_alacrity             : start=  9.6 refresh=  7.7 interval= 30.2 trigger= 16.5 duration= 16.0 uptime= 50.45%
+    starlord                       : start= 15.8 refresh= 88.8 interval= 19.4 trigger=  2.9 duration= 17.3 uptime= 89.98%
+    sylvan_beckoning               : start= 14.1 refresh=  0.0 interval= 22.2 trigger= 22.2 duration=  7.9 uptime= 36.63%
+    tattered_tortollan_scroll      : start=  2.5 refresh=  0.2 interval= 73.5 trigger= 64.9 duration= 12.4 uptime= 10.08%
+    touch_the_cosmos               : start= 19.9 refresh=  1.7 interval= 14.7 trigger= 13.6 duration=  1.3 uptime=  8.16%
+    versatile_ritual               : start=  3.6 refresh=  0.6 interval= 64.5 trigger= 52.9 duration= 15.8 uptime= 18.49%
+    Sylvan Beckoning-starfall      : start= 14.1 refresh=  0.0 interval= 22.2 trigger= 22.2 duration=  7.9 uptime=100.00%
+  Up-Times:
+     26.88% : Fungal Growth                 
+      1.26% : Astral Power Cap              
+  Gains:
+       148.0 : Natures Balance         (astral_power)   (overflow=1.54%)
+        99.4 : force_of_nature         (astral_power)   (overflow=17.31%)
+       212.1 : fury_of_elune           (astral_power)   (overflow=6.82%)
+        55.8 : moonfire                (astral_power)   (overflow=3.71%)
+       169.6 : shooting_stars_moonfire (astral_power)   (overflow=1.24%)
+       164.5 : shooting_stars_sunfire  (astral_power)   (overflow=1.22%)
+       110.3 : sunfire                 (astral_power) 
+        88.8 : sunseeker_mushroom      (astral_power)   (overflow=2.74%)
+      1382.3 : wrath                   (astral_power) 
+    Pet "Sylvan Beckoning" Gains:
+    Pet "Treant" Gains:
+  Waiting:  0.00%
+
+Player: Forced_CM night_elf druid balance 90
+  DPS=166015.46434708894 DPS-Error=2441.8635055788927/1.47% DPS-Range=11437.45862711576/6.89%
+  DPR=19475.70588617499 RPS-Out=8.155567117585848 RPS-In=8.09861914672218 Resource=astral_power Waiting=0 ApM=65.23413111342353
+  Talents: CYGADBD3hSPCL9Y9gz68WcKvMAAAAAAAAAAAAAAAAAWoMLNjxMDwsNzMzMbmBMLjlZWmxMjZWmZZmZGshBAjtFjttZ2sMTzMLzEAAAgNzMPwYwmxMGDAzMYmBGA
+  Core Stats:    strength=265|265(265)  agility=622|622(622)  stamina=42712|40678(39114)  intellect=3460|3281(3125)  spirit=0|0(0)  health=854240|813560  mana=262500|262500
+  Generic Stats: mastery=22.37%|18.18%(747)  versatility=9.26%|9.26%(176)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=3460|3281(0)  hit=15.00%|15.00%(0)  crit=24.43%|24.43%(894)  haste=30.32%|22.94%(956)  speed=30.32%|22.94%  manareg=2560|2560(0)
+  Attack Stats:  power=0|0(0)  hit=7.50%|7.50%(0)  crit=24.43%|24.43%(894)  expertise=7.50%|7.50%(0)  haste=30.32%|22.94%(956)  speed=30.32%|22.94%
+  Defense Stats: armor=1087|1087(1087) miss=3.00%|3.00%  dodge=8.25%|8.25%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=4.63%|4.63%(176)
+  Priorities (actions.precombat):
+    snapshot_stats
+    variable,name=Starfall_talents,value=(spell_targets<3&(talent.starweaver&!talent.aetherial_kindling&!talent.meteorites&(talent.stellar_amplification&talent.power_of_goldrinn|talent.stellar_amplification&talent.power_of_goldrinn&talent.meteor_storm|talent.power_of_goldrinn&!talent.meteor_storm))|(talent.rattle_the_stars&!talent.meteorites&((talent.stellar_amplification|talent.power_of_goldrinn)&!talent.aetherial_kindling)))
+    variable,name=no_cd_talent,value=!talent.celestial_alignment&!talent.incarnation_chosen_of_elune|druid.no_cds
+    variable,name=ca_opener,op=set,value=1/variable,name=opener,op=set,value=1/variable,name=on_use_trinket,op=add,value=trinket.1.has_use_buff
+    variable,name=on_use_trinket,op=add,value=(trinket.2.has_use_buff)*2/moonkin_form/wrath/wrath/wrath,if=talent.dream_surge&enemies<=2
+    starfire,if=hero_tree.elunes_chosen|enemies>2
+  Priorities (actions.default):
+    potion,if=((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))|fight_remains<=30
+    use_items,if=!trinket.1.is.wraps_of_cosmic_madness&!trinket.2.is.wraps_of_cosmic_madness&!trinket.1.is.font_of_venomous_rage&!trinket.2.is.font_of_venomous_rage&((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))&(buff.harmony_of_the_grove.up|hero_tree.elunes_chosen)|fight_remains<20
+    use_item,name=wraps_of_cosmic_madness,if=!buff.eclipse.up/use_item,name=font_of_venomous_rage,if=!buff.eclipse.up
+    variable,name=cd_overflow,op=set,value=1,if=cooldown.ca_inc.charges_fractional>1.9|fight_remains<trinket.1.cooldown.remains
+    variable,name=cd_overflow,op=set,value=0,if=cooldown.ca_inc.charges_fractional<1
+    berserking,if=buff.ca_inc.up&(buff.harmony_of_the_grove.up|!talent.dream_surge)|fight_remains<cooldown.ca_inc.remains
+    invoke_external_buff,name=power_infusion,if=buff.ca_inc.up
+    variable,name=eclipse_timings,value=((cooldown.eclipse.full_recharge_time<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((buff.eclipse.duration+2)))|((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?(buff.eclipse.duration+2)))&(buff.eclipse.duration<=(cooldown.ca_inc.remains<?cooldown.fury_of_elune.remains<?cooldown.force_of_nature.remains)|!talent.fury_of_elune|hero_tree.elunes_chosen|talent.radiant_moonlight)|fight_remains<buff.eclipse.duration)&(buff.eclipse.remains<2&fight_style.dungeonroute|!fight_style.dungeonroute)
+    variable,name=opener,op=set,value=0,if=buff.ca_inc.up
+    variable,name=starfall_cosmos,value=(talent.starweaver&(talent.meteorites&(talent.incarnation_chosen_of_elune&talent.meteor_storm&!talent.power_of_goldrinn|buff.ca_inc.down&(talent.incarnation_chosen_of_elune|talent.stellar_amplification|!talent.power_of_goldrinn))|buff.eclipse.down&(talent.meteorites|talent.aetherial_kindling|talent.stellar_amplification&!talent.power_of_goldrinn))|buff.ca_inc.down&talent.meteorites&talent.aetherial_kindling&talent.stellar_amplification&!talent.power_of_goldrinn|buff.eclipse.down&talent.meteorites&(talent.aetherial_kindling|talent.stellar_amplification|!talent.power_of_goldrinn))&buff.touch_the_cosmos.react&!buff.starweavers_weft.react
+    variable,name=cds,op=set,value=1,if=((((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<?(buff.eclipse.remains-(10*(buff.bloodlust.up*buff.ascendant_stars.down)))<?buff.ca_inc.remains)<1)&(active_dot.moonfire>=active_enemies|active_dots.moonfire>=10|spell_targets=1&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&spell_targets=1))&target.time_to_die>20
+    variable,name=cds,op=set,value=0,if=buff.ca_inc.up
+    variable,name=mini,op=set,value=1,if=(((cooldown.eclipse.remains<?cooldown.force_of_nature.remains<?cooldown.fury_of_elune.remains<?buff.eclipse.remains)<1)&((((trinket.1.cooldown.remains*!variable.cd_overflow)<?cooldown.ca_inc.remains)+10)>(cooldown.force_of_nature.duration<?cooldown.fury_of_elune.duration-15)))&hero_tree.keeper_of_the_grove
+    variable,name=mini,op=set,value=0,if=prev_gcd.1.eclipse/run_action_list,name=opener,if=variable.opener
+    run_action_list,name=mini,if=variable.mini&!variable.opener/run_action_list,name=cooldowns,if=variable.cds&!variable.opener
+    run_action_list,name=ec_st,if=hero_tree.elunes_chosen&spell_targets=1/run_action_list,name=kotg_st,if=spell_targets=1
+    run_action_list,name=aoe,if=spell_targets>1
+  Priorities (actions.cooldowns):
+    moonfire,target_if=hero_tree.elunes_chosen&dot.moonfire.remains<12&spell_targets=1&cooldown.fury_of_elune.remains<1,line_cd=20
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1
+    sunfire,if=dot.sunfire.remains<18&cooldown.fury_of_elune.remains<1&(cooldown.force_of_nature.remains<1&hero_tree.keeper_of_the_grove|!hero_tree.keeper_of_the_grove),line_cd=10
+    fury_of_elune/force_of_nature,if=hero_tree.keeper_of_the_grove/celestial_alignment,add_queue_lag=1
+  Priorities (actions.kotg_st):
+    sunfire,target_if=remains<2|refreshable&buff.eclipse.down&target.time_to_die>10
+    moonfire,target_if=buff.harmony_of_the_grove.down&(remains<2|refreshable&!buff.eclipse.up&!cooldown.force_of_nature.remains<dot.moonfire.remains)&target.time_to_die>10
+    celestial_alignment,if=fight_remains<=buff.ca_inc.duration
+    fury_of_elune,if=fight_remains<20|cooldown.force_of_nature.remains>cooldown.fury_of_elune.duration/force_of_nature,if=fight_remains<20
+    convoke_the_spirits,if=astral_power<40&buff.harmony_of_the_grove.up|fight_remains<10
+    eclipse,if=variable.eclipse_timings&(astral_power>60|charges_fractional=2)|fight_remains<(15+(buff.ca_inc.duration*(cooldown.ca_inc.remains<fight_remains-20)))
+    starfall,if=buff.starweavers_warp.react/starfall,if=variable.starfall_cosmos
+    starsurge,if=buff.eclipse.down&astral_power.deficit<20|buff.eclipse.up&action.starsurge.cost>1&(astral_power.deficit<10|cooldown.force_of_nature.remains>5+buff.eclipse.remains|buff.ascendant_stars.up)|buff.touch_the_cosmos.react|buff.starweavers_weft.react
+    new_moon,if=astral_power.deficit>energize_amount/half_moon,if=astral_power.deficit>energize_amount
+    full_moon,if=astral_power.deficit>energize_amount
+    wild_mushroom,if=buff.eclipse.up|cooldown.wild_mushroom.full_recharge_time<cooldown.ca_inc.remains/wrath
+  Priorities (actions.mini):
+    fury_of_elune/force_of_nature/eclipse
+  Priorities (actions.opener):
+    moonfire,if=!talent.convoke_the_spirits,line_cd=999
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1/sunfire,line_cd=999
+    eclipse,if=!talent.convoke_the_spirits,line_cd=999
+    starsurge,if=buff.ascendant_stars.up&hero_tree.elunes_chosen&!talent.lunation&spell_targets=1
+    wrath,if=astral_power<80&hero_tree.keeper_of_the_grove&spell_targets.starfire<3&!talent.convoke_the_spirits
+    starfire,if=!talent.convoke_the_spirits&(astral_power<80&spell_targets>=3&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&(buff.ascendant_fires.up&talent.lunation|!talent.lunation&(astral_power<80&spell_targets=1)))
+    moonfire,if=!talent.convoke_the_spirits&(dot.moonfire.remains<15-(8*talent.aetherial_kindling))&cooldown.force_of_nature.ready&hero_tree.elunes_chosen&cooldown.fury_of_elune.ready,line_cd=999
+    sunfire,if=!talent.convoke_the_spirits&dot.sunfire.remains<15&cooldown.force_of_nature.ready&cooldown.fury_of_elune.ready,line_cd=999
+    fury_of_elune/force_of_nature/celestial_alignment,add_queue_lag=1
+  Actions:
+    ascendant_eclipses                     Count=  15.5|  0.000sec  DPE=187190| 0.00%  DPET=511324  DPR=     0  pDPS=    0
+    astral_smolder                         Count= 470.6|  0.656sec  DPE= 10447| 9.78%  DPET=     0  DPR=     0  pDPS=16255  TickCount=   141  MissTick= 0.00%  Tick= 34941|  3054|131616  UpTime= 93.03%
+    dream_burst                            Count=  17.3| 17.195sec  DPE= 79950| 2.74%  DPET=     0  DPR=     0  pDPS= 4541  Miss= 0.00%  Hit= 56916| 43569| 79517  Crit=121155| 93389|171216|35.37%
+    eclipse                                Count=  11.4| 27.751sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    force_of_nature                        Count=   5.8| 57.007sec  DPE=916138| 0.00%  DPET=888584  DPR=     0  pDPS=    0
+    fungal_growth                          Count=  10.1| 29.169sec  DPE= 29316| 0.59%  DPET=     0  DPR=     0  pDPS=  965  TickCount=    44  MissTick= 0.00%  Tick=  4894|  3282| 11688  CritTick= 10576|  6829| 23690|32.66%  UpTime= 29.21%
+    fury_of_elune                          Count=   5.4| 61.069sec  DPE=174571| 1.88%  DPET=170178  DPR=     0  pDPS= 3138  Miss= 0.00%  Hit=  3758|  2174|  6366  Crit=  8839|  4548| 13368|54.32%
+    incarnation_chosen_of_elune            Count=   4.2| 80.805sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    lunar_bolt                             Count=  12.4| 22.074sec  DPE= 32964| 0.81%  DPET=     0  DPR=     0  pDPS= 1359  Miss= 0.00%  Crit= 33245| 28400| 43729|100.00%
+    moonfire                               Count=   9.8| 29.492sec  DPE=113229| 2.22%  DPET=112726  DPR=     0  pDPS= 3678  Miss= 0.00%  Hit=  7418|  6012|  8746  Crit= 15251| 12509| 18637|18.72%  TickCount=   123  MissTick= 0.00%  Tick=  6540|  3253| 10671  CritTick= 13676| 10857| 21365|24.89%  UpTime= 41.52%
+    moonfire_treants                       Count=  34.6| 19.950sec  DPE= 78827| 5.42%  DPET=     0  DPR=     0  pDPS= 8998  Miss= 0.00%  Hit=  9508|  6752| 14359  Crit= 21397| 14307| 30996|38.51%  TickCount=   196  MissTick= 0.00%  Tick=  7995|  5896| 13456  CritTick= 17802| 12594| 27489|34.71%  UpTime= 58.34%
+    potion                                 Count=   1.5|300.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire                 Count=  45.8|  6.582sec  DPE=  8478| 0.59%  DPET=     0  DPR=     0  pDPS=  973  Miss= 0.00%  Hit=  6478|  6190|  7697
+    rune_of_unleashed_fire_heal            Count=   4.7| 49.852sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering  Count=   4.7| 49.852sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0  TickCount=    37  UpTime= 12.07%
+    rune_of_unleashed_fire_lingering       Count=  45.8|  6.582sec  DPE=  2007| 0.18%  DPET=     0  DPR=     0  pDPS=  303  TickCount=   228  MissTick= 0.00%  Tick=   405|   387|   481  UpTime= 74.99%
+    shooting_stars                         Count=   0.0|  0.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    shooting_stars_moonfire                Count=  84.7|  3.769sec  DPE= 23503| 3.96%  DPET=     0  DPR=     0  pDPS= 6573  MissTick= 0.00%  Tick= 15146|  8986| 29842  CritTick= 34943| 21080| 62806|41.85%
+    shooting_stars_sunfire                 Count=  87.3|  3.454sec  DPE= 23758| 4.13%  DPET=     0  DPR=     0  pDPS= 6864  MissTick= 0.00%  Tick= 15197|  8986| 29904  CritTick= 35310| 21689| 62671|42.95%
+    solar_bolt                             Count=  15.5| 19.941sec  DPE=160818| 4.97%  DPET=     0  DPR=     0  pDPS= 8233  Miss= 0.00%  Crit=162980|139611|246175|100.00%
+    starsurge                              Count= 104.7|  2.871sec  DPE=178493|37.18%  DPET=190187  DPR=  7574  pDPS=61752  Miss= 0.00%  Hit=108378| 64046|216408  Crit=253468|133961|457057|48.54%
+    sunfire                                Count=  18.4| 16.826sec  DPE=190236| 6.95%  DPET=193613  DPR=     0  pDPS=11522  Miss= 0.00%  Hit=  7767|  5465| 11742  Crit= 16374| 11372| 23654|30.95%  TickCount=   318  MissTick= 0.00%  Tick=  7354|  4743| 12101  CritTick= 15996|  9870| 25454|34.89%  UpTime= 99.55%
+    sunseeker_mushroom                     Count=  10.1| 29.169sec  DPE= 78584| 0.99%  DPET=     0  DPR=     0  pDPS= 1638  Miss= 0.00%  Hit= 33326| 25173| 44961  Crit= 71789| 52380|109231|43.46%
+    sylvan_beckoning                       Count=  14.4| 21.774sec  DPE= 86628| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    sylvan_beckoning_starfall_driver       Count=   0.0|  0.000sec  DPE=     0| 0.73%  DPET=     0  DPR=     0  pDPS= 1211  MissTick= 0.00%  Tick=  2859|  2648|  3821  CritTick=  5934|  5509|  7950|28.30%
+    wrath                                  Count= 167.2|  1.826sec  DPE= 38340|12.75%  DPET= 40105  DPR=     0  pDPS=21145  Miss= 0.00%  Hit= 27597| 15881| 47595  Crit= 60792| 33609|103835|32.35%
+   Sylvan Beckoning (DPS=7805.394887090757)
+    starsurge                              Count=  70.6|  4.210sec  DPE= 12498| 1.75%  DPET=  9225  DPR=     0  pDPS= 7805  Miss= 0.00%  Hit=  9622|  8943| 12906  Crit= 20083| 18608| 26747|28.06%
+   Treant (DPS=20853.011382981444)
+    melee                                  Count= 150.8|  1.903sec  DPE=  7942| 2.38%  DPET=  7339  DPR=     0  pDPS=20853  Miss= 0.00%  Hit=  6071|  5578|  7915  Crit= 12628| 11627| 16469|28.30%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/blessing_of_the_bronze/flask_of_the_magisters/harandar_celebration/lycaras_teachings_mast/mark_of_the_wild
+    moonkin_form/power_word_fortitude/skyfury/voidtouched
+  Dynamic Buffs:
+    50lb_midnight_salmon           : start=  2.6 refresh=  0.1 interval= 60.9 trigger= 59.6 duration= 12.0 uptime= 10.26%
+    akilzons_clarity               : start= 14.3 refresh=102.6 interval= 21.8 trigger= 15.7 duration= 16.3 uptime= 77.06%  benefit= 80.15%
+    akilzons_rite                  : start=  2.3 refresh=  0.6 interval= 85.8 trigger= 59.0 duration= 16.8 uptime= 12.55%
+    arcanoweave_insight            : start=  6.3 refresh=  5.1 interval= 47.3 trigger= 24.2 duration= 26.5 uptime= 54.54%
+    arcanoweave_insight_ally       : start=  3.1 refresh=  0.8 interval= 78.6 trigger= 57.1 duration= 22.1 uptime= 21.91%
+    arcanoweave_insight_ally       : start=  3.1 refresh=  0.8 interval= 76.1 trigger= 60.5 duration= 21.0 uptime= 21.64%
+    arcanoweave_insight_ally       : start=  3.2 refresh=  1.2 interval= 83.6 trigger= 55.0 duration= 22.9 uptime= 24.77%
+    ascendant_fires                : start= 15.5 refresh=  4.2 interval= 20.2 trigger= 15.7 duration=  3.4 uptime= 17.58%  benefit=  9.25%
+    ascendant_stars                : start= 14.5 refresh=  5.2 interval= 21.7 trigger= 15.7 duration=  3.9 uptime= 18.03%  benefit= 40.68%
+    astral_communion               : start= 14.5 refresh=  5.2 interval= 21.7 trigger= 15.7 duration=  0.9 uptime=  4.43%
+    balance_of_all_things_arcane   : start=  4.2 refresh=  0.0 interval= 82.3 trigger= 82.3 duration=  9.8 uptime= 13.52%
+    balance_of_all_things_nature   : start= 14.4 refresh=  1.1 interval= 21.8 trigger= 20.2 duration= 10.0 uptime= 47.63%
+    bloodlust                      : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration= 40.0 uptime= 13.35%
+    blooming_infusion_heal         : start= 13.8 refresh=  6.7 interval= 22.2 trigger= 14.7 duration= 15.6 uptime= 70.53%
+    blooming_infusion_heal_counter : start= 21.4 refresh= 83.4 interval= 14.3 trigger=  2.9 duration= 11.4 uptime= 80.20%
+    brittle_torga_totem            : start=  2.1 refresh=  0.3 interval= 64.9 trigger= 53.2 duration= 13.3 uptime=  9.08%
+    cenarius_might                 : start= 14.5 refresh=  5.2 interval= 21.7 trigger= 15.7 duration=  6.1 uptime= 29.21%
+    critical_ritual                : start=  3.5 refresh=  0.7 interval= 66.0 trigger= 51.6 duration= 16.2 uptime= 18.65%
+    debilitating_venom_Crit        : start=  0.7 refresh=  0.0 interval=249.5 trigger=249.5 duration= 14.2 uptime=  3.14%
+    debilitating_venom_Haste       : start=  0.4 refresh=  0.0 interval=123.0 trigger=123.0 duration= 15.0 uptime=  1.80%
+    debilitating_venom_Mastery     : start=  0.8 refresh=  0.0 interval=153.4 trigger=153.4 duration= 14.5 uptime=  4.03%
+    debilitating_venom_Vers        : start=  0.9 refresh=  0.0 interval=172.9 trigger=172.9 duration= 14.5 uptime=  4.22%
+    dream_burst                    : start=  5.8 refresh=  0.0 interval= 58.0 trigger= 58.0 duration= 10.2 uptime= 19.56%
+    eclipse_lunar                  : start=  4.2 refresh=  0.0 interval= 82.3 trigger= 82.3 duration= 19.4 uptime= 26.72%  benefit= 37.60%
+    eclipse_solar                  : start= 14.3 refresh=  1.2 interval= 21.8 trigger= 20.2 duration= 16.3 uptime= 77.06%  benefit= 80.16%
+    empowering_venom_Crit          : start=  0.7 refresh=  0.0 interval=204.5 trigger=204.5 duration= 14.7 uptime=  3.55%
+    empowering_venom_Haste         : start=  0.6 refresh=  0.0 interval=122.2 trigger=122.2 duration= 14.8 uptime=  3.23%
+    empowering_venom_Mastery       : start=  0.9 refresh=  0.0 interval=185.5 trigger=185.5 duration= 15.0 uptime=  4.38%
+    empowering_venom_Vers          : start=  0.7 refresh=  0.0 interval=122.7 trigger=122.7 duration= 13.9 uptime=  3.29%
+    fury_of_elune                  : start=  5.4 refresh=  0.0 interval= 61.4 trigger= 61.4 duration=  7.9 uptime= 14.24%
+    halazzis_rite                  : start=  2.5 refresh=  0.0 interval= 61.3 trigger= 61.3 duration=  8.8 uptime=  7.49%
+    harmony_of_the_grove           : start=  5.8 refresh= 11.6 interval= 58.0 trigger= 17.0 duration= 10.3 uptime= 19.54%  benefit= 28.41%
+    hasty_ritual                   : start=  4.2 refresh=  0.8 interval= 56.4 trigger= 46.0 duration= 15.9 uptime= 22.44%
+    incarnation_chosen_of_elune    : start=  4.2 refresh=  0.0 interval= 82.3 trigger= 82.3 duration= 19.4 uptime= 26.72%
+    janalais_rite                  : start=  6.3 refresh=  3.9 interval= 46.1 trigger= 26.9 duration= 18.2 uptime= 37.32%
+    lights_potential               : start=  1.5 refresh=  0.0 interval=306.1 trigger=306.1 duration= 27.1 uptime= 13.17%
+    lycaras_teachings_haste        : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    masterful_ritual               : start=  3.6 refresh=  0.9 interval= 64.3 trigger= 48.8 duration= 16.5 uptime= 20.08%
+    nalorakks_rite                 : start=  1.6 refresh=  0.1 interval= 75.6 trigger= 68.8 duration= 15.0 uptime=  7.60%
+    rotting_voidfin                : start=  2.4 refresh=  0.4 interval= 71.9 trigger= 58.5 duration= 12.5 uptime= 10.18%
+    rune_of_burning_haste          : start= 11.9 refresh= 38.5 interval= 17.8 trigger=  5.9 duration= 22.1 uptime= 86.06%
+    seriously_sharp_seashell       : start=  2.2 refresh=  0.2 interval= 70.1 trigger= 59.4 duration= 12.7 uptime=  9.32%
+    slick_and_slimy_gralstone      : start=  3.1 refresh=  0.3 interval= 75.8 trigger= 68.2 duration= 12.0 uptime= 11.78%
+    solstice                       : start= 19.7 refresh=  0.0 interval= 15.7 trigger= 15.7 duration=  5.7 uptime= 29.21%  benefit= 29.63%
+    soul_fang_alacrity             : start=  9.5 refresh=  7.1 interval= 31.2 trigger= 17.1 duration= 15.9 uptime= 49.38%
+    starlord                       : start= 16.1 refresh= 88.7 interval= 19.0 trigger=  2.9 duration= 17.1 uptime= 90.65%
+    sylvan_beckoning               : start= 14.4 refresh=  0.0 interval= 21.8 trigger= 21.8 duration=  7.9 uptime= 37.26%
+    tattered_tortollan_scroll      : start=  2.7 refresh=  0.2 interval= 68.7 trigger= 63.0 duration= 12.2 uptime= 10.78%
+    touch_the_cosmos               : start= 19.6 refresh=  1.9 interval= 15.2 trigger= 13.8 duration=  1.2 uptime=  7.96%
+    versatile_ritual               : start=  3.1 refresh=  0.8 interval= 69.2 trigger= 50.0 duration= 16.9 uptime= 16.84%
+    Sylvan Beckoning-starfall      : start= 14.4 refresh=  0.0 interval= 21.8 trigger= 21.8 duration=  7.9 uptime=100.00%
+  Up-Times:
+     29.17% : Fungal Growth                 
+      1.28% : Astral Power Cap              
+  Gains:
+       148.4 : Natures Balance         (astral_power)   (overflow=1.34%)
+       103.7 : force_of_nature         (astral_power)   (overflow=13.10%)
+       214.6 : fury_of_elune           (astral_power)   (overflow=6.14%)
+        56.0 : moonfire                (astral_power)   (overflow=3.72%)
+       168.4 : shooting_stars_moonfire (astral_power)   (overflow=1.11%)
+       172.6 : shooting_stars_sunfire  (astral_power) 
+       109.3 : sunfire                 (astral_power) 
+        97.8 : sunseeker_mushroom      (astral_power) 
+      1380.5 : wrath                   (astral_power) 
+    Pet "Sylvan Beckoning" Gains:
+    Pet "Treant" Gains:
+  Waiting:  0.00%
+
+Player: Forced_MH night_elf druid balance 90
+  DPS=163976.01800534572 DPS-Error=2396.2843817753806/1.46% DPS-Range=10615.530464676776/6.47%
+  DPR=19251.847909297216 RPS-Out=8.140738813735693 RPS-In=8.08384599375652 Resource=astral_power Waiting=0 ApM=65.60874089490115
+  Talents: CYGADBD3hSPCL9Y9gz68WcKvMAAAAAAAAAAAAAAAAAWoMLNjxMDwsNzMzMbmBMLjlZWmxMjZWmZZmZGshBAjtFjttZ2sMTzMLzEAAAgNzMPwYwmxMGDAzMYmBGA
+  Core Stats:    strength=265|265(265)  agility=622|622(622)  stamina=42712|40678(39114)  intellect=3460|3281(3125)  spirit=0|0(0)  health=854240|813560  mana=262500|262500
+  Generic Stats: mastery=22.37%|18.18%(747)  versatility=9.26%|9.26%(176)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=3460|3281(0)  hit=15.00%|15.00%(0)  crit=23.35%|23.35%(844)  haste=31.54%|24.09%(1006)  speed=31.54%|24.09%  manareg=2560|2560(0)
+  Attack Stats:  power=0|0(0)  hit=7.50%|7.50%(0)  crit=23.35%|23.35%(844)  expertise=7.50%|7.50%(0)  haste=31.54%|24.09%(1006)  speed=31.54%|24.09%
+  Defense Stats: armor=1087|1087(1087) miss=3.00%|3.00%  dodge=8.25%|8.25%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=4.63%|4.63%(176)
+  Priorities (actions.precombat):
+    snapshot_stats
+    variable,name=Starfall_talents,value=(spell_targets<3&(talent.starweaver&!talent.aetherial_kindling&!talent.meteorites&(talent.stellar_amplification&talent.power_of_goldrinn|talent.stellar_amplification&talent.power_of_goldrinn&talent.meteor_storm|talent.power_of_goldrinn&!talent.meteor_storm))|(talent.rattle_the_stars&!talent.meteorites&((talent.stellar_amplification|talent.power_of_goldrinn)&!talent.aetherial_kindling)))
+    variable,name=no_cd_talent,value=!talent.celestial_alignment&!talent.incarnation_chosen_of_elune|druid.no_cds
+    variable,name=ca_opener,op=set,value=1/variable,name=opener,op=set,value=1/variable,name=on_use_trinket,op=add,value=trinket.1.has_use_buff
+    variable,name=on_use_trinket,op=add,value=(trinket.2.has_use_buff)*2/moonkin_form/wrath/wrath/wrath,if=talent.dream_surge&enemies<=2
+    starfire,if=hero_tree.elunes_chosen|enemies>2
+  Priorities (actions.default):
+    potion,if=((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))|fight_remains<=30
+    use_items,if=!trinket.1.is.wraps_of_cosmic_madness&!trinket.2.is.wraps_of_cosmic_madness&!trinket.1.is.font_of_venomous_rage&!trinket.2.is.font_of_venomous_rage&((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))&(buff.harmony_of_the_grove.up|hero_tree.elunes_chosen)|fight_remains<20
+    use_item,name=wraps_of_cosmic_madness,if=!buff.eclipse.up/use_item,name=font_of_venomous_rage,if=!buff.eclipse.up
+    variable,name=cd_overflow,op=set,value=1,if=cooldown.ca_inc.charges_fractional>1.9|fight_remains<trinket.1.cooldown.remains
+    variable,name=cd_overflow,op=set,value=0,if=cooldown.ca_inc.charges_fractional<1
+    berserking,if=buff.ca_inc.up&(buff.harmony_of_the_grove.up|!talent.dream_surge)|fight_remains<cooldown.ca_inc.remains
+    invoke_external_buff,name=power_infusion,if=buff.ca_inc.up
+    variable,name=eclipse_timings,value=((cooldown.eclipse.full_recharge_time<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((buff.eclipse.duration+2)))|((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?(buff.eclipse.duration+2)))&(buff.eclipse.duration<=(cooldown.ca_inc.remains<?cooldown.fury_of_elune.remains<?cooldown.force_of_nature.remains)|!talent.fury_of_elune|hero_tree.elunes_chosen|talent.radiant_moonlight)|fight_remains<buff.eclipse.duration)&(buff.eclipse.remains<2&fight_style.dungeonroute|!fight_style.dungeonroute)
+    variable,name=opener,op=set,value=0,if=buff.ca_inc.up
+    variable,name=starfall_cosmos,value=(talent.starweaver&(talent.meteorites&(talent.incarnation_chosen_of_elune&talent.meteor_storm&!talent.power_of_goldrinn|buff.ca_inc.down&(talent.incarnation_chosen_of_elune|talent.stellar_amplification|!talent.power_of_goldrinn))|buff.eclipse.down&(talent.meteorites|talent.aetherial_kindling|talent.stellar_amplification&!talent.power_of_goldrinn))|buff.ca_inc.down&talent.meteorites&talent.aetherial_kindling&talent.stellar_amplification&!talent.power_of_goldrinn|buff.eclipse.down&talent.meteorites&(talent.aetherial_kindling|talent.stellar_amplification|!talent.power_of_goldrinn))&buff.touch_the_cosmos.react&!buff.starweavers_weft.react
+    variable,name=cds,op=set,value=1,if=((((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<?(buff.eclipse.remains-(10*(buff.bloodlust.up*buff.ascendant_stars.down)))<?buff.ca_inc.remains)<1)&(active_dot.moonfire>=active_enemies|active_dots.moonfire>=10|spell_targets=1&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&spell_targets=1))&target.time_to_die>20
+    variable,name=cds,op=set,value=0,if=buff.ca_inc.up
+    variable,name=mini,op=set,value=1,if=(((cooldown.eclipse.remains<?cooldown.force_of_nature.remains<?cooldown.fury_of_elune.remains<?buff.eclipse.remains)<1)&((((trinket.1.cooldown.remains*!variable.cd_overflow)<?cooldown.ca_inc.remains)+10)>(cooldown.force_of_nature.duration<?cooldown.fury_of_elune.duration-15)))&hero_tree.keeper_of_the_grove
+    variable,name=mini,op=set,value=0,if=prev_gcd.1.eclipse/run_action_list,name=opener,if=variable.opener
+    run_action_list,name=mini,if=variable.mini&!variable.opener/run_action_list,name=cooldowns,if=variable.cds&!variable.opener
+    run_action_list,name=ec_st,if=hero_tree.elunes_chosen&spell_targets=1/run_action_list,name=kotg_st,if=spell_targets=1
+    run_action_list,name=aoe,if=spell_targets>1
+  Priorities (actions.cooldowns):
+    moonfire,target_if=hero_tree.elunes_chosen&dot.moonfire.remains<12&spell_targets=1&cooldown.fury_of_elune.remains<1,line_cd=20
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1
+    sunfire,if=dot.sunfire.remains<18&cooldown.fury_of_elune.remains<1&(cooldown.force_of_nature.remains<1&hero_tree.keeper_of_the_grove|!hero_tree.keeper_of_the_grove),line_cd=10
+    fury_of_elune/force_of_nature,if=hero_tree.keeper_of_the_grove/celestial_alignment,add_queue_lag=1
+  Priorities (actions.kotg_st):
+    sunfire,target_if=remains<2|refreshable&buff.eclipse.down&target.time_to_die>10
+    moonfire,target_if=buff.harmony_of_the_grove.down&(remains<2|refreshable&!buff.eclipse.up&!cooldown.force_of_nature.remains<dot.moonfire.remains)&target.time_to_die>10
+    celestial_alignment,if=fight_remains<=buff.ca_inc.duration
+    fury_of_elune,if=fight_remains<20|cooldown.force_of_nature.remains>cooldown.fury_of_elune.duration/force_of_nature,if=fight_remains<20
+    convoke_the_spirits,if=astral_power<40&buff.harmony_of_the_grove.up|fight_remains<10
+    eclipse,if=variable.eclipse_timings&(astral_power>60|charges_fractional=2)|fight_remains<(15+(buff.ca_inc.duration*(cooldown.ca_inc.remains<fight_remains-20)))
+    starfall,if=buff.starweavers_warp.react/starfall,if=variable.starfall_cosmos
+    starsurge,if=buff.eclipse.down&astral_power.deficit<20|buff.eclipse.up&action.starsurge.cost>1&(astral_power.deficit<10|cooldown.force_of_nature.remains>5+buff.eclipse.remains|buff.ascendant_stars.up)|buff.touch_the_cosmos.react|buff.starweavers_weft.react
+    new_moon,if=astral_power.deficit>energize_amount/half_moon,if=astral_power.deficit>energize_amount
+    full_moon,if=astral_power.deficit>energize_amount
+    wild_mushroom,if=buff.eclipse.up|cooldown.wild_mushroom.full_recharge_time<cooldown.ca_inc.remains/wrath
+  Priorities (actions.mini):
+    fury_of_elune/force_of_nature/eclipse
+  Priorities (actions.opener):
+    moonfire,if=!talent.convoke_the_spirits,line_cd=999
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1/sunfire,line_cd=999
+    eclipse,if=!talent.convoke_the_spirits,line_cd=999
+    starsurge,if=buff.ascendant_stars.up&hero_tree.elunes_chosen&!talent.lunation&spell_targets=1
+    wrath,if=astral_power<80&hero_tree.keeper_of_the_grove&spell_targets.starfire<3&!talent.convoke_the_spirits
+    starfire,if=!talent.convoke_the_spirits&(astral_power<80&spell_targets>=3&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&(buff.ascendant_fires.up&talent.lunation|!talent.lunation&(astral_power<80&spell_targets=1)))
+    moonfire,if=!talent.convoke_the_spirits&(dot.moonfire.remains<15-(8*talent.aetherial_kindling))&cooldown.force_of_nature.ready&hero_tree.elunes_chosen&cooldown.fury_of_elune.ready,line_cd=999
+    sunfire,if=!talent.convoke_the_spirits&dot.sunfire.remains<15&cooldown.force_of_nature.ready&cooldown.fury_of_elune.ready,line_cd=999
+    fury_of_elune/force_of_nature/celestial_alignment,add_queue_lag=1
+  Actions:
+    ascendant_eclipses                     Count=  15.4|  0.000sec  DPE=188410| 0.00%  DPET=516605  DPR=     0  pDPS=    0
+    astral_smolder                         Count= 459.9|  0.632sec  DPE= 10295| 9.54%  DPET=     0  DPR=     0  pDPS=15644  TickCount=   140  MissTick= 0.00%  Tick= 33716|  3153|121492  UpTime= 92.51%
+    dream_burst                            Count=  17.2| 17.186sec  DPE= 80962| 2.81%  DPET=     0  DPR=     0  pDPS= 4583  Miss= 0.00%  Hit= 57774| 43569| 83809  Crit=119992|100353|173466|36.70%
+    eclipse                                Count=  11.2| 28.460sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    force_of_nature                        Count=   5.8| 57.025sec  DPE=922560| 0.00%  DPET=900834  DPR=     0  pDPS=    0
+    fungal_growth                          Count=   9.4| 35.194sec  DPE= 29811| 0.57%  DPET=     0  DPR=     0  pDPS=  934  TickCount=    41  MissTick= 0.00%  Tick=  4959|  3295| 11484  CritTick= 10651|  6857| 24798|33.20%  UpTime= 26.95%
+    fury_of_elune                          Count=   5.4| 61.151sec  DPE=177174| 1.93%  DPET=173432  DPR=     0  pDPS= 3187  Miss= 0.00%  Hit=  3743|  2174|  6398  Crit=  8827|  4524| 13434|55.25%
+    incarnation_chosen_of_elune            Count=   4.2| 80.885sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    lunar_bolt                             Count=  12.5| 22.096sec  DPE= 32996| 0.83%  DPET=     0  DPR=     0  pDPS= 1369  Miss= 0.00%  Crit= 33315| 28400| 44843|100.00%
+    moonfire                               Count=   9.7| 29.640sec  DPE=114570| 2.25%  DPET=114864  DPR=     0  pDPS= 3684  Miss= 0.00%  Hit=  7366|  6012|  8854  Crit= 15415| 12509| 16911|22.70%  TickCount=   123  MissTick= 0.00%  Tick=  6554|  5218| 10318  CritTick= 13710| 10857| 22375|24.97%  UpTime= 41.02%
+    moonfire_treants                       Count=  34.7| 22.524sec  DPE= 79823| 5.59%  DPET=     0  DPR=     0  pDPS= 9158  Miss= 0.00%  Hit=  9502|  6752| 15103  Crit= 21552| 14050| 31192|38.48%  TickCount=   199  MissTick= 0.00%  Tick=  7986|  5979| 13650  CritTick= 17974| 12384| 28663|34.50%  UpTime= 58.82%
+    potion                                 Count=   1.5|300.364sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire                 Count=  46.4|  6.661sec  DPE=  8550| 0.61%  DPET=     0  DPR=     0  pDPS=  995  Miss= 0.00%  Hit=  6490|  6190|  7813
+    rune_of_unleashed_fire_heal            Count=   4.7| 55.651sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering  Count=   4.7| 55.651sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0  TickCount=    35  UpTime= 11.39%
+    rune_of_unleashed_fire_lingering       Count=  46.4|  6.661sec  DPE=  2055| 0.19%  DPET=     0  DPR=     0  pDPS=  314  TickCount=   235  MissTick= 0.00%  Tick=   406|   387|   488  UpTime= 77.33%
+    shooting_stars                         Count=   0.0|  0.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    shooting_stars_moonfire                Count=  84.8|  3.469sec  DPE= 23277| 3.98%  DPET=     0  DPR=     0  pDPS= 6545  MissTick= 0.00%  Tick= 15266|  8986| 29171  CritTick= 35077| 18698| 63558|40.57%
+    shooting_stars_sunfire                 Count=  88.2|  3.607sec  DPE= 23488| 4.17%  DPET=     0  DPR=     0  pDPS= 6859  MissTick= 0.00%  Tick= 15387|  8986| 28799  CritTick= 34853| 19092| 63558|41.51%
+    solar_bolt                             Count=  15.4| 20.539sec  DPE=161629| 5.00%  DPET=     0  DPR=     0  pDPS= 8191  Miss= 0.00%  Crit=162920|139569|255700|100.00%
+    starsurge                              Count= 104.4|  2.872sec  DPE=174873|36.78%  DPET=188056  DPR=  7383  pDPS=60330  Miss= 0.00%  Hit=108153| 64694|211652  Crit=254285|133961|455590|45.35%
+    sunfire                                Count=  18.4| 16.847sec  DPE=191163| 7.07%  DPET=196133  DPR=     0  pDPS=11583  Miss= 0.00%  Hit=  7718|  5465| 12190  Crit= 16541| 11372| 25615|28.37%  TickCount=   321  MissTick= 0.00%  Tick=  7388|  4743| 12351  CritTick= 15983|  9870| 26058|34.42%  UpTime= 99.52%
+    sunseeker_mushroom                     Count=   9.4| 35.194sec  DPE= 77134| 0.90%  DPET=     0  DPR=     0  pDPS= 1484  Miss= 0.00%  Hit= 33927| 25173| 53767  Crit= 71276| 53485|109062|35.20%
+    sylvan_beckoning                       Count=  14.3| 22.144sec  DPE= 85284| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    sylvan_beckoning_starfall_driver       Count=   0.0|  0.000sec  DPE=     0| 0.73%  DPET=     0  DPR=     0  pDPS= 1186  MissTick= 0.00%  Tick=  2870|  2647|  3951  CritTick=  5997|  5508|  8054|26.27%
+    wrath                                  Count= 169.6|  1.785sec  DPE= 37653|12.87%  DPET= 39572  DPR=     0  pDPS=21079  Miss= 0.00%  Hit= 27802| 16113| 50423  Crit= 61065| 33784|103283|29.81%
+   Sylvan Beckoning (DPS=7651.016170893258)
+    starsurge                              Count=  69.9|  4.277sec  DPE= 12250| 1.72%  DPET=  9091  DPR=     0  pDPS= 7651  Miss= 0.00%  Hit=  9678|  8941| 13344  Crit= 20088| 18705| 26747|25.15%
+   Treant (DPS=21207.260776171297)
+    melee                                  Count= 154.1|  1.861sec  DPE=  7942| 2.46%  DPET=  7449  DPR=     0  pDPS=21207  Miss= 0.00%  Hit=  6119|  5493|  8367  Crit= 12758| 11431| 17410|26.99%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/blessing_of_the_bronze/flask_of_the_magisters/harandar_celebration/lycaras_teachings_mast/mark_of_the_wild
+    moonkin_form/power_word_fortitude/skyfury/voidtouched
+  Dynamic Buffs:
+    50lb_midnight_salmon           : start=  3.2 refresh=  0.3 interval= 73.6 trigger= 62.1 duration= 12.0 uptime= 12.38%
+    akilzons_clarity               : start= 14.2 refresh=101.4 interval= 22.0 trigger= 15.7 duration= 16.4 uptime= 76.29%  benefit= 79.47%
+    akilzons_rite                  : start=  2.4 refresh=  0.3 interval= 80.0 trigger= 66.6 duration= 15.5 uptime= 12.08%
+    arcanoweave_insight            : start=  5.9 refresh=  5.9 interval= 49.5 trigger= 23.8 duration= 27.7 uptime= 54.75%
+    arcanoweave_insight_ally       : start=  2.9 refresh=  0.5 interval= 82.4 trigger= 68.1 duration= 20.2 uptime= 19.26%
+    arcanoweave_insight_ally       : start=  3.5 refresh=  0.7 interval= 67.1 trigger= 53.9 duration= 21.8 uptime= 24.37%
+    arcanoweave_insight_ally       : start=  3.0 refresh=  0.8 interval= 70.1 trigger= 52.8 duration= 21.8 uptime= 22.11%
+    ascendant_fires                : start= 15.3 refresh=  4.2 interval= 20.4 trigger= 15.7 duration=  3.4 uptime= 17.44%  benefit=  9.04%
+    ascendant_stars                : start= 14.3 refresh=  5.2 interval= 21.9 trigger= 15.7 duration=  3.9 uptime= 18.22%  benefit= 40.41%
+    astral_communion               : start= 14.4 refresh=  5.2 interval= 21.8 trigger= 15.7 duration=  0.9 uptime=  4.29%
+    balance_of_all_things_arcane   : start=  4.2 refresh=  0.0 interval= 82.0 trigger= 82.0 duration=  9.8 uptime= 13.52%
+    balance_of_all_things_nature   : start= 14.3 refresh=  1.1 interval= 21.9 trigger= 20.3 duration= 10.1 uptime= 47.12%
+    bloodlust                      : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration= 40.0 uptime= 13.35%
+    blooming_infusion_heal         : start= 14.1 refresh=  6.6 interval= 21.6 trigger= 14.7 duration= 15.3 uptime= 70.57%
+    blooming_infusion_heal_counter : start= 21.4 refresh= 83.0 interval= 14.3 trigger=  2.9 duration= 11.3 uptime= 79.72%
+    brittle_torga_totem            : start=  3.2 refresh=  0.4 interval= 66.4 trigger= 54.7 duration= 12.9 uptime= 13.55%
+    cenarius_might                 : start= 14.3 refresh=  5.3 interval= 21.9 trigger= 15.7 duration=  6.2 uptime= 28.95%
+    critical_ritual                : start=  3.5 refresh=  0.3 interval= 65.2 trigger= 54.6 duration= 15.8 uptime= 18.03%
+    debilitating_venom_Crit        : start=  0.6 refresh=  0.0 interval=204.7 trigger=204.7 duration= 14.3 uptime=  2.78%
+    debilitating_venom_Haste       : start=  0.5 refresh=  0.0 interval=122.3 trigger=122.3 duration= 15.0 uptime=  2.35%
+    debilitating_venom_Mastery     : start=  0.9 refresh=  0.0 interval=122.8 trigger=122.8 duration= 15.0 uptime=  4.88%
+    debilitating_venom_Vers        : start=  0.7 refresh=  0.0 interval=163.7 trigger=163.7 duration= 14.4 uptime=  3.39%
+    dream_burst                    : start=  5.8 refresh=  0.0 interval= 57.6 trigger= 57.6 duration= 10.1 uptime= 19.61%
+    eclipse_lunar                  : start=  4.2 refresh=  0.0 interval= 82.0 trigger= 82.0 duration= 19.5 uptime= 26.80%  benefit= 37.70%
+    eclipse_solar                  : start= 14.2 refresh=  1.2 interval= 22.0 trigger= 20.3 duration= 16.4 uptime= 76.30%  benefit= 78.44%
+    empowering_venom_Crit          : start=  0.7 refresh=  0.0 interval=196.1 trigger=196.1 duration= 14.9 uptime=  3.69%
+    empowering_venom_Haste         : start=  0.5 refresh=  0.0 interval=122.7 trigger=122.7 duration= 15.0 uptime=  2.44%
+    empowering_venom_Mastery       : start=  0.8 refresh=  0.0 interval=152.8 trigger=152.8 duration= 13.8 uptime=  3.68%
+    empowering_venom_Vers          : start=  0.9 refresh=  0.0 interval=142.9 trigger=142.9 duration= 14.7 uptime=  4.65%
+    fury_of_elune                  : start=  5.4 refresh=  0.0 interval= 61.3 trigger= 61.3 duration=  7.9 uptime= 14.20%
+    halazzis_rite                  : start=  2.0 refresh=  0.0 interval= 77.6 trigger= 77.6 duration= 11.6 uptime=  7.67%
+    harmony_of_the_grove           : start=  5.8 refresh= 11.7 interval= 57.6 trigger= 16.9 duration= 10.2 uptime= 19.58%  benefit= 28.73%
+    hasty_ritual                   : start=  4.4 refresh=  0.7 interval= 60.5 trigger= 46.9 duration= 16.3 uptime= 22.91%
+    incarnation_chosen_of_elune    : start=  4.2 refresh=  0.0 interval= 82.0 trigger= 82.0 duration= 19.5 uptime= 26.80%
+    janalais_rite                  : start=  6.5 refresh=  3.4 interval= 44.3 trigger= 26.5 duration= 18.2 uptime= 39.32%
+    lights_potential               : start=  1.5 refresh=  0.0 interval=306.3 trigger=306.3 duration= 27.0 uptime= 13.14%
+    lycaras_teachings_haste        : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    masterful_ritual               : start=  3.3 refresh=  0.7 interval= 74.5 trigger= 57.0 duration= 16.3 uptime= 17.19%
+    nalorakks_rite                 : start=  1.7 refresh=  0.2 interval= 81.8 trigger= 69.4 duration= 15.4 uptime=  8.48%
+    rotting_voidfin                : start=  2.3 refresh=  0.2 interval= 66.3 trigger= 59.9 duration= 12.2 uptime=  9.48%
+    rune_of_burning_haste          : start= 10.8 refresh= 40.2 interval= 21.1 trigger=  5.8 duration= 24.6 uptime= 87.80%
+    seriously_sharp_seashell       : start=  2.7 refresh=  0.2 interval= 74.9 trigger= 66.0 duration= 12.4 uptime= 11.14%
+    slick_and_slimy_gralstone      : start=  2.7 refresh=  0.5 interval= 87.4 trigger= 72.0 duration= 12.6 uptime= 11.30%
+    solstice                       : start= 19.5 refresh=  0.0 interval= 15.7 trigger= 15.7 duration=  5.7 uptime= 28.95%  benefit= 29.62%
+    soul_fang_alacrity             : start=  9.8 refresh=  6.3 interval= 30.6 trigger= 17.9 duration= 15.2 uptime= 49.09%
+    starlord                       : start= 16.4 refresh= 88.1 interval= 18.8 trigger=  2.9 duration= 16.8 uptime= 89.71%
+    sylvan_beckoning               : start= 14.3 refresh=  0.0 interval= 21.9 trigger= 21.9 duration=  7.9 uptime= 36.85%
+    tattered_tortollan_scroll      : start=  1.8 refresh=  0.2 interval= 85.9 trigger= 73.5 duration= 12.6 uptime=  7.77%
+    touch_the_cosmos               : start= 19.2 refresh=  1.6 interval= 15.2 trigger= 13.9 duration=  1.3 uptime=  7.78%
+    versatile_ritual               : start=  4.3 refresh=  0.8 interval= 60.5 trigger= 48.6 duration= 16.0 uptime= 22.53%
+    Sylvan Beckoning-starfall      : start= 14.3 refresh=  0.0 interval= 21.9 trigger= 21.9 duration=  7.9 uptime=100.00%
+  Up-Times:
+     27.15% : Fungal Growth                 
+      1.86% : Astral Power Cap              
+  Gains:
+       147.5 : Natures Balance         (astral_power)   (overflow=1.97%)
+        94.8 : force_of_nature         (astral_power)   (overflow=21.20%)
+       210.1 : fury_of_elune           (astral_power)   (overflow=8.00%)
+        54.8 : moonfire                (astral_power)   (overflow=5.00%)
+       169.8 : shooting_stars_moonfire (astral_power)   (overflow=1.63%)
+       172.9 : shooting_stars_sunfire  (astral_power)   (overflow=1.25%)
+       109.2 : sunfire                 (astral_power) 
+        93.5 : sunseeker_mushroom      (astral_power)   (overflow=2.25%)
+      1403.4 : wrath                   (astral_power) 
+    Pet "Sylvan Beckoning" Gains:
+    Pet "Treant" Gains:
+  Waiting:  0.00%
+
+Player: NoOH night_elf druid balance 90
+  DPS=145921.381297616 DPS-Error=2157.3680256521384/1.48% DPS-Range=8877.173610375656/6.08%
+  DPR=17172.246852218403 RPS-Out=8.118886576482831 RPS-In=8.063303503295195 Resource=astral_power Waiting=0 ApM=64.93236212278876
+  Talents: CYGADBD3hSPCL9Y9gz68WcKvMAAAAAAAAAAAAAAAAAWoMLNjxMDwsNzMzMbmBMLjlZWmxMjZWmZZmZGshBAjtFjttZ2sMTzMLzEAAAgNzMPwYwmxMGDAzMYmBGA
+  Core Stats:    strength=265|265(265)  agility=622|622(622)  stamina=40650|38715(37226)  intellect=3156|2986(2844)  spirit=0|0(0)  health=813000|774300  mana=262500|262500
+  Generic Stats: mastery=21.55%|17.36%(697)  versatility=9.26%|9.26%(176)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=3156|2986(0)  hit=15.00%|15.00%(0)  crit=23.35%|23.35%(844)  haste=30.32%|22.94%(956)  speed=30.32%|22.94%  manareg=2560|2560(0)
+  Attack Stats:  power=0|0(0)  hit=7.50%|7.50%(0)  crit=23.35%|23.35%(844)  expertise=7.50%|7.50%(0)  haste=30.32%|22.94%(956)  speed=30.32%|22.94%
+  Defense Stats: armor=1087|1087(1087) miss=3.00%|3.00%  dodge=8.25%|8.25%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=4.63%|4.63%(176)
+  Priorities (actions.precombat):
+    snapshot_stats
+    variable,name=Starfall_talents,value=(spell_targets<3&(talent.starweaver&!talent.aetherial_kindling&!talent.meteorites&(talent.stellar_amplification&talent.power_of_goldrinn|talent.stellar_amplification&talent.power_of_goldrinn&talent.meteor_storm|talent.power_of_goldrinn&!talent.meteor_storm))|(talent.rattle_the_stars&!talent.meteorites&((talent.stellar_amplification|talent.power_of_goldrinn)&!talent.aetherial_kindling)))
+    variable,name=no_cd_talent,value=!talent.celestial_alignment&!talent.incarnation_chosen_of_elune|druid.no_cds
+    variable,name=ca_opener,op=set,value=1/variable,name=opener,op=set,value=1/variable,name=on_use_trinket,op=add,value=trinket.1.has_use_buff
+    variable,name=on_use_trinket,op=add,value=(trinket.2.has_use_buff)*2/moonkin_form/wrath/wrath/wrath,if=talent.dream_surge&enemies<=2
+    starfire,if=hero_tree.elunes_chosen|enemies>2
+  Priorities (actions.default):
+    potion,if=((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))|fight_remains<=30
+    use_items,if=!trinket.1.is.wraps_of_cosmic_madness&!trinket.2.is.wraps_of_cosmic_madness&!trinket.1.is.font_of_venomous_rage&!trinket.2.is.font_of_venomous_rage&((variable.opener|variable.cds)&((prev_gcd.1.force_of_nature&hero_tree.keeper_of_the_grove|prev_gcd.1.fury_of_elune&hero_tree.elunes_chosen)|!talent.force_of_nature&!talent.fury_of_elune))&(buff.harmony_of_the_grove.up|hero_tree.elunes_chosen)|fight_remains<20
+    use_item,name=wraps_of_cosmic_madness,if=!buff.eclipse.up/use_item,name=font_of_venomous_rage,if=!buff.eclipse.up
+    variable,name=cd_overflow,op=set,value=1,if=cooldown.ca_inc.charges_fractional>1.9|fight_remains<trinket.1.cooldown.remains
+    variable,name=cd_overflow,op=set,value=0,if=cooldown.ca_inc.charges_fractional<1
+    berserking,if=buff.ca_inc.up&(buff.harmony_of_the_grove.up|!talent.dream_surge)|fight_remains<cooldown.ca_inc.remains
+    invoke_external_buff,name=power_infusion,if=buff.ca_inc.up
+    variable,name=eclipse_timings,value=((cooldown.eclipse.full_recharge_time<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((buff.eclipse.duration+2)))|((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?(buff.eclipse.duration+2)))&(buff.eclipse.duration<=(cooldown.ca_inc.remains<?cooldown.fury_of_elune.remains<?cooldown.force_of_nature.remains)|!talent.fury_of_elune|hero_tree.elunes_chosen|talent.radiant_moonlight)|fight_remains<buff.eclipse.duration)&(buff.eclipse.remains<2&fight_style.dungeonroute|!fight_style.dungeonroute)
+    variable,name=opener,op=set,value=0,if=buff.ca_inc.up
+    variable,name=starfall_cosmos,value=(talent.starweaver&(talent.meteorites&(talent.incarnation_chosen_of_elune&talent.meteor_storm&!talent.power_of_goldrinn|buff.ca_inc.down&(talent.incarnation_chosen_of_elune|talent.stellar_amplification|!talent.power_of_goldrinn))|buff.eclipse.down&(talent.meteorites|talent.aetherial_kindling|talent.stellar_amplification&!talent.power_of_goldrinn))|buff.ca_inc.down&talent.meteorites&talent.aetherial_kindling&talent.stellar_amplification&!talent.power_of_goldrinn|buff.eclipse.down&talent.meteorites&(talent.aetherial_kindling|talent.stellar_amplification|!talent.power_of_goldrinn))&buff.touch_the_cosmos.react&!buff.starweavers_weft.react
+    variable,name=cds,op=set,value=1,if=((((cooldown.force_of_nature.remains*hero_tree.keeper_of_the_grove)<?(cooldown.fury_of_elune.remains)<?((trinket.1.cooldown.remains*!variable.cd_overflow*hero_tree.keeper_of_the_grove)<?cooldown.ca_inc.remains)<?(buff.eclipse.remains-(10*(buff.bloodlust.up*buff.ascendant_stars.down)))<?buff.ca_inc.remains)<1)&(active_dot.moonfire>=active_enemies|active_dots.moonfire>=10|spell_targets=1&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&spell_targets=1))&target.time_to_die>20
+    variable,name=cds,op=set,value=0,if=buff.ca_inc.up
+    variable,name=mini,op=set,value=1,if=(((cooldown.eclipse.remains<?cooldown.force_of_nature.remains<?cooldown.fury_of_elune.remains<?buff.eclipse.remains)<1)&((((trinket.1.cooldown.remains*!variable.cd_overflow)<?cooldown.ca_inc.remains)+10)>(cooldown.force_of_nature.duration<?cooldown.fury_of_elune.duration-15)))&hero_tree.keeper_of_the_grove
+    variable,name=mini,op=set,value=0,if=prev_gcd.1.eclipse/run_action_list,name=opener,if=variable.opener
+    run_action_list,name=mini,if=variable.mini&!variable.opener/run_action_list,name=cooldowns,if=variable.cds&!variable.opener
+    run_action_list,name=ec_st,if=hero_tree.elunes_chosen&spell_targets=1/run_action_list,name=kotg_st,if=spell_targets=1
+    run_action_list,name=aoe,if=spell_targets>1
+  Priorities (actions.cooldowns):
+    moonfire,target_if=hero_tree.elunes_chosen&dot.moonfire.remains<12&spell_targets=1&cooldown.fury_of_elune.remains<1,line_cd=20
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1
+    sunfire,if=dot.sunfire.remains<18&cooldown.fury_of_elune.remains<1&(cooldown.force_of_nature.remains<1&hero_tree.keeper_of_the_grove|!hero_tree.keeper_of_the_grove),line_cd=10
+    fury_of_elune/force_of_nature,if=hero_tree.keeper_of_the_grove/celestial_alignment,add_queue_lag=1
+  Priorities (actions.kotg_st):
+    sunfire,target_if=remains<2|refreshable&buff.eclipse.down&target.time_to_die>10
+    moonfire,target_if=buff.harmony_of_the_grove.down&(remains<2|refreshable&!buff.eclipse.up&!cooldown.force_of_nature.remains<dot.moonfire.remains)&target.time_to_die>10
+    celestial_alignment,if=fight_remains<=buff.ca_inc.duration
+    fury_of_elune,if=fight_remains<20|cooldown.force_of_nature.remains>cooldown.fury_of_elune.duration/force_of_nature,if=fight_remains<20
+    convoke_the_spirits,if=astral_power<40&buff.harmony_of_the_grove.up|fight_remains<10
+    eclipse,if=variable.eclipse_timings&(astral_power>60|charges_fractional=2)|fight_remains<(15+(buff.ca_inc.duration*(cooldown.ca_inc.remains<fight_remains-20)))
+    starfall,if=buff.starweavers_warp.react/starfall,if=variable.starfall_cosmos
+    starsurge,if=buff.eclipse.down&astral_power.deficit<20|buff.eclipse.up&action.starsurge.cost>1&(astral_power.deficit<10|cooldown.force_of_nature.remains>5+buff.eclipse.remains|buff.ascendant_stars.up)|buff.touch_the_cosmos.react|buff.starweavers_weft.react
+    new_moon,if=astral_power.deficit>energize_amount/half_moon,if=astral_power.deficit>energize_amount
+    full_moon,if=astral_power.deficit>energize_amount
+    wild_mushroom,if=buff.eclipse.up|cooldown.wild_mushroom.full_recharge_time<cooldown.ca_inc.remains/wrath
+  Priorities (actions.mini):
+    fury_of_elune/force_of_nature/eclipse
+  Priorities (actions.opener):
+    moonfire,if=!talent.convoke_the_spirits,line_cd=999
+    moonfire,target_if=refreshable&(target.time_to_die-remains)>6&active_dots.moonfire<10&spell_targets>1/sunfire,line_cd=999
+    eclipse,if=!talent.convoke_the_spirits,line_cd=999
+    starsurge,if=buff.ascendant_stars.up&hero_tree.elunes_chosen&!talent.lunation&spell_targets=1
+    wrath,if=astral_power<80&hero_tree.keeper_of_the_grove&spell_targets.starfire<3&!talent.convoke_the_spirits
+    starfire,if=!talent.convoke_the_spirits&(astral_power<80&spell_targets>=3&hero_tree.keeper_of_the_grove|hero_tree.elunes_chosen&(buff.ascendant_fires.up&talent.lunation|!talent.lunation&(astral_power<80&spell_targets=1)))
+    moonfire,if=!talent.convoke_the_spirits&(dot.moonfire.remains<15-(8*talent.aetherial_kindling))&cooldown.force_of_nature.ready&hero_tree.elunes_chosen&cooldown.fury_of_elune.ready,line_cd=999
+    sunfire,if=!talent.convoke_the_spirits&dot.sunfire.remains<15&cooldown.force_of_nature.ready&cooldown.fury_of_elune.ready,line_cd=999
+    fury_of_elune/force_of_nature/celestial_alignment,add_queue_lag=1
+  Actions:
+    ascendant_eclipses                     Count=  15.5|  0.000sec  DPE=169736| 0.00%  DPET=464283  DPR=     0  pDPS=    0
+    astral_smolder                         Count= 449.8|  0.657sec  DPE=  9387| 9.56%  DPET=     0  DPR=     0  pDPS=13973  TickCount=   141  MissTick= 0.00%  Tick= 30111|  2897|114201  UpTime= 92.92%
+    dream_burst                            Count=  17.3| 17.259sec  DPE= 74411| 2.91%  DPET=     0  DPR=     0  pDPS= 4216  Miss= 0.00%  Hit= 51620| 41191| 73611  Crit=109353| 90951|154214|39.94%
+    eclipse                                Count=  11.3| 28.406sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    force_of_nature                        Count=   5.8| 56.995sec  DPE=819775| 0.00%  DPET=791082  DPR=     0  pDPS=    0
+    fungal_growth                          Count=  10.3| 27.809sec  DPE= 27147| 0.63%  DPET=     0  DPR=     0  pDPS=  919  TickCount=    45  MissTick= 0.00%  Tick=  4434|  2959| 10365  CritTick=  9506|  6157| 21970|36.08%  UpTime= 29.52%
+    fury_of_elune                          Count=   5.5| 61.130sec  DPE=152549| 1.89%  DPET=147112  DPR=     0  pDPS= 2770  Miss= 0.00%  Hit=  3323|  1958|  5569  Crit=  7957|  4074| 11694|52.83%
+    incarnation_chosen_of_elune            Count=   4.2| 80.892sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    lunar_bolt                             Count=  12.5| 22.098sec  DPE= 29323| 0.83%  DPET=     0  DPR=     0  pDPS= 1215  Miss= 0.00%  Crit= 29903| 26179| 40671|100.00%
+    moonfire                               Count=   9.8| 29.127sec  DPE=100414| 2.24%  DPET= 99405  DPR=     0  pDPS= 3265  Miss= 0.00%  Hit=  6613|  5448|  8163  Crit= 13969| 11337| 15935|23.53%  TickCount=   122  MissTick= 0.00%  Tick=  5892|   457|  8770  CritTick= 12354|  9748| 19912|23.52%  UpTime= 41.21%
+    moonfire_treants                       Count=  34.6| 23.200sec  DPE= 70019| 5.49%  DPET=     0  DPR=     0  pDPS= 8010  Miss= 0.00%  Hit=  8577|  6119| 13333  Crit= 19367| 13223| 27743|37.08%  TickCount=   197  MissTick= 0.00%  Tick=  7279|  5395| 12494  CritTick= 16044|  3980| 25633|32.53%  UpTime= 58.62%
+    potion                                 Count=   1.5|300.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire                 Count=  47.2|  6.499sec  DPE=  8422| 0.69%  DPET=     0  DPR=     0  pDPS= 1006  Miss= 0.00%  Hit=  6447|  6190|  7774
+    rune_of_unleashed_fire_heal            Count=   5.2| 44.853sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering  Count=   5.2| 44.853sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0  TickCount=    38  UpTime= 12.61%
+    rune_of_unleashed_fire_lingering       Count=  47.2|  6.499sec  DPE=  1974| 0.21%  DPET=     0  DPR=     0  pDPS=  308  TickCount=   231  MissTick= 0.00%  Tick=   403|   387|   486  UpTime= 76.27%
+    shooting_stars                         Count=   0.0|  0.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    shooting_stars_moonfire                Count=  82.4|  3.466sec  DPE= 20465| 3.82%  DPET=     0  DPR=     0  pDPS= 5575  MissTick= 0.00%  Tick= 13703|  8091| 26348  CritTick= 31349| 19272| 55327|38.84%
+    shooting_stars_sunfire                 Count=  87.4|  3.326sec  DPE= 20670| 4.09%  DPET=     0  DPR=     0  pDPS= 5962  MissTick= 0.00%  Tick= 13632|  8091| 26213  CritTick= 31506| 19382| 54321|40.07%
+    solar_bolt                             Count=  15.5| 20.587sec  DPE=146099| 5.12%  DPET=     0  DPR=     0  pDPS= 7457  Miss= 0.00%  Crit=147724|126548|226721|100.00%
+    starsurge                              Count= 103.2|  2.845sec  DPE=156706|36.62%  DPET=166665  DPR=  6577  pDPS=53489  Miss= 0.00%  Hit= 96573| 57668|187668  Crit=229604|120679|399832|46.21%
+    sunfire                                Count=  18.4| 16.666sec  DPE=168976| 7.03%  DPET=171189  DPR=     0  pDPS=10243  Miss= 0.00%  Hit=  6998|  4907| 11323  Crit= 14862| 10306| 22775|30.66%  TickCount=   317  MissTick= 0.00%  Tick=  6679|  4259| 11358  CritTick= 14411|  8945| 23243|33.04%  UpTime= 99.54%
+    sunseeker_mushroom                     Count=  10.3| 27.809sec  DPE= 71290| 1.03%  DPET=     0  DPR=     0  pDPS= 1495  Miss= 0.00%  Hit= 30684| 22814| 48397  Crit= 66247| 48824| 98268|38.97%
+    sylvan_beckoning                       Count=  14.4| 22.195sec  DPE= 77279| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    sylvan_beckoning_starfall_driver       Count=   0.0|  0.000sec  DPE=     0| 0.75%  DPET=     0  DPR=     0  pDPS= 1086  MissTick= 0.00%  Tick=  2612|  2415|  3754  CritTick=  5434|  5026|  7851|26.12%
+    wrath                                  Count= 167.3|  1.846sec  DPE= 34051|12.89%  DPET= 35422  DPR=     0  pDPS=18798  Miss= 0.00%  Hit= 25209| 14638| 44276  Crit= 54579| 30458| 90906|30.20%
+   Sylvan Beckoning (DPS=6924.776495036085)
+    starsurge                              Count=  70.5|  4.289sec  DPE= 11080| 1.77%  DPET=  8141  DPR=     0  pDPS= 6925  Miss= 0.00%  Hit=  8798|  8157| 11926  Crit= 18307| 16973| 24816|24.57%
+   Treant (DPS=18715.79184562764)
+    melee                                  Count= 152.4|  1.885sec  DPE=  7084| 2.44%  DPET=  6575  DPR=     0  pDPS=18716  Miss= 0.00%  Hit=  5574|  5101|  7666  Crit= 11557| 10614| 15951|25.24%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/blessing_of_the_bronze/flask_of_the_magisters/harandar_celebration/lycaras_teachings_mast/mark_of_the_wild
+    moonkin_form/power_word_fortitude/skyfury/voidtouched
+  Dynamic Buffs:
+    50lb_midnight_salmon           : start=  2.6 refresh=  0.2 interval= 89.4 trigger= 80.1 duration= 12.4 uptime= 10.44%
+    akilzons_clarity               : start= 14.3 refresh=101.9 interval= 21.9 trigger= 15.7 duration= 16.3 uptime= 76.78%  benefit= 79.83%
+    akilzons_rite                  : start=  2.3 refresh=  0.4 interval= 82.8 trigger= 58.6 duration= 16.1 uptime= 11.90%
+    arcanoweave_insight            : start=  5.6 refresh=  6.6 interval= 51.9 trigger= 22.1 duration= 28.7 uptime= 52.43%
+    arcanoweave_insight_ally       : start=  2.9 refresh=  0.9 interval= 74.6 trigger= 53.4 duration= 22.2 uptime= 21.45%
+    arcanoweave_insight_ally       : start=  3.2 refresh=  0.4 interval= 68.7 trigger= 60.9 duration= 20.2 uptime= 21.32%
+    arcanoweave_insight_ally       : start=  3.4 refresh=  0.8 interval= 70.8 trigger= 51.7 duration= 22.2 uptime= 24.52%
+    ascendant_fires                : start= 15.4 refresh=  4.2 interval= 20.3 trigger= 15.7 duration=  3.4 uptime= 17.55%  benefit=  9.20%
+    ascendant_stars                : start= 14.4 refresh=  5.2 interval= 21.8 trigger= 15.7 duration=  4.0 uptime= 18.27%  benefit= 41.24%
+    astral_communion               : start= 14.5 refresh=  5.2 interval= 21.8 trigger= 15.7 duration=  0.9 uptime=  4.26%
+    balance_of_all_things_arcane   : start=  4.2 refresh=  0.0 interval= 82.1 trigger= 82.1 duration=  9.8 uptime= 13.51%
+    balance_of_all_things_nature   : start= 14.4 refresh=  1.1 interval= 21.9 trigger= 20.2 duration= 10.1 uptime= 47.53%
+    bloodlust                      : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration= 40.0 uptime= 13.35%
+    blooming_infusion_heal         : start= 13.6 refresh=  6.6 interval= 22.3 trigger= 14.9 duration= 15.4 uptime= 69.88%
+    blooming_infusion_heal_counter : start= 21.0 refresh= 82.2 interval= 14.5 trigger=  2.9 duration= 11.4 uptime= 78.88%
+    brittle_torga_totem            : start=  2.5 refresh=  0.4 interval= 74.8 trigger= 61.4 duration= 12.8 uptime= 10.80%
+    cenarius_might                 : start= 14.4 refresh=  5.3 interval= 21.9 trigger= 15.7 duration=  6.2 uptime= 29.15%
+    debilitating_venom_Crit        : start=  0.9 refresh=  0.0 interval=163.5 trigger=163.5 duration= 15.0 uptime=  4.72%
+    debilitating_venom_Haste       : start=  0.7 refresh=  0.0 interval=184.3 trigger=184.3 duration= 14.4 uptime=  3.23%
+    debilitating_venom_Mastery     : start=  0.4 refresh=  0.0 interval=123.3 trigger=123.3 duration= 15.0 uptime=  1.86%
+    debilitating_venom_Vers        : start=  0.8 refresh=  0.0 interval=147.2 trigger=147.2 duration= 14.4 uptime=  3.58%
+    dream_burst                    : start=  5.8 refresh=  0.0 interval= 57.6 trigger= 57.6 duration= 10.2 uptime= 19.66%
+    eclipse_lunar                  : start=  4.2 refresh=  0.0 interval= 82.1 trigger= 82.1 duration= 19.4 uptime= 26.71%  benefit= 37.62%
+    eclipse_solar                  : start= 14.3 refresh=  1.2 interval= 21.9 trigger= 20.2 duration= 16.3 uptime= 76.79%  benefit= 79.28%
+    empowering_venom_Crit          : start=  0.8 refresh=  0.0 interval=122.5 trigger=122.5 duration= 14.8 uptime=  4.18%
+    empowering_venom_Haste         : start=  1.0 refresh=  0.0 interval=171.6 trigger=171.6 duration= 14.2 uptime=  4.74%
+    empowering_venom_Mastery       : start=  0.7 refresh=  0.0 interval=184.0 trigger=184.0 duration= 14.6 uptime=  3.36%
+    empowering_venom_Vers          : start=  0.4 refresh=  0.0 interval=123.2 trigger=123.2 duration= 15.0 uptime=  2.18%
+    fury_of_elune                  : start=  5.5 refresh=  0.0 interval= 61.3 trigger= 61.3 duration=  7.9 uptime= 14.24%
+    halazzis_rite                  : start=  2.4 refresh=  0.0 interval= 60.9 trigger= 60.9 duration= 10.2 uptime=  7.76%
+    harmony_of_the_grove           : start=  5.8 refresh= 11.7 interval= 57.6 trigger= 16.9 duration= 10.2 uptime= 19.59%  benefit= 28.66%
+    incarnation_chosen_of_elune    : start=  4.2 refresh=  0.0 interval= 82.1 trigger= 82.1 duration= 19.4 uptime= 26.71%
+    janalais_rite                  : start=  6.1 refresh=  3.0 interval= 45.3 trigger= 28.3 duration= 18.1 uptime= 35.21%
+    lights_potential               : start=  1.5 refresh=  0.0 interval=306.1 trigger=306.1 duration= 27.1 uptime= 13.17%
+    lycaras_teachings_haste        : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    nalorakks_rite                 : start=  2.1 refresh=  0.1 interval= 71.4 trigger= 66.2 duration= 14.9 uptime= 10.43%
+    rotting_voidfin                : start=  2.7 refresh=  0.3 interval= 91.8 trigger= 75.9 duration= 12.9 uptime= 11.26%
+    rune_of_burning_haste          : start= 11.6 refresh= 40.7 interval= 20.3 trigger=  5.8 duration= 22.9 uptime= 87.94%
+    seriously_sharp_seashell       : start=  2.3 refresh=  0.1 interval= 81.7 trigger= 78.8 duration= 11.8 uptime=  9.00%
+    slick_and_slimy_gralstone      : start=  2.5 refresh=  0.2 interval= 74.6 trigger= 66.8 duration= 12.1 uptime= 10.04%
+    solstice                       : start= 19.6 refresh=  0.0 interval= 15.7 trigger= 15.7 duration=  5.7 uptime= 29.15%  benefit= 29.85%
+    soul_fang_alacrity             : start=  9.4 refresh=  8.1 interval= 32.5 trigger= 16.9 duration= 16.2 uptime= 50.47%
+    starlord                       : start= 16.1 refresh= 87.2 interval= 19.2 trigger=  2.9 duration= 17.1 uptime= 90.19%
+    sylvan_beckoning               : start= 14.4 refresh=  0.0 interval= 21.9 trigger= 21.9 duration=  7.9 uptime= 37.18%
+    tattered_tortollan_scroll      : start=  2.5 refresh=  0.0 interval= 74.9 trigger= 71.6 duration= 12.1 uptime=  9.31%
+    touch_the_cosmos               : start= 18.3 refresh=  1.7 interval= 15.8 trigger= 14.4 duration=  1.3 uptime=  7.59%
+    Sylvan Beckoning-starfall      : start= 14.4 refresh=  0.0 interval= 21.9 trigger= 21.9 duration=  7.9 uptime=100.00%
+  Up-Times:
+     29.70% : Fungal Growth                 
+      1.83% : Astral Power Cap              
+  Gains:
+       147.7 : Natures Balance         (astral_power)   (overflow=1.83%)
+        99.1 : force_of_nature         (astral_power)   (overflow=17.54%)
+       212.6 : fury_of_elune           (astral_power)   (overflow=7.05%)
+        55.1 : moonfire                (astral_power)   (overflow=5.37%)
+       162.6 : shooting_stars_moonfire (astral_power)   (overflow=1.50%)
+       171.2 : shooting_stars_sunfire  (astral_power)   (overflow=1.84%)
+       108.6 : sunfire                 (astral_power)   (overflow=1.37%)
+       103.0 : sunseeker_mushroom      (astral_power)   (overflow=1.68%)
+      1381.9 : wrath                   (astral_power) 
+    Pet "Sylvan Beckoning" Gains:
+    Pet "Treant" Gains:
+  Waiting:  0.00%
+
+
+ *** Targets *** 
+
+Target: Fluffy_Pillow humanoid tank_dummy unknown 93
+  DTPS=640526.3456865684 DTPS-Error=6908.127725130588/1.08% DTPS-Range=29851.133162645798/4.66%
+  DPR=0 RPS-Out=630422.337746229 RPS-In=0 Resource=health Waiting=0 ApM=0
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|151546735  mana=0|0
+  Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=7.00%|7.00%(0)
+  Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%  manareg=0|0(0)
+  Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=5.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%
+  Defense Stats: armor=1470|1470(1470) miss=3.00%|3.00%  dodge=3.00%|3.00%(0)  parry=3.00%|3.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=0.00%|0.00%(0)
+  Priorities (actions.precombat):
+    snapshot_stats
+  Priorities (actions.default):
+
+  Actions:
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/bleeding/chaos_brand/hunters_mark/mark_of_the_wild/mortal_wounds/mystic_touch/power_word_fortitude/skyfury
+  Dynamic Buffs:
+    stellar_amplification : start=  1.0 refresh=103.4 interval=  6.3 trigger=  2.9 duration=296.6 uptime= 97.91%
+    stellar_amplification : start=  1.0 refresh=101.8 interval= 54.3 trigger=  2.9 duration=284.5 uptime= 98.03%
+    stellar_amplification : start=  1.0 refresh=103.2 interval=  6.3 trigger=  2.9 duration=296.9 uptime= 98.04%
+    stellar_amplification : start=  1.0 refresh=103.5 interval=  5.9 trigger=  2.9 duration=296.9 uptime= 98.02%
+  Waiting:  0.00%
+
+
+Baseline Performance:
+  Networking    = disabled
+  RNG Engine    = xoshiro256+
+  Iterations    = 23 (5, 6, 6, 6)
+  TotalEvents   = 1014718
+  MaxEventQueue = 309
+  TargetHealth  = 151546736
+  SimSeconds    = 5766.000
+  CpuSeconds    = 1.005376116
+  WallSeconds   = 0.584759656
+  InitSeconds   = 0.164167471
+  MergeSeconds  = 0.013408931
+  AnalyzeSeconds= 0.001345455
+  SpeedUp       = 6943
+  EndTime       = 2026-10-07 18:00:03+0000
+
+
+Waiting:
+    All players active 100% of the time.
+
+text report took 0.002158707 seconds.
