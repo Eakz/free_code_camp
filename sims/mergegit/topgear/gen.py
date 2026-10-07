@@ -55,7 +55,7 @@ for eid, n in ((7965,"AmaniMastery"),(7969,"ZuljinsMastery"),(7995,"NaturesWrath
 L = ["name=A_current", "copy=Z_SANITY,A_current", "trinket2=,id=270164,bonus_id=42/13334/12854,ilevel=334"]
 for n, lines in V: L += [f"copy={n},A_current"] + lines
 open("p1_variants.simc", "w").write("\n".join(L) + "\n")
-for fs, it in (("Patchwerk", 8000), ("DungeonSlice", 5000)):
+for fs, it in (("Patchwerk", 4000), ("DungeonSlice", 3000)):
     open(f"run_p1_{fs}.simc", "w").write(f"threads=4\niterations={it}\ndeterministic=1\nfight_style={fs}\ndesired_targets=1\n"
         f"input=../char_2026-10-07_2124.simc\ninput=p1_variants.simc\n")
 print(len(V), "variants")

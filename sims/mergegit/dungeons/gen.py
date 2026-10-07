@@ -60,7 +60,7 @@ for g, vs in groups.items():
     for n, lines in vs:
         L += [f"copy={n},A_current"] + lines
     open(f"{g}_variants.simc", "w").write("\n".join(L) + "\n")
-    for fs, it in (("Patchwerk", 6000), ("DungeonSlice", 4000)):
+    for fs, it in (("Patchwerk", 4000), ("DungeonSlice", 3000)):
         open(f"run_{g}_{fs}.simc", "w").write(
             f"threads=4\niterations={it}\ndeterministic=1\nfight_style={fs}\ndesired_targets=1\n"
             f"input=../char_2026-10-07_2124.simc\ninput={g}_variants.simc\n")
