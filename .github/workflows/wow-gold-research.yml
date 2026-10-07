@@ -1,6 +1,10 @@
 name: wow-gold-research
 
 on:
+  # Run = push a change to wow_gold_scraper/RUN on this branch (workflow_dispatch needs the file on the default branch).
+  push:
+    branches: [claude/cool-goodall-00amud]
+    paths: [wow_gold_scraper/RUN]
   workflow_dispatch:
     inputs:
       pages:
@@ -31,11 +35,11 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m pytest -q tests
       - name: Guide pages
-        if: ${{ inputs.pages }}
+        if: ${{ github.event_name == 'push' || inputs.pages }}
         continue-on-error: true
         run: python wowgold.py pages
       - name: Live EU prices
-        if: ${{ inputs.prices }}
+        if: ${{ github.event_name == 'push' || inputs.prices }}
         continue-on-error: true
         env:
           BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
