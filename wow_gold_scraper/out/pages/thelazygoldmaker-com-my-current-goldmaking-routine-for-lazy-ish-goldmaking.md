@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/my-current-goldmaking-routine-for-lazy-ish-goldmaking fetched: 2026-10-07T20:40:53.288704+00:00 -->
+<!-- source: https://thelazygoldmaker.com/my-current-goldmaking-routine-for-lazy-ish-goldmaking fetched: 2026-10-07T20:46:27.276208+00:00 -->
 <!-- page dates: article:modified_time=2026-08-30T09:44:28+00:00; article:published_time=2026-08-30T09:44:26+00:00 -->
 # My current goldmaking routine for lazy-ish goldmaking! - The Lazy Goldmaker
 

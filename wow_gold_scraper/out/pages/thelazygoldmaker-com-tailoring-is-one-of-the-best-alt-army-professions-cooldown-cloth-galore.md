@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/tailoring-is-one-of-the-best-alt-army-professions-cooldown-cloth-galore fetched: 2026-10-07T20:39:39.768198+00:00 -->
+<!-- source: https://thelazygoldmaker.com/tailoring-is-one-of-the-best-alt-army-professions-cooldown-cloth-galore fetched: 2026-10-07T20:44:45.569680+00:00 -->
 <!-- page dates: article:modified_time=2026-03-19T19:13:57+00:00; article:published_time=2026-03-19T19:13:54+00:00 -->
 # Tailoring is one of the best alt army professions! Cooldown cloth galore! - The Lazy Goldmaker
 

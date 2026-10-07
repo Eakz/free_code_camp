@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/flipping-augment-runes-for-profit fetched: 2026-10-07T20:39:47.380396+00:00 -->
+<!-- source: https://thelazygoldmaker.com/flipping-augment-runes-for-profit fetched: 2026-10-07T20:44:53.063033+00:00 -->
 <!-- page dates: article:published_time=2018-11-08T15:49:39+00:00 -->
 # Flipping Augment Runes for profit - The Lazy Goldmaker
 

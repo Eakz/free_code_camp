@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/midnight-mining-profession-guide fetched: 2026-10-07T20:39:13.882423+00:00 -->
+<!-- source: https://www.method.gg/guides/midnight-mining-profession-guide fetched: 2026-10-07T20:44:18.852900+00:00 -->
 <!-- page dates: none found -->
 # Midnight Mining Profession Guide
 

@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/midnight-world-events-guide fetched: 2026-10-07T20:39:10.126287+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/midnight-world-events-guide fetched: 2026-10-07T20:44:15.117992+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Complete Guide to World Events in World of Warcraft Midnight - World of Warcraft - Icy Veins
 

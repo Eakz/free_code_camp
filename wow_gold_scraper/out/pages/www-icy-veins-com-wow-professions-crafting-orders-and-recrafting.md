@@ -1,170 +1,161 @@
-<!-- source: https://www.icy-veins.com/wow/professions-tailoring fetched: 2026-10-07T20:44:05.177027+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-crafting-orders-and-recrafting fetched: 2026-10-07T20:45:17.304266+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
-# Tailoring Guide for Midnight - World of Warcraft - Icy Veins
+# Crafting Orders and Recrafting Guide - World of Warcraft - Icy Veins
 
-# Tailoring Guide for Midnight
+# Crafting Orders and Recrafting Guide
 Support Our Writers
-This page covers the most important aspects of Tailoring in Midnight, 
-including talent builds and suggestions on how to make gold with the profession.
-## Tailoring in Midnight
-Like always, Tailoring will be responsible for creating cloth gear for combat, 
-such as Arcanoweave Cloak , and gear for other professions, such as Thalassian Alchemy Coveralls . They can also make cosmetic gear such as Scout's Cape , 
-and some House Decor.
-Besides crafting cloth armor and profession gear, Tailors are able to make bags 
-like the Sunfire Silk Backpack , leg enchants for casters and healers, such 
-as Sunfire Silk Spellthread , and powerful embellishments such as Arcanoweave Lining .
-Tailors can also learn to loot much more cloth when killing enemies, and gain 
-a chance to loot high Quality cloth through some of their knowledge talents. 
-Finally, they have cooldown cloth transmutes and specialization trees for Arcanoweave Bolt and Sunfire Silk Bolt .
-### Tailoring Changes in Season 2
-Tailoring can now learn the new Snakeskin Lining Embellishment craft, 
-and the Pattern: Twilight's Blade Bedroll plus Pattern: Tortollan Slingsack Decor crafts.
-## Best Race for Tailoring in Midnight
-Alliance players can be Kul'Tiran for +2 skill points with Tailoring.
-As you need to be a Tailor to loot cloth from enemies, Tailoring also goes well 
-with traditional farmers who can pull and kill high amounts of hyperspawning cloth-rich enemies constantly in a 2x4 group farm format, such as Balance Druid s, Guardian Druid s or Beast Mastery Hunter s!
-## Best Crafting Stats for Tailoring in Midnight
-Tailoring can make great use of all four stats, but you might want to focus on 
-specific stats with different Tailoring specializations. We go into detail with 
-Tailoring stats and the gear you can use to boost them in the specialized guide below:
-## Leveling Tailoring in Midnight
-Increasing your skill is done by crafting items that grant skill points as usual, 
-and in order to be efficient, we recommend trying to get as many first-craft bonuses 
-while leveling as possible, which also grant experience if you are not at 
-maximum level.
-Besides learning basic recipes from the trainer, you can also learn extra recipes 
-beyond the profession trainer by buying them with Moxie from reputation vendors 
-and the vendor next to the profession table in Silvermoon. These will grant more 
-first crafts and can occasionally be the most efficient way to level in the later 
-levels.
-## How to Level Tailoring in Midnight
-### Leveling Tailoring to 60 Skill
-As with most professions, getting to skill 60 can easily be done through trainer 
-recipes, with the remaining skill points being awarded by specialty crafts such 
-as Adherent's Silken Shroud , Sunfire Silk Bolt , and Elegant Artisan's Alchemy Coveralls which you should do based on your choice of profession talents.
-In order to quickly level up uninterrupted, ensure you have the following materials:
-- 119 Silverleaf Thread
-- 20 Eversinging Dust
-- 20 Imbued Bright Linen Bolt
-- 14 Bright Linen
-- 29 Bright Linen Bolt
-- 46 Embroidery Floss
-Extra Eversinging Dust , Embroidery Floss , Imbued Bright Linen Bolt , Bright Linen Bolt , and Silverleaf Thread might be useful in order 
-to guarantee you can hit 60 Skill as some of the recommended recipes are not guaranteed 
-to grant skill-ups on their final crafts.
-With the materials above, craft the following items, learning new recipes from 
-the trainer as they become available:
-- 14 Bright Linen Bolt (use them on later crafts
-- 3 Courtly Slippers
-- 2 Courtly Cloak
-- 3 Courtly Pants
-- 5 Courtly Robes
-- 7+ Courtly Shoulders
-- 10+ Bright Linen Spellthread
-While you can start crafting end game recipes earlier instead of relying on the 
-Tailoring trainer, these will generally be more efficient to craft towards the 
-end of your leveling once regular trainer recipes stop giving reliable skill points, 
-as they are expensive to produce and will generally only turn a profit when crafted 
-at maximum rank with Concentration .
-### Leveling Tailoring Past 60 Skill
-Getting past Skill 60 will then vary heavily depending on which Profession talents 
-you invest into with your Tailoring Knowledge. Since skill-ups are more RNG as 
-you get closer to 100 Tailoring Skill, we recommend checking the Auction House 
-or using one of our recommended 
-crafting Addons to help you skill up without it eating into your wallet too much.
-Thankfully the process isn't too difficult, as you can craft the same type of 
-items all the way to 100, depending on your specialization. We recommend using the 
-following families of recipes:
-- Cooldown Cloths: Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
-	profit on minimum quality making them cheap ways to level up to 100, but the 
-	amount you can craft is time-limited making it a slow process.
-- Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
-	profit on minimum quality making them cheap ways to level up to 100, but the 
-	amount you can craft is time-limited making it a slow process.
-- Consumables: Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
-	consumables are great options for leveling up past 60 as they have solid demand 
-	and can be crafted at maximum quality for a profit immediately through Concentration .
-- Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
-	consumables are great options for leveling up past 60 as they have solid demand 
-	and can be crafted at maximum quality for a profit immediately through Concentration .
-- Combat Gear Master: Combat gear such as Adherent's Silken Shroud is often in demand and 
-	grants a large amount of skill points all the way to 100, but can be hard to 
-	get in quantity due to requiring Spark usage and the work order system.
-- Combat gear such as Adherent's Silken Shroud is often in demand and 
-	grants a large amount of skill points all the way to 100, but can be hard to 
-	get in quantity due to requiring Spark usage and the work order system.
-- Profession Gear Master: Tailoring can also craft gear for other professions, ranging from rare 
-	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
-	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
-	which requires the work order system.
-- Tailoring can also craft gear for other professions, ranging from rare 
-	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
-	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
-	which requires the work order system.
-## Tailoring Knowledge in Midnight
-You will be able to track all weekly and one-time sources of profession knowledge 
-with Myu's Knowledge Points Tracker , 
-which has been converted to an addon in Midnight!
-There are also eight treasures around the world that you can loot to gain up 
-to 24 extra knowledge. You can find them all easily in-game with the aforementioned 
-addon.
-## Best Tailoring Specializations and Talents in Midnight
-The best passive option is to max out the Fabric Specialist tree, as the 
-bonuses granted massively increase the amount of cloth you loot and also allow you 
-to loot high Quality cloth occasionally. Pick the Eastern Kingdoms Cloth sub-node if you want to maximize your cloth gathering in the Eversong Woods and 
-Zul'Aman zones, or Otherworldly Cloth if you are instead looking to farm 
-on Harandar or Voidstorm.
-Investment into the Nimble Needlework tree is the only way to enable 
-drops of Sunfire Silk and Arcanoweave when killing enemies. This 
-tree also teaches you how to craft some Embellished gear and the cooldown bolts, Arcanoweave Bolt and Sunfire Silk Bolt . While initially you can only 
-accumulate 10 crafts of each and it takes a day for their cooldown to be ready again, 
-you can learn how to accumulate up to 30 crafts and halve the cooldown by fully 
-investing into the leaf nodes.
-For cloth gear crafting, profession gear, and cloaks, invest into the Sin'dorei Finery tree, which will increase your skill at these crafts massively 
-and also unlock the generic epic gear recipes with its leaf nodes.
-Finally, the Fiber Arts tree is also very valuable for most tailors due 
-to the high stat gains it provides for all tailoring crafts. The Embroidery sub-tree is particularly notable because it grants stats and skill towards the 
-valuable Spellthread and Embellishment crafts despite being in the generic skill 
-tree.
-## Making Gold with Tailoring in Midnight
-Tailoring allows you to convert cheap cloth into expensive bolts, bags, and crafted 
-gear or leg enchants. High-end gear pieces and bind on pickup profession bags are 
-likely to fetch a good price in the Crafting Orders system, while everything 
-else can be sold at a profit on the auction house.
-It is particularly hard to unlock the crafting of Tailoring recipes at maximum 
-natural skill this time because the trees are configured in a way where the skill 
-increasing nodes are randomly located deep into otherwise useless trees, as is the 
-case in the Fabric Specialist tree, which has 15 skill increases, all locked 
-behind large knowledge point investments.
-As most Tailoring requirements for natural maximum rank crafting require the 
-usage of maximum rank materials and all knowledge skill increases, a gigantic amount 
-of knowledge is needed in order to unlock the best crafts, which will otherwise 
-be locked behind Concentration usage, providing a great opportunity for gold 
-making early on!
-Finally, you can make a lot of passive / farm gold with Tailoring by investing 
-into all the various cloth drop support nodes, as that will cause valuable cloth 
-to drop from whatever enemies you kill during your daily activities.
-We have a specialized guide for Midnight gold-making below, which contains 
-a gold-making tier list and goes deeper into techniques and habits for successful 
-gold making, as well as websites and addons that can help you on your journey!
+This page introduces the Crafting Orders system, which is a critical part of 
+leveling and getting new knowledge for professions and a source of customized bind 
+on pickup items for all players.
+## Crafting Orders
+Crafting Orders is a system that was first introduced in Dragonflight .
+To put it simply, it allows players to place an order for a piece of gear, weapon,
+consumable, or even cosmetics. Other players, crafters, can then see the orders
+and proceed to fulfil them. While the explanation sounds easy, there is more to
+it. In the following guide, you can get a better idea of how the Crafting Orders system works,
+what are the limitations of it, and if it can be of use to you.
+## Location of Crafting Order Vendors
+Much like with Auction Houses, you need to talk with specific NPCs located
+in certain areas to access the Crafting Order user interface. Usually these
+NPC's are located in the main city hubs of the current expansion.
+### Crafting Order Clerk locations
+As Silvermoon serves as the main hub for Midnight, it only 
+makes sense that you would find the vendors here. They have their own little area, 
+which can be found in the location displayed below.
+## Crafting Orders and How They Work
+There are 2 sides when it comes to Crafting Orders. One side is the placing of
+various Crafting Orders, and the other one is actually crafting said orders. While
+anyone can place an order, not anyone can fulfil the Order. You need to have the
+specific profession, recipes, and skills to actually craft the customer-ordered
+item.
+There are various types of orders that can be placed, below you can find a list
+giving a quick overview of them.
+- Public Orders can be placed by anyone and picked up by anyone
+- Personal Orders can be placed by anyone, but only fulfilled by the specific
+person they were sent to
+- Guild Orders can be placed by anyone in the guild, and completed by
+anyone in the guild ignoring cross-realm limitations , making it the main 
+way to craft items across different realms
+- Patron Orders are automatically created by NPCs to guarantee a flow of 
+Work Orders for crafters which help with profession leveling, gold making, and grant 
+special rewards such as Augment runes and skill-increasing optional reagents
+## Limitations for Crafting
+Before we get dive in, there are some limitations in place that you should
+keep in mind before stepping into the world of Crafting Orders. These are there
+to help keep the balance and to prevent one person grabbing up all the crafting
+orders.
+- As a crafter, you can only complete 4 Public Orders per day
+- Guild and Personal Crafting Orders have no daily limits
+- After picking up a Order, you have only 30 minutes to complete it
+- You can only have one work order active at any given time
+- Crafting Orders are server-specific, meaning that you can only see and
+craft for people on your own server with the exception of guild orders, which 
+are cross-realm
+- The player creating the order does not need to provide all the materials; the 
+missing materials can be provided by the Crafter
+- For some higher-level crafts, the player creating the order needs to provide 
+specific materials which can not be given by the Crafter. The most common situation 
+where this happens is when crafting high-end gear, as sparks and crests cannot be 
+provided by the Crafter
+## Placing a Crafting Order
+To place an order, you need to go and talk to a NPC at one of said locations
+above. Doing so will open an auction-house like interface which allows you to filter
+for various items which can be crafted. These items can go from bind on pickup end 
+game gear, all the way down to various Battle Pets.
+Below, you can see a picture of the Crafting Order window for placing orders,
+filtered to Inscription gear from the current expansion.
+Once you find the item you wish to get crafted, you can click on it, and
+it will show you the mandatory and optional Reagents needed to craft it. You,
+as the client, need to provide the crafting Reagents to place the Order. You
+can also choose the duration for how long your Order will be up. In addition
+to the above, you need to also provide a Commission for the Crafter, which might 
+influence how quickly your order is done, if at all.
+You can also choose between order types. Public Orders can be picked up 
+by any crafter in your realm, Personal Orders will only show up for the 
+specified player, and Guild Orders are available only for guilds. With Public Orders , the creator needs to provide all 
+the materials. For Guild and Personal Orders you do not need to provide all the 
+materials, as the Crafter can fill in the missing materials themselves, and you 
+will also be able to request the item to be of a specific minimum Quality .
+Once the Order is placed, you can see it under the My Orders tab. All 
+your active orders will be shown there with some additional information, and you 
+can enter any unclaimed order to cancel it, if needed, in which case all materials 
+and other inputs you provided for the Order will be sent to your mailbox.
+### Optional Reagents
+On top of the mandatory Reagents needed to craft a item, there are also
+various Optional Reagents. These Optional Reagents allow you to modify the
+requested item further, either by adding extra item levels, specific stats, or
+even special effects which typically count towards your character's two Embellishment limit.
+For example, Thalassian Missive of the Fireflash allows to set the secondary 
+stats for your item to Crit and Haste, while Arcanoweave Lining adds an
+additional Embellishment effect to your item.
+These can typically be bought from the Auction House and are created by professions, 
+with the exception of crests to increase item level and sparks / Fused Vitality which are mandatory items to provide for the best combat / profession gear, respectively.
+To understand which profession can create what, take a look at the in-depth 
+profession guides linked below.
+## Fulfilling a Crafting Order
+In order to pick up a crafting order, you need to be near your profession's Crafting Table . These can typically be found next to your trainer in the 
+main expansion hub. If you are having issues locating your trainer, ask any of the 
+guards in the city for the location.
+Once you are near a Crafting Table , you can click on it, and it will
+open up a similar interface as with placing orders. At the bottom of the window,
+navigate to the Crafting Orders tab. From there, you can see all the Orders
+that are currently available, and their rewards. You can also filter and sort for 
+items that you wish to see active orders for.
+Once you find an order you wish to craft, click on it to open up a detailed
+view window. In this window, you can see who placed the Order, your cut of the
+gold, and additional Crafting Details. If you are satisfied with everything,
+you can click on Start Order to pick it up for yourself, which will reserve 
+a public or personal order for yourself for 30 minutes, preventing other crafters 
+from taking on that specific Order.
+After picking up the Order, if you can fulfil its material and Quality requirements, you can click on the Create button in the same window to create 
+the item and then Complete Order to mail it to the person who ordered it 
+and obtain your gold, with other NPC request rewards being sent to mail instead.
+## Recrafting of Crafting Orders
+Recrafting allows you to take a piece of crafted gear and take another shot at 
+it. It requires the original item and a small fraction of the original tradeable 
+reagents that went into it.
+Recrafting lets you add, remove, or change out the Optional Reagents in the gear. Any replaced or removed Optional Reagents will be destroyed in the
+process. It allows you to raise the quality of the gear further if you can craft 
+it at a higher skill than when it was originally created, but keep in mind that 
+if you are trying to do this by increasing the Quality of the materials 
+used, the original materials will still be weighted in the recraft and might cause 
+your skill to drop unexpectedly if you originally crafted with base materials and 
+try to recraft with the best materials.
+### Recrafting Orders
+Just as with regular Crafting Orders, you can also place Recrafting Orders .
+These are special kinds of orders which allow you to upgrade an already crafted
+item to either higher item level, to add some effects, or to change the stats
+on the item.
+Recrafting can be accessed from the same place where you can place your regular 
+Crafting Orders. Just click on the Start Recrafting Order at the top. After 
+that, the Recrafting page opens, allowing you to pick an item you want to recraft.
+Once the item is select additional options become available. You can see
+the materials needed for the recraft, and the possibility to provide Optional
+Reagents. These Optional Reagents allow you to alter the item to your needs,
+adding effects or increasing the item level. You can also see the outcome of
+the recrafting at the top of the page so you know which item you will get.
 This guide has been written by Seksi , member of Cursed Gifts and healing aficionado.
           You can find him answering questions and discussing Restoration Shaman gameplay
           on the Ancestral Guidance and Earthshrine Discords.
 ## Changelog
-- 11 Aug. 2026: Updated for Midnight Season 2 launch.
-- 11 May 2026: Added a detailed leveling section.
+- 11 Aug. 2026: Reviewed for Midnight Season 2 launch.
 - 24 Feb. 2026: Updated for Midnight.
-- 26 Oct. 2024: Reviewed for Patch 11.0.5.
-- 24 Aug. 2024: Updated for The War Within launch.
-- 18 Apr. 2024: Reviewed for Season 4.
-- 19 Mar. 2024: Reviewed for Patch 10.2.6.
-- 07 Nov. 2023: Updated for Patch 10.2.
-- 04 Sep. 2023: Reviewed for Patch 10.1.7.
-- 01 Dec. 2022: Added more pages to the guide.
+- 27 Feb. 2025: Reviewed and updated for Patch 11.1.
+- 17 Dec. 2024: Reviewed for Patch 11.0.7.
+- 09 Sep. 2024: Updated for The War Within.
+- 10 May 2024: Reviewed for Patch 10.2.7.
+- 19 Apr. 2024: Reviewed and updated for Season 4 of Patch 10.2.6.
+- 18 Mar. 2024: Reviewed for Patch 10.2.6.
+- 20 Jan. 2024: Reviewed for Patch 10.2.5.
+- 07 Nov. 2023: Reviewed and updated for Patch 10.2, with new materials.
+- 05 Sep. 2023: Reviewed and updated for Patch 10.1.7.
+- 03 Jan. 2023: Updated Primal Infusion acquisition through Reputation Rewards.
 - 27 Nov. 2022: Updated for Dragonflight.
-- 20 Feb. 2022: Updated for Patch 9.2.
-- 24 Jun. 2021: Updated for Patch 9.1.
-- 24 Nov. 2020: Guide added.
+- 30 Jul. 2022: Updated for Shadowlands Season 4.
+- 19 Jul. 2022: Pure-Air Sail Extensions description fixed.
+- 12 Apr. 2022: Updated with Vestige of the Devourers.
+- 21 Feb. 2022: Guide updated for Patch 9.2.
+- 30 Jun. 2021: Updated for Patch 9.1.
 ### In The Same Category
 
 ## LINKS
@@ -326,8 +317,7 @@ This guide has been written by Seksi , member of Cursed Gifts and healing aficio
 - [Player Housing](https://www.icy-veins.com/wow/player-housing-guide)
 - [Go Ad Free](https://www.icy-veins.com/premium)
 - [](https://discord.gg/AcTek6e)
-- [Midnight Tailoring Stats and Gear Guide](https://www.icy-veins.com/wow/professions-tailoring-stats-and-gear)
-- [Myu's Knowledge Points Tracker](https://www.curseforge.com/wow/addons/myus-knowledge-points-tracker)
+- [Dragonflight](https://www.icy-veins.com/wow/dragonflight-expansion)
 - [](https://discord.gg/earthshrine)
 - [](https://discord.gg/focusedwill)
 - [Seksi](https://raider.io/characters/eu/tarren-mill/Seksixeny)

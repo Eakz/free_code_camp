@@ -1,170 +1,139 @@
-<!-- source: https://www.icy-veins.com/wow/professions-tailoring fetched: 2026-10-07T20:44:05.177027+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/player-housing-guide fetched: 2026-10-07T20:45:14.008235+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
-# Tailoring Guide for Midnight - World of Warcraft - Icy Veins
+# Player Housing Guide - World of Warcraft - Icy Veins
 
-# Tailoring Guide for Midnight
+# Player Housing Guide
 Support Our Writers
-This page covers the most important aspects of Tailoring in Midnight, 
-including talent builds and suggestions on how to make gold with the profession.
-## Tailoring in Midnight
-Like always, Tailoring will be responsible for creating cloth gear for combat, 
-such as Arcanoweave Cloak , and gear for other professions, such as Thalassian Alchemy Coveralls . They can also make cosmetic gear such as Scout's Cape , 
-and some House Decor.
-Besides crafting cloth armor and profession gear, Tailors are able to make bags 
-like the Sunfire Silk Backpack , leg enchants for casters and healers, such 
-as Sunfire Silk Spellthread , and powerful embellishments such as Arcanoweave Lining .
-Tailors can also learn to loot much more cloth when killing enemies, and gain 
-a chance to loot high Quality cloth through some of their knowledge talents. 
-Finally, they have cooldown cloth transmutes and specialization trees for Arcanoweave Bolt and Sunfire Silk Bolt .
-### Tailoring Changes in Season 2
-Tailoring can now learn the new Snakeskin Lining Embellishment craft, 
-and the Pattern: Twilight's Blade Bedroll plus Pattern: Tortollan Slingsack Decor crafts.
-## Best Race for Tailoring in Midnight
-Alliance players can be Kul'Tiran for +2 skill points with Tailoring.
-As you need to be a Tailor to loot cloth from enemies, Tailoring also goes well 
-with traditional farmers who can pull and kill high amounts of hyperspawning cloth-rich enemies constantly in a 2x4 group farm format, such as Balance Druid s, Guardian Druid s or Beast Mastery Hunter s!
-## Best Crafting Stats for Tailoring in Midnight
-Tailoring can make great use of all four stats, but you might want to focus on 
-specific stats with different Tailoring specializations. We go into detail with 
-Tailoring stats and the gear you can use to boost them in the specialized guide below:
-## Leveling Tailoring in Midnight
-Increasing your skill is done by crafting items that grant skill points as usual, 
-and in order to be efficient, we recommend trying to get as many first-craft bonuses 
-while leveling as possible, which also grant experience if you are not at 
-maximum level.
-Besides learning basic recipes from the trainer, you can also learn extra recipes 
-beyond the profession trainer by buying them with Moxie from reputation vendors 
-and the vendor next to the profession table in Silvermoon. These will grant more 
-first crafts and can occasionally be the most efficient way to level in the later 
-levels.
-## How to Level Tailoring in Midnight
-### Leveling Tailoring to 60 Skill
-As with most professions, getting to skill 60 can easily be done through trainer 
-recipes, with the remaining skill points being awarded by specialty crafts such 
-as Adherent's Silken Shroud , Sunfire Silk Bolt , and Elegant Artisan's Alchemy Coveralls which you should do based on your choice of profession talents.
-In order to quickly level up uninterrupted, ensure you have the following materials:
-- 119 Silverleaf Thread
-- 20 Eversinging Dust
-- 20 Imbued Bright Linen Bolt
-- 14 Bright Linen
-- 29 Bright Linen Bolt
-- 46 Embroidery Floss
-Extra Eversinging Dust , Embroidery Floss , Imbued Bright Linen Bolt , Bright Linen Bolt , and Silverleaf Thread might be useful in order 
-to guarantee you can hit 60 Skill as some of the recommended recipes are not guaranteed 
-to grant skill-ups on their final crafts.
-With the materials above, craft the following items, learning new recipes from 
-the trainer as they become available:
-- 14 Bright Linen Bolt (use them on later crafts
-- 3 Courtly Slippers
-- 2 Courtly Cloak
-- 3 Courtly Pants
-- 5 Courtly Robes
-- 7+ Courtly Shoulders
-- 10+ Bright Linen Spellthread
-While you can start crafting end game recipes earlier instead of relying on the 
-Tailoring trainer, these will generally be more efficient to craft towards the 
-end of your leveling once regular trainer recipes stop giving reliable skill points, 
-as they are expensive to produce and will generally only turn a profit when crafted 
-at maximum rank with Concentration .
-### Leveling Tailoring Past 60 Skill
-Getting past Skill 60 will then vary heavily depending on which Profession talents 
-you invest into with your Tailoring Knowledge. Since skill-ups are more RNG as 
-you get closer to 100 Tailoring Skill, we recommend checking the Auction House 
-or using one of our recommended 
-crafting Addons to help you skill up without it eating into your wallet too much.
-Thankfully the process isn't too difficult, as you can craft the same type of 
-items all the way to 100, depending on your specialization. We recommend using the 
-following families of recipes:
-- Cooldown Cloths: Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
-	profit on minimum quality making them cheap ways to level up to 100, but the 
-	amount you can craft is time-limited making it a slow process.
-- Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
-	profit on minimum quality making them cheap ways to level up to 100, but the 
-	amount you can craft is time-limited making it a slow process.
-- Consumables: Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
-	consumables are great options for leveling up past 60 as they have solid demand 
-	and can be crafted at maximum quality for a profit immediately through Concentration .
-- Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
-	consumables are great options for leveling up past 60 as they have solid demand 
-	and can be crafted at maximum quality for a profit immediately through Concentration .
-- Combat Gear Master: Combat gear such as Adherent's Silken Shroud is often in demand and 
-	grants a large amount of skill points all the way to 100, but can be hard to 
-	get in quantity due to requiring Spark usage and the work order system.
-- Combat gear such as Adherent's Silken Shroud is often in demand and 
-	grants a large amount of skill points all the way to 100, but can be hard to 
-	get in quantity due to requiring Spark usage and the work order system.
-- Profession Gear Master: Tailoring can also craft gear for other professions, ranging from rare 
-	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
-	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
-	which requires the work order system.
-- Tailoring can also craft gear for other professions, ranging from rare 
-	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
-	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
-	which requires the work order system.
-## Tailoring Knowledge in Midnight
-You will be able to track all weekly and one-time sources of profession knowledge 
-with Myu's Knowledge Points Tracker , 
-which has been converted to an addon in Midnight!
-There are also eight treasures around the world that you can loot to gain up 
-to 24 extra knowledge. You can find them all easily in-game with the aforementioned 
-addon.
-## Best Tailoring Specializations and Talents in Midnight
-The best passive option is to max out the Fabric Specialist tree, as the 
-bonuses granted massively increase the amount of cloth you loot and also allow you 
-to loot high Quality cloth occasionally. Pick the Eastern Kingdoms Cloth sub-node if you want to maximize your cloth gathering in the Eversong Woods and 
-Zul'Aman zones, or Otherworldly Cloth if you are instead looking to farm 
-on Harandar or Voidstorm.
-Investment into the Nimble Needlework tree is the only way to enable 
-drops of Sunfire Silk and Arcanoweave when killing enemies. This 
-tree also teaches you how to craft some Embellished gear and the cooldown bolts, Arcanoweave Bolt and Sunfire Silk Bolt . While initially you can only 
-accumulate 10 crafts of each and it takes a day for their cooldown to be ready again, 
-you can learn how to accumulate up to 30 crafts and halve the cooldown by fully 
-investing into the leaf nodes.
-For cloth gear crafting, profession gear, and cloaks, invest into the Sin'dorei Finery tree, which will increase your skill at these crafts massively 
-and also unlock the generic epic gear recipes with its leaf nodes.
-Finally, the Fiber Arts tree is also very valuable for most tailors due 
-to the high stat gains it provides for all tailoring crafts. The Embroidery sub-tree is particularly notable because it grants stats and skill towards the 
-valuable Spellthread and Embellishment crafts despite being in the generic skill 
-tree.
-## Making Gold with Tailoring in Midnight
-Tailoring allows you to convert cheap cloth into expensive bolts, bags, and crafted 
-gear or leg enchants. High-end gear pieces and bind on pickup profession bags are 
-likely to fetch a good price in the Crafting Orders system, while everything 
-else can be sold at a profit on the auction house.
-It is particularly hard to unlock the crafting of Tailoring recipes at maximum 
-natural skill this time because the trees are configured in a way where the skill 
-increasing nodes are randomly located deep into otherwise useless trees, as is the 
-case in the Fabric Specialist tree, which has 15 skill increases, all locked 
-behind large knowledge point investments.
-As most Tailoring requirements for natural maximum rank crafting require the 
-usage of maximum rank materials and all knowledge skill increases, a gigantic amount 
-of knowledge is needed in order to unlock the best crafts, which will otherwise 
-be locked behind Concentration usage, providing a great opportunity for gold 
-making early on!
-Finally, you can make a lot of passive / farm gold with Tailoring by investing 
-into all the various cloth drop support nodes, as that will cause valuable cloth 
-to drop from whatever enemies you kill during your daily activities.
-We have a specialized guide for Midnight gold-making below, which contains 
-a gold-making tier list and goes deeper into techniques and habits for successful 
-gold making, as well as websites and addons that can help you on your journey!
-This guide has been written by Seksi , member of Cursed Gifts and healing aficionado.
-          You can find him answering questions and discussing Restoration Shaman gameplay
-          on the Ancestral Guidance and Earthshrine Discords.
+Discover a fresh way to make Azeroth feel like home! Player housing is 
+available in World of Warcraft. Learn all about player housing with 
+our dedicated guides.
+## Player Housing Introduction
+The Midnight expansion brings one of the most anticipated features ever to World of Warcraft: player housing. This new addition allows players to create 
+and customize their own living spaces within the game, adding a new layer of immersion 
+and personalization.
+In this guide, we will break down everything we know about player housing, 
+including building and decor options, functionality, neighborhoods, and more!
+## Buying Your First Home
+Obtaining your first home is quite simple, as the first quest is an auto-accept 
+breadcrumb quest that pops when you first log in post-Midnight launch. The resulting quest 
+chain is extremely straightforward and takes very little time, so you will be on your 
+own exploring the creative possibilities before you know it!
+The housing quest chain is as follows:
+- A House For You
+- My First Home
+- Welcome Home
+- Time to Decorate
+The initial cost of a home is 1,000 gold. You are able to have two homes across 
+your Warband; one in the Horde's Razorwind Shores Neighborhood, and the other in 
+the Alliance's Founder's Point Neighborhood. However, your Horde characters can 
+easily visit your Alliance home and vice versa. You will also be able to buy from 
+vendors and wander the Neighborhood regardless of faction, as long as your home is 
+located there!
+Take some time to familiarize yourself with the home privacy options, which are 
+accessible in the Settings Menu to the right of the Edit Housing button when you are
+on your own housing plot. Players can adjust access to both their houses and their 
+plots separately.
+### Moving
+If you find yourself unhappy with your plot, moving is easy and free . 
+Simply browse open plots on your map, or take a stroll through the neighborhood, until you
+find your new favorite. Click on the Cornerstone sign at the front of the plot and 
+select "Move House."
+You can move at any time, even if you have already spent hours perfecting your 
+landscaping and home decor. Never fear! None of your customization will be disturbed upon
+moving your home.
+## Neighborhoods
+Neighborhoods are the larger social community instances in which your home resides. 
+They are comprised of 50 total plots, and can be Public or Private; Private Neighborhoods are
+either founded by guilds or founded via charter. Currently, it appears Private Neighborhoods, 
+both Guild and Charter, take on the faction location of the player to initiate the
+neighborhood's creation. As with your Warband alt characters, if your Guild Neighborhood's 
+faction is different than that of your main, you will still be able to build, live, wander,
+and shop in that neighborhood.
+For more information on every aspect of neighborhoods, visit our guide!
+## Endeavors
+Endeavors are thematic, Neighborhood-wide activities allowing players to engage 
+in a variety of different activities in order to further the Endeavor's milestones. 
+Completing Endeavor Tasks awards players access to exclusive, Endeavor-themed decor, 
+new vendors, new quests, and Community Coupons . Whether you are in a Public 
+or Private Neighborhood, Endeavors will be available on a monthly cycle.
+For a full look at Endeavors, visit our guide:
+## Heading Home
+To get to your house, you have several different options:
+First, you can navigate to your neighborhood via the Neighborhood Portal, located 
+in the Orgrimmar and Stormwind portal rooms and attended by Tocho Cloudhide and Lyssabel Dawnpetal , the Horde and Alliance Stewards, respectively.
+Access the Teleport Home, a Hearthstone with a 15 minute cooldown, located on 
+your Housing Dashboard (natively bound to H ).
+## Decor Items
+The driving force behind the flexibility and personalization of Player Housing 
+is the decor catalog; both obtaining decor and placing it to suit your exact preferences 
+are systems intended to be satisfying, interesting, and deeply personal.
+For more information on Housing Decor, visit our guide!
+## Exterior Customization
+Basic housing exteriors are fairly limited, at least right off the bat. However, 
+players will have access to four different themed decor "kits" as 
+Midnight progresses. The Orc and Blood Elf kits will only be 
+applicable in the Horde Neighborhood, while the Human and Night Elf kits 
+will only be applicable in the Alliance Neighborhood. Once you have chosen your 
+external kit, you will also be able to scroll through options like Base and Roof Style, 
+Roof Color, Windows and Wall Fixtures, and more.
+Each housing plot also comes with a substantial yard, and the massive decor catalog 
+offers a myriad of options to allow players impressive flexibility in their landscaping and
+outdoor furnishing. There are some large structures, like gazebos, market stalls, 
+and fountains, that may only be placed outside, but even most interior furniture 
+and decor cango out in your yard to achieve the perfect entertaining space or dream 
+garden.
+## Interior Customization
+Your house exterior may be limited to a few different decor kits, but interior 
+customization is far more flexible.
+Despite sitting on a finite-sized plot, the size of your interior is limited 
+only by your housing level and your imagination. Your layout is also easily adjustable with just a
+few clicks, especially as you level up your home and learn new room options.
+Interior structures, like pillars, doors and doorways, and all manner of different 
+walls, can further structure, divide, and define your house exactly the way you'd 
+imagined. Interior structures are a must for creating interesting spaces even in square rooms, 
+and they come in a variety of themes to fit whatever aesthetic you are hoping to achieve.
+## Blueprints
+Added in Midnight Patch 12.1 , the Blueprints System is a way for builders 
+to share their creations with the community, or import community creations into their 
+own homes. Using system-generated codes, players can save, share, and import a single room, 
+a full build, or an exterior. While there are some faction-based restrictions for 
+exteriors and full builds, single room blueprints are faction agnostic and limited 
+only by the importer's decor budget.
+Read our full Blueprints Guide for more details on this highly-anticipated feature!
+## Recommended Addons
+The arrival of Player Housing brings with it a massive new collection in its 
+Decor Catalog. Not only will most of us already have a big list of achievements 
+to grind, but the catalog will continue to grow as Midnight brings a whole host 
+of new achievements and factions! We've found several useful addons to help you 
+in building your Housing Decor Catalog:
+- ADT: Advanced Decoration Tools is an absolute lifesaver for players who love to build! Save traditional keyboard 
+shortcuts for quick duplication, copying, cutting, and pasting of decor items. Set 
+your chosen dye color scheme to the Dye Presets, and save your favorite decor pieces 
+on the Quickbar. Most importantly, use incremental rotation tools for those intense, 
+precise builds, and then LOCK them to prevent picking up any tiny pieces!
+- Home Bound is a necessity for the collection-minded among us. It neatly organizes all the 
+achievements granting Player Housing rewards, and even provides 3D images of the 
+decor item each achievement rewards.
+- Instance Achievement Tracker will remind you of which achievements you (and your party members) still need upon 
+instance entry, and will track achievement completion as you progress through a 
+fight. This is a must for any difficult raid and dungeon achievements you may be 
+tackling for those high-value decor items.
+- Decor Vendor is, as the name suggests, focused only on Housing Decor Vendors. It allows players 
+to browse decor vendors, vendors who sell decor recipes, and quest or achievement-related 
+decor vendors. That's it!
+- Housing Decor Guide is a complete housing decor addon designed to help players identify exactly where every piece of decor in the game comes from. Housing Decor Guide can also 
+plan vendor shopping routes, set waypoints, help monitor crafting costs, and even 
+queue up crafting recipes for decor-related Auction House sales.
+This guide has been written by Gogogadgetkat , a longtime guild master
+        and former CE raider. She is a passionate advocate for community-building
+        and marginalized folks in gaming, and is a founding member and the Executive
+        Director of VISAGE. You can find her on Twitter ,
+        or visit the VISAGE Discord .
 ## Changelog
-- 11 Aug. 2026: Updated for Midnight Season 2 launch.
-- 11 May 2026: Added a detailed leveling section.
-- 24 Feb. 2026: Updated for Midnight.
-- 26 Oct. 2024: Reviewed for Patch 11.0.5.
-- 24 Aug. 2024: Updated for The War Within launch.
-- 18 Apr. 2024: Reviewed for Season 4.
-- 19 Mar. 2024: Reviewed for Patch 10.2.6.
-- 07 Nov. 2023: Updated for Patch 10.2.
-- 04 Sep. 2023: Reviewed for Patch 10.1.7.
-- 01 Dec. 2022: Added more pages to the guide.
-- 27 Nov. 2022: Updated for Dragonflight.
-- 20 Feb. 2022: Updated for Patch 9.2.
-- 24 Jun. 2021: Updated for Patch 9.1.
-- 24 Nov. 2020: Guide added.
+- 06 Aug. 2026: Updated for Midnight Patch 12.1.
+- 22 Feb. 2026: List of addons updated.
+- 28 Nov. 2025: Guide updated to include introductory questline and customization options.
+- 23 Jan. 2025: Guide added.
 ### In The Same Category
 
 ## LINKS
@@ -325,14 +294,31 @@ This guide has been written by Seksi , member of Cursed Gifts and healing aficio
 - [Books and Novels](https://www.icy-veins.com/wow/warcraft-books-and-novels-overview)
 - [Player Housing](https://www.icy-veins.com/wow/player-housing-guide)
 - [Go Ad Free](https://www.icy-veins.com/premium)
-- [](https://discord.gg/AcTek6e)
-- [Midnight Tailoring Stats and Gear Guide](https://www.icy-veins.com/wow/professions-tailoring-stats-and-gear)
-- [Myu's Knowledge Points Tracker](https://www.curseforge.com/wow/addons/myus-knowledge-points-tracker)
-- [](https://discord.gg/earthshrine)
-- [](https://discord.gg/focusedwill)
-- [Seksi](https://raider.io/characters/eu/tarren-mill/Seksixeny)
-- [Cursed Gifts](https://raider.io/guilds/eu/tarren-mill/Cursed%20Gifts)
-- [Earthshrine](https://discord.me/earthshrine)
+- [](https://discord.gg/visagecommunity)
+- [](https://x.com/gogogadgetkat)
+- [](https://static.icy-veins.com/images/wow/tww/player-housing-mug.webp)
+- [](https://static.icy-veins.com/images/wow/tww/housing-privacy-settings.jpg)
+- [](https://static.icy-veins.com/images/wow/tww/housing-move.jpg)
+- [Neighborhoods Guide](https://www.icy-veins.com/wow/player-housing-neighborhoods-guide)
+- [Endeavors Guide](https://www.icy-veins.com/wow/housing-endeavors-guide)
+- [](https://static.icy-veins.com/images/wow/tww/housing-hordeportal.jpg)
+- [](https://static.icy-veins.com/images/wow/tww/housing-dashboard.jpg)
+- [](https://static.icy-veins.com/images/wow/tww/housing-decor-catalog.jpg)
+- [Housing Decor Guide](https://www.icy-veins.com/wow/housing-decor-guide)
+- [](https://static.icy-veins.com/images/wow/tww/housing-external.jpg)
+- [Exterior Customization Guide](https://www.icy-veins.com/wow/player-housing-exterior-guide)
+- [](https://static.icy-veins.com/images/wow/tww/housing-layout-custom.jpg)
+- [](https://static.icy-veins.com/images/wow/tww/housing-interiorstructures.jpg)
+- [Interior Customization Guide](https://www.icy-veins.com/wow/player-housing-interior-guide)
+- [](https://static.icy-veins.com/images/wow/midnight/12-1-place-blueprint.jpg)
+- [Blueprints Guide](https://www.icy-veins.com/wow/housing-blueprints-guide)
+- [ADT: Advanced Decoration Tools](https://www.curseforge.com/wow/addons/adt)
+- [Home Bound](https://www.curseforge.com/wow/addons/home-bound)
+- [Instance Achievement Tracker](https://www.curseforge.com/wow/addons/instance-achievement-tracker)
+- [Decor Vendor](https://www.curseforge.com/wow/addons/decor-vendor)
+- [Housing Decor Guide](https://www.curseforge.com/wow/addons/housing-decor-guide)
+- [Gogogadgetkat](https://raider.io/user/Gogogadgetkat)
+- [Housing Experience](https://www.icy-veins.com/wow/housing-experience-guide)
 - [Twitch](https://www.twitch.tv/icyveinscom)
 - [Facebook](https://www.facebook.com/icyveinscom)
 - [Twitter](https://x.com/icyveins)

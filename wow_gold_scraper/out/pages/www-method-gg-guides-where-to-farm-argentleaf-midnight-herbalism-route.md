@@ -1,28 +1,28 @@
-<!-- source: https://www.method.gg/guides/midnight-herb-and-mote-farming-routes fetched: 2026-10-07T20:44:15.625202+00:00 -->
+<!-- source: https://www.method.gg/guides/where-to-farm-argentleaf-midnight-herbalism-route fetched: 2026-10-07T20:45:20.791595+00:00 -->
 <!-- page dates: none found -->
-# Midnight Herb and Mote Farming Routes
+# Where To Farm Argentleaf: Midnight Herbalism Route
 
-With Midnight Herbalism, you will only be able to get specific motes in specific zones. In this guide we have included farming routes for each of the zones so you efficiently farm all of the specific motes that you want.
-You will also be able to farm Tranquility Bloom , Argentleaf , Azeroot , Mana Lily and Sanguithorn in any zone as these are not zone specific. You will also rarely receive Nocturnal Lotus when herbing any node.
-Herbalism is always a great gold source, as all of the new Midnight herbs are used for crafting Potions, Flasks and even food, so farming herbs at the start of the expansion can be an easy way to get your professions going and making some gold in the process.
-## Which Zone Gives Which Mote
-We have included a table so you know which zone to farm for the different motes in Midnight. We recommend specializing into the Midnight Overload Herbalism specialization so you can farm even more motes. If you want more information on the Midnight Herbalism, you can check our full Herbalism Profession Guide .
-Herb Modifier | Mote Type | Zone
-Lightfused | Mote Of Light | Eversong Woods and light areas
-Wild | Mote Of Wild Magic | Zul’Aman
-Primal | Mote Of Primal Energy | Harandar
-Voidbound | Mote Of Pure Void | Voidstorm and void areas
-## Eversong Woods Herb Farming Route
-In Eversong Woods we recommend sticking close to the rivers as a lot of herb nodes spawn along them and you will also be able to find additional Rich Soil to use seeds in for more herbs. We think this is one of the best zones for just farming herbs.
-## Zul’Aman Herb Farming Route
-When following this Zul’Aman Herbalism farming route, we recommend sticking to the edges of the zone as this keeps you always roughly on the same level, meaning you won’t struggle to locate herbs that are on a very specific ledge.
-Overloading the nodes here gives a really nice buff for additional rare materials. In addition, the lashers from wild nodes give a nice bonus for the amount of herbs you receive.
-## Harandar Herb Farming Route
-Harandar is probably the most herb rich zone, making it very efficient for farming herbs. However, the overload results are a little lackluster compared to the other zones. If you are not specialized into Midnight Overload this is probably the best zone for farming herbs.
-## Voidstorm Herb Farming Route
-The Voidstorm is a little bit of an awkward zone for collecting herbs, because it has a lot of ledges and a high amount of aggressive mobs. However, overloading nodes here can result in a lot of additional herbs and motes.
-Note: You will need to complete most of the campaign to access this zone.
-We hope this guide helped you with some easy farming routes for the new materials in the Midnight Expansion. For more guides like this, you can check out our Midnight Profession Guides .
+Argentleaf is an important Midnight Herb reagent that is used in multiple recipes for the Cooking and Alchemy professions and can only be gathered by Herbalists (players with Herbalism). Finding Argentleaf can be tough as it only spawns around bushes and other foliage with many of the Midnight herbs also spawning around the same area.
+This guide shows you a short route that has helped us gather a large amount of Argentleaf along with a smaller amount of other herbs.
+## Recommended Herbalism Knowledge Point Build
+As this route does have a lot of mobs in the area it is recommended that you first max out the Botany point tree as this will allow you to stay on your mount while you are gathering herbs.
+After you have maxed out Botany move onto Bountiful Harvests to gain higher maximum and minimum yields from all herbs. If you only want to focus on Argentleaf , you can max out the Silver Searcher tree in Bountiful Harvests.
+If you don’t have enough knowledge points to max out either of the trees, you will want to try to gain as many knowledge points as you can. Herbalism Profession Knowledge Points come from multiple sources: a chance to drop when herbing each week, first time herbing for each herb type, Profession Treasures and a Thalassian Treatise on Herbalism.
+The best way to get a lot of points in a short amount of time is to find all of the Profession Treasures spread across the zones of Midnight. For Herbalism there are 8 treasures that will each give you 3 knowledge points, totaling to 28 knowledge points. For the locations of all of the profession treasures you can check out our Midnight Profession Treasures Locations Guide .
+If you are looking for more information about the Herbalism profession and the other trees inside of this profession you can check out our Midnight Herbalism Profession Guide .
+## Argentleaf Herb Farming Route
+The route is based in the Harandar zone, inside of The Blinding Bloom area, in the southwest of the zone. This area is densely packed with herbs, with a ton of different platforms for herbs to spawn on.
+Inside of this route you will primarily find four different herbs:
+- Argentleaf
+- Tranquility Bloom
+- Azeroot
+- Lightfused Herbs ( Mote Of Light )
+Argentleaf and Tranquility Bloom will be the main herbs you will find in the area, as it is packed with different types of bushes and foliage for them to spawn around. You will find Azeroot in smaller batches, which will spawn around the different roots of Shaladrassil.
+The image below shows you the Herb Farming route for Argentleaf in The Blinding Bloom.
+Make sure to check and pick herbs around the entire area of the Blinding Bloom as the herbs will also spawn in and around the middle. You will farm a lot more Argentleaf and accompanying herbs if you make sure to do this.
+The route is a short one and you may have to supplement it by fishing or gathering herbs around Fungara Village to help new nodes spawn.
+Note: This area is also densely populated with Mobs, which means the chance you pull mobs is quite high. To prevent being dazed and minimising the amount of time you have to engage with these mobs, you should opt to spec into a Tank spec if possible, as Tank specs can’t get dazed while mounted.
+We hope this guide has helped you with your Argentleaf Herb Farming. If you are looking for more Midnight content, including routes for other herbs check out our Midnight Profession Guides .
 
 ## LINKS
 - [](https://www.method.gg)
@@ -151,17 +151,12 @@ We hope this guide helped you with some easy farming routes for the new material
 - [Tier Lists](https://www.method.gg/guides/tier-list/mythic-plus)
 - [Delves](https://www.method.gg/guides/world-of-warcraft/delves)
 - [Reputation](https://www.method.gg/guides/world-of-warcraft/reputation)
-- [Tranquility Bloom](https://www.wowhead.com/beta/item=236761/tranquility-bloom)
 - [Argentleaf](https://www.wowhead.com/beta/item=236776/argentleaf)
+- [Midnight Profession Treasures Locations Guide](https://www.method.gg/guides/location-of-all-midnight-profession-knowledge-treasures)
+- [Midnight Herbalism Profession Guide](https://www.method.gg/guides/midnight-herbalism-profession-guide)
+- [Tranquility Bloom](https://www.wowhead.com/beta/item=236761/tranquility-bloom)
 - [Azeroot](https://www.wowhead.com/beta/item=236774/azeroot)
-- [Mana Lily](https://www.wowhead.com/beta/item=236778/mana-lily)
-- [Sanguithorn](https://www.wowhead.com/beta/item=236770/sanguithorn)
-- [Nocturnal Lotus](https://www.wowhead.com/beta/item=236780/nocturnal-lotus)
-- [Herbalism Profession Guide](https://www.method.gg/guides/midnight-herbalism-profession-guide)
 - [Mote Of Light](https://www.wowhead.com/beta/item=236949/mote-of-light)
-- [Mote Of Wild Magic](https://www.wowhead.com/beta/item=236951/mote-of-wild-magic)
-- [Mote Of Primal Energy](https://www.wowhead.com/beta/item=236950/mote-of-primal-energy)
-- [Mote Of Pure Void](https://www.wowhead.com/beta/item=236952/mote-of-pure-void)
 - [Alchemy](https://www.method.gg/guides/midnight-alchemy-profession-guide)
 - [Blacksmithing](https://www.method.gg/guides/midnight-blacksmithing-profession-guide)
 - [Cooking](https://www.method.gg/guides/midnight-cooking-profession-guide)
@@ -174,11 +169,10 @@ We hope this guide helped you with some easy farming routes for the new material
 - [Mining](https://www.method.gg/guides/midnight-mining-profession-guide)
 - [Skinning](https://www.method.gg/guides/midnight-skinning-profession-guide)
 - [Tailoring](https://www.method.gg/guides/midnight-tailoring-profession-guide)
-- [Midnight Profession Knowledge Treasure Locations](https://www.method.gg/guides/location-of-all-midnight-profession-knowledge-treasures)
 - [How to Reset Profession Knowledge Points in WoW Midnight](https://www.method.gg/guides/how-to-reset-profession-knowledge-points-in-wow-midnight)
 - [All Profession Knowledge Point Sources in Midnight](https://www.method.gg/guides/all-profession-knowledge-point-sources-in-midnight)
 - [How To Farm Nocturnal Lotus in WoW Midnight](https://www.method.gg/guides/how-to-farm-nocturnal-lotus-in-wow-midnight)
-- [Where To Farm Argentleaf: Midnight Herbalism Route](https://www.method.gg/guides/where-to-farm-argentleaf-midnight-herbalism-route)
+- [The Vial of Eversong Oddities, Enchanted Sunfire Silk and the Half-Baked Techniques Profession Treasure Locations](https://www.method.gg/guides/missing-midnight-profession-treasure-locations)
 - [](https://discord.gg/method)
 - [](https://www.youtube.com/methodgg?sub_confirmation=1)
 - [](https://twitter.com/method)

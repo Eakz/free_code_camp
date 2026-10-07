@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/this-will-make-or-break-your-profits-midnight-profession-stats-guide fetched: 2026-10-07T20:39:32.124354+00:00 -->
+<!-- source: https://thelazygoldmaker.com/this-will-make-or-break-your-profits-midnight-profession-stats-guide fetched: 2026-10-07T20:44:38.156177+00:00 -->
 <!-- page dates: article:modified_time=2026-03-25T12:03:46+00:00; article:published_time=2026-03-25T12:03:43+00:00 -->
 # This will make or break your profits! Midnight Profession stats guide! - The Lazy Goldmaker
 

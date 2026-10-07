@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/shadowlands-profession-spreadsheet fetched: 2026-10-07T20:39:55.789224+00:00 -->
+<!-- source: https://thelazygoldmaker.com/shadowlands-profession-spreadsheet fetched: 2026-10-07T20:45:30.434829+00:00 -->
 <!-- page dates: article:modified_time=2020-11-14T20:26:25+00:00 -->
 # Shadowlands Profession Spreadsheet - The Lazy Goldmaker
 

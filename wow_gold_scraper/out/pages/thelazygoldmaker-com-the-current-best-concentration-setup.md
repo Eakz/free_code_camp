@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/the-current-best-concentration-setup/ fetched: 2026-10-07T20:40:49.613016+00:00 -->
+<!-- source: https://thelazygoldmaker.com/the-current-best-concentration-setup/ fetched: 2026-10-07T20:46:23.574082+00:00 -->
 <!-- page dates: article:modified_time=2026-09-08T22:10:35+00:00; article:published_time=2026-09-08T22:10:31+00:00 -->
 # The current best concentration setup! - The Lazy Goldmaker
 

@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/cooking-is-easy-lazy-afk-gold fetched: 2026-10-07T20:39:43.537461+00:00 -->
+<!-- source: https://thelazygoldmaker.com/cooking-is-easy-lazy-afk-gold fetched: 2026-10-07T20:44:49.325270+00:00 -->
 <!-- page dates: article:modified_time=2026-07-02T22:21:53+00:00; article:published_time=2026-07-02T22:21:51+00:00 -->
 # Cooking is easy lazy AFK gold - The Lazy Goldmaker
 

@@ -1,4 +1,4 @@
-<!-- source: https://www.method.gg/guides/midnight-enchanting-profession-guide fetched: 2026-10-07T20:39:17.125994+00:00 -->
+<!-- source: https://www.method.gg/guides/midnight-enchanting-profession-guide fetched: 2026-10-07T20:44:22.074760+00:00 -->
 <!-- page dates: none found -->
 # Midnight Enchanting Profession Guide
 

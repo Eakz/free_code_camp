@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/forever-is-getting-the-retail-ah-heres-what-that-means/ fetched: 2026-10-07T20:40:15.611694+00:00 -->
+<!-- source: https://thelazygoldmaker.com/forever-is-getting-the-retail-ah-heres-what-that-means/ fetched: 2026-10-07T20:45:50.357726+00:00 -->
 <!-- page dates: article:modified_time=2026-09-30T11:37:59+00:00; article:published_time=2026-09-30T11:37:56+00:00 -->
 # Forever is getting the retail AH, here's what that means - The Lazy Goldmaker
 

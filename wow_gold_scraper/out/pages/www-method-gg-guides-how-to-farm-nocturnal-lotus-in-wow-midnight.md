@@ -1,28 +1,31 @@
-<!-- source: https://www.method.gg/guides/midnight-herb-and-mote-farming-routes fetched: 2026-10-07T20:44:15.625202+00:00 -->
+<!-- source: https://www.method.gg/guides/how-to-farm-nocturnal-lotus-in-wow-midnight fetched: 2026-10-07T20:45:17.575984+00:00 -->
 <!-- page dates: none found -->
-# Midnight Herb and Mote Farming Routes
+# How To Farm Nocturnal Lotus in WoW Midnight
 
-With Midnight Herbalism, you will only be able to get specific motes in specific zones. In this guide we have included farming routes for each of the zones so you efficiently farm all of the specific motes that you want.
-You will also be able to farm Tranquility Bloom , Argentleaf , Azeroot , Mana Lily and Sanguithorn in any zone as these are not zone specific. You will also rarely receive Nocturnal Lotus when herbing any node.
-Herbalism is always a great gold source, as all of the new Midnight herbs are used for crafting Potions, Flasks and even food, so farming herbs at the start of the expansion can be an easy way to get your professions going and making some gold in the process.
-## Which Zone Gives Which Mote
-We have included a table so you know which zone to farm for the different motes in Midnight. We recommend specializing into the Midnight Overload Herbalism specialization so you can farm even more motes. If you want more information on the Midnight Herbalism, you can check our full Herbalism Profession Guide .
-Herb Modifier | Mote Type | Zone
-Lightfused | Mote Of Light | Eversong Woods and light areas
-Wild | Mote Of Wild Magic | Zul’Aman
-Primal | Mote Of Primal Energy | Harandar
-Voidbound | Mote Of Pure Void | Voidstorm and void areas
-## Eversong Woods Herb Farming Route
-In Eversong Woods we recommend sticking close to the rivers as a lot of herb nodes spawn along them and you will also be able to find additional Rich Soil to use seeds in for more herbs. We think this is one of the best zones for just farming herbs.
-## Zul’Aman Herb Farming Route
-When following this Zul’Aman Herbalism farming route, we recommend sticking to the edges of the zone as this keeps you always roughly on the same level, meaning you won’t struggle to locate herbs that are on a very specific ledge.
-Overloading the nodes here gives a really nice buff for additional rare materials. In addition, the lashers from wild nodes give a nice bonus for the amount of herbs you receive.
-## Harandar Herb Farming Route
-Harandar is probably the most herb rich zone, making it very efficient for farming herbs. However, the overload results are a little lackluster compared to the other zones. If you are not specialized into Midnight Overload this is probably the best zone for farming herbs.
-## Voidstorm Herb Farming Route
-The Voidstorm is a little bit of an awkward zone for collecting herbs, because it has a lot of ledges and a high amount of aggressive mobs. However, overloading nodes here can result in a lot of additional herbs and motes.
-Note: You will need to complete most of the campaign to access this zone.
-We hope this guide helped you with some easy farming routes for the new materials in the Midnight Expansion. For more guides like this, you can check out our Midnight Profession Guides .
+Nocturnal Lotus is a rare reagent that you can find as a bonus loot drop from gathering any of the Midnight herbs in any of the Midnight zones. As it is gathered from herbs it can only be collected by Herbalists but can be found by Alchemists through alternative methods.
+Nocturnal Lotus has become a crucial herb reagent in Midnight with the majority of Flasks and Cauldrons requiring Nocturnal Lotus . Since Nocturnal Lotus has become such an important herb it has started to drive a high price on the Auction House with a single Nocturnal Lotus costing thousands of gold.
+Now that Nocturnal Lotus has spiked in price it can be a great time to start farming it either for gold making or personal use to save yourself some gold.
+## Farming Nocturnal Lotus
+As Nocturnal Lotus is a bonus item that is looted from gathering Midnight herbs it can be difficult to get a good farm for it but there are ways to improve your chances of finding more Nocturnal Lotus .
+### Perception
+One of the main ways to increase your chances of finding more Nocturnal Lotus is going to be from increasing your Perception stats. Perception is a gathering stat that increases your chance of finding additional rare resources while gathering herbs. There are multiple ways you can increase your Perception stat.
+- Profession Tools - When you are able to craft epic profession tools you can use the Thalassian Missive Of Perception as an optional reagent to give yourself a large boost in Perception.
+- Enchantments - After you have crafted some profession equipment you can use the enchantment - Enchant Tool - Amani Perception . This will give you a smaller but welcome boost to perception.
+- Consumables - There are a few consumables that you can use to increase your Perception. Use the Haranir Phial Of Perception and Sanguithorn Tea . Both of these consumables will grant you increased Perception and some extra deftness increasing how quick you gather herbs.
+### Mulching
+A great way to guarantee some Nocturnal Lotus can be to start putting some knowledge points into the Mulching Sub-Specialization in the Botany tree.
+Once you have learned Mulching you will need to put 20 knowledge points into the Mulching tree to learn Imbued Mulch .
+This will guarantee a rare reagent on your next herb gather and can be used every hour at the cost of 10 Tranquility Bloom . As Nocturnal Lotus is the only rare reagent in Midnight Herbalism you can guarantee at least 1 Nocturnal Lotus every hour.
+To learn more about all of the herbalism trees you can use our Midnight Herbalism Guide .
+### Routes
+As Nocturnal Lotus is a chance drop from any herb having some good routes to maximise your time gathering can help to increase your Nocturnal Lotus yields.
+For zone-wide routes you can check out our Herbalism Node Routes . Or if you are looking for Argentleaf you can use our Argentleaf Route .
+### Spending Leftover Moxie
+As you progress further and further in Midnight’s professions you will have a ton of leftover Artisan Moxie. Each profession has a different Moxie with Alchemists having Artisan Alchemist’s Moxie and Herbalists gaining Artisan Herbalist’s Moxie.
+You can gain moxie from gaining knowledge points and completing Patron Work Orders. After a while you may find yourself with some leftover Artisan Moxie. You can spend leftover Artisan Moxie on the Master Alchemist's Surplus Reagents and Master Herbalist's Surplus Reagents .
+Each of the Surplus Reagents cost 600 Artisans Moxie and will contain a minimum of 4 Nocturnal Lotus .
+These Surplus Reagents can be purchased from Lyrendal in Silvermoon City.
+We hope this guide has given you an understanding of all the ways you can farm Nocturnal Lotus. If you are looking for more profession guides including herbing routes, cloth farms and profession leveling guides. You can check out our Midnight Profession Guides .
 
 ## LINKS
 - [](https://www.method.gg)
@@ -151,17 +154,19 @@ We hope this guide helped you with some easy farming routes for the new material
 - [Tier Lists](https://www.method.gg/guides/tier-list/mythic-plus)
 - [Delves](https://www.method.gg/guides/world-of-warcraft/delves)
 - [Reputation](https://www.method.gg/guides/world-of-warcraft/reputation)
-- [Tranquility Bloom](https://www.wowhead.com/beta/item=236761/tranquility-bloom)
-- [Argentleaf](https://www.wowhead.com/beta/item=236776/argentleaf)
-- [Azeroot](https://www.wowhead.com/beta/item=236774/azeroot)
-- [Mana Lily](https://www.wowhead.com/beta/item=236778/mana-lily)
-- [Sanguithorn](https://www.wowhead.com/beta/item=236770/sanguithorn)
-- [Nocturnal Lotus](https://www.wowhead.com/beta/item=236780/nocturnal-lotus)
-- [Herbalism Profession Guide](https://www.method.gg/guides/midnight-herbalism-profession-guide)
-- [Mote Of Light](https://www.wowhead.com/beta/item=236949/mote-of-light)
-- [Mote Of Wild Magic](https://www.wowhead.com/beta/item=236951/mote-of-wild-magic)
-- [Mote Of Primal Energy](https://www.wowhead.com/beta/item=236950/mote-of-primal-energy)
-- [Mote Of Pure Void](https://www.wowhead.com/beta/item=236952/mote-of-pure-void)
+- [Nocturnal Lotus](https://www.wowhead.com/item=236780/nocturnal-lotus)
+- [Thalassian Missive Of Perception](https://www.wowhead.com/item=245824/thalassian-missive-of-perception)
+- [Enchant Tool - Amani Perception](https://www.wowhead.com/item=243965/enchant-tool--amani-perception)
+- [Haranir Phial Of Perception](https://www.wowhead.com/item=241316/haranir-phial-of-perception)
+- [Sanguithorn Tea](https://www.wowhead.com/item=242299/sanguithorn-tea)
+- [Imbued Mulch](https://www.wowhead.com/item=238388/imbued-mulch)
+- [Tranquility Bloom](https://www.wowhead.com/item=236761/tranquility-bloom)
+- [Midnight Herbalism Guide](https://www.method.gg/guides/midnight-herbalism-profession-guide)
+- [Herbalism Node Routes](https://www.method.gg/guides/midnight-herb-and-mote-farming-routes)
+- [Argentleaf](https://www.wowhead.com/item=236776/argentleaf)
+- [Argentleaf Route](https://www.method.gg/guides/where-to-farm-argentleaf-midnight-herbalism-route)
+- [Master Alchemist's Surplus Reagents](https://www.wowhead.com/item=260534/master-alchemists-surplus-reagents)
+- [Master Herbalist's Surplus Reagents](https://www.wowhead.com/item=260539/master-herbalists-surplus-reagents)
 - [Alchemy](https://www.method.gg/guides/midnight-alchemy-profession-guide)
 - [Blacksmithing](https://www.method.gg/guides/midnight-blacksmithing-profession-guide)
 - [Cooking](https://www.method.gg/guides/midnight-cooking-profession-guide)
@@ -177,8 +182,7 @@ We hope this guide helped you with some easy farming routes for the new material
 - [Midnight Profession Knowledge Treasure Locations](https://www.method.gg/guides/location-of-all-midnight-profession-knowledge-treasures)
 - [How to Reset Profession Knowledge Points in WoW Midnight](https://www.method.gg/guides/how-to-reset-profession-knowledge-points-in-wow-midnight)
 - [All Profession Knowledge Point Sources in Midnight](https://www.method.gg/guides/all-profession-knowledge-point-sources-in-midnight)
-- [How To Farm Nocturnal Lotus in WoW Midnight](https://www.method.gg/guides/how-to-farm-nocturnal-lotus-in-wow-midnight)
-- [Where To Farm Argentleaf: Midnight Herbalism Route](https://www.method.gg/guides/where-to-farm-argentleaf-midnight-herbalism-route)
+- [The Vial of Eversong Oddities, Enchanted Sunfire Silk and the Half-Baked Techniques Profession Treasure Locations](https://www.method.gg/guides/missing-midnight-profession-treasure-locations)
 - [](https://discord.gg/method)
 - [](https://www.youtube.com/methodgg?sub_confirmation=1)
 - [](https://twitter.com/method)

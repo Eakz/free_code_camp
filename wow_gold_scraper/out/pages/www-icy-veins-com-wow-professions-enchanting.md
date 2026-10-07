@@ -1,4 +1,4 @@
-<!-- source: https://www.icy-veins.com/wow/professions-enchanting fetched: 2026-10-07T20:39:06.826268+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/professions-enchanting fetched: 2026-10-07T20:44:11.784237+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
 # Enchanting Guide for Midnight - World of Warcraft - Icy Veins
 

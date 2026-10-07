@@ -1,170 +1,109 @@
-<!-- source: https://www.icy-veins.com/wow/professions-tailoring fetched: 2026-10-07T20:44:05.177027+00:00 -->
+<!-- source: https://www.icy-veins.com/wow/prey-system-guide fetched: 2026-10-07T20:45:04.099015+00:00 -->
 <!-- page dates: msvalidate.01=BBA2E69ADD6BD4A76395B2709092CCA6 -->
-# Tailoring Guide for Midnight - World of Warcraft - Icy Veins
+# Midnight Prey System Guide for Midnight: How to Unlock, Difficulties, and Rewards - World of Warcraft - Icy Veins
 
-# Tailoring Guide for Midnight
+# Midnight Prey System Guide for Midnight: How to Unlock, Difficulties, and Rewards
 Support Our Writers
-This page covers the most important aspects of Tailoring in Midnight, 
-including talent builds and suggestions on how to make gold with the profession.
-## Tailoring in Midnight
-Like always, Tailoring will be responsible for creating cloth gear for combat, 
-such as Arcanoweave Cloak , and gear for other professions, such as Thalassian Alchemy Coveralls . They can also make cosmetic gear such as Scout's Cape , 
-and some House Decor.
-Besides crafting cloth armor and profession gear, Tailors are able to make bags 
-like the Sunfire Silk Backpack , leg enchants for casters and healers, such 
-as Sunfire Silk Spellthread , and powerful embellishments such as Arcanoweave Lining .
-Tailors can also learn to loot much more cloth when killing enemies, and gain 
-a chance to loot high Quality cloth through some of their knowledge talents. 
-Finally, they have cooldown cloth transmutes and specialization trees for Arcanoweave Bolt and Sunfire Silk Bolt .
-### Tailoring Changes in Season 2
-Tailoring can now learn the new Snakeskin Lining Embellishment craft, 
-and the Pattern: Twilight's Blade Bedroll plus Pattern: Tortollan Slingsack Decor crafts.
-## Best Race for Tailoring in Midnight
-Alliance players can be Kul'Tiran for +2 skill points with Tailoring.
-As you need to be a Tailor to loot cloth from enemies, Tailoring also goes well 
-with traditional farmers who can pull and kill high amounts of hyperspawning cloth-rich enemies constantly in a 2x4 group farm format, such as Balance Druid s, Guardian Druid s or Beast Mastery Hunter s!
-## Best Crafting Stats for Tailoring in Midnight
-Tailoring can make great use of all four stats, but you might want to focus on 
-specific stats with different Tailoring specializations. We go into detail with 
-Tailoring stats and the gear you can use to boost them in the specialized guide below:
-## Leveling Tailoring in Midnight
-Increasing your skill is done by crafting items that grant skill points as usual, 
-and in order to be efficient, we recommend trying to get as many first-craft bonuses 
-while leveling as possible, which also grant experience if you are not at 
-maximum level.
-Besides learning basic recipes from the trainer, you can also learn extra recipes 
-beyond the profession trainer by buying them with Moxie from reputation vendors 
-and the vendor next to the profession table in Silvermoon. These will grant more 
-first crafts and can occasionally be the most efficient way to level in the later 
-levels.
-## How to Level Tailoring in Midnight
-### Leveling Tailoring to 60 Skill
-As with most professions, getting to skill 60 can easily be done through trainer 
-recipes, with the remaining skill points being awarded by specialty crafts such 
-as Adherent's Silken Shroud , Sunfire Silk Bolt , and Elegant Artisan's Alchemy Coveralls which you should do based on your choice of profession talents.
-In order to quickly level up uninterrupted, ensure you have the following materials:
-- 119 Silverleaf Thread
-- 20 Eversinging Dust
-- 20 Imbued Bright Linen Bolt
-- 14 Bright Linen
-- 29 Bright Linen Bolt
-- 46 Embroidery Floss
-Extra Eversinging Dust , Embroidery Floss , Imbued Bright Linen Bolt , Bright Linen Bolt , and Silverleaf Thread might be useful in order 
-to guarantee you can hit 60 Skill as some of the recommended recipes are not guaranteed 
-to grant skill-ups on their final crafts.
-With the materials above, craft the following items, learning new recipes from 
-the trainer as they become available:
-- 14 Bright Linen Bolt (use them on later crafts
-- 3 Courtly Slippers
-- 2 Courtly Cloak
-- 3 Courtly Pants
-- 5 Courtly Robes
-- 7+ Courtly Shoulders
-- 10+ Bright Linen Spellthread
-While you can start crafting end game recipes earlier instead of relying on the 
-Tailoring trainer, these will generally be more efficient to craft towards the 
-end of your leveling once regular trainer recipes stop giving reliable skill points, 
-as they are expensive to produce and will generally only turn a profit when crafted 
-at maximum rank with Concentration .
-### Leveling Tailoring Past 60 Skill
-Getting past Skill 60 will then vary heavily depending on which Profession talents 
-you invest into with your Tailoring Knowledge. Since skill-ups are more RNG as 
-you get closer to 100 Tailoring Skill, we recommend checking the Auction House 
-or using one of our recommended 
-crafting Addons to help you skill up without it eating into your wallet too much.
-Thankfully the process isn't too difficult, as you can craft the same type of 
-items all the way to 100, depending on your specialization. We recommend using the 
-following families of recipes:
-- Cooldown Cloths: Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
-	profit on minimum quality making them cheap ways to level up to 100, but the 
-	amount you can craft is time-limited making it a slow process.
-- Arcanoweave Bolt and Sunfire Silk Bolt can be crafted for 
-	profit on minimum quality making them cheap ways to level up to 100, but the 
-	amount you can craft is time-limited making it a slow process.
-- Consumables: Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
-	consumables are great options for leveling up past 60 as they have solid demand 
-	and can be crafted at maximum quality for a profit immediately through Concentration .
-- Arcanoweave Lining , Arcanoweave Spellthread and other high-end 
-	consumables are great options for leveling up past 60 as they have solid demand 
-	and can be crafted at maximum quality for a profit immediately through Concentration .
-- Combat Gear Master: Combat gear such as Adherent's Silken Shroud is often in demand and 
-	grants a large amount of skill points all the way to 100, but can be hard to 
-	get in quantity due to requiring Spark usage and the work order system.
-- Combat gear such as Adherent's Silken Shroud is often in demand and 
-	grants a large amount of skill points all the way to 100, but can be hard to 
-	get in quantity due to requiring Spark usage and the work order system.
-- Profession Gear Master: Tailoring can also craft gear for other professions, ranging from rare 
-	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
-	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
-	which requires the work order system.
-- Tailoring can also craft gear for other professions, ranging from rare 
-	gear that can be sold on the auction house profitably, such as Elegant Artisan's Alchemy Coveralls , 
-	to epic gear that is bind on pickup such as Thalassian Alchemy Coveralls , 
-	which requires the work order system.
-## Tailoring Knowledge in Midnight
-You will be able to track all weekly and one-time sources of profession knowledge 
-with Myu's Knowledge Points Tracker , 
-which has been converted to an addon in Midnight!
-There are also eight treasures around the world that you can loot to gain up 
-to 24 extra knowledge. You can find them all easily in-game with the aforementioned 
-addon.
-## Best Tailoring Specializations and Talents in Midnight
-The best passive option is to max out the Fabric Specialist tree, as the 
-bonuses granted massively increase the amount of cloth you loot and also allow you 
-to loot high Quality cloth occasionally. Pick the Eastern Kingdoms Cloth sub-node if you want to maximize your cloth gathering in the Eversong Woods and 
-Zul'Aman zones, or Otherworldly Cloth if you are instead looking to farm 
-on Harandar or Voidstorm.
-Investment into the Nimble Needlework tree is the only way to enable 
-drops of Sunfire Silk and Arcanoweave when killing enemies. This 
-tree also teaches you how to craft some Embellished gear and the cooldown bolts, Arcanoweave Bolt and Sunfire Silk Bolt . While initially you can only 
-accumulate 10 crafts of each and it takes a day for their cooldown to be ready again, 
-you can learn how to accumulate up to 30 crafts and halve the cooldown by fully 
-investing into the leaf nodes.
-For cloth gear crafting, profession gear, and cloaks, invest into the Sin'dorei Finery tree, which will increase your skill at these crafts massively 
-and also unlock the generic epic gear recipes with its leaf nodes.
-Finally, the Fiber Arts tree is also very valuable for most tailors due 
-to the high stat gains it provides for all tailoring crafts. The Embroidery sub-tree is particularly notable because it grants stats and skill towards the 
-valuable Spellthread and Embellishment crafts despite being in the generic skill 
-tree.
-## Making Gold with Tailoring in Midnight
-Tailoring allows you to convert cheap cloth into expensive bolts, bags, and crafted 
-gear or leg enchants. High-end gear pieces and bind on pickup profession bags are 
-likely to fetch a good price in the Crafting Orders system, while everything 
-else can be sold at a profit on the auction house.
-It is particularly hard to unlock the crafting of Tailoring recipes at maximum 
-natural skill this time because the trees are configured in a way where the skill 
-increasing nodes are randomly located deep into otherwise useless trees, as is the 
-case in the Fabric Specialist tree, which has 15 skill increases, all locked 
-behind large knowledge point investments.
-As most Tailoring requirements for natural maximum rank crafting require the 
-usage of maximum rank materials and all knowledge skill increases, a gigantic amount 
-of knowledge is needed in order to unlock the best crafts, which will otherwise 
-be locked behind Concentration usage, providing a great opportunity for gold 
-making early on!
-Finally, you can make a lot of passive / farm gold with Tailoring by investing 
-into all the various cloth drop support nodes, as that will cause valuable cloth 
-to drop from whatever enemies you kill during your daily activities.
-We have a specialized guide for Midnight gold-making below, which contains 
-a gold-making tier list and goes deeper into techniques and habits for successful 
-gold making, as well as websites and addons that can help you on your journey!
-This guide has been written by Seksi , member of Cursed Gifts and healing aficionado.
-          You can find him answering questions and discussing Restoration Shaman gameplay
-          on the Ancestral Guidance and Earthshrine Discords.
+Learn more about Prey, the optional open-world activity introduced in the Midnight Expansion.
+## Introduction
+Prey is an optional hunting system that lets you pursue powerful foes across the
+Midnight Expansion zones for gear and various cosmetic rewards. This system adds an extra
+layer to world content that can make it more fun and exciting!
+## What Is New in Season 2 of Midnight?
+With Season 2 we get four new bosses that are all snake-themed to go with 
+The Curse of Ula'tek patch. There's also the Curse of the Isle mode, that can add a little extra 
+torment to your day to day world content, which also includes a new repeatable boss.
+You can also earn additional gear rewards each week with Afflicted Soul and Tormented Soul . Each of these drop from bountiful delves at tier 6 and 
+above once you've unlocked them at Preyhunter's Journey Rank 4 and Rank 9 respectively.
+Using one of these items will instantly reveal the location of your next Nightmare 
+Difficulty Prey hunt, and award an additional piece of loot. The Afflicted Souls will award a Champion level piece of loot, and the Tormented Souls will award a 
+Hero level piece of loot.
+Curse of the Isle Mode : This is the biggest addition to Prey in Season 2. 
+After a short initial questline from Astalor in Silvermoon, you will be able to 
+take a portal from his sanctum straight to The Coiled Isle. Once you're there you can speak 
+with an Image of Astalor Bloodsworn to toggle on the "Curse of the Isle" debuff, turning 
+on all Nightmare difficulty affixes from a hunt while on The Coiled Isle. 
+Speak with the Image once again to turn the mode off again.
+Why turn it on? : Ultimately your goal will be to kill Ral'kala and acquire his 
+rewards, which include Remnants of Anguish, Voidlight Marl, Champion and Hero crests, 
+a new pet, a new toy, and a new mount!
+To summon Ral'Kala you must go to a Haunted Brazier which can be found easily 
+from your map, and make an offering with Ossified Relic s. 
+These are warband items that spawn across the isle as skull-looking treasures. 
+You can also do a daily quest on the isle, located at 57.1, 33.3, once per character, to 
+get an additional 100 Ossified Relics.
+Once 100 relics have been offered to a Haunted Brazier, which can be contributed by 
+any player, it will summon Ral'kala. After about 10-15 seconds of immunity to give 
+players a chance to get to his location, he can be defeated for his rewards. You can kill him 
+multiple times a day to acquire the rewards, and there is even an achievement, Nine, Ten, Never Sleep Again , to defeat him 50 times!
+One final note is that you can collect Ossified Relics and fight Ral'kala 
+while you are on a Nightmare Difficulty hunt. Though it is not advised as you 
+can easily be ambushed while fighting an already difficult enemy. Unless, of course, you
+like the extra challenge!
+## How to Enable the Prey System
+As mentioned, Prey is an optional feature, which means you must first enable it by visiting Magister Astalor Bloodsworn in Murder Row in Silvermoon City, starting at level 90.
+You can easily identify Astalor’s location by the Prey icon on your map. After a short
+questline you can then accept contracts to hunt down prey in each of the Midnight zones.
+## How Prey Works in Midnight
+Once you pick a contract, you can venture out into the zone you selected. Completing any
+world content, such as World Quests, including the ones that become available once you enable this system,
+killing rares, interacting with treasures, and participating in Prey activities will help
+Astalor's magic focus on the location of your prey, furthering your hunt.
+Prey activities are new world interactions that define this system and are only available
+while it is activated. These include defeating your prey, who may ambush you at any time
+while interacting with world content, disarming traps, which can be used against your
+prey to instantly make them flee if they ambush you, and defeating Coalesced Anguish ,
+enemies that may be summoned in the area.
+After completing enough of these activities, Astalor will locate the position of your prey.
+You will now be able to summon and fight them, and once defeated, you will be rewarded with:
+- Progress toward your season’s Prey journey.
+- A chest containing gear with quality based on the difficulty completed.
+- Mistcrests , Midnight’s Gear Upgrade System material.
+- Restored Coffer Key shards, providing an additional source of keys for Bountiful Delves.
+- Progress toward the Great Vault in the World tier slot.
+Helpful Tip : After you are ambushed, follow the blood mist trail 
+and take an attack at your prey to further increase your progress.
+## Prey Difficulties
+The Prey system is available in three difficulties. You are limited to one hunt per
+difficulty, per week, per zone. The exception is The Coiled Isle introduced in patch 12.1, 
+this zone has two Hard hunts and one Nightmare hunt a week.
+- Normal Difficulty : On this difficulty, nothing extra occurs, and other players
+in the open world can help you take down your target.
+- Hard Difficulty : Enemies on this difficulty come with a mechanic called Torment. 
+Which will have you increase damage by 2% and stacks as you pursue your prey, ramping up
+quickly.
+- Nightmare Difficulty : This is the hardest difficulty, and the target is extremely
+challenging to defeat. Torment is active and stronger, increasing damage you 
+take by 4% stacking and increasing by 4% every 60 seconds while no in a rested area. 
+Make sure you pursue your prey with haste! 
+No groups are allowed to take down your foe, so proceed with caution.
+Hard and Nightmare difficulty will also have additional affixes during your hunt.  
+Each unique to the season of Prey, Below are the affixes for season 2 of prey.
+- Torment : Increased damage and reduced progress of your hunt if you die.
+- Pack Ambush : A pack of serpentine scouts will 
+occasionally attack from the shadows while you are in combat.
+- Exploding Corpse Snakes : Snakes erupt from enemy corpses, exploding 
+in a spray of venom when killed. Make sure to get out of the large circle when they 
+are defeated.
+- Toxic Snare : Envenomed Nets are thrown at your location while in combat, 
+slowing you and inflicting nature damage if triggered. When they start being cast on you, 
+ensure you keep moving until they stop. These nets are very deadly if you are caught 
+by them.
+## Prey Rewards
+The Prey system grants credit toward the Great Vault based on the difficulty
+completed, rewarding up to Hero-track loot, similar to Delves .
+Additionally, there are Achievements to earn and a wide variety of cosmetics, including
+new mounts, transmog, and Player Housing decor! These rewards will change from
+season to season during Midnight. Interested in everything you can earn? Check out our 
+Prey Rewards Guide!
+Daylea is a lover of all things Warcraft. From raiding with her friends,
+        to exploring every nook and cranny Azeorth can offer, she is always on
+        the hunt for more things to get lost in this world. You can follow her on Twitter to see what she is getting up to.
 ## Changelog
-- 11 Aug. 2026: Updated for Midnight Season 2 launch.
-- 11 May 2026: Added a detailed leveling section.
-- 24 Feb. 2026: Updated for Midnight.
-- 26 Oct. 2024: Reviewed for Patch 11.0.5.
-- 24 Aug. 2024: Updated for The War Within launch.
-- 18 Apr. 2024: Reviewed for Season 4.
-- 19 Mar. 2024: Reviewed for Patch 10.2.6.
-- 07 Nov. 2023: Updated for Patch 10.2.
-- 04 Sep. 2023: Reviewed for Patch 10.1.7.
-- 01 Dec. 2022: Added more pages to the guide.
-- 27 Nov. 2022: Updated for Dragonflight.
-- 20 Feb. 2022: Updated for Patch 9.2.
-- 24 Jun. 2021: Updated for Patch 9.1.
-- 24 Nov. 2020: Guide added.
+- 08 Aug. 2026: Updated for patch 12.1.
+- 24 Feb. 2026: Updated with more information on systems and rewards.
+- 25 Jan. 2026: Guide updated.
+- 13 Sep. 2025: Guide added.
 ### In The Same Category
 
 ## LINKS
@@ -325,14 +264,18 @@ This guide has been written by Seksi , member of Cursed Gifts and healing aficio
 - [Books and Novels](https://www.icy-veins.com/wow/warcraft-books-and-novels-overview)
 - [Player Housing](https://www.icy-veins.com/wow/player-housing-guide)
 - [Go Ad Free](https://www.icy-veins.com/premium)
-- [](https://discord.gg/AcTek6e)
-- [Midnight Tailoring Stats and Gear Guide](https://www.icy-veins.com/wow/professions-tailoring-stats-and-gear)
-- [Myu's Knowledge Points Tracker](https://www.curseforge.com/wow/addons/myus-knowledge-points-tracker)
-- [](https://discord.gg/earthshrine)
-- [](https://discord.gg/focusedwill)
-- [Seksi](https://raider.io/characters/eu/tarren-mill/Seksixeny)
-- [Cursed Gifts](https://raider.io/guilds/eu/tarren-mill/Cursed%20Gifts)
-- [Earthshrine](https://discord.me/earthshrine)
+- [](https://x.com/GoodDaylea)
+- [](https://static.icy-veins.com/images/wow/midnight/prey-intro.webp)
+- [](https://static.icy-veins.com/images/wow/midnight/ralkala.jpg)
+- [](https://static.icy-veins.com/images/wow/midnight/ossified_relic.jpg)
+- [](https://static.icy-veins.com/images/wow/midnight/haunted_brazier.jpg)
+- [](https://static.icy-veins.com/images/wow/midnight/prey-location.jpg)
+- [](https://static.icy-veins.com/images/wow/midnight/prey-ambush.webp)
+- [Prey Rewards Guide](https://www.icy-veins.com/wow/prey-rewards-guide)
+- [Daylea](https://raider.io/characters/us/moon-guard/Daylea)
+- [The Blinding Vale](https://www.icy-veins.com/wow/blinding-vale-dungeon-guide)
+- [Den of Nalorakk](https://www.icy-veins.com/wow/den-of-nalorakk-dungeon-guide)
+- [Voidscar Arena](https://www.icy-veins.com/wow/voidscar-arena-dungeon-guide)
 - [Twitch](https://www.twitch.tv/icyveinscom)
 - [Facebook](https://www.facebook.com/icyveinscom)
 - [Twitter](https://x.com/icyveins)

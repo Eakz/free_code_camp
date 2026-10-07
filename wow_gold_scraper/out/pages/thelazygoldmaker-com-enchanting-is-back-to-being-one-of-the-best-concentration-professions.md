@@ -1,4 +1,4 @@
-<!-- source: https://thelazygoldmaker.com/enchanting-is-back-to-being-one-of-the-best-concentration-professions fetched: 2026-10-07T20:39:35.825495+00:00 -->
+<!-- source: https://thelazygoldmaker.com/enchanting-is-back-to-being-one-of-the-best-concentration-professions fetched: 2026-10-07T20:44:41.856164+00:00 -->
 <!-- page dates: article:modified_time=2026-04-08T19:48:46+00:00; article:published_time=2026-04-08T19:48:44+00:00 -->
 # Enchanting is back to being one of the best concentration professions! - The Lazy Goldmaker
 
