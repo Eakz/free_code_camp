@@ -1,5 +1,25 @@
 # Project memory
 
+## ⚠️ RULE ZERO — FRESH, CURRENT DATA ONLY (read before anything else, never skip)
+
+This project's data changes very frequently (patches, hotfixes, season rules, item levels,
+crafting costs, loot tables, talents, the player's gear and currencies). **Assumptions will be
+wrong.** Every answer must rest on freshly collected, current data and solid calculations:
+
+1. **Collect current data first, every time.** Use the newest export the user gave in this
+   conversation. Rebuild SimC from the current `midnight` branch and check its version string
+   matches the user's client build. Look up costs, caps, loot and rules with WebSearch *now*.
+2. **Nothing in this file, `sims/`, or a previous session is a source of truth.** It is a record
+   of method and of what was true *then*. Re-verify every number you reuse (track caps, spark and
+   crest costs, dungeon pool, loot tables, consumable names, bonus ids) against current sources
+   before you rely on it, and update this file when it is outdated.
+3. **Never assume.** If a fact cannot be verified from a current source or the export, say so
+   explicitly in the answer; don't fill the gap with an old value or a guess.
+4. **Calculate, don't estimate.** Recommendations come from sims run on current data, with
+   error bars, sanity actors and the method below.
+5. **State your sources and their dates** in every answer (export timestamp, SimC build,
+   web sources).
+
 This repo is used as the user's WoW / SimulationCraft workspace. Characters so far:
 Mergegit (EU-Silvermoon Night Elf Druid, Balance main, Guardian offspec) and Resetgit
 (EU-Silvermoon Beast Mastery Hunter). The user pastes a SimC addon export and asks a gear,
