@@ -86,3 +86,15 @@ Corrected conclusion: hold the 2 sparks and craft the Pikestaff + Ritual Stone a
 because spending 2 now on the best single armour craft (≤ +0.4%) delays the Pikestaff from ~2 to ~4 weeks.
 If crafting now: bear-first = Utility Belt (+0.41 / −0.42) or Agent's Cover + tier gauntlets (+0.23 / −1.59);
 Balance-first = Handwraps (+0.32 raid / +0.32 M+; bear +0.13 / 0).
+
+## 2026-10-08 (fresh) — what to do with 2 sparks
+Sources: Guardian export 2026-10-08 14:25; Balance profile 2026-10-07 21:24 (gear unchanged in 14:25 export);
+SimC midnight 2c56391 (2026-10-08), live data 69933 = client. Costs verified today (wiki/Method/wowcarry):
+armour 2 sparks, 2H 4; 331 = Q5 + 80 Myth Mistcrest (3446, player has 83). Inputs/outputs `sparks2/`.
+Guardian (Patchwerk single actor, 8000 it, ±0.10 DPS / ±0.31 DTPS), crafts Haste/Vers per user:
+Pikestaff+Ritual Stone (4 sparks) +3.79 / −7.38 | Belt+Adorned Fang +0.74 / −0.95 | Cover+tier gauntlets+AF +0.60 / −1.99 |
+Leggings+TH+AF +0.63 / −1.20 | Belt (no emb) +0.41 / −0.42 | free Amani ring1 +0.38 / −1.93.
+Balance (PW ±0.08 / DS ±0.20): Handwraps Crit/Mastery +0.74 / +0.54; Mastery/Vers +0.61 / +0.69; Haste/Vers +0.24 / +0.41.
+Adorned Fang: SimC placeholder for low-health proc chance (approximate).
+Conclusion: save sparks + 80 Myth crests for the Pikestaff (~5x any 2-spark craft for the bear).
+If crafting now: bear = Utility Belt + Adorned Fang; Balance = Handwraps Crit/Mastery.
