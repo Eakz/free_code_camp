@@ -203,8 +203,11 @@ Each of these was made in a real session, cost the user several rounds, and is n
 - Sparks of Tides: **2 per armour / jewellery / 1H / off-hand craft, 4 per two-hander**
   (user confirmed in-game: 2H needs 4; guides agree). About 1 spark per week; guides mention a cap of 4.
 - Crafted 331 needs a personal order with the sparks **plus 80 Myth Mistcrests** (guides; verify).
-- Export currency ids 3442-3446 are the five Mistcrests, but which id is which is NOT verified —
-  ask the in-game currency tab rather than guessing. (2026-10-08 export: 3445=79, 3446=83.)
+- Currency ids (Wowhead, checked 2026-10-08): 3442 Adventurer, 3443 Veteran, 3444 Champion,
+  3445 Hero, 3446 Myth Mistcrest; 3378 Dawnlight Manaflux (Midnight catalyst charges).
+- S2 embellishments: Hunter's Ritual Stone (13771), Adorned Fang (LW, Haste proc, bonus 13767),
+  Snakeskin Lining, Polished Ammolite, Coiled Snake-Eye (guns). Arcanoweave (12384) still used.
+- Patch 12.1.5 lands Oct 14 (EU): re-verify everything after it.
 - Embellishment cap is 2 per character loadout; armour is shared between specs, weapons are not.
 
 ### 3d. Season 2 item level facts (verified)
