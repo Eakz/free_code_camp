@@ -80,4 +80,9 @@ Balance: Patchwerk 8000 (±0.08) / DungeonSlice 5000 (±0.21). Inputs `sparks/`.
 | Agent's Leggings + tier gauntlets (enchant conflict: Agi kit vs Int thread) | +0.32 | −0.50 | +0.38 | +0.61 |
 | Agent's Sneakers (vs Breakwater 334) | −0.06 | +0.11 | −0.19 | −0.09 |
 Free: Band of the Amani Warlord ring1 on bear +0.38 / −1.93.
-Conclusion: spark 1 = Pikestaff + Ritual Stone (bear). Spark 2 = Utility Belt (bear +0.5/−0.7 on top; Balance tie).
+~~Conclusion: spark 1 = Pikestaff, spark 2 = belt~~ WRONG: assumed 1 spark per craft. Corrected 2026-10-08:
+2H costs 4 sparks, armour 2; the player has 2 sparks = exactly one armour craft now.
+Corrected conclusion: hold the 2 sparks and craft the Pikestaff + Ritual Stone at 4 sparks (+3.8% DPS / −7.4% dmg taken),
+because spending 2 now on the best single armour craft (≤ +0.4%) delays the Pikestaff from ~2 to ~4 weeks.
+If crafting now: bear-first = Utility Belt (+0.41 / −0.42) or Agent's Cover + tier gauntlets (+0.23 / −1.59);
+Balance-first = Handwraps (+0.32 raid / +0.32 M+; bear +0.13 / 0).

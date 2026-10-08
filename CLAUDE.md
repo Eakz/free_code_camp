@@ -19,6 +19,11 @@ enchant, gem, talent, craft or upgrade question.
 - **Output: terse.** Tables with % vs baseline and ± error, then an ordered action list
   (slot -> item -> what to do -> expected %). No essays, no guide-site summaries.
 - Answer exactly what was asked. Re-read the question before answering.
+- **Never assume resource costs or counts (sparks, crests, catalyst charges, embellishment
+  reagents) from old sessions or memory.** Check the current requirement (WebSearch / the user's
+  in-game statement) and the player's current amount (export currencies) before recommending a
+  craft or upgrade, and state both in the answer. Old data is never the source of truth; a fresh
+  export or a user correction always overrides this file — update this file when it does.
 - Recorded results live in `sims/` (section 8). Check it before re-simming a question, and add
   every new result there with the exact `.simc` input so it can be reproduced.
 
@@ -173,7 +178,16 @@ Each of these was made in a real session, cost the user several rounds, and is n
    2=leather, 3=mail, 4=plate. Cloaks are subclass 1 for everyone. Feeding a mail belt to a
    druid aborts the whole run with "Invalid type" and wastes the batch.
 
-### 3c. Season 2 item level facts (verified)
+### 3c. Season 2 crafting costs (checked 2026-10-08 — re-verify each time)
+
+- Sparks of Tides: **2 per armour / jewellery / 1H / off-hand craft, 4 per two-hander**
+  (user confirmed in-game: 2H needs 4; guides agree). About 1 spark per week; guides mention a cap of 4.
+- Crafted 331 needs a personal order with the sparks **plus 80 Myth Mistcrests** (guides; verify).
+- Export currency ids 3442-3446 are the five Mistcrests, but which id is which is NOT verified —
+  ask the in-game currency tab rather than guessing. (2026-10-08 export: 3445=79, 3446=83.)
+- Embellishment cap is 2 per character loadout; armour is shared between specs, weapons are not.
+
+### 3d. Season 2 item level facts (verified)
 
 - **M+ end-of-dungeon cache caps at 321.** Great Vault from M+ reaches 337. Dungeons never drop
   Mythic-track gear. Confirmed in-game by the player and independently by search.
