@@ -67,3 +67,17 @@ Same Guardian profile, Patchwerk, single actor, 10000 it (DPS ±0.09%, DTPS ±0.
 +600 rating injected: Vers −21.5% dmg taken / +9.3% DPS; Crit −18.2% / +9.8%; Haste −12.7% / +8.9%; Mastery −10.0% / +8.3%.
 Real item check (crafted wrist 331, all 6 pairs): Crit/Vers = Crit/Haste = Haste/Vers (within error); Mastery pairs +1.1..+1.7% dmg taken.
 Caveat: Patchwerk = one physical melee hitter on a dummy; no magic damage, no pulls. Talents = "m+ dps" (Elune's Chosen).
+
+## 2026-10-08 — 2 sparks: craft for Guardian or Balance? (Guardian 14:25 export, Balance 21:24 profile)
+Crafts 331 q5 Haste/Vers (user's assumption). Guardian: Patchwerk single actor 8000 it (DPS ±0.10, DTPS ±0.31).
+Balance: Patchwerk 8000 (±0.08) / DungeonSlice 5000 (±0.21). Inputs `sparks/`.
+| Craft | Bear DPS | Bear dmg taken | Balance raid | Balance M+ |
+|---|---|---|---|---|
+| Aln'hara Pikestaff + Hunter's Ritual Stone | +3.79 | −7.38 | n/a | n/a |
+| Aln'hara Pikestaff, no embellishment | +2.75 | −5.28 | n/a | n/a |
+| Pikestaff+RS + Silvermoon Agent's Utility Belt | +4.31 | −8.11 | +0.07 | +0.18 |
+| Pikestaff+RS + Silvermoon Agent's Handwraps | +3.93 | −7.49 | +0.32 | +0.32 |
+| Agent's Leggings + tier gauntlets (enchant conflict: Agi kit vs Int thread) | +0.32 | −0.50 | +0.38 | +0.61 |
+| Agent's Sneakers (vs Breakwater 334) | −0.06 | +0.11 | −0.19 | −0.09 |
+Free: Band of the Amani Warlord ring1 on bear +0.38 / −1.93.
+Conclusion: spark 1 = Pikestaff + Ritual Stone (bear). Spark 2 = Utility Belt (bear +0.5/−0.7 on top; Balance tie).
