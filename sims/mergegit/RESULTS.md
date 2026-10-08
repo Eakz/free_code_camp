@@ -61,3 +61,9 @@ Ranked by damage taken (negative = better), DPS second.
 Owned now: Band of the Amani Warlord (bags, 315→321) ring2 + Ritual Binder's Ring ring1: +0.49 DPS / −3.04 dmg taken.
 Combos: owned rings + Pilfered + Polearm + Dinomancer + Hood: +0.84 / −8.53.
 Avoid: Tumor of the Swarm (+0.55 DPS but +6.1% dmg taken), all other dungeon trinkets lose DPS and survivability.
+
+## 2026-10-08 — Guardian stat values (why Crit shows up)
+Same Guardian profile, Patchwerk, single actor, 10000 it (DPS ±0.09%, DTPS ±0.3%). `guardian/stats`, `guardian/stats_out`.
++600 rating injected: Vers −21.5% dmg taken / +9.3% DPS; Crit −18.2% / +9.8%; Haste −12.7% / +8.9%; Mastery −10.0% / +8.3%.
+Real item check (crafted wrist 331, all 6 pairs): Crit/Vers = Crit/Haste = Haste/Vers (within error); Mastery pairs +1.1..+1.7% dmg taken.
+Caveat: Patchwerk = one physical melee hitter on a dummy; no magic damage, no pulls. Talents = "m+ dps" (Elune's Chosen).
