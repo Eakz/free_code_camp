@@ -98,3 +98,13 @@ Balance (PW ±0.08 / DS ±0.20): Handwraps Crit/Mastery +0.74 / +0.54; Mastery/V
 Adorned Fang: SimC placeholder for low-health proc chance (approximate).
 Conclusion: save sparks + 80 Myth crests for the Pikestaff (~5x any 2-spark craft for the bear).
 If crafting now: bear = Utility Belt + Adorned Fang; Balance = Handwraps Crit/Mastery.
+
+## 2026-10-10 — M+ consumables (fresh SimC 71a76b7, data 69933 = client)
+Balance: profile 2026-10-07 21:24 (newest Balance export), DungeonSlice 6000 it (±0.19%).
+Guardian: profile 2026-10-08 14:25, Patchwerk single actor 5000 it (DPS ±0.13, DTPS ±0.39). `consumables_1010/`.
+Balance M+: Flask of the Magisters (others −0.6..−1.4) | Draught of Rampant Abandon +0.38 vs Light's Potential |
+Harandar Celebration = Royal Roast = Impossibly Royal Roast = Silvermoon Parade | Void-Touched rune (+0.77 vs none) |
+Thalassian Phoenix Oil (Oil of Dawn −0.69).
+Guardian (vs Blood Knights / Light's Potential): Flask of Thalassian Resistance +0.20 DPS / −3.22 dmg taken;
+Flask of the Shattered Sun +0.54 / −2.36; Draught of Rampant Abandon +0.54 / −0.33; food Harandar = Royal Roast = Parade;
+rune Void-Touched (+0.65 / −1.30 vs none); oil Thalassian Phoenix Oil (Oil of Dawn −0.50 / +0.83).
