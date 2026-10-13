@@ -108,3 +108,16 @@ Thalassian Phoenix Oil (Oil of Dawn −0.69).
 Guardian (vs Blood Knights / Light's Potential): Flask of Thalassian Resistance +0.20 DPS / −3.22 dmg taken;
 Flask of the Shattered Sun +0.54 / −2.36; Draught of Rampant Abandon +0.54 / −0.33; food Harandar = Royal Roast = Parade;
 rune Void-Touched (+0.65 / −1.30 vs none); oil Thalassian Phoenix Oil (Oil of Dawn −0.50 / +0.83).
+
+## 2026-10-13 — Guardian: Bubbleband ring + Whirling Sash belt? (export 2026-10-13 18:09)
+SimC midnight f762a63 (2026-10-13), live data 69933 = client. Patchwerk single actor 10000 it (DPS ±0.09, DTPS ±0.28).
+Profile fixed: Slitherscale = Champion 6/6 308 (not 321). Inputs `guardian_1013/`.
+| Change | DPS | Dmg taken |
+| Bubbleband (Haste/Vers) for Sickening Signet | −0.03 | −1.67 |
+| Whirling Sash (Haste/Mastery) for Slitherscale | +0.52 | +0.70 |
+| both | +0.50 | −1.07 |
+| Amani Warlord ring1 instead | +0.37 | −2.22 |
+| Subjugator's Grips for Miststalker's Grips | +0.22 | −1.55 |
+| Twin-Strike Polearm 321 | +0.21 | −1.10 |
+| Amani + Subjugator + Polearm | +0.68 | −4.53 |
+| Amani + Subjugator + Polearm + Sash | +1.13 | −3.91 |

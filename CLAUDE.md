@@ -207,6 +207,10 @@ Each of these was made in a real session, cost the user several rounds, and is n
   3445 Hero, 3446 Myth Mistcrest; 3378 Dawnlight Manaflux (Midnight catalyst charges).
 - S2 embellishments: Hunter's Ritual Stone (13771), Adorned Fang (LW, Haste proc, bonus 13767),
   Snakeskin Lining, Polished Ammolite, Coiled Snake-Eye (guns). Arcanoweave (12384) still used.
+- Upgrade tracks (verified 2026-10-13, Method + Icy Veins): Champion 292-308, Hero 305-321, Myth 318-334
+  (6/6). Step bonus ids: Champion 12833-12838, Hero 12841-12846, Myth 12849-12854. `build_profile.py` now caps
+  by these ids (Slitherscale Girdle = Champion 6/6 = 308; earlier sims wrongly put it at 321).
+- Upgrade cost: flat 20 crests of the track per step (nexttier.pro, Icy Veins; verify in game).
 - Patch 12.1.5 lands Oct 14 (EU): re-verify everything after it.
 - Embellishment cap is 2 per character loadout; armour is shared between specs, weapons are not.
 

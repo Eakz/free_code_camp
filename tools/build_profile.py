@@ -35,15 +35,32 @@ def strip_stat_bonus(rest):
         return 'bonus_id=' + '/'.join(ids)
     return re.sub(r'bonus_id=([0-9/]+)', fix, rest)
 
-def cap_for(line, raw):
+# Upgrade-track step bonus ids -> (track, 6/6 cap). S2 caps verified 2026-10-13 (Method, Icy Veins):
+# Champion 292-308, Hero 305-321, Myth 318-334. Re-verify every season/patch.
+TRACKS = [(range(12833, 12841), 'Champion', 308),
+          (range(12841, 12849), 'Hero', 321),
+          (range(12849, 12857), 'Myth', 334)]
+
+def track_of(line):
+    m = re.search(r'bonus_id=([0-9/]+)', line)
+    ids = {int(b) for b in m.group(1).split('/')} if m else set()
+    for rng, name, cap in TRACKS:
+        if ids & set(rng):
+            return name, cap
+    return None, None
+
+def cap_for(line, raw, name=''):
     """Return (cap, why). Never invent an item level a source cannot produce."""
     if 'crafting_quality=' in line:
         return CRAFTED_CAP, 'crafted PvE'
-    if re.search(r"Competitor|Gladiator|Aspirant|Combatant", line):
+    if re.search(r"Competitor|Gladiator|Aspirant|Combatant", name + line):
         return raw, 'PvP - does not scale in PvE'
+    track, cap = track_of(line)
+    if track:
+        return max(cap, raw), f'{track} track 6/6'
     if raw > DUNGEON_CAP:
-        return raw, 'already above Hero track - leave alone'
-    return DUNGEON_CAP, 'Hero/dungeon track'
+        return raw, 'no track id, above Hero cap - leave alone'
+    return DUNGEON_CAP, 'no track id - assumed Hero/dungeon'
 
 def main(path):
     txt = open(path, encoding='utf-8', errors='replace').read()
@@ -66,7 +83,7 @@ def main(path):
             sys.exit(f"ERROR: {slot} has no '# Name (ilvl)' comment above it - cannot "
                      f"establish its item level. Fix the export, do not guess.")
         name, raw = pending_ilvl; pending_ilvl = None
-        cap, why = cap_for(s, raw)
+        cap, why = cap_for(s, raw, name)
         rest = re.sub(r',?\s*ilevel=\d+', '', rest)
         rest = re.sub(r',?\s*content_tuning=\d+', '', rest)
         rest = strip_stat_bonus(rest)
