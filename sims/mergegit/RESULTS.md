@@ -121,3 +121,11 @@ Profile fixed: Slitherscale = Champion 6/6 308 (not 321). Inputs `guardian_1013/
 | Twin-Strike Polearm 321 | +0.21 | −1.10 |
 | Amani + Subjugator + Polearm | +0.68 | −4.53 |
 | Amani + Subjugator + Polearm + Sash | +1.13 | −3.91 |
+
+## 2026-10-13 — What 12.1.5 changes for Mergegit (Druid)
+Source of truth: SimC f762a63 game data diff, live 12.1.0.69933 vs PTR 12.1.5.70340 (`tools/spell_diff.py <simc> 7`).
+Only 4 Druid-family spells change: Bear Form (melee-crit-taken −6% and +3% expertise removed from Bear Form),
+Guardian Druid aura (those two effects added -> no net change for Guardian), Nature's Bounty (Resto 10%->15%),
+Skyfire Heel (attribute flag). Balance: no spell changes.
+Live-vs-ptr sims (`ptr_1215/`) are NOT valid yet: SimC's PTR mode uses a different Balance APL (−2.4% is APL, not game)
+and still reads Bear Form effect indices from the old layout (Guardian DTPS ×3.4 is a SimC artifact).

@@ -211,7 +211,11 @@ Each of these was made in a real session, cost the user several rounds, and is n
   (6/6). Step bonus ids: Champion 12833-12838, Hero 12841-12846, Myth 12849-12854. `build_profile.py` now caps
   by these ids (Slitherscale Girdle = Champion 6/6 = 308; earlier sims wrongly put it at 321).
 - Upgrade cost: flat 20 crests of the track per step (nexttier.pro, Icy Veins; verify in game).
-- Patch 12.1.5 lands Oct 14 (EU): re-verify everything after it.
+- Patch 12.1.5 lands Oct 14 (EU): re-verify everything after it. To see class changes exactly, diff SimC
+  live vs PTR spell data: `python3 tools/spell_diff.py <simc> <family>` (Druid = 7). Do not trust `ptr=1`
+  sims until SimC updates the class module/APL (on 2026-10-13 they gave fake −2.4% Balance / ×3.4 bear DTPS).
+- 12.1.5 mid-season refresh: 10 Ascendant Venomstones raise one fully upgraded S2 Hero/Myth/max-quality
+  crafted weapon, trinket or necklace above its track cap (amount not final); obtainable from week of Oct 20.
 - Embellishment cap is 2 per character loadout; armour is shared between specs, weapons are not.
 
 ### 3d. Season 2 item level facts (verified)
