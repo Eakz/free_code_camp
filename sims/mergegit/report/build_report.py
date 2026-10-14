@@ -39,33 +39,46 @@ def swap(base, changes):
     d = {r[0]: r for r in base}
     for c in changes: d[c[0]] = c
     return [d[r[0]] for r in base]
-OWNED = swap(CUR, [
- ("Ring 1","Charged Sandstone Band",321,"Hero 6/6","Silvermoon's Alacrity",["Flawless Quick Lapis"],"Crit / Mastery","+2.54% M+ · +1.77% raid alone"),
- ("Ring 2","Band of the Amani Warlord",321,"Hero 6/6 · upgrade 315→321","Silvermoon's Alacrity",["Flawless Quick Lapis"],"Crit / Haste","+0.40% M+ · +0.46% raid alone"),
- ("Hands","Subjugator's Chilling Grips",321,"Hero 6/6","",[],"Crit / Vers","+0.60% M+ · +0.42% raid alone"),
- ("Trinket 2","Gebbo's Bottomless Bag",334,"Myth 6/6","",[],"Agility","+0.88% M+ · +0.45% raid alone"),
+PIKE = ("Weapon","Aln'hara Pikestaff",331,"Crafted Q5 · 4 sparks + 80 Myth crests","Berserker's Rage · Embellishment: Hunter's Ritual Stone",[],"Haste / Vers","crafted weapon")
+BEAR_OWN = swap(CUR, [PIKE,
+ ("Waist","Miststalker's Cinch",321,"Hero 6/6 · upgrade 305→321 (100 Hero crests)","",[],"Crit / Vers","−2.9% dmg taken alone"),
+ ("Hands","Subjugator's Chilling Grips",321,"Hero 6/6","",[],"Crit / Vers","−1.7% dmg taken alone"),
+ ("Trinket 1","Gebbo's Bottomless Bag",334,"Myth 6/6 · replaces Voracious Heart","",[],"Agility","−4.4% dmg taken, −1.7% DPS alone"),
 ])
-OWNED_W = swap(OWNED, [("Weapon","Aln'hara Pikestaff",331,"Crafted Q5 · 4 sparks + 80 Myth crests","Berserker's Rage · Embellishment: Hunter's Ritual Stone",[],"Mastery / Crit","weapon +4.69% M+ · +4.37% raid alone")])
-PROJ = swap(CUR, [
- ("Weapon","Abyssal Broodfiend's Bardiche",334,"Myth 6/6 · Ula'tek (Venomous Abyss)","Berserker's Rage",[],"Mastery","+4.86% M+ · +4.26% raid alone"),
- ("Ring 1","Vile Alchemist's Band",334,"Myth 6/6 · raid","Silvermoon's Alacrity",[],"Crit / Mastery","+3.37% M+ · +2.25% raid alone"),
- ("Ring 2","Charged Sandstone Band",321,"Hero 6/6 · owned","Silvermoon's Alacrity",["Flawless Quick Lapis"],"Crit / Mastery","owned"),
- ("Trinket 2","Zul'jin's Guillotine Technique",334,"Myth 6/6 · The Coiled Altar","",[],"Agility","+1.06% M+ · +2.86% raid alone"),
- ("Back","Silken Voodoo Drape",334,"Myth 6/6 · The Coiled Altar","",[],"Haste / Mastery","+0.91% M+ · +0.68% raid alone"),
- ("Hands","Subjugator's Chilling Grips",321,"Hero 6/6 · owned","",[],"Crit / Vers","owned"),
- ("Feet","Silvermoon Agent's Sneakers",331,"Crafted Q5 · 2 sparks + 80 Myth crests","Lynx's Dexterity",[],"Mastery / Crit","+0.86% M+ · +0.66% raid alone"),
+FERAL_OWN = swap(CUR, [PIKE,
+ ("Ring 1","Charged Sandstone Band",321,"Hero 6/6","Silvermoon's Alacrity",["Flawless Quick Lapis"],"Crit / Mastery","+2.5% M+ alone"),
+ ("Ring 2","Band of the Amani Warlord",321,"Hero 6/6 · upgrade 315→321 (40 Hero crests)","Silvermoon's Alacrity",["Flawless Quick Lapis"],"Crit / Haste","+0.4% M+ alone"),
+ ("Hands","Subjugator's Chilling Grips",321,"Hero 6/6","",[],"Crit / Vers","+0.6% M+ alone"),
+ ("Trinket 2","Gebbo's Bottomless Bag",334,"Myth 6/6 · replaces Keeper's Core","",[],"Agility","+0.9% M+ alone"),
+])
+BEAR_BIS = swap(BEAR_OWN, [
+ ("Chest","Chestwrap of Palpable Terror",334,"Myth 6/6 · Kith'ix (new raid)","Mark of the Worldsoul",[],"Crit / Haste","−3.2% dmg taken, +0.7% DPS alone"),
+ ("Hands","Enigmatic Dreamwatcher's Gauntlets",321,"Tier · Hero 6/6 · owned, keeps 4pc","",[],"Tier","needed for 4pc with Chestwrap"),
+ ("Trinket 1","Twisted Horror's Tendril",334,"Myth 6/6 · Kith'ix (new raid)","",[],"Agility","−6.7% dmg taken alone"),
+ ("Trinket 2","Gebbo's Bottomless Bag",334,"Myth 6/6 · owned","",[],"Agility","owned"),
+ ("Ring 1","Masterwork Sin'dorei Band",331,"Crafted Q5 · 2 sparks + 80 Myth crests","Silvermoon's Alacrity",[],"Crit / Vers","−4.5% dmg taken alone"),
+ ("Ring 2","Apex Brute's Claw Ring",334,"Myth 6/6 · Sszorak (Venomous Abyss)","Silvermoon's Alacrity",[],"Crit / Haste","−2.4% dmg taken alone"),
+])
+FERAL_BIS = swap(FERAL_OWN, [
+ ("Trinket 1","Twisted Horror's Tendril",334,"Myth 6/6 · Kith'ix (new raid)","",[],"Agility","+4.2% M+ over your build"),
+ ("Trinket 2","Font of Venomous Rage",334,"Myth 6/6 · raid (boss not verified)","",[],"Mastery","+1.2% M+ over Gebbo"),
+ ("Ring 1","Vile Alchemist's Band",334,"Myth 6/6 · Venomous Abyss","Silvermoon's Alacrity",[],"Crit / Mastery","+1.1% M+"),
+ ("Ring 2","Band of the Swarmcaller",334,"Myth 6/6 · Kith'ix (new raid)","Silvermoon's Alacrity",[],"Haste / Mastery","+2.9% M+"),
+ ("Back","Silken Voodoo Drape",334,"Myth 6/6 · The Coiled Altar","",[],"Haste / Mastery","+0.9% M+"),
+ ("Waist","Sash of the Forlorn Vessel",334,"Myth 6/6 · raid (boss not verified)","",[],"Haste / Mastery","+0.7% M+"),
+ ("Chest","Chestwrap of Palpable Terror",334,"Myth 6/6 · Kith'ix (new raid)","Mark of the Worldsoul",[],"Crit / Haste","+0.4% M+"),
+ ("Hands","Enigmatic Dreamwatcher's Gauntlets",321,"Tier · owned, keeps 4pc","",[],"Tier","needed for 4pc"),
 ])
 SETS = [
- ("now","Equipped now","Your 2026-10-14 23:43 export, every piece at its track cap.", CUR, None),
- ("owned","Best from your bags","Four swaps, all items you own. One ring needs 2 Hero upgrades (40 Hero crests; you have 154).", OWNED, ("+3.48%","+2.28%")),
- ("craft","Bags + crafted weapon","The four swaps plus Aln'hara Pikestaff, Hunter's Ritual Stone, Mastery/Crit.", OWNED_W, ("+7.65%","+6.34%")),
- ("bis","Projected BiS","Items the top 50 M+ Ferals on murlok.io wear most, simmed on your character. Raid drops at Myth 334.", PROJ, ("+9.30%","+8.34%")),
+ ("now","Equipped now","Your 2026-10-14 export (same gear on bear and cat), every piece at its track cap.", CUR, None),
+ ("bear","Bear · your gear","Priority build. Crafted Pikestaff plus three swaps from your bags.", BEAR_OWN, ("−16.9%","+2.1%","Damage taken","DPS")),
+ ("feral","Cat · your gear","Same Pikestaff plus four swaps from your bags. Keeps Whirling Dervish Sash.", FERAL_OWN, ("+6.9%","+5.9%","Mythic+","Raid")),
+ ("bearbis","Bear · projected BiS","Next targets incl. the new Kith'ix raid. Raid items at Myth 334.", BEAR_BIS, ("−22.5%","+2.5%","Damage taken","DPS")),
+ ("feralbis","Cat · projected BiS","Next targets incl. the new Kith'ix raid. Raid items at Myth 334.", FERAL_BIS, ("+17.1%","+9.3%","Mythic+","Raid")),
 ]
-WEAPON = [  # stats, feral raid, feral M+, bear dps, bear dmg taken
- ("Mastery / Crit", "+4.37%", "+4.69%", "+3.77%", "−8.7%"),
- ("Crit / Vers", "+3.88%", "+4.04%", "+3.78%", "−10.9%"),
- ("Haste / Vers", "+3.28%", "+3.41%", "+3.69%", "−9.1%"),
- ("Crit / Haste", "+3.64%", "+3.56%", "+3.89%", "−8.4%"),
+WEAPON = [  # stats, cat build M+, cat build raid, bear build dps, bear build dmg taken  (whole builds vs now)
+ ("Haste / Vers (your pick)", "+6.9%", "+5.9%", "+2.1%", "−16.9%"),
+ ("Crit / Vers", "+6.9%", "+5.9%", "+2.2%", "−18.3%"),
 ]
 EMB = [ # embellishment, feral raid, feral M+, bear dps, bear taken  (Haste/Vers runs)
  ("Hunter's Ritual Stone","+3.33%","+3.29%","+3.69%","−9.1%"),
@@ -91,11 +104,11 @@ def doll(rows):
     col = lambda slots: "".join(item(d[s], d[s][1] != cur[s][1]) for s in slots)
     return f'<div class="doll"><div class="col">{col(LEFT)}</div><div class="col">{col(RIGHT)}</div></div>'
 tabs = "".join(f'<button class="tab" role="tab" id="t-{k}" aria-controls="p-{k}" data-k="{k}">{esc(t)}'
-               f'{f"<span class=chip>{g[0]} M+</span>" if g else ""}</button>' for k, t, _, _, g in SETS)
+               f'{f"<span class=chip>{g[0]}</span>" if g else ""}</button>' for k, t, _, _, g in SETS)
 panels = ""
 for k, t, desc, rows, g in SETS:
-    nums = (f'<div class="nums"><div><b>{g[0]}</b><span>Mythic+ (DungeonSlice)</span></div>'
-            f'<div><b>{g[1]}</b><span>Raid single target</span></div></div>') if g else '<div class="nums"><div><b>baseline</b><span>all % below are vs this set</span></div></div>'
+    nums = (f'<div class="nums"><div><b>{g[0]}</b><span>{g[2]}</span></div>'
+            f'<div><b>{g[1]}</b><span>{g[3]}</span></div></div>') if g else '<div class="nums"><div><b>baseline</b><span>all % below are vs this set</span></div></div>'
     panels += f'<section class="panel" role="tabpanel" id="p-{k}" aria-labelledby="t-{k}"><div class="ph"><div><h3>{esc(t)}</h3><p>{esc(desc)}</p></div>{nums}</div>{doll(rows)}</section>'
 def table(head, rows):
     h = "".join(f"<th>{x}</th>" for x in head)
@@ -103,7 +116,7 @@ def table(head, rows):
     return f'<div class="tw"><table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table></div>'
 html = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html")).read()
 html = (html.replace("{{TABS}}", tabs).replace("{{PANELS}}", panels)
-        .replace("{{WEAPON}}", table(["Pikestaff stats (Hunter's Ritual Stone)","Feral raid","Feral M+","Bear DPS","Bear damage taken"], WEAPON))
+        .replace("{{WEAPON}}", table(["Pikestaff stats, whole build vs now","Cat M+","Cat raid","Bear DPS","Bear damage taken"], WEAPON))
         .replace("{{EMB}}", table(["Embellishment (Haste/Vers)","Feral raid","Feral M+","Bear DPS","Bear damage taken"], EMB))
         .replace("{{CAT}}", ICONS["_cat"]).replace("{{BEAR}}", ICONS["_bear"]))
 open(OUT, "w").write(html)

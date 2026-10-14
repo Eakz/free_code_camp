@@ -71,12 +71,12 @@ a{color:var(--rare)}
     <div class="forms"><img src="{{CAT}}" alt="Cat Form"><img src="{{BEAR}}" alt="Bear Form"></div>
     <div>
       <h1>Mergegit · Feral &amp; Guardian</h1>
-      <p class="lede">Night Elf Druid, EU-Silvermoon. Simulated 2026-10-14 on SimulationCraft built from the midnight branch, game data 12.1.5.70391 (same build as your client). All gear compared at max upgrade with your enchants and gems.</p>
+      <p class="lede">Night Elf Druid, EU-Silvermoon. Simulated 2026-10-15 on SimulationCraft (midnight branch 8bd8f32), game data 12.1.5.70391, the same build as your client. Every item is compared at its upgrade cap with your enchants and gems. Bear is ranked by damage taken, cat by damage.</p>
     </div>
   </header>
 
   <section class="frame">
-    <h2>Feral Mythic+ gear</h2>
+    <h2>Mythic+ builds · bear first, cat for fun</h2>
     <div class="tabs" role="tablist">{{TABS}}</div>
     {{PANELS}}
   </section>
@@ -86,9 +86,9 @@ a{color:var(--rare)}
     <div class="reco">
       <div><b>Craft:</b> Aln'hara Pikestaff (Inscription) or Blood Knight's Impetus (Blacksmithing). They sim within 0.1%, so pick whichever you can get crafted. Quality 5 / 331, Berserker's Rage.</div>
       <div><b>Embellishment:</b> Hunter's Ritual Stone. Best or tied-best for Feral in both modes and best for the bear. Darkmoon Sigil: Hunt is within error for Feral.</div>
-      <div><b>Stats:</b> Mastery/Crit if Feral is your main use (+0.5–0.65% over Crit/Vers). Crit/Vers if tanking matters: the bear takes 2.2% less damage than with Mastery/Crit at the same DPS.</div>
+      <div><b>Stats: Haste/Vers.</b> In the full builds the cat does the same damage with Haste/Vers or Crit/Vers. The bear takes 1.4% more damage with Haste/Vers than with Crit/Vers, a small cost.</div>
     </div>
-    <h3 style="margin:16px 0 6px">Stat pair, vs your Toxin-Coated Warstaff</h3>
+    <h3 style="margin:16px 0 6px">Weapon stats inside the full builds</h3>
     {{WEAPON}}
     <h3 style="margin:16px 0 6px">Embellishment, Haste/Vers Pikestaff</h3>
     {{EMB}}
@@ -99,6 +99,8 @@ a{color:var(--rare)}
     <ul class="notes">
       <li>Feral: Patchwerk (raid, 6,000–10,000 iterations, ±0.06–0.08%) and DungeonSlice (M+, 4,000–6,000 iterations, ±0.21–0.25%). Bear: Patchwerk, one tank per run, 10,000 iterations (DPS ±0.09%, damage taken ±0.35%).</li>
       <li>Single-swap gains are shown on each changed item; set totals come from simming the whole set together.</li>
+      <li>Kith'ix (The Unbinding of Kith'ix, 12.1.5) items: Mythic drops at 324 and upgrades to 334. Lightbearer's Shield Fragment (its tank trinket) and Font of Venomous Rage both made the bear take more damage, so they are left out. Gaze of the Coiled Watcher and Chestwrap of Palpable Terror both use the one non-tier slot; Chestwrap won.</li>
+      <li>Crests: the bear build needs 100 Hero crests (Cinch 305→321), the cat build 40 (Amani ring 315→321). You have 154. The projected tier gauntlets need 80 more (308→321).</li>
       <li>Projected BiS items come from murlok.io's top-50 Feral M+ usage (read through web search; the site could not be opened here). Raid items are simmed at Myth 6/6 (334). Raid rings are simmed without a gem because their socket is not confirmed.</li>
       <li>Icons are generic WoW slot, gem and enchant icons, not the exact item icons: the item-to-icon data lives on Wowhead and wago, which are blocked from the sim machine.</li>
       <li>Costs: two-handers need 4 Sparks of Tides, armour 2, each 331 craft 80 Myth Mistcrests (you have 102). Hero upgrades cost 20 crests per step.</li>
@@ -116,7 +118,7 @@ a{color:var(--rare)}
     try{localStorage.setItem('mg-tab',k)}catch(e){}
   }
   tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.k)})});
-  var start='craft';
+  var start='bear';
   try{var s=localStorage.getItem('mg-tab');if(s&&document.getElementById('p-'+s))start=s}catch(e){}
   if(location.hash&&document.getElementById('p-'+location.hash.slice(1)))start=location.hash.slice(1);
   show(start);

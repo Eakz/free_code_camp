@@ -1,0 +1,1108 @@
+Implementation Not Yet Verified: Rune of Unleashed Fire: Procs are assumed to target the same unit that triggered them. Procs triggered by damage are assumed to proc damage. Procs triggered by healing/aura are assumed to proc heal.
+Implementation Not Yet Verified: Band of the Swarmcaller: Damage is assumed to not be split amongst targets hit.
+SimulationCraft 1210-01 for World of Warcraft 12.1.5.70391 Live (hotfix 2026-10-14/70391, git build midnight 2c56391, no-networking)
+
+Simulating... ( iterations=5000, threads=4, target_error=0.000, max_time=300, vary_combat_length=0.20, optimal_raid=0, fight_style=DungeonSlice )
+
+Generating Baseline: 1/1 [....................] 52/5000 23.547 52secGenerating Baseline: 1/1 [....................] 103/5000 24.571 49secGenerating Baseline: 1/1 [>...................] 157/5000 25.543 47secGenerating Baseline: 1/1 [>...................] 208/5000 25.799 46secGenerating Baseline: 1/1 [>...................] 258/5000 25.647 46secGenerating Baseline: 1/1 [>...................] 311/5000 25.884 45secGenerating Baseline: 1/1 [>...................] 363/5000 26.054 44secGenerating Baseline: 1/1 [=>..................] 413/5000 26.080 43secGenerating Baseline: 1/1 [=>..................] 464/5000 26.293 43secGenerating Baseline: 1/1 [=>..................] 517/5000 26.566 42secGenerating Baseline: 1/1 [=>..................] 569/5000 26.845 41secGenerating Baseline: 1/1 [=>..................] 619/5000 26.808 40secGenerating Baseline: 1/1 [==>.................] 671/5000 26.761 40secGenerating Baseline: 1/1 [==>.................] 723/5000 26.699 40secGenerating Baseline: 1/1 [==>.................] 774/5000 26.691 39secGenerating Baseline: 1/1 [==>.................] 825/5000 26.741 39secGenerating Baseline: 1/1 [===>................] 876/5000 26.510 38secGenerating Baseline: 1/1 [===>................] 927/5000 26.309 38secGenerating Baseline: 1/1 [===>................] 978/5000 25.668 39secGenerating Baseline: 1/1 [===>................] 1029/5000 25.644 38secGenerating Baseline: 1/1 [===>................] 1081/5000 25.700 38secGenerating Baseline: 1/1 [====>...............] 1133/5000 25.689 37secGenerating Baseline: 1/1 [====>...............] 1184/5000 25.767 37secGenerating Baseline: 1/1 [====>...............] 1236/5000 25.071 37secGenerating Baseline: 1/1 [====>...............] 1286/5000 24.999 37secGenerating Baseline: 1/1 [====>...............] 1336/5000 25.024 36secGenerating Baseline: 1/1 [=====>..............] 1389/5000 25.129 35secGenerating Baseline: 1/1 [=====>..............] 1441/5000 25.142 35secGenerating Baseline: 1/1 [=====>..............] 1492/5000 25.176 34secGenerating Baseline: 1/1 [=====>..............] 1545/5000 25.258 34secGenerating Baseline: 1/1 [=====>..............] 1598/5000 25.342 33secGenerating Baseline: 1/1 [======>.............] 1651/5000 25.396 32secGenerating Baseline: 1/1 [======>.............] 1703/5000 25.420 32secGenerating Baseline: 1/1 [======>.............] 1758/5000 25.435 31secGenerating Baseline: 1/1 [======>.............] 1809/5000 25.397 31secGenerating Baseline: 1/1 [======>.............] 1861/5000 25.404 30secGenerating Baseline: 1/1 [=======>............] 1911/5000 25.468 30secGenerating Baseline: 1/1 [=======>............] 1961/5000 25.508 29secGenerating Baseline: 1/1 [=======>............] 2011/5000 25.524 29secGenerating Baseline: 1/1 [=======>............] 2063/5000 25.575 28secGenerating Baseline: 1/1 [=======>............] 2114/5000 25.653 28secGenerating Baseline: 1/1 [========>...........] 2166/5000 25.685 27secGenerating Baseline: 1/1 [========>...........] 2219/5000 25.754 26secGenerating Baseline: 1/1 [========>...........] 2269/5000 25.833 26secGenerating Baseline: 1/1 [========>...........] 2322/5000 25.893 25secGenerating Baseline: 1/1 [========>...........] 2372/5000 25.911 25secGenerating Baseline: 1/1 [=========>..........] 2424/5000 25.944 24secGenerating Baseline: 1/1 [=========>..........] 2474/5000 26.000 24secGenerating Baseline: 1/1 [=========>..........] 2527/5000 26.056 23secGenerating Baseline: 1/1 [=========>..........] 2579/5000 26.100 23secGenerating Baseline: 1/1 [==========>.........] 2630/5000 26.158 22secGenerating Baseline: 1/1 [==========>.........] 2680/5000 26.187 22secGenerating Baseline: 1/1 [==========>.........] 2732/5000 26.208 21secGenerating Baseline: 1/1 [==========>.........] 2784/5000 26.228 21secGenerating Baseline: 1/1 [==========>.........] 2838/5000 26.215 20secGenerating Baseline: 1/1 [===========>........] 2889/5000 26.229 20secGenerating Baseline: 1/1 [===========>........] 2943/5000 26.274 19secGenerating Baseline: 1/1 [===========>........] 2993/5000 26.311 19secGenerating Baseline: 1/1 [===========>........] 3043/5000 26.341 18secGenerating Baseline: 1/1 [===========>........] 3094/5000 26.375 18secGenerating Baseline: 1/1 [============>.......] 3145/5000 26.424 17secGenerating Baseline: 1/1 [============>.......] 3197/5000 26.485 17secGenerating Baseline: 1/1 [============>.......] 3247/5000 26.525 16secGenerating Baseline: 1/1 [============>.......] 3297/5000 26.561 16secGenerating Baseline: 1/1 [============>.......] 3348/5000 26.577 15secGenerating Baseline: 1/1 [=============>......] 3398/5000 26.601 15secGenerating Baseline: 1/1 [=============>......] 3451/5000 26.644 14secGenerating Baseline: 1/1 [=============>......] 3503/5000 26.665 14secGenerating Baseline: 1/1 [=============>......] 3554/5000 26.677 13secGenerating Baseline: 1/1 [=============>......] 3606/5000 26.695 13secGenerating Baseline: 1/1 [==============>.....] 3658/5000 26.704 12secGenerating Baseline: 1/1 [==============>.....] 3712/5000 26.735 12secGenerating Baseline: 1/1 [==============>.....] 3764/5000 26.772 11secGenerating Baseline: 1/1 [==============>.....] 3815/5000 26.802 11secGenerating Baseline: 1/1 [==============>.....] 3867/5000 26.843 10secGenerating Baseline: 1/1 [===============>....] 3919/5000 26.883 10secGenerating Baseline: 1/1 [===============>....] 3970/5000 26.836 9sec Generating Baseline: 1/1 [===============>....] 4024/5000 26.823 9sec Generating Baseline: 1/1 [===============>....] 4075/5000 26.801 8sec Generating Baseline: 1/1 [================>...] 4126/5000 26.768 8sec Generating Baseline: 1/1 [================>...] 4178/5000 26.782 7sec Generating Baseline: 1/1 [================>...] 4228/5000 26.808 7sec Generating Baseline: 1/1 [================>...] 4278/5000 26.765 6sec Generating Baseline: 1/1 [================>...] 4331/5000 26.776 6sec Generating Baseline: 1/1 [=================>..] 4382/5000 26.794 5sec Generating Baseline: 1/1 [=================>..] 4434/5000 26.818 5sec Generating Baseline: 1/1 [=================>..] 4486/5000 26.830 4sec Generating Baseline: 1/1 [=================>..] 4537/5000 26.845 4sec Generating Baseline: 1/1 [=================>..] 4590/5000 26.830 3sec Generating Baseline: 1/1 [==================>.] 4640/5000 26.848 3sec Generating Baseline: 1/1 [==================>.] 4692/5000 26.864 2sec Generating Baseline: 1/1 [==================>.] 4742/5000 26.855 2sec Generating Baseline: 1/1 [==================>.] 4793/5000 26.835 1sec Generating Baseline: 1/1 [==================>.] 4846/5000 26.855 1sec Generating Baseline: 1/1 [===================>] 4898/5000 26.859      Generating Baseline: 1/1 [===================>] 4948/5000 26.800      Generating Baseline: 1/1 [===================>] 5000/5000 26.750 46.625
+Merging data from thread-3 ...
+Merging data from thread-1 ...
+Merging data from thread-2 ...
+Analyzing actor data ...
+
+Generating reports...
+
+
+Raid Events:
+  raid_event=/adds,name=Boss,count=1,cooldown=500,duration=135,type=add_boss,duration_stddev=1
+  raid_event+=/adds,name=SmallAdd,count=5,count_range=1,first=140,cooldown=45,duration=18,duration_stddev=2
+  raid_event+=/adds,name=BigAdd,count=2,count_range=1,first=160,cooldown=50,duration=30,duration_stddev=2
+
+
+DPS Ranking:
+1004310 100.0%  Raid
+ 217562  21.7%  FP_bis_A
+ 216593  21.6%  FP_bis_B_Bardiche
+ 198601  19.8%  F_owned_PikeHV
+ 185840  18.5%  A_now_ToxinStaff
+ 185714  18.5%  Z_SANITY
+
+HPS Ranking:
+      0 100.0%%  Raid
+
+Player: A_now_ToxinStaff night_elf druid feral 90
+  DPS=185839.85105429695 DPS-Error=412.77594945925034/0.22% DPS-Range=56795.2302043031/30.56%
+  DPR=9454.980553846635 RPS-Out=19.73359421322803 RPS-In=19.705649850222247 Resource=energy Waiting=12.927533787738193 ApM=52.90455205893442
+  Talents: CcGADBD3hSPCL9Y9gz68WcKvMAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGGA
+  Core Stats:    strength=265|265(265)  agility=2499|2420(2305)  stamina=40501|40501(38944)  intellect=620|620(620)  spirit=0|0(0)  health=810020|810020  mana=250000|250000
+  Generic Stats: mastery=46.52%|39.35%(537)  versatility=12.63%|12.63%(682)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=0|3047(0)  hit=15.00%|15.00%(0)  crit=22.67%|22.67%(583)  haste=36.67%|28.94%(1217)  speed=36.67%|28.94%  manareg=2560|2560(0)
+  Attack Stats:  power=2499|2420(0)  hit=7.50%|7.50%(0)  crit=22.67%|22.67%(583)  expertise=7.50%|7.50%(0)  haste=36.67%|28.94%(1217)  speed=36.67%|28.94%
+  Defense Stats: armor=1152|1152(1087) miss=3.00%|3.00%  dodge=16.94%|16.61%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=6.31%|6.31%(682)
+  Priorities (actions.precombat):
+    snapshot_stats/variable,name=regrowth,op=reset/variable,name=dotc_rake_threshold,op=set,value=99
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&talent.merciless_claws,value=5
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&!talent.merciless_claws,value=8
+    potion,pre_pot_time=12,if=potion.liquid_luster
+    variable,name=algethar_puzzle_box_precombat_cast,value=3,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff
+    use_item,name=algethar_puzzle_box,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff/cat_form,if=buff.cat_form.down/prowl
+  Priorities (actions.default):
+    prowl,if=buff.bs_inc.down&!buff.prowl.up&!buff.shadowmeld.up/cat_form,if=!buff.cat_form.up&!talent.fluid_form
+    invoke_external_buff,name=power_infusion,if=buff.bs_inc.up|!talent.berserk_heart_of_the_lion
+    auto_attack,if=!buff.prowl.up&!buff.shadowmeld.up
+    tigers_fury,if=(cooldown.bs_inc.remains<=1|cooldown.bs_inc.remains>10|variable.holdBerserk)&(cooldown.frantic_frenzy.remains<buff.tigers_fury.duration-1.5|cooldown.frantic_frenzy.remains>22|!talent.frantic_frenzy|spell_targets=1|fight_style.dungeonroute|fight_style.dungeonslice)
+    rake,if=buff.prowl.up|buff.shadowmeld.up/chomp,if=buff.chomp_enabler.up/call_action_list,name=cooldown
+    ferocious_bite,if=buff.apex_predators_craving.up/call_action_list,name=finisher,if=spell_targets=1
+    call_action_list,name=aoe_finisher,if=spell_targets>=2/call_action_list,name=builder,if=spell_targets=1&combo_points<=4
+    call_action_list,name=aoe_builder,if=spell_targets>1&combo_points<=4/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
+  Priorities (actions.aoe_builder):
+    prowl,target_if=dot.rake.refreshable,if=!buff.shadowmeld.up/shadowmeld,target_if=dot.rake.refreshable,if=!buff.prowl.up
+    rake,target_if=refreshable,if=(talent.doubleclawed_rake&(!talent.lunar_inspiration|!talent.panthers_guile|active_dot.rake<5))|hero_tree.wildstalker&(active_dot.rake<2+!talent.panthers_guile+talent.lunar_inspiration)
+    moonfire_cat,target_if=refreshable/shred,if=spell_targets=2&talent.panthers_guile&buff.clearcasting.react
+    swipe_cat,if=hero_tree.druid_of_the_claw&buff.bs_inc.up|buff.clearcasting.react&(hero_tree.druid_of_the_claw|spell_targets<7)
+    swipe_cat,if=buff.sudden_ambush.up&spell_targets.swipe_cat>=5+(2*hero_tree.wildstalker)
+    rake,target_if=refreshable,if=hero_tree.wildstalker|spell_targets.swipe_cat<=variable.dotc_rake_threshold
+    rake,target_if=min:pmultiplier,if=persistent_multiplier>pmultiplier&spell_targets=2/shred,if=spell_targets=2&talent.panthers_guile
+    swipe_cat,if=spell_targets>2|!talent.panthers_guile
+  Priorities (actions.aoe_finisher):
+    primal_wrath,target_if=min:remains,if=combo_points>=5&spell_targets.primal_wrath>1&(dot.primal_wrath.remains<6.5&!buff.bs_inc.up|dot.primal_wrath.refreshable)
+    ferocious_bite,if=buff.ravage.up&combo_points>=5&!talent.primal_wrath&spell_targets>=2+(3*!talent.rampant_ferocity)
+    rip,target_if=min:remains,if=combo_points>=5&!talent.primal_wrath&refreshable
+    ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5&(talent.rampant_ferocity|buff.ravage.up&spell_targets<8|dot.bloodseeker_vines.ticking&spell_targets<5)
+    primal_wrath,if=combo_points>=5/ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5
+  Priorities (actions.builder):
+    prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+    shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)/shred,if=buff.sudden_ambush.up&hero_tree.druid_of_the_claw
+    rake,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    moonfire_cat,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    shred
+  Priorities (actions.cooldown):
+    call_action_list,name=cd_variable,if=!cooldown.bs_inc.remains|!cooldown.potion.remains|!trinket.1.cooldown.remains|!trinket.2.cooldown.remains
+    use_item,slot=trinket1,if=trinket.1.has_use_damage&(trinket.2.cooldown.remains>20|!trinket.2.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.1.is.font_of_venomous_rage|!buff.bs_inc.up)
+    use_item,slot=trinket2,if=trinket.2.has_use_damage&(trinket.1.cooldown.remains>20|!trinket.1.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.2.is.font_of_venomous_rage|!buff.bs_inc.up)
+    berserking/potion,if=buff.bs_inc.up|fight_remains<32|buff.tigers_fury.up&!variable.holdPot/use_items
+    use_item,slot=trinket1,use_off_gcd=1,if=trinket.1.has_use_buff&(cooldown.tigers_fury.remains>=25|trinket.1.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&cooldown.tigers_fury.remains<2)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.1.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.1.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.1.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining+1&buff.potion.up|trinket.2.has_use_buff&(variable.secondLowestCDremaining>trinket.1.cooldown.duration&variable.lowestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.2.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket2,use_off_gcd=1,if=trinket.2.has_use_buff&(!trinket.1.has_use_buff|trinket.1.cooldown.remains>20)&(cooldown.tigers_fury.remains>=25|trinket.2.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&(cooldown.tigers_fury.remains<2|buff.tigers_fury.up))&(buff.potion.up|variable.slot2CountRemaining!=variable.potCountRemaining)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.2.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.2.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.2.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining-1&buff.potion.up|trinket.1.has_use_buff&(variable.secondLowestCDremaining>trinket.2.cooldown.duration&variable.lowestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.1.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket1,if=fight_remains<=(21<?trinket.1.proc.any_dps.duration)
+    use_item,slot=trinket2,if=fight_remains<=(21<?trinket.2.proc.any_dps.duration)/berserk,if=buff.tigers_fury.up&!variable.holdBerserk
+    feral_frenzy,if=!talent.frantic_frenzy&combo_points<=2+(2*buff.bs_inc.up)
+    frantic_frenzy,if=(!fight_style.dungeonroute&!fight_style.dungeonslice|raid_event.adds.remains>5)&(buff.tigers_fury.up&spell_targets>=2|combo_points<=2+(2*buff.bs_inc.up))
+    convoke_the_spirits,if=(buff.bs_inc.up|talent.ashamanes_guidance&(cooldown.bs_inc.remains>45|variable.holdBerserk))&buff.tigers_fury.up&(prev_gcd.1.rip|prev_gcd.1.ferocious_bite|prev_gcd.1.primal_wrath|buff.tigers_fury.remains<=1+action.convoke_the_spirits.execute_time)|fight_remains<5
+  Priorities (actions.finisher):
+    rip,if=combo_points>=5&refreshable&(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)/pool_resource,for_next=1
+    ferocious_bite,max_energy=1,if=combo_points>=5
+  Actions:
+    berserk_cat                                     Count=   3.4|131.245sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    37  UpTime= 15.28%
+    cat_melee                                       Count= 434.0|  0.820sec  DPE=   8363| 5.40%  DPET=  12394  DPR=      0  pDPS=10120  Miss= 0.00%  Hit=  6480|  4139| 15924  Crit= 12957|  8279| 31847|29.07%
+    convoke_the_spirits                             Count=   6.1| 63.668sec  DPE=1020603| 0.00%  DPET= 341374  DPR=      0  pDPS=    0  TickCount=    65  UpTime=  4.49%
+    devour_morsel                                   Count=  30.4| 11.242sec  DPE=  14797| 0.67%  DPET=      0  DPR=      0  pDPS= 1247  Miss= 0.00%  Hit= 11769| 10851| 14946  Crit= 23523| 21702| 29892|29.06%
+    dreadful_wound_ferocious_bite                   Count=  89.7| 11.303sec  DPE=  43064| 5.75%  DPET=      0  DPR=      0  pDPS=10688  TickCount=   260  MissTick= 0.00%  Tick= 11515|     6| 31366  CritTick= 22996|     8| 62732|29.15%  UpTime=143.50%
+    dreadful_wound_ferocious_bite_convoke           Count=   6.9|106.143sec  DPE=  56610| 0.59%  DPET=      0  DPR=      0  pDPS= 1076  TickCount=    23  MissTick= 0.00%  Tick= 13511|    30| 27628  CritTick= 26985|   171| 58890|29.38%  UpTime= 12.48%
+    ferocious_bite                                  Count=  39.1|  8.910sec  DPE= 453613| 3.46%  DPET= 253590  DPR=  13748  pDPS= 6484  Miss= 0.00%  Hit= 69490| 21367|180654  Crit=138604| 42623|342031|29.14%
+    ferocious_bite_apex                             Count=   0.0|  0.000sec  DPE=      0| 1.83%  DPET=      0  DPR=      0  pDPS= 3397  Miss= 0.00%  Hit= 72102| 36709|173272  Crit=144073| 73793|352396|29.28%
+    ferocious_bite_convoke                          Count=  10.9| 31.067sec  DPE= 241395| 1.33%  DPET=      0  DPR=      0  pDPS= 2486  Miss= 0.00%  Hit= 75747| 37795|158902  Crit=151359| 68718|306548|29.56%
+    ferocious_bite_convoke_apex                     Count=   0.0|  0.000sec  DPE=      0| 0.28%  DPET=      0  DPR=      0  pDPS=  517  Miss= 0.00%  Hit= 84306| 47874|161477  Crit=166936| 98604|322953|28.91%
+    frantic_frenzy                                  Count=   8.3| 46.134sec  DPE=1005095|12.41%  DPET=1000708  DPR=  40205  pDPS=22992  Miss= 0.00%  Hit=  2851|  1647|  7695  Crit=  5686|  3293| 14768|29.14%  TickCount=   247  MissTick= 0.00%  Tick= 28779|    17|133869  CritTick= 57413|    35|267737|29.16%  UpTime= 58.85%
+    frantic_frenzy_convoke                          Count=   2.7|134.345sec  DPE= 703243| 2.82%  DPET=      0  DPR=      0  pDPS= 5141  Miss= 0.00%  Hit=  3912|  1727|  8038  Crit=  7811|  3467| 16076|29.06%  TickCount=    43  MissTick= 0.00%  Tick= 43931|    28|110146  CritTick= 87813|   103|220291|29.06%  UpTime=  9.04%
+    lunar_inspiration_convoke                       Count=   6.9| 52.385sec  DPE=  79200| 0.82%  DPET=      0  DPR=      0  pDPS= 1516  Miss= 0.00%  Hit=  5536|  2464| 11398  Crit= 11069|  5229| 22286|29.15%  TickCount=    70  MissTick= 0.00%  Tick=  5516|     3| 14100  CritTick= 11017|     7| 26284|29.10%  UpTime= 20.26%
+    potion                                          Count=   1.8|336.952sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    primal_wrath                                    Count=  22.9|  9.552sec  DPE= 515479|17.59%  DPET= 513184  DPR=  20619  pDPS=32526  Miss= 0.00%  Hit= 16944| 10758| 42218  Crit= 33828| 21516| 81046|29.15%  TickCount=   570  MissTick= 0.00%  Tick= 12964|     7| 45379  CritTick= 25875|    14| 90043|29.10%  UpTime=170.06%
+    prowl                                           Count=   4.3| 99.976sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rake                                            Count=  54.6|  6.546sec  DPE=  66971| 5.44%  DPET=  66672  DPR=   1914  pDPS=10159  Miss= 0.00%  Hit=  7706|  3867| 21881  Crit= 15375|  7735| 41618|28.97%  TickCount=   275  MissTick= 0.00%  Tick=  8772|     4| 28152  CritTick= 17488|     9| 55416|29.08%  UpTime=121.56%
+    rake_convoke                                    Count=   3.3| 40.042sec  DPE=  72784| 0.36%  DPET=      0  DPR=      0  pDPS=  657  Miss= 0.00%  Hit=  8827|  4016| 19481  Crit= 17594|  8331| 38839|28.46%  TickCount=    18  MissTick= 0.00%  Tick=  8919|    11| 24236  CritTick= 17801|    16| 52899|29.26%  UpTime=  7.57%
+    rampant_ferocity_ferocious_bite                 Count=  16.3| 12.884sec  DPE= 155612| 3.77%  DPET=      0  DPR=      0  pDPS= 6935  Miss= 0.00%  Hit= 30836| 11434|112432  Crit= 61513| 23360|207471|29.23%
+    rampant_ferocity_ferocious_bite_convoke         Count=   4.0| 31.815sec  DPE= 131197| 0.78%  DPET=      0  DPR=      0  pDPS= 1425  Miss= 0.00%  Hit= 24679| 13633| 45151  Crit= 49239| 27267| 94716|28.98%
+    rampant_ferocity_ravage_ferocious_bite          Count=  15.7| 13.654sec  DPE= 167761| 3.92%  DPET=      0  DPR=      0  pDPS= 7233  Miss= 0.00%  Hit= 34551| 11434|112141  Crit= 68931| 22868|224283|29.13%
+    rampant_ferocity_ravage_ferocious_bite_convoke  Count=   1.1| 84.688sec  DPE= 127276| 0.21%  DPET=      0  DPR=      0  pDPS=  376  Miss= 0.00%  Hit= 24471| 12622| 51439  Crit= 48884| 25244| 91487|29.67%
+    ravage_ferocious_bite                           Count=  30.5| 11.303sec  DPE= 381685| 5.15%  DPET=      0  DPR=  10764  pDPS= 9595  Miss= 0.00%  Hit= 49862| 10269|260465  Crit= 99769| 20539|537308|29.23%
+    ravage_ferocious_bite_apex                      Count=   0.0|  0.000sec  DPE=      0| 2.52%  DPET=      0  DPR=      0  pDPS= 4677  Miss= 0.00%  Hit= 36600| 10269|245047  Crit= 72664| 20539|474769|29.08%
+    ravage_ferocious_bite_convoke                   Count=   2.5|106.143sec  DPE= 399242| 0.58%  DPET=      0  DPR=      0  pDPS= 1068  Miss= 0.00%  Hit= 56473| 10604|216381  Crit=111814| 21209|443379|28.91%
+    ravage_ferocious_bite_convoke_apex              Count=   0.0|  0.000sec  DPE=      0| 0.14%  DPET=      0  DPR=      0  pDPS=  252  Miss= 0.00%  Hit= 44829| 11148|220821  Crit= 89154| 22297|448783|29.73%
+    regrowth_convoke                                Count=   4.2| 64.863sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    20  UpTime=  5.73%
+    rejuvenation_convoke                            Count=   4.3| 65.176sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    30  UpTime= 11.42%
+    rip                                             Count=   9.8| 28.313sec  DPE= 282311| 4.12%  DPET= 281070  DPR=  14117  pDPS= 7794  TickCount=   138  MissTick= 0.00%  Tick= 15558|    15| 37297  CritTick= 31045|    62| 71270|29.13%  UpTime= 41.41%
+    rune_of_unleashed_fire                          Count=  53.4|  6.573sec  DPE=   8314| 0.51%  DPET=      0  DPR=      0  pDPS=  948  Miss= 0.00%  Hit=  6373|  6113|  8420
+    rune_of_unleashed_fire_heal                     Count=   1.2| 96.737sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering           Count=   1.2| 96.737sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    10  UpTime=  2.64%
+    rune_of_unleashed_fire_lingering                Count=  53.4|  6.573sec  DPE=   1941| 0.15%  DPET=      0  DPR=      0  pDPS=  289  TickCount=   260  MissTick= 0.00%  Tick=   398|   382|   526  UpTime= 72.30%
+    shadowmeld                                      Count=   3.3|125.049sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    shred                                           Count=  77.5|  4.229sec  DPE=  35100| 4.05%  DPET=  34943  DPR=   1743  pDPS= 7633  Miss= 0.00%  Hit= 27185| 15250| 71796  Crit= 54283| 30651|136292|29.21%
+    shred_convoke                                   Count=  20.9| 15.878sec  DPE=  42328| 1.31%  DPET=      0  DPR=      0  pDPS= 2459  Miss= 0.00%  Hit= 32794| 15905| 59999  Crit= 65567| 34349|126447|29.09%
+    swipe_cat                                       Count=  30.8|  6.908sec  DPE= 103309| 4.74%  DPET= 102847  DPR=  11206  pDPS= 8797  Miss= 0.00%  Hit= 15858|  7049| 41661  Crit= 31686| 14128| 83322|29.14%
+    tigers_fury                                     Count=  11.9| 31.204sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    twin_claw                                       Count=  27.5| 12.308sec  DPE=  29028| 1.19%  DPET=      0  DPR=      0  pDPS= 2231  Miss= 0.00%  Hit= 22487| 14393| 55369  Crit= 44928| 28786| 99812|29.15%
+    unseen_slash                                    Count=  61.6|  5.640sec  DPE=  52836| 4.85%  DPET=      0  DPR=      0  pDPS= 9127  Miss= 0.00%  Hit=  6790|     3| 14877  Crit= 13552|     5| 31527|29.01%  TickCount=   109  MissTick= 0.00%  Tick= 19442|     4| 88840  CritTick= 38909|    19|171415|29.11%  UpTime= 48.23%
+    unseen_swipe                                    Count=  16.0|  9.738sec  DPE= 134731| 3.22%  DPET=      0  DPR=      0  pDPS= 5911  Miss= 0.00%  Hit= 17096|    13| 39162  Crit= 34163|    26| 78086|29.08%
+    wrath_convoke                                   Count=   8.9| 35.578sec  DPE=   3302| 0.04%  DPET=      0  DPR=      0  pDPS=   82  Miss= 0.00%  Hit=  2576|  2129|  3938  Crit=  5160|  4258|  7876|29.34%
+
+  Constant Buffs:
+    cat_form/flask_of_the_magisters/harandar_celebration/lycaras_teachings_crit/voidtouched
+  Dynamic Buffs:
+    apex_predators_craving    : start= 21.9 refresh=  1.7 interval= 15.1 trigger= 13.9 duration=  0.8 uptime=  5.13%
+    arcanoweave_insight       : start=  6.7 refresh=  5.4 interval= 52.1 trigger= 27.1 duration= 26.5 uptime= 49.43%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 91.6 trigger= 73.7 duration= 21.1 uptime= 15.21%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 90.1 trigger= 73.1 duration= 21.0 uptime= 15.34%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 90.2 trigger= 72.5 duration= 21.1 uptime= 15.37%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 91.1 trigger= 74.0 duration= 21.0 uptime= 15.39%
+    berserk_cat               : start=  3.4 refresh=  0.0 interval=131.3 trigger=131.3 duration= 24.1 uptime= 22.96%  benefit= 22.82%
+    clearcasting_cat          : start= 47.2 refresh= 18.6 interval=  7.4 trigger=  5.3 duration=  2.6 uptime= 34.00%  benefit= 55.24%
+    devoured_strength         : start=  3.7 refresh= 26.7 interval=117.7 trigger= 11.3 duration= 18.8 uptime= 19.28%
+    focus_of_ulatek           : start= 12.4 refresh= 24.2 interval= 19.1 trigger=  9.5 duration= 21.2 uptime= 73.18%
+    forestwalk                : start=  3.1 refresh=  1.2 interval=102.2 trigger= 65.7 duration=  6.3 uptime=  5.36%
+    frantic_momentum          : start= 19.4 refresh= 15.3 interval= 18.3 trigger= 10.1 duration=  8.3 uptime= 44.83%
+    frenzied_focus            : start=  9.3 refresh=  8.9 interval= 37.9 trigger= 18.6 duration= 20.9 uptime= 54.49%
+    halazzis_fury             : start=  3.1 refresh=  0.0 interval=128.4 trigger=128.4 duration= 50.8 uptime= 44.48%  benefit= 46.54%
+    hunger_for_battle         : start=  7.3 refresh= 29.1 interval= 34.4 trigger=  6.2 duration= 13.0 uptime= 24.91%  benefit= 17.44%
+    killing_strikes           : start= 18.8 refresh= 77.8 interval= 18.6 trigger=  3.6 duration= 11.2 uptime= 58.75%
+    liquid_luster             : start=  1.8 refresh=  0.0 interval=336.9 trigger=336.9 duration= 27.7 uptime= 14.00%
+    lustrous_gleam            : start=  1.8 refresh=  6.8 interval=336.9 trigger= 39.7 duration= 27.7 uptime= 14.00%
+    lycaras_teachings_haste   : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    overflowing_power         : start= 22.9 refresh= 47.8 interval= 15.3 trigger=  4.8 duration=  1.5 uptime=  9.59%
+    predatory_swiftness       : start=  2.9 refresh=112.9 interval=158.7 trigger=  3.1 duration=119.4 uptime= 95.73%
+    prowl                     : start=  4.3 refresh=  0.0 interval=100.1 trigger=100.1 duration=  0.2 uptime=  0.01%  benefit=  2.46%
+    ravage                    : start= 33.9 refresh=  9.6 interval= 10.4 trigger=  8.1 duration=  3.5 uptime= 32.43%
+    rune_of_burning_haste     : start= 14.0 refresh= 40.6 interval= 17.7 trigger=  6.4 duration= 20.9 uptime= 81.68%
+    savage_fury               : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.9 uptime= 26.33%
+    shadowmeld                : start=  3.3 refresh=  0.0 interval=125.0 trigger=125.0 duration=  0.5 uptime=  0.00%  benefit=  1.44%
+    stalking_predator         : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  3.1 uptime= 10.25%
+    tigers_fury               : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration= 14.7 uptime= 48.98%  benefit= 50.59%
+    tigers_tenacity           : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.8 uptime= 25.70%
+    unseen_predators_craving  : start=  2.3 refresh= 74.0 interval= 94.4 trigger=  4.6 duration=152.0 uptime= 96.29%  benefit= 97.66%
+    venomcursed_ascendance    : start=  8.2 refresh=  3.9 interval= 41.5 trigger= 27.3 duration= 15.6 uptime= 35.84%
+    voracious_heart_of_ulatek : start=  3.7 refresh=  0.0 interval=118.4 trigger=118.4 duration= 19.4 uptime= 19.86%
+  Up-Times:
+     18.44% : Energy Cap                    
+  Procs:
+     18.57566 |  17.15004sec : Clearcasting (Wasted)
+     27.97158 |  12.34048sec : Ravage
+     22.19496 |  15.21253sec : delayed_aa_channel
+  Gains:
+      6175.7 : Clearcasting        (energy)       
+      5329.7 : Energy Regen        (energy)         (overflow=20.55%)
+       267.8 : Hunger for Battle   (energy)         (overflow=26.48%)
+        47.6 : Overflowing Power   (combo_points)   (overflow=8.51%)
+        41.6 : Panther's Guile     (combo_points)   (overflow=1.95%)
+        42.9 : Primal Fury         (combo_points)   (overflow=24.22%)
+      1016.0 : Soul of the Forest  (energy)         (overflow=12.23%)
+        31.4 : Tiger's Tenacity    (combo_points)   (overflow=8.32%)
+        27.2 : berserk_cat         (combo_points)   (overflow=27.35%)
+        11.7 : convoke_the_spirits (combo_points)   (overflow=69.89%)
+        24.9 : frantic_frenzy      (combo_points)   (overflow=31.21%)
+        56.3 : rake                (combo_points)   (overflow=1.83%)
+        85.9 : shred               (combo_points) 
+        36.5 : swipe_cat           (combo_points) 
+       402.0 : tigers_fury         (energy)         (overflow=32.61%)
+        79.0 : twin_claw           (energy)         (overflow=4.40%)
+  Waiting: 12.93%
+
+Player: FP_bis_A night_elf druid feral 90
+  DPS=217562.36581591007 DPS-Error=460.24254091253897/0.21% DPS-Range=63663.01594079884/29.26%
+  DPR=11487.19385514154 RPS-Out=18.99037913770253 RPS-In=18.951927605474665 Resource=energy Waiting=13.403591651893542 ApM=50.15653699759295
+  Talents: CcGADBD3hSPCL9Y9gz68WcKvMAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGGA
+  Core Stats:    strength=265|265(265)  agility=2568|2489(2371)  stamina=42858|42858(41210)  intellect=620|620(620)  spirit=0|0(0)  health=857160|857160  mana=250000|250000
+  Generic Stats: mastery=78.62%|71.74%(1282)  versatility=10.85%|10.85%(586)  leech=0.00%|0.00%(0)  runspeed=8.19%|8.19%(0)
+  Spell Stats:   power=0|3184(0)  hit=15.00%|15.00%(0)  crit=18.76%|18.76%(403)  haste=26.33%|19.18%(792)  speed=26.33%|19.18%  manareg=2560|2560(0)
+  Attack Stats:  power=2568|2489(0)  hit=7.50%|7.50%(0)  crit=18.76%|18.76%(403)  expertise=7.50%|7.50%(0)  haste=26.33%|19.18%(792)  speed=26.33%|19.18%
+  Defense Stats: armor=1185|1185(1118) miss=3.00%|3.00%  dodge=17.23%|16.90%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=5.43%|5.43%(586)
+  Priorities (actions.precombat):
+    snapshot_stats/variable,name=regrowth,op=reset/variable,name=dotc_rake_threshold,op=set,value=99
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&talent.merciless_claws,value=5
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&!talent.merciless_claws,value=8
+    potion,pre_pot_time=12,if=potion.liquid_luster
+    variable,name=algethar_puzzle_box_precombat_cast,value=3,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff
+    use_item,name=algethar_puzzle_box,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff/cat_form,if=buff.cat_form.down/prowl
+  Priorities (actions.default):
+    prowl,if=buff.bs_inc.down&!buff.prowl.up&!buff.shadowmeld.up/cat_form,if=!buff.cat_form.up&!talent.fluid_form
+    invoke_external_buff,name=power_infusion,if=buff.bs_inc.up|!talent.berserk_heart_of_the_lion
+    auto_attack,if=!buff.prowl.up&!buff.shadowmeld.up
+    tigers_fury,if=(cooldown.bs_inc.remains<=1|cooldown.bs_inc.remains>10|variable.holdBerserk)&(cooldown.frantic_frenzy.remains<buff.tigers_fury.duration-1.5|cooldown.frantic_frenzy.remains>22|!talent.frantic_frenzy|spell_targets=1|fight_style.dungeonroute|fight_style.dungeonslice)
+    rake,if=buff.prowl.up|buff.shadowmeld.up/chomp,if=buff.chomp_enabler.up/call_action_list,name=cooldown
+    ferocious_bite,if=buff.apex_predators_craving.up/call_action_list,name=finisher,if=spell_targets=1
+    call_action_list,name=aoe_finisher,if=spell_targets>=2/call_action_list,name=builder,if=spell_targets=1&combo_points<=4
+    call_action_list,name=aoe_builder,if=spell_targets>1&combo_points<=4/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
+  Priorities (actions.aoe_builder):
+    prowl,target_if=dot.rake.refreshable,if=!buff.shadowmeld.up/shadowmeld,target_if=dot.rake.refreshable,if=!buff.prowl.up
+    rake,target_if=refreshable,if=(talent.doubleclawed_rake&(!talent.lunar_inspiration|!talent.panthers_guile|active_dot.rake<5))|hero_tree.wildstalker&(active_dot.rake<2+!talent.panthers_guile+talent.lunar_inspiration)
+    moonfire_cat,target_if=refreshable/shred,if=spell_targets=2&talent.panthers_guile&buff.clearcasting.react
+    swipe_cat,if=hero_tree.druid_of_the_claw&buff.bs_inc.up|buff.clearcasting.react&(hero_tree.druid_of_the_claw|spell_targets<7)
+    swipe_cat,if=buff.sudden_ambush.up&spell_targets.swipe_cat>=5+(2*hero_tree.wildstalker)
+    rake,target_if=refreshable,if=hero_tree.wildstalker|spell_targets.swipe_cat<=variable.dotc_rake_threshold
+    rake,target_if=min:pmultiplier,if=persistent_multiplier>pmultiplier&spell_targets=2/shred,if=spell_targets=2&talent.panthers_guile
+    swipe_cat,if=spell_targets>2|!talent.panthers_guile
+  Priorities (actions.aoe_finisher):
+    primal_wrath,target_if=min:remains,if=combo_points>=5&spell_targets.primal_wrath>1&(dot.primal_wrath.remains<6.5&!buff.bs_inc.up|dot.primal_wrath.refreshable)
+    ferocious_bite,if=buff.ravage.up&combo_points>=5&!talent.primal_wrath&spell_targets>=2+(3*!talent.rampant_ferocity)
+    rip,target_if=min:remains,if=combo_points>=5&!talent.primal_wrath&refreshable
+    ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5&(talent.rampant_ferocity|buff.ravage.up&spell_targets<8|dot.bloodseeker_vines.ticking&spell_targets<5)
+    primal_wrath,if=combo_points>=5/ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5
+  Priorities (actions.builder):
+    prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+    shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)/shred,if=buff.sudden_ambush.up&hero_tree.druid_of_the_claw
+    rake,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    moonfire_cat,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    shred
+  Priorities (actions.cooldown):
+    call_action_list,name=cd_variable,if=!cooldown.bs_inc.remains|!cooldown.potion.remains|!trinket.1.cooldown.remains|!trinket.2.cooldown.remains
+    use_item,slot=trinket1,if=trinket.1.has_use_damage&(trinket.2.cooldown.remains>20|!trinket.2.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.1.is.font_of_venomous_rage|!buff.bs_inc.up)
+    use_item,slot=trinket2,if=trinket.2.has_use_damage&(trinket.1.cooldown.remains>20|!trinket.1.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.2.is.font_of_venomous_rage|!buff.bs_inc.up)
+    berserking/potion,if=buff.bs_inc.up|fight_remains<32|buff.tigers_fury.up&!variable.holdPot/use_items
+    use_item,slot=trinket1,use_off_gcd=1,if=trinket.1.has_use_buff&(cooldown.tigers_fury.remains>=25|trinket.1.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&cooldown.tigers_fury.remains<2)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.1.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.1.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.1.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining+1&buff.potion.up|trinket.2.has_use_buff&(variable.secondLowestCDremaining>trinket.1.cooldown.duration&variable.lowestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.2.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket2,use_off_gcd=1,if=trinket.2.has_use_buff&(!trinket.1.has_use_buff|trinket.1.cooldown.remains>20)&(cooldown.tigers_fury.remains>=25|trinket.2.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&(cooldown.tigers_fury.remains<2|buff.tigers_fury.up))&(buff.potion.up|variable.slot2CountRemaining!=variable.potCountRemaining)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.2.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.2.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.2.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining-1&buff.potion.up|trinket.1.has_use_buff&(variable.secondLowestCDremaining>trinket.2.cooldown.duration&variable.lowestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.1.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket1,if=fight_remains<=(21<?trinket.1.proc.any_dps.duration)
+    use_item,slot=trinket2,if=fight_remains<=(21<?trinket.2.proc.any_dps.duration)/berserk,if=buff.tigers_fury.up&!variable.holdBerserk
+    feral_frenzy,if=!talent.frantic_frenzy&combo_points<=2+(2*buff.bs_inc.up)
+    frantic_frenzy,if=(!fight_style.dungeonroute&!fight_style.dungeonslice|raid_event.adds.remains>5)&(buff.tigers_fury.up&spell_targets>=2|combo_points<=2+(2*buff.bs_inc.up))
+    convoke_the_spirits,if=(buff.bs_inc.up|talent.ashamanes_guidance&(cooldown.bs_inc.remains>45|variable.holdBerserk))&buff.tigers_fury.up&(prev_gcd.1.rip|prev_gcd.1.ferocious_bite|prev_gcd.1.primal_wrath|buff.tigers_fury.remains<=1+action.convoke_the_spirits.execute_time)|fight_remains<5
+  Priorities (actions.finisher):
+    rip,if=combo_points>=5&refreshable&(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)/pool_resource,for_next=1
+    ferocious_bite,max_energy=1,if=combo_points>=5
+  Actions:
+    acidbrood_scourge                               Count=  24.0| 14.321sec  DPE=  28996| 0.89%  DPET=      0  DPR=      0  pDPS= 1923  Miss= 0.00%  Hit=  7872|  7543| 10563  Crit= 15742| 15086| 21126|33.51%
+    berserk_cat                                     Count=   3.4|130.575sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    35  UpTime= 14.59%
+    cat_melee                                       Count= 385.9|  0.921sec  DPE=   8452| 4.15%  DPET=  11342  DPR=      0  pDPS= 9096  Miss= 0.00%  Hit=  6388|  4251| 12150  Crit= 12816|  8503| 24510|32.12%
+    convoke_the_spirits                             Count=   5.9| 65.881sec  DPE=1205999| 0.00%  DPET= 401695  DPR=      0  pDPS=    0  TickCount=    63  UpTime=  4.37%
+    dreadful_wound_ferocious_bite                   Count=  82.6| 12.295sec  DPE=  54937| 5.78%  DPET=      0  DPR=      0  pDPS=12562  TickCount=   244  MissTick= 0.00%  Tick= 13884|     5| 28874  CritTick= 27852|    12| 57748|33.93%  UpTime=134.08%
+    dreadful_wound_ferocious_bite_convoke           Count=   8.6|105.763sec  DPE=  75189| 0.83%  DPET=      0  DPR=      0  pDPS= 1792  TickCount=    31  MissTick= 0.00%  Tick= 15467|    39| 26083  CritTick= 30834|   264| 52166|34.46%  UpTime= 17.35%
+    ferocious_bite                                  Count=  37.3|  9.273sec  DPE= 552159| 3.41%  DPET= 314107  DPR=  16401  pDPS= 7464  Miss= 0.00%  Hit= 80161| 25755|173694  Crit=161915| 53003|347387|31.27%
+    ferocious_bite_apex                             Count=   0.0|  0.000sec  DPE=      0| 1.78%  DPET=      0  DPR=      0  pDPS= 3866  Miss= 0.00%  Hit= 86757| 42611|169721  Crit=175748| 85519|341777|33.75%
+    ferocious_bite_convoke                          Count=  10.4| 32.481sec  DPE= 325700| 1.27%  DPET=      0  DPR=      0  pDPS= 2768  Miss= 0.00%  Hit= 85980| 46086|154555  Crit=173850| 92171|305910|31.07%
+    ferocious_bite_convoke_apex                     Count=   0.0|  0.000sec  DPE=      0| 0.27%  DPET=      0  DPR=      0  pDPS=  582  Miss= 0.00%  Hit= 97960| 50799|150302  Crit=200126|121803|302030|32.68%
+    font_of_venomous_rage                           Count=   2.0|240.396sec  DPE=2206930| 4.16%  DPET=1246853  DPR=      0  pDPS= 9200  TickCount=     9  MissTick= 0.00%  Tick=273629|269499|295916  CritTick=547163|538999|591833|31.52%  UpTime=  0.98%
+    frantic_frenzy                                  Count=   8.3| 46.082sec  DPE=1160014|12.19%  DPET=1154947  DPR=  46402  pDPS=26390  Miss= 0.00%  Hit=  3390|  1990|  7551  Crit=  6789|  3979| 15101|33.13%  TickCount=   225  MissTick= 0.00%  Tick= 35403|    18|139865  CritTick= 70637|    35|278485|34.16%  UpTime= 57.79%
+    frantic_frenzy_convoke                          Count=   2.6|138.351sec  DPE= 803036| 2.67%  DPET=      0  DPR=      0  pDPS= 5734  Miss= 0.00%  Hit=  4226|  2125|  7537  Crit=  8410|  4250| 15075|33.06%  TickCount=    42  MissTick= 0.00%  Tick= 48494|    36|124016  CritTick= 96298|    67|248032|33.79%  UpTime=  9.39%
+    lunar_inspiration_convoke                       Count=   6.9| 51.736sec  DPE=  83304| 0.73%  DPET=      0  DPR=      0  pDPS= 1585  Miss= 0.00%  Hit=  5901|  2902| 11649  Crit= 11751|  6067| 22690|32.52%  TickCount=    63  MissTick= 0.00%  Tick=  6215|     4| 12914  CritTick= 12294|     7| 26429|32.94%  UpTime= 20.13%
+    potion                                          Count=   1.8|334.220sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    primal_wrath                                    Count=  22.8|  9.611sec  DPE= 604212|17.50%  DPET= 601515  DPR=  24169  pDPS=37898  Miss= 0.00%  Hit= 20636| 13546| 39896  Crit= 41413| 27092| 77728|33.74%  TickCount=   511  MissTick= 0.00%  Tick= 15779|    11| 41774  CritTick= 31652|    23| 82716|34.61%  UpTime=168.60%
+    prowl                                           Count=   4.3| 99.114sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rake                                            Count=  54.0|  6.592sec  DPE=  74648| 5.13%  DPET=  74314  DPR=   2133  pDPS=11187  Miss= 0.00%  Hit=  9004|  4668| 20360  Crit= 17912|  9336| 39692|32.61%  TickCount=   244  MissTick= 0.00%  Tick= 10501|     4| 28766  CritTick= 20723|    10| 57771|32.97%  UpTime=118.87%
+    rake_convoke                                    Count=   3.3| 37.319sec  DPE=  86022| 0.37%  DPET=      0  DPR=      0  pDPS=  789  Miss= 0.00%  Hit=  9491|  4731| 20010  Crit= 19032|  9399| 41290|33.82%  TickCount=    17  MissTick= 0.00%  Tick= 10400|     6| 23398  CritTick= 20768|    10| 45829|35.28%  UpTime=  8.17%
+    rampant_ferocity_ferocious_bite                 Count=  16.0| 13.170sec  DPE= 197141| 4.02%  DPET=      0  DPR=      0  pDPS= 8655  Miss= 0.00%  Hit= 37818| 14694|109675  Crit= 75599| 29387|217351|34.88%
+    rampant_ferocity_ferocious_bite_convoke         Count=   3.8| 33.702sec  DPE= 179964| 0.87%  DPET=      0  DPR=      0  pDPS= 1863  Miss= 0.00%  Hit= 28656| 14397| 47859  Crit= 57438| 28794|100051|34.03%
+    rampant_ferocity_ravage_ferocious_bite          Count=  14.7| 14.787sec  DPE= 205295| 3.83%  DPET=      0  DPR=      0  pDPS= 8270  Miss= 0.00%  Hit= 40938| 14397|107959  Crit= 81964| 28794|219349|34.51%
+    rampant_ferocity_ravage_ferocious_bite_convoke  Count=   1.2| 89.805sec  DPE= 176939| 0.28%  DPET=      0  DPR=      0  pDPS=  601  Miss= 0.00%  Hit= 27576| 15391| 52606  Crit= 55113| 30782|100559|34.31%
+    ravage_ferocious_bite                           Count=  28.0| 12.295sec  DPE= 477690| 4.97%  DPET=      0  DPR=  13402  pDPS=10841  Miss= 0.00%  Hit= 58704| 12921|242799  Crit=114752| 25841|472765|33.28%
+    ravage_ferocious_bite_apex                      Count=   0.0|  0.000sec  DPE=      0| 2.43%  DPET=      0  DPR=      0  pDPS= 5262  Miss= 0.00%  Hit= 44213| 12921|234544  Crit= 88700| 25841|438065|34.21%
+    ravage_ferocious_bite_convoke                   Count=   2.7|105.763sec  DPE= 557946| 0.65%  DPET=      0  DPR=      0  pDPS= 1406  Miss= 0.00%  Hit= 56987| 12921|213460  Crit=111503| 25841|426384|33.04%
+    ravage_ferocious_bite_convoke_apex              Count=   0.0|  0.000sec  DPE=      0| 0.15%  DPET=      0  DPR=      0  pDPS=  316  Miss= 0.00%  Hit= 47195| 12921|211334  Crit= 92432| 27933|424737|33.45%
+    regrowth_convoke                                Count=   4.1| 66.697sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    19  UpTime=  5.55%
+    rejuvenation_convoke                            Count=   4.1| 67.990sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    27  UpTime= 10.89%
+    rip                                             Count=   9.2| 29.664sec  DPE= 319443| 3.75%  DPET= 318026  DPR=  15973  pDPS= 8277  TickCount=   122  MissTick= 0.00%  Tick= 18546|    15| 36136  CritTick= 37060|    20| 72914|29.96%  UpTime= 40.40%
+    rune_of_unleashed_fire                          Count=  53.4|  6.580sec  DPE=   8207| 0.43%  DPET=      0  DPR=      0  pDPS=  936  Miss= 0.00%  Hit=  6295|  6016|  8424
+    rune_of_unleashed_fire_heal                     Count=   1.2| 96.900sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering           Count=   1.2| 96.900sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=     9  UpTime=  2.53%
+    rune_of_unleashed_fire_lingering                Count=  53.4|  6.580sec  DPE=   1912| 0.13%  DPET=      0  DPR=      0  pDPS=  284  TickCount=   260  MissTick= 0.00%  Tick=   393|   376|   527  UpTime= 72.09%
+    shadowmeld                                      Count=   3.3|125.029sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    shred                                           Count=  70.3|  4.616sec  DPE=  33808| 3.03%  DPET=  33657  DPR=   1662  pDPS= 6664  Miss= 0.00%  Hit= 25777| 15116| 52119  Crit= 51703| 30231|104020|30.98%
+    shred_convoke                                   Count=  20.3| 16.434sec  DPE=  37223| 0.96%  DPET=      0  DPR=      0  pDPS= 2105  Miss= 0.00%  Hit= 28410| 15379| 52855  Crit= 56972| 31040|106328|30.86%
+    swipe_cat                                       Count=  29.2|  7.281sec  DPE= 100632| 3.74%  DPET= 100183  DPR=   9563  pDPS= 8118  Miss= 0.00%  Hit= 15020|  6859| 32411  Crit= 30121| 13717| 64822|34.27%
+    tigers_fury                                     Count=  11.9| 31.240sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    twin_claw                                       Count=  25.8| 12.906sec  DPE=  29310| 0.96%  DPET=      0  DPR=      0  pDPS= 2111  Miss= 0.00%  Hit= 22235| 14786| 41107  Crit= 44553| 29571| 81944|31.70%
+    unseen_slash                                    Count=  57.6|  6.054sec  DPE=  59645| 4.37%  DPET=      0  DPR=      0  pDPS= 9629  Miss= 0.00%  Hit=  6547|     0| 11723  Crit= 13125|     7| 23427|30.63%  TickCount=   102  MissTick= 0.00%  Tick= 22231|     1| 84167  CritTick= 43876|     2|166902|30.94%  UpTime= 45.33%
+    unseen_swipe                                    Count=  16.3|  9.315sec  DPE= 135980| 2.83%  DPET=      0  DPR=      0  pDPS= 6086  Miss= 0.00%  Hit= 16380|     0| 31523  Crit= 32898|     1| 61967|34.45%
+    venom_splatter                                  Count=   0.0|  0.000sec  DPE=      0| 1.46%  DPET=      0  DPR=      0  pDPS= 3228  Miss= 0.00%  Hit= 48332| 47428| 52077  Crit= 96557| 94856|104154|36.27%
+    wrath_convoke                                   Count=   8.6| 35.694sec  DPE=   3114| 0.03%  DPET=      0  DPR=      0  pDPS=   74  Miss= 0.00%  Hit=  2397|  2187|  3332  Crit=  4800|  4374|  6575|31.04%
+
+  Constant Buffs:
+    cat_form/flask_of_the_magisters/harandar_celebration/lycaras_teachings_crit/voidtouched
+  Dynamic Buffs:
+    apex_predators_craving   : start= 19.7 refresh=  1.5 interval= 16.5 trigger= 15.3 duration=  0.9 uptime=  4.63%
+    arcanoweave_insight      : start=  6.7 refresh=  5.4 interval= 52.0 trigger= 27.1 duration= 26.5 uptime= 49.39%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 91.1 trigger= 72.8 duration= 21.1 uptime= 15.47%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 90.7 trigger= 73.6 duration= 21.0 uptime= 15.39%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 90.7 trigger= 73.3 duration= 21.0 uptime= 15.35%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 90.5 trigger= 73.2 duration= 21.0 uptime= 15.28%
+    berserk_cat              : start=  3.4 refresh=  0.0 interval=130.6 trigger=130.6 duration= 24.2 uptime= 23.02%  benefit= 22.91%
+    clearcasting_cat         : start= 43.7 refresh= 14.8 interval=  7.9 trigger=  5.9 duration=  2.6 uptime= 31.06%  benefit= 53.56%
+    critical_ritual          : start=  3.9 refresh=  0.7 interval= 71.9 trigger= 58.3 duration= 16.1 uptime= 17.25%
+    devastating_power        : start=  2.3 refresh=140.8 interval=141.6 trigger=  2.5 duration=152.0 uptime= 98.35%
+    forestwalk               : start=  3.0 refresh=  1.1 interval=104.6 trigger= 67.1 duration=  6.3 uptime=  5.20%
+    frantic_momentum         : start= 18.9 refresh= 14.2 interval= 18.8 trigger= 10.5 duration=  8.2 uptime= 43.05%
+    frenzied_focus           : start=  9.3 refresh=  8.8 interval= 37.9 trigger= 18.7 duration= 20.9 uptime= 54.49%
+    halazzis_fury            : start=  3.2 refresh=  0.0 interval=128.3 trigger=128.3 duration= 49.0 uptime= 43.16%  benefit= 45.48%
+    hasty_ritual             : start=  3.8 refresh=  0.7 interval= 72.0 trigger= 57.7 duration= 16.1 uptime= 17.21%
+    hunger_for_battle        : start=  7.3 refresh= 29.1 interval= 34.4 trigger=  6.2 duration= 13.0 uptime= 24.90%  benefit= 16.79%
+    killing_strikes          : start= 18.2 refresh= 73.0 interval= 19.2 trigger=  3.7 duration= 10.9 uptime= 55.17%
+    liquid_luster            : start=  1.8 refresh=  0.0 interval=334.2 trigger=334.2 duration= 27.7 uptime= 14.03%
+    lustrous_gleam           : start=  1.8 refresh=  6.8 interval=334.2 trigger= 39.3 duration= 27.7 uptime= 14.03%
+    lycaras_teachings_haste  : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    masterful_ritual         : start=  3.9 refresh=  0.7 interval= 71.7 trigger= 57.8 duration= 16.0 uptime= 17.26%
+    overflowing_power        : start= 22.8 refresh= 46.8 interval= 15.4 trigger=  4.9 duration=  1.5 uptime=  9.68%
+    predatory_swiftness      : start=  2.9 refresh=107.4 interval=155.7 trigger=  3.2 duration=117.4 uptime= 95.04%
+    prowl                    : start=  4.3 refresh=  0.0 interval= 99.2 trigger= 99.2 duration=  0.2 uptime=  0.01%  benefit=  2.57%
+    ravage                   : start= 31.5 refresh=  8.8 interval= 11.1 trigger=  8.7 duration=  3.7 uptime= 31.60%
+    rune_of_burning_haste    : start= 13.9 refresh= 40.6 interval= 17.7 trigger=  6.4 duration= 21.0 uptime= 81.68%
+    savage_fury              : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.9 uptime= 26.31%
+    shadowmeld               : start=  3.3 refresh=  0.0 interval=125.0 trigger=125.0 duration=  0.6 uptime=  0.01%  benefit=  1.89%
+    stalking_predator        : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  3.3 uptime= 10.90%
+    tigers_fury              : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration= 14.8 uptime= 48.95%  benefit= 49.33%
+    tigers_tenacity          : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  8.2 uptime= 27.33%
+    unseen_predators_craving : start=  3.6 refresh= 68.9 interval= 63.9 trigger=  4.9 duration= 93.2 uptime= 93.92%  benefit= 95.75%
+    venomcursed_ascendance   : start=  8.2 refresh=  3.9 interval= 41.6 trigger= 27.2 duration= 15.7 uptime= 35.78%
+    versatile_ritual         : start=  3.8 refresh=  0.7 interval= 72.4 trigger= 58.3 duration= 16.1 uptime= 17.14%
+  Up-Times:
+     15.59% : Energy Cap                    
+  Procs:
+     14.83407 |  20.69939sec : Clearcasting (Wasted)
+     24.69856 |  13.84552sec : Ravage
+     19.94656 |  16.89635sec : delayed_aa_channel
+  Gains:
+      5543.3 : Clearcasting        (energy)       
+      5022.4 : Energy Regen        (energy)         (overflow=17.39%)
+       294.9 : Hunger for Battle   (energy)         (overflow=18.91%)
+        47.1 : Overflowing Power   (combo_points)   (overflow=8.76%)
+        37.1 : Panther's Guile     (combo_points)   (overflow=2.26%)
+        43.6 : Primal Fury         (combo_points)   (overflow=23.64%)
+       993.7 : Soul of the Forest  (energy)         (overflow=9.90%)
+        31.3 : Tiger's Tenacity    (combo_points)   (overflow=8.46%)
+        26.9 : berserk_cat         (combo_points)   (overflow=26.44%)
+        11.6 : convoke_the_spirits (combo_points)   (overflow=69.84%)
+        24.9 : frantic_frenzy      (combo_points)   (overflow=31.20%)
+        55.9 : rake                (combo_points)   (overflow=1.82%)
+        77.2 : shred               (combo_points) 
+        36.0 : swipe_cat           (combo_points) 
+       437.1 : tigers_fury         (energy)         (overflow=26.66%)
+        75.1 : twin_claw           (energy)         (overflow=2.99%)
+  Waiting: 13.40%
+
+Player: FP_bis_B_Bardiche night_elf druid feral 90
+  DPS=216593.31194150934 DPS-Error=466.58900419804445/0.22% DPS-Range=64498.46679057267/29.78%
+  DPR=11519.042175207282 RPS-Out=18.855024908378592 RPS-In=18.81348098538516 Resource=energy Waiting=13.701948311467072 ApM=49.690500916190665
+  Talents: CcGADBD3hSPCL9Y9gz68WcKvMAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGGA
+  Core Stats:    strength=265|265(265)  agility=2574|2495(2377)  stamina=42996|42996(41343)  intellect=620|620(620)  spirit=0|0(0)  health=859920|859920  mana=250000|250000
+  Generic Stats: mastery=86.49%|80.03%(1483)  versatility=9.02%|9.02%(487)  leech=0.00%|0.00%(0)  runspeed=8.19%|8.19%(0)
+  Spell Stats:   power=0|3212(0)  hit=15.00%|15.00%(0)  crit=18.76%|18.76%(403)  haste=23.92%|16.91%(693)  speed=23.92%|16.91%  manareg=2560|2560(0)
+  Attack Stats:  power=2574|2495(0)  hit=7.50%|7.50%(0)  crit=18.76%|18.76%(403)  expertise=7.50%|7.50%(0)  haste=23.92%|16.91%(693)  speed=23.92%|16.91%
+  Defense Stats: armor=1185|1185(1118) miss=3.00%|3.00%  dodge=17.26%|16.93%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=4.51%|4.51%(487)
+  Priorities (actions.precombat):
+    snapshot_stats/variable,name=regrowth,op=reset/variable,name=dotc_rake_threshold,op=set,value=99
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&talent.merciless_claws,value=5
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&!talent.merciless_claws,value=8
+    potion,pre_pot_time=12,if=potion.liquid_luster
+    variable,name=algethar_puzzle_box_precombat_cast,value=3,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff
+    use_item,name=algethar_puzzle_box,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff/cat_form,if=buff.cat_form.down/prowl
+  Priorities (actions.default):
+    prowl,if=buff.bs_inc.down&!buff.prowl.up&!buff.shadowmeld.up/cat_form,if=!buff.cat_form.up&!talent.fluid_form
+    invoke_external_buff,name=power_infusion,if=buff.bs_inc.up|!talent.berserk_heart_of_the_lion
+    auto_attack,if=!buff.prowl.up&!buff.shadowmeld.up
+    tigers_fury,if=(cooldown.bs_inc.remains<=1|cooldown.bs_inc.remains>10|variable.holdBerserk)&(cooldown.frantic_frenzy.remains<buff.tigers_fury.duration-1.5|cooldown.frantic_frenzy.remains>22|!talent.frantic_frenzy|spell_targets=1|fight_style.dungeonroute|fight_style.dungeonslice)
+    rake,if=buff.prowl.up|buff.shadowmeld.up/chomp,if=buff.chomp_enabler.up/call_action_list,name=cooldown
+    ferocious_bite,if=buff.apex_predators_craving.up/call_action_list,name=finisher,if=spell_targets=1
+    call_action_list,name=aoe_finisher,if=spell_targets>=2/call_action_list,name=builder,if=spell_targets=1&combo_points<=4
+    call_action_list,name=aoe_builder,if=spell_targets>1&combo_points<=4/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
+  Priorities (actions.aoe_builder):
+    prowl,target_if=dot.rake.refreshable,if=!buff.shadowmeld.up/shadowmeld,target_if=dot.rake.refreshable,if=!buff.prowl.up
+    rake,target_if=refreshable,if=(talent.doubleclawed_rake&(!talent.lunar_inspiration|!talent.panthers_guile|active_dot.rake<5))|hero_tree.wildstalker&(active_dot.rake<2+!talent.panthers_guile+talent.lunar_inspiration)
+    moonfire_cat,target_if=refreshable/shred,if=spell_targets=2&talent.panthers_guile&buff.clearcasting.react
+    swipe_cat,if=hero_tree.druid_of_the_claw&buff.bs_inc.up|buff.clearcasting.react&(hero_tree.druid_of_the_claw|spell_targets<7)
+    swipe_cat,if=buff.sudden_ambush.up&spell_targets.swipe_cat>=5+(2*hero_tree.wildstalker)
+    rake,target_if=refreshable,if=hero_tree.wildstalker|spell_targets.swipe_cat<=variable.dotc_rake_threshold
+    rake,target_if=min:pmultiplier,if=persistent_multiplier>pmultiplier&spell_targets=2/shred,if=spell_targets=2&talent.panthers_guile
+    swipe_cat,if=spell_targets>2|!talent.panthers_guile
+  Priorities (actions.aoe_finisher):
+    primal_wrath,target_if=min:remains,if=combo_points>=5&spell_targets.primal_wrath>1&(dot.primal_wrath.remains<6.5&!buff.bs_inc.up|dot.primal_wrath.refreshable)
+    ferocious_bite,if=buff.ravage.up&combo_points>=5&!talent.primal_wrath&spell_targets>=2+(3*!talent.rampant_ferocity)
+    rip,target_if=min:remains,if=combo_points>=5&!talent.primal_wrath&refreshable
+    ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5&(talent.rampant_ferocity|buff.ravage.up&spell_targets<8|dot.bloodseeker_vines.ticking&spell_targets<5)
+    primal_wrath,if=combo_points>=5/ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5
+  Priorities (actions.builder):
+    prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+    shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)/shred,if=buff.sudden_ambush.up&hero_tree.druid_of_the_claw
+    rake,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    moonfire_cat,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    shred
+  Priorities (actions.cooldown):
+    call_action_list,name=cd_variable,if=!cooldown.bs_inc.remains|!cooldown.potion.remains|!trinket.1.cooldown.remains|!trinket.2.cooldown.remains
+    use_item,slot=trinket1,if=trinket.1.has_use_damage&(trinket.2.cooldown.remains>20|!trinket.2.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.1.is.font_of_venomous_rage|!buff.bs_inc.up)
+    use_item,slot=trinket2,if=trinket.2.has_use_damage&(trinket.1.cooldown.remains>20|!trinket.1.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.2.is.font_of_venomous_rage|!buff.bs_inc.up)
+    berserking/potion,if=buff.bs_inc.up|fight_remains<32|buff.tigers_fury.up&!variable.holdPot/use_items
+    use_item,slot=trinket1,use_off_gcd=1,if=trinket.1.has_use_buff&(cooldown.tigers_fury.remains>=25|trinket.1.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&cooldown.tigers_fury.remains<2)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.1.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.1.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.1.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining+1&buff.potion.up|trinket.2.has_use_buff&(variable.secondLowestCDremaining>trinket.1.cooldown.duration&variable.lowestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.2.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket2,use_off_gcd=1,if=trinket.2.has_use_buff&(!trinket.1.has_use_buff|trinket.1.cooldown.remains>20)&(cooldown.tigers_fury.remains>=25|trinket.2.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&(cooldown.tigers_fury.remains<2|buff.tigers_fury.up))&(buff.potion.up|variable.slot2CountRemaining!=variable.potCountRemaining)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.2.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.2.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.2.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining-1&buff.potion.up|trinket.1.has_use_buff&(variable.secondLowestCDremaining>trinket.2.cooldown.duration&variable.lowestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.1.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket1,if=fight_remains<=(21<?trinket.1.proc.any_dps.duration)
+    use_item,slot=trinket2,if=fight_remains<=(21<?trinket.2.proc.any_dps.duration)/berserk,if=buff.tigers_fury.up&!variable.holdBerserk
+    feral_frenzy,if=!talent.frantic_frenzy&combo_points<=2+(2*buff.bs_inc.up)
+    frantic_frenzy,if=(!fight_style.dungeonroute&!fight_style.dungeonslice|raid_event.adds.remains>5)&(buff.tigers_fury.up&spell_targets>=2|combo_points<=2+(2*buff.bs_inc.up))
+    convoke_the_spirits,if=(buff.bs_inc.up|talent.ashamanes_guidance&(cooldown.bs_inc.remains>45|variable.holdBerserk))&buff.tigers_fury.up&(prev_gcd.1.rip|prev_gcd.1.ferocious_bite|prev_gcd.1.primal_wrath|buff.tigers_fury.remains<=1+action.convoke_the_spirits.execute_time)|fight_remains<5
+  Priorities (actions.finisher):
+    rip,if=combo_points>=5&refreshable&(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)/pool_resource,for_next=1
+    ferocious_bite,max_energy=1,if=combo_points>=5
+  Actions:
+    acidbrood_scourge                               Count=  23.5| 14.622sec  DPE=  28400| 0.85%  DPET=      0  DPR=      0  pDPS= 1846  Miss= 0.00%  Hit=  7725|  7417| 10385  Crit= 15451| 14834| 20769|32.99%
+    berserk_cat                                     Count=   3.4|130.527sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    35  UpTime= 14.59%
+    cat_melee                                       Count= 377.3|  0.942sec  DPE=   8329| 4.02%  DPET=  10929  DPR=      0  pDPS= 8763  Miss= 0.00%  Hit=  6311|  4216| 12147  Crit= 12660|  8433| 23914|31.79%
+    convoke_the_spirits                             Count=   5.9| 65.544sec  DPE=1221618| 0.00%  DPET= 406576  DPR=      0  pDPS=    0  TickCount=    63  UpTime=  4.37%
+    dreadful_wound_ferocious_bite                   Count=  81.5| 12.438sec  DPE=  56363| 5.87%  DPET=      0  DPR=      0  pDPS=12716  TickCount=   241  MissTick= 0.00%  Tick= 14263|    11| 29313  CritTick= 28615|    13| 58343|33.43%  UpTime=132.55%
+    dreadful_wound_ferocious_bite_convoke           Count=   8.5|109.490sec  DPE=  77417| 0.84%  DPET=      0  DPR=      0  pDPS= 1804  TickCount=    31  MissTick= 0.00%  Tick= 15879|    40| 27891  CritTick= 31699|    58| 55781|34.11%  UpTime= 17.05%
+    ferocious_bite                                  Count=  36.6|  9.496sec  DPE= 567344| 3.47%  DPET= 322421  DPR=  16771  pDPS= 7559  Miss= 0.00%  Hit= 82416| 27217|175111  Crit=166585| 51449|344625|30.91%
+    ferocious_bite_apex                             Count=   0.0|  0.000sec  DPE=      0| 1.77%  DPET=      0  DPR=      0  pDPS= 3834  Miss= 0.00%  Hit= 89277| 44567|177935  Crit=180459| 88587|354614|33.16%
+    ferocious_bite_convoke                          Count=  10.4| 32.284sec  DPE= 331978| 1.31%  DPET=      0  DPR=      0  pDPS= 2840  Miss= 0.00%  Hit= 88636| 49023|153749  Crit=179123| 97920|307498|30.26%
+    ferocious_bite_convoke_apex                     Count=   0.0|  0.000sec  DPE=      0| 0.27%  DPET=      0  DPR=      0  pDPS=  581  Miss= 0.00%  Hit=100789| 53824|153749  Crit=205040|103395|321321|32.83%
+    font_of_venomous_rage                           Count=   2.0|240.431sec  DPE=2156701| 4.09%  DPET=1218819  DPR=      0  pDPS= 9003  TickCount=     9  MissTick= 0.00%  Tick=268613|264990|286807  CritTick=536995|529980|573614|31.15%  UpTime=  0.98%
+    frantic_frenzy                                  Count=   8.2| 46.136sec  DPE=1151416|12.13%  DPET=1146322  DPR=  46058  pDPS=26166  Miss= 0.00%  Hit=  3444|  2042|  7654  Crit=  6893|  4084| 15309|32.77%  TickCount=   218  MissTick= 0.00%  Tick= 36646|    24|151048  CritTick= 73170|    48|340642|33.77%  UpTime= 57.42%
+    frantic_frenzy_convoke                          Count=   2.6|137.054sec  DPE= 817320| 2.74%  DPET=      0  DPR=      0  pDPS= 5860  Miss= 0.00%  Hit=  4302|  2087|  8489  Crit=  8555|  4175| 16934|32.88%  TickCount=    42  MissTick= 0.00%  Tick= 50125|    65|123668  CritTick= 99593|    68|247337|33.57%  UpTime=  9.58%
+    lunar_inspiration_convoke                       Count=   6.9| 52.632sec  DPE=  83299| 0.73%  DPET=      0  DPR=      0  pDPS= 1581  Miss= 0.00%  Hit=  5994|  3022| 12301  Crit= 11948|  6142| 22800|31.46%  TickCount=    62  MissTick= 0.00%  Tick=  6383|     4| 13413  CritTick= 12611|     8| 26436|32.57%  UpTime= 20.06%
+    potion                                          Count=   1.8|334.177sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    primal_wrath                                    Count=  22.7|  9.658sec  DPE= 608137|17.63%  DPET= 605417  DPR=  24325  pDPS=38008  Miss= 0.00%  Hit= 21198| 14034| 40578  Crit= 42478| 28069| 81155|33.39%  TickCount=   499  MissTick= 0.00%  Tick= 16176|    27| 42828  CritTick= 32449|    23| 84817|34.17%  UpTime=168.28%
+    prowl                                           Count=   4.3| 99.348sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rake                                            Count=  54.1|  6.566sec  DPE=  74626| 5.16%  DPET=  74293  DPR=   2132  pDPS=11209  Miss= 0.00%  Hit=  9133|  4795| 20977  Crit= 18189|  9591| 40528|32.24%  TickCount=   239  MissTick= 0.00%  Tick= 10733|     4| 29155  CritTick= 21193|     7| 58590|32.64%  UpTime=119.00%
+    rake_convoke                                    Count=   3.3| 38.358sec  DPE=  86392| 0.37%  DPET=      0  DPR=      0  pDPS=  789  Miss= 0.00%  Hit=  9626|  4959| 20517  Crit= 19309| 10012| 40615|33.05%  TickCount=    17  MissTick= 0.00%  Tick= 10685|     5| 23306  CritTick= 21363|    10| 46837|34.94%  UpTime=  8.16%
+    rampant_ferocity_ferocious_bite                 Count=  15.7| 13.518sec  DPE= 201905| 4.06%  DPET=      0  DPR=      0  pDPS= 8699  Miss= 0.00%  Hit= 38993| 15295|109103  Crit= 77980| 30590|218206|34.26%
+    rampant_ferocity_ferocious_bite_convoke         Count=   3.8| 32.564sec  DPE= 184284| 0.91%  DPET=      0  DPR=      0  pDPS= 1926  Miss= 0.00%  Hit= 29506| 14916| 50824  Crit= 58926| 29832|104489|33.78%
+    rampant_ferocity_ravage_ferocious_bite          Count=  14.5| 14.800sec  DPE= 210170| 3.89%  DPET=      0  DPR=      0  pDPS= 8353  Miss= 0.00%  Hit= 42019| 14916|114616  Crit= 84017| 29832|214792|34.05%
+    rampant_ferocity_ravage_ferocious_bite_convoke  Count=   1.2| 89.710sec  DPE= 179975| 0.28%  DPET=      0  DPR=      0  pDPS=  598  Miss= 0.00%  Hit= 28301| 14916| 53433  Crit= 56722| 29832|102357|33.28%
+    ravage_ferocious_bite                           Count=  27.5| 12.438sec  DPE= 490461| 5.05%  DPET=      0  DPR=  13775  pDPS=10947  Miss= 0.00%  Hit= 60224| 13384|247739  Crit=116580| 26767|488435|32.99%
+    ravage_ferocious_bite_apex                      Count=   0.0|  0.000sec  DPE=      0| 2.44%  DPET=      0  DPR=      0  pDPS= 5276  Miss= 0.00%  Hit= 45472| 13384|259377  Crit= 90833| 26767|461285|33.87%
+    ravage_ferocious_bite_convoke                   Count=   2.6|109.490sec  DPE= 569699| 0.65%  DPET=      0  DPR=      0  pDPS= 1413  Miss= 0.00%  Hit= 58791| 13384|216542  Crit=114052| 26767|432361|32.56%
+    ravage_ferocious_bite_convoke_apex              Count=   0.0|  0.000sec  DPE=      0| 0.15%  DPET=      0  DPR=      0  pDPS=  317  Miss= 0.00%  Hit= 48239| 14029|215141  Crit= 97633| 27483|433455|33.34%
+    regrowth_convoke                                Count=   4.1| 66.064sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    18  UpTime=  5.60%
+    rejuvenation_convoke                            Count=   4.1| 66.402sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    27  UpTime= 10.97%
+    rip                                             Count=   9.2| 29.721sec  DPE= 319095| 3.75%  DPET= 317669  DPR=  15955  pDPS= 8253  TickCount=   119  MissTick= 0.00%  Tick= 18993|    10| 40030  CritTick= 37906|    25| 78666|29.53%  UpTime= 40.39%
+    rune_of_unleashed_fire                          Count=  53.3|  6.554sec  DPE=   8061| 0.42%  DPET=      0  DPR=      0  pDPS=  918  Miss= 0.00%  Hit=  6178|  5915|  8282
+    rune_of_unleashed_fire_heal                     Count=   1.2| 95.782sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering           Count=   1.2| 95.782sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=     9  UpTime=  2.52%
+    rune_of_unleashed_fire_lingering                Count=  53.3|  6.554sec  DPE=   1883| 0.13%  DPET=      0  DPR=      0  pDPS=  280  TickCount=   260  MissTick= 0.00%  Tick=   386|   370|   518  UpTime= 72.26%
+    shadowmeld                                      Count=   3.3|125.019sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    shred                                           Count=  69.0|  4.706sec  DPE=  32959| 2.91%  DPET=  32811  DPR=   1611  pDPS= 6380  Miss= 0.00%  Hit= 25213| 14862| 51390  Crit= 50610| 29725|111249|30.50%
+    shred_convoke                                   Count=  20.3| 16.269sec  DPE=  36217| 0.94%  DPET=      0  DPR=      0  pDPS= 2045  Miss= 0.00%  Hit= 27756| 15230| 50214  Crit= 55574| 30460|100250|30.41%
+    swipe_cat                                       Count=  28.9|  7.408sec  DPE=  98056| 3.62%  DPET=  97620  DPR=   9125  pDPS= 7817  Miss= 0.00%  Hit= 14668|  6755| 30655  Crit= 29414| 13511| 64095|33.97%
+    tigers_fury                                     Count=  11.9| 31.252sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    twin_claw                                       Count=  25.6| 13.017sec  DPE=  28848| 0.94%  DPET=      0  DPR=      0  pDPS= 2058  Miss= 0.00%  Hit= 21979| 14662| 41089  Crit= 44062| 29325| 80809|31.11%
+    unseen_slash                                    Count=  56.8|  6.107sec  DPE=  60797| 4.42%  DPET=      0  DPR=      0  pDPS= 9688  Miss= 0.00%  Hit=  6474|     1| 11779  Crit= 12967|     9| 23284|30.36%  TickCount=   101  MissTick= 0.00%  Tick= 22774|     3| 88550  CritTick= 44933|     6|168081|30.55%  UpTime= 44.89%
+    unseen_swipe                                    Count=  16.0|  9.498sec  DPE= 133798| 2.73%  DPET=      0  DPR=      0  pDPS= 5850  Miss= 0.00%  Hit= 16177|     2| 32076  Crit= 32465|     5| 64151|34.14%
+    venom_splatter                                  Count=   0.0|  0.000sec  DPE=      0| 1.43%  DPET=      0  DPR=      0  pDPS= 3143  Miss= 0.00%  Hit= 47357| 46635| 50474  Crit= 94613| 93269|100948|35.53%
+    wrath_convoke                                   Count=   8.6| 36.149sec  DPE=   3070| 0.03%  DPET=      0  DPR=      0  pDPS=   73  Miss= 0.00%  Hit=  2372|  2169|  3302  Crit=  4747|  4337|  6636|30.52%
+
+  Constant Buffs:
+    cat_form/flask_of_the_magisters/harandar_celebration/lycaras_teachings_crit/voidtouched
+  Dynamic Buffs:
+    apex_predators_craving   : start= 19.1 refresh=  1.5 interval= 16.9 trigger= 15.7 duration=  0.8 uptime=  4.44%
+    arcanoweave_insight      : start=  6.7 refresh=  5.3 interval= 51.8 trigger= 27.3 duration= 26.4 uptime= 49.47%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 91.9 trigger= 74.4 duration= 21.1 uptime= 15.37%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 91.2 trigger= 74.2 duration= 21.0 uptime= 15.28%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 90.9 trigger= 72.7 duration= 21.1 uptime= 15.23%
+    arcanoweave_insight_ally : start=  2.6 refresh=  0.4 interval= 91.5 trigger= 73.8 duration= 21.1 uptime= 15.26%
+    berserk_cat              : start=  3.4 refresh=  0.0 interval=130.6 trigger=130.6 duration= 24.2 uptime= 23.02%  benefit= 22.97%
+    clearcasting_cat         : start= 43.1 refresh= 14.0 interval=  8.0 trigger=  6.1 duration=  2.5 uptime= 30.24%  benefit= 53.03%
+    devastating_power        : start=  2.3 refresh=140.7 interval=141.7 trigger=  2.5 duration=152.4 uptime= 98.34%
+    forestwalk               : start=  3.0 refresh=  1.2 interval=103.5 trigger= 65.9 duration=  6.3 uptime=  5.23%
+    frantic_momentum         : start= 18.7 refresh= 14.0 interval= 18.9 trigger= 10.7 duration=  8.2 uptime= 42.58%
+    frenzied_focus           : start=  9.3 refresh=  8.9 interval= 38.0 trigger= 18.7 duration= 21.0 uptime= 54.46%
+    halazzis_fury            : start=  3.2 refresh=  0.0 interval=128.2 trigger=128.2 duration= 48.6 uptime= 42.74%  benefit= 45.10%
+    hunger_for_battle        : start=  7.3 refresh= 29.1 interval= 34.4 trigger=  6.2 duration= 13.0 uptime= 24.90%  benefit= 16.74%
+    killing_strikes          : start= 18.0 refresh= 71.9 interval= 19.3 trigger=  3.8 duration= 10.8 uptime= 54.44%
+    liquid_luster            : start=  1.8 refresh=  0.0 interval=334.1 trigger=334.1 duration= 27.7 uptime= 14.03%
+    lustrous_gleam           : start=  1.8 refresh=  6.8 interval=334.1 trigger= 39.3 duration= 27.7 uptime= 14.03%
+    lycaras_teachings_haste  : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    overflowing_power        : start= 22.7 refresh= 46.9 interval= 15.4 trigger=  4.9 duration=  1.5 uptime=  9.73%
+    predatory_swiftness      : start=  2.9 refresh=106.0 interval=153.9 trigger=  3.2 duration=116.4 uptime= 95.02%
+    prowl                    : start=  4.3 refresh=  0.0 interval= 99.4 trigger= 99.4 duration=  0.2 uptime=  0.01%  benefit=  2.57%
+    ravage                   : start= 31.0 refresh=  8.8 interval= 11.3 trigger=  8.8 duration=  3.8 uptime= 31.63%
+    rune_of_burning_haste    : start= 13.9 refresh= 40.5 interval= 17.7 trigger=  6.5 duration= 21.0 uptime= 81.70%
+    savage_fury              : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.9 uptime= 26.30%
+    shadowmeld               : start=  3.3 refresh=  0.0 interval=125.0 trigger=125.0 duration=  0.6 uptime=  0.01%  benefit=  1.10%
+    stalking_predator        : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  3.3 uptime= 10.86%
+    tigers_fury              : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration= 14.8 uptime= 48.94%  benefit= 49.30%
+    tigers_tenacity          : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  8.3 uptime= 27.60%
+    unseen_predators_craving : start=  3.9 refresh= 67.5 interval= 63.6 trigger=  4.9 duration= 85.8 uptime= 93.09%  benefit= 95.11%
+    venomcursed_ascendance   : start=  8.2 refresh=  3.9 interval= 41.8 trigger= 27.4 duration= 15.7 uptime= 35.61%
+  Up-Times:
+     14.75% : Energy Cap                    
+  Procs:
+     13.98479 |  21.73455sec : Clearcasting (Wasted)
+     24.19616 |  14.12498sec : Ravage
+     19.30685 |  17.46585sec : delayed_aa_channel
+  Gains:
+      5427.3 : Clearcasting        (energy)       
+      4965.4 : Energy Regen        (energy)         (overflow=16.48%)
+       300.4 : Hunger for Battle   (energy)         (overflow=17.42%)
+        46.9 : Overflowing Power   (combo_points)   (overflow=9.26%)
+        36.3 : Panther's Guile     (combo_points)   (overflow=2.39%)
+        42.7 : Primal Fury         (combo_points)   (overflow=23.65%)
+       987.9 : Soul of the Forest  (energy)         (overflow=9.33%)
+        31.4 : Tiger's Tenacity    (combo_points)   (overflow=8.39%)
+        26.8 : berserk_cat         (combo_points)   (overflow=26.78%)
+        11.5 : convoke_the_spirits (combo_points)   (overflow=69.99%)
+        24.9 : frantic_frenzy      (combo_points)   (overflow=31.03%)
+        56.0 : rake                (combo_points)   (overflow=1.84%)
+        75.8 : shred               (combo_points) 
+        35.7 : swipe_cat           (combo_points) 
+       445.1 : tigers_fury         (energy)         (overflow=25.31%)
+        74.6 : twin_claw           (energy)         (overflow=2.67%)
+  Waiting: 13.70%
+
+Player: F_owned_PikeHV night_elf druid feral 90
+  DPS=198601.21426109647 DPS-Error=463.0673723089357/0.23% DPS-Range=59263.85480940771/29.84%
+  DPR=10295.55322701581 RPS-Out=19.36993708230308 RPS-In=19.330835974857678 Resource=energy Waiting=13.684983688559234 ApM=51.31153659093302
+  Talents: CcGADBD3hSPCL9Y9gz68WcKvMAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGGA
+  Core Stats:    strength=265|265(265)  agility=2515|2437(2321)  stamina=40926|40926(39352)  intellect=620|620(620)  spirit=0|0(0)  health=818520|818520  mana=250000|250000
+  Generic Stats: mastery=50.04%|42.87%(618)  versatility=10.67%|10.67%(576)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=0|3134(0)  hit=15.00%|15.00%(0)  crit=32.13%|32.13%(1018)  haste=26.87%|19.69%(814)  speed=26.87%|19.69%  manareg=2560|2560(0)
+  Attack Stats:  power=2515|2437(0)  hit=7.50%|7.50%(0)  crit=32.13%|32.13%(1018)  expertise=7.50%|7.50%(0)  haste=26.87%|19.69%(814)  speed=26.87%|19.69%
+  Defense Stats: armor=1152|1152(1087) miss=3.00%|3.00%  dodge=17.01%|16.68%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=5.33%|5.33%(576)
+  Priorities (actions.precombat):
+    snapshot_stats/variable,name=regrowth,op=reset/variable,name=dotc_rake_threshold,op=set,value=99
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&talent.merciless_claws,value=5
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&!talent.merciless_claws,value=8
+    potion,pre_pot_time=12,if=potion.liquid_luster
+    variable,name=algethar_puzzle_box_precombat_cast,value=3,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff
+    use_item,name=algethar_puzzle_box,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff/cat_form,if=buff.cat_form.down/prowl
+  Priorities (actions.default):
+    prowl,if=buff.bs_inc.down&!buff.prowl.up&!buff.shadowmeld.up/cat_form,if=!buff.cat_form.up&!talent.fluid_form
+    invoke_external_buff,name=power_infusion,if=buff.bs_inc.up|!talent.berserk_heart_of_the_lion
+    auto_attack,if=!buff.prowl.up&!buff.shadowmeld.up
+    tigers_fury,if=(cooldown.bs_inc.remains<=1|cooldown.bs_inc.remains>10|variable.holdBerserk)&(cooldown.frantic_frenzy.remains<buff.tigers_fury.duration-1.5|cooldown.frantic_frenzy.remains>22|!talent.frantic_frenzy|spell_targets=1|fight_style.dungeonroute|fight_style.dungeonslice)
+    rake,if=buff.prowl.up|buff.shadowmeld.up/chomp,if=buff.chomp_enabler.up/call_action_list,name=cooldown
+    ferocious_bite,if=buff.apex_predators_craving.up/call_action_list,name=finisher,if=spell_targets=1
+    call_action_list,name=aoe_finisher,if=spell_targets>=2/call_action_list,name=builder,if=spell_targets=1&combo_points<=4
+    call_action_list,name=aoe_builder,if=spell_targets>1&combo_points<=4/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
+  Priorities (actions.aoe_builder):
+    prowl,target_if=dot.rake.refreshable,if=!buff.shadowmeld.up/shadowmeld,target_if=dot.rake.refreshable,if=!buff.prowl.up
+    rake,target_if=refreshable,if=(talent.doubleclawed_rake&(!talent.lunar_inspiration|!talent.panthers_guile|active_dot.rake<5))|hero_tree.wildstalker&(active_dot.rake<2+!talent.panthers_guile+talent.lunar_inspiration)
+    moonfire_cat,target_if=refreshable/shred,if=spell_targets=2&talent.panthers_guile&buff.clearcasting.react
+    swipe_cat,if=hero_tree.druid_of_the_claw&buff.bs_inc.up|buff.clearcasting.react&(hero_tree.druid_of_the_claw|spell_targets<7)
+    swipe_cat,if=buff.sudden_ambush.up&spell_targets.swipe_cat>=5+(2*hero_tree.wildstalker)
+    rake,target_if=refreshable,if=hero_tree.wildstalker|spell_targets.swipe_cat<=variable.dotc_rake_threshold
+    rake,target_if=min:pmultiplier,if=persistent_multiplier>pmultiplier&spell_targets=2/shred,if=spell_targets=2&talent.panthers_guile
+    swipe_cat,if=spell_targets>2|!talent.panthers_guile
+  Priorities (actions.aoe_finisher):
+    primal_wrath,target_if=min:remains,if=combo_points>=5&spell_targets.primal_wrath>1&(dot.primal_wrath.remains<6.5&!buff.bs_inc.up|dot.primal_wrath.refreshable)
+    ferocious_bite,if=buff.ravage.up&combo_points>=5&!talent.primal_wrath&spell_targets>=2+(3*!talent.rampant_ferocity)
+    rip,target_if=min:remains,if=combo_points>=5&!talent.primal_wrath&refreshable
+    ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5&(talent.rampant_ferocity|buff.ravage.up&spell_targets<8|dot.bloodseeker_vines.ticking&spell_targets<5)
+    primal_wrath,if=combo_points>=5/ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5
+  Priorities (actions.builder):
+    prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+    shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)/shred,if=buff.sudden_ambush.up&hero_tree.druid_of_the_claw
+    rake,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    moonfire_cat,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    shred
+  Priorities (actions.cooldown):
+    call_action_list,name=cd_variable,if=!cooldown.bs_inc.remains|!cooldown.potion.remains|!trinket.1.cooldown.remains|!trinket.2.cooldown.remains
+    use_item,slot=trinket1,if=trinket.1.has_use_damage&(trinket.2.cooldown.remains>20|!trinket.2.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.1.is.font_of_venomous_rage|!buff.bs_inc.up)
+    use_item,slot=trinket2,if=trinket.2.has_use_damage&(trinket.1.cooldown.remains>20|!trinket.1.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.2.is.font_of_venomous_rage|!buff.bs_inc.up)
+    berserking/potion,if=buff.bs_inc.up|fight_remains<32|buff.tigers_fury.up&!variable.holdPot/use_items
+    use_item,slot=trinket1,use_off_gcd=1,if=trinket.1.has_use_buff&(cooldown.tigers_fury.remains>=25|trinket.1.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&cooldown.tigers_fury.remains<2)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.1.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.1.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.1.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining+1&buff.potion.up|trinket.2.has_use_buff&(variable.secondLowestCDremaining>trinket.1.cooldown.duration&variable.lowestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.2.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket2,use_off_gcd=1,if=trinket.2.has_use_buff&(!trinket.1.has_use_buff|trinket.1.cooldown.remains>20)&(cooldown.tigers_fury.remains>=25|trinket.2.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&(cooldown.tigers_fury.remains<2|buff.tigers_fury.up))&(buff.potion.up|variable.slot2CountRemaining!=variable.potCountRemaining)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.2.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.2.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.2.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining-1&buff.potion.up|trinket.1.has_use_buff&(variable.secondLowestCDremaining>trinket.2.cooldown.duration&variable.lowestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.1.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket1,if=fight_remains<=(21<?trinket.1.proc.any_dps.duration)
+    use_item,slot=trinket2,if=fight_remains<=(21<?trinket.2.proc.any_dps.duration)/berserk,if=buff.tigers_fury.up&!variable.holdBerserk
+    feral_frenzy,if=!talent.frantic_frenzy&combo_points<=2+(2*buff.bs_inc.up)
+    frantic_frenzy,if=(!fight_style.dungeonroute&!fight_style.dungeonslice|raid_event.adds.remains>5)&(buff.tigers_fury.up&spell_targets>=2|combo_points<=2+(2*buff.bs_inc.up))
+    convoke_the_spirits,if=(buff.bs_inc.up|talent.ashamanes_guidance&(cooldown.bs_inc.remains>45|variable.holdBerserk))&buff.tigers_fury.up&(prev_gcd.1.rip|prev_gcd.1.ferocious_bite|prev_gcd.1.primal_wrath|buff.tigers_fury.remains<=1+action.convoke_the_spirits.execute_time)|fight_remains<5
+  Priorities (actions.finisher):
+    rip,if=combo_points>=5&refreshable&(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)/pool_resource,for_next=1
+    ferocious_bite,max_energy=1,if=combo_points>=5
+  Actions:
+    berserk_cat                                     Count=   3.4|131.214sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    37  UpTime= 15.27%
+    cat_melee                                       Count= 396.2|  0.897sec  DPE=   9200| 5.08%  DPET=  12495  DPR=      0  pDPS=10164  Miss= 0.00%  Hit=  6581|  4156| 15577  Crit= 13158|  8312| 31090|39.81%
+    convoke_the_spirits                             Count=   6.1| 63.784sec  DPE=1113450| 0.00%  DPET= 371561  DPR=      0  pDPS=    0  TickCount=    65  UpTime=  4.49%
+    devour_morsel                                   Count=  28.2| 12.107sec  DPE=  15882| 0.62%  DPET=      0  DPR=      0  pDPS= 1240  Miss= 0.00%  Hit= 11688| 10604| 15507  Crit= 23365| 21207| 30910|39.49%
+    dreadful_wound_ferocious_bite                   Count=  85.5| 11.941sec  DPE=  50248| 5.98%  DPET=      0  DPR=      0  pDPS=11880  TickCount=   251  MissTick= 0.00%  Tick= 12254|     5| 33256  CritTick= 24478|    26| 64596|39.94%  UpTime=138.07%
+    dreadful_wound_ferocious_bite_convoke           Count=   6.7|108.669sec  DPE=  66079| 0.61%  DPET=      0  DPR=      0  pDPS= 1210  TickCount=    22  MissTick= 0.00%  Tick= 14275|    90| 29070  CritTick= 28521|    88| 58140|39.83%  UpTime= 12.26%
+    ferocious_bite                                  Count=  38.5|  9.109sec  DPE= 513557| 3.74%  DPET= 292147  DPR=  15217  pDPS= 7485  Miss= 0.00%  Hit= 73544| 20834|192906  Crit=146580| 43262|372758|39.62%
+    ferocious_bite_apex                             Count=   0.0|  0.000sec  DPE=      0| 1.83%  DPET=      0  DPR=      0  pDPS= 3643  Miss= 0.00%  Hit= 76475| 37169|185342  Crit=152633| 73555|385223|40.21%
+    ferocious_bite_convoke                          Count=  10.9| 30.870sec  DPE= 273784| 1.45%  DPET=      0  DPR=      0  pDPS= 2903  Miss= 0.00%  Hit= 80135| 39911|182890  Crit=160261| 78162|361571|39.39%
+    ferocious_bite_convoke_apex                     Count=   0.0|  0.000sec  DPE=      0| 0.28%  DPET=      0  DPR=      0  pDPS=  538  Miss= 0.00%  Hit= 89307| 45576|166261  Crit=179448|106717|352889|39.87%
+    frantic_frenzy                                  Count=   8.3| 46.185sec  DPE=1056332|12.19%  DPET=1051612  DPR=  42254  pDPS=24134  Miss= 0.00%  Hit=  2900|  1628|  7860  Crit=  5792|  3256| 15720|39.82%  TickCount=   232  MissTick= 0.00%  Tick= 29916|    11|144007  CritTick= 59851|    21|288014|39.90%  UpTime= 59.27%
+    frantic_frenzy_convoke                          Count=   2.7|133.392sec  DPE= 738228| 2.76%  DPET=      0  DPR=      0  pDPS= 5399  Miss= 0.00%  Hit=  3964|  1805|  8073  Crit=  7919|  3610| 16355|39.82%  TickCount=    42  MissTick= 0.00%  Tick= 45103|    39|124801  CritTick= 89886|    86|249602|39.96%  UpTime=  9.03%
+    lunar_inspiration_convoke                       Count=   6.9| 51.737sec  DPE=  83122| 0.80%  DPET=      0  DPR=      0  pDPS= 1591  Miss= 0.00%  Hit=  5588|  2530| 11616  Crit= 11171|  4967| 22064|39.65%  TickCount=    64  MissTick= 0.00%  Tick=  5803|     4| 14635  CritTick= 11562|     6| 29616|39.74%  UpTime= 20.26%
+    potion                                          Count=   1.8|336.978sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    primal_wrath                                    Count=  22.9|  9.542sec  DPE= 549833|17.57%  DPET= 547380  DPR=  21993  pDPS=34748  Miss= 0.00%  Hit= 17973| 10967| 44507  Crit= 35870| 21935| 89015|39.75%  TickCount=   521  MissTick= 0.00%  Tick= 13724|    10| 48113  CritTick= 27410|    20| 93751|39.86%  UpTime=169.74%
+    prowl                                           Count=   4.3|100.211sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rake                                            Count=  54.8|  6.500sec  DPE=  70284| 5.37%  DPET=  69969  DPR=   2008  pDPS=10709  Miss= 0.00%  Hit=  7812|  3875| 21730  Crit= 15598|  7684| 44908|39.83%  TickCount=   252  MissTick= 0.00%  Tick=  9243|     4| 31085  CritTick= 18430|     7| 63301|39.83%  UpTime=121.41%
+    rake_convoke                                    Count=   3.3| 40.029sec  DPE=  77313| 0.35%  DPET=      0  DPR=      0  pDPS=  686  Miss= 0.00%  Hit=  8961|  4154| 20981  Crit= 17918|  8097| 40902|39.77%  TickCount=    16  MissTick= 0.00%  Tick=  9474|     4| 27840  CritTick= 18973|    10| 49339|40.17%  UpTime=  7.42%
+    rampant_ferocity_ferocious_bite                 Count=  16.3| 13.003sec  DPE= 180416| 4.09%  DPET=      0  DPR=      0  pDPS= 8035  Miss= 0.00%  Hit= 33172| 12036|116821  Crit= 66461| 24072|230202|39.87%
+    rampant_ferocity_ferocious_bite_convoke         Count=   4.1| 30.605sec  DPE= 151862| 0.87%  DPET=      0  DPR=      0  pDPS= 1690  Miss= 0.00%  Hit= 26164| 13946| 49735  Crit= 52320| 27892| 99469|40.06%
+    rampant_ferocity_ravage_ferocious_bite          Count=  15.1| 14.210sec  DPE= 193918| 4.07%  DPET=      0  DPR=      0  pDPS= 8013  Miss= 0.00%  Hit= 36980| 12271|124554  Crit= 73780| 24541|249108|39.75%
+    rampant_ferocity_ravage_ferocious_bite_convoke  Count=   1.1| 85.310sec  DPE= 143751| 0.21%  DPET=      0  DPR=      0  pDPS=  411  Miss= 0.00%  Hit= 25914| 14974| 53229  Crit= 51812| 29949| 95116|39.68%
+    ravage_ferocious_bite                           Count=  28.9| 11.941sec  DPE= 444453| 5.39%  DPET=      0  DPR=  12324  pDPS=10739  Miss= 0.00%  Hit= 52142| 10614|273971  Crit=103396| 21136|539577|39.97%
+    ravage_ferocious_bite_apex                      Count=   0.0|  0.000sec  DPE=      0| 2.42%  DPET=      0  DPR=      0  pDPS= 4800  Miss= 0.00%  Hit= 38701| 10614|252807  Crit= 77097| 21229|494662|40.26%
+    ravage_ferocious_bite_convoke                   Count=   2.5|108.669sec  DPE= 456962| 0.61%  DPET=      0  DPR=      0  pDPS= 1217  Miss= 0.00%  Hit= 59575| 12415|230303  Crit=117298| 24830|468828|40.20%
+    ravage_ferocious_bite_convoke_apex              Count=   0.0|  0.000sec  DPE=      0| 0.13%  DPET=      0  DPR=      0  pDPS=  247  Miss= 0.00%  Hit= 48087| 13250|233947  Crit= 96761| 26500|469039|39.61%
+    regrowth_convoke                                Count=   4.2| 66.451sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    19  UpTime=  5.72%
+    rejuvenation_convoke                            Count=   4.3| 65.156sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    28  UpTime= 11.34%
+    rip                                             Count=   9.8| 27.978sec  DPE= 294145| 4.02%  DPET= 292856  DPR=  14708  pDPS= 8113  TickCount=   126  MissTick= 0.00%  Tick= 16348|     9| 37676  CritTick= 32603|   164| 85362|39.86%  UpTime= 41.39%
+    rune_of_unleashed_fire                          Count=  53.2|  6.577sec  DPE=   8267| 0.47%  DPET=      0  DPR=      0  pDPS=  941  Miss= 0.00%  Hit=  6337|  5974|  8758
+    rune_of_unleashed_fire_heal                     Count=   1.3| 99.113sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering           Count=   1.3| 99.113sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    10  UpTime=  2.65%
+    rune_of_unleashed_fire_lingering                Count=  53.2|  6.577sec  DPE=   1930| 0.14%  DPET=      0  DPR=      0  pDPS=  286  TickCount=   260  MissTick= 0.00%  Tick=   396|   373|   547  UpTime= 72.11%
+    shadowmeld                                      Count=   3.3|125.013sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    shred                                           Count=  71.4|  4.603sec  DPE=  37117| 3.69%  DPET=  36951  DPR=   1831  pDPS= 7437  Miss= 0.00%  Hit= 26548| 14883| 65014  Crit= 53085| 29728|131272|39.83%
+    shred_convoke                                   Count=  21.1| 15.820sec  DPE=  44318| 1.30%  DPET=      0  DPR=      0  pDPS= 2606  Miss= 0.00%  Hit= 31789| 15042| 61332  Crit= 63413| 30084|117587|39.62%
+    swipe_cat                                       Count=  29.4|  7.251sec  DPE= 109038| 4.46%  DPET= 108549  DPR=  11026  pDPS= 8848  Miss= 0.00%  Hit= 15466|  6942| 41277  Crit= 30921| 13884| 82554|39.74%
+    tigers_fury                                     Count=  11.9| 31.198sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    twin_claw                                       Count=  26.4| 12.824sec  DPE=  31974| 1.18%  DPET=      0  DPR=      0  pDPS= 2356  Miss= 0.00%  Hit= 22878| 14454| 52335  Crit= 45742| 28908|104215|39.78%
+    unseen_slash                                    Count=  60.3|  5.772sec  DPE=  59863| 5.03%  DPET=      0  DPR=      0  pDPS=10123  Miss= 0.00%  Hit=  6895|     0| 15108  Crit= 13759|    15| 30170|39.66%  TickCount=   107  MissTick= 0.00%  Tick= 20388|     1| 87764  CritTick= 40865|     1|175529|39.76%  UpTime= 47.37%
+    unseen_swipe                                    Count=  15.7|  9.689sec  DPE= 147829| 3.22%  DPET=      0  DPR=      0  pDPS= 6323  Miss= 0.00%  Hit= 17267|     1| 40428  Crit= 34510|     2| 80855|39.95%
+    wrath_convoke                                   Count=   8.8| 35.805sec  DPE=   3618| 0.04%  DPET=      0  DPR=      0  pDPS=   89  Miss= 0.00%  Hit=  2617|  2138|  4124  Crit=  5227|  4275|  7768|39.52%
+
+  Constant Buffs:
+    cat_form/flask_of_the_magisters/harandar_celebration/lycaras_teachings_crit/voidtouched
+  Dynamic Buffs:
+    50lb_midnight_salmon      : start=  2.8 refresh=  0.3 interval= 82.5 trigger= 72.4 duration= 12.4 uptime=  9.59%
+    apex_predators_craving    : start= 20.0 refresh=  1.5 interval= 16.3 trigger= 15.2 duration=  0.8 uptime=  4.60%
+    arcanoweave_insight       : start=  6.7 refresh=  5.4 interval= 51.9 trigger= 27.3 duration= 26.4 uptime= 49.37%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 91.2 trigger= 73.6 duration= 21.0 uptime= 15.14%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 90.4 trigger= 72.8 duration= 21.1 uptime= 15.48%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 89.8 trigger= 72.4 duration= 21.1 uptime= 15.33%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 90.3 trigger= 73.0 duration= 21.1 uptime= 15.27%
+    berserk_cat               : start=  3.4 refresh=  0.0 interval=131.3 trigger=131.3 duration= 24.1 uptime= 22.96%  benefit= 22.99%
+    brittle_torga_totem       : start=  2.6 refresh=  0.4 interval= 88.4 trigger= 71.9 duration= 20.5 uptime= 15.02%
+    clearcasting_cat          : start= 44.7 refresh= 15.3 interval=  7.8 trigger=  5.8 duration=  2.5 uptime= 31.38%  benefit= 54.11%
+    critical_ritual           : start=  3.8 refresh=  0.7 interval= 71.9 trigger= 58.0 duration= 16.0 uptime= 17.08%
+    devoured_strength         : start=  3.7 refresh= 24.5 interval=117.5 trigger= 12.2 duration= 18.8 uptime= 19.23%
+    forestwalk                : start=  3.1 refresh=  1.2 interval=102.2 trigger= 65.9 duration=  6.3 uptime=  5.36%
+    frantic_momentum          : start= 19.1 refresh= 14.9 interval= 18.6 trigger= 10.3 duration=  8.3 uptime= 44.01%
+    frenzied_focus            : start=  9.4 refresh=  8.8 interval= 37.8 trigger= 18.7 duration= 20.9 uptime= 54.34%
+    halazzis_fury             : start=  3.1 refresh=  0.0 interval=128.4 trigger=128.4 duration= 49.8 uptime= 43.58%  benefit= 45.63%
+    hasty_ritual              : start=  3.8 refresh=  0.7 interval= 72.7 trigger= 58.6 duration= 16.1 uptime= 17.20%
+    hunger_for_battle         : start=  7.3 refresh= 29.2 interval= 34.4 trigger=  6.2 duration= 13.0 uptime= 24.91%  benefit= 17.08%
+    killing_strikes           : start= 18.4 refresh= 73.7 interval= 19.0 trigger=  3.7 duration= 10.9 uptime= 56.26%
+    liquid_luster             : start=  1.8 refresh=  0.0 interval=336.9 trigger=336.9 duration= 27.7 uptime= 14.00%
+    lustrous_gleam            : start=  1.8 refresh=  6.8 interval=336.9 trigger= 39.7 duration= 27.7 uptime= 14.00%
+    lycaras_teachings_haste   : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    masterful_ritual          : start=  3.9 refresh=  0.7 interval= 71.0 trigger= 57.2 duration= 16.1 uptime= 17.25%
+    overflowing_power         : start= 23.0 refresh= 49.7 interval= 15.3 trigger=  4.7 duration=  1.5 uptime=  9.84%
+    predatory_swiftness       : start=  2.9 refresh=110.6 interval=158.7 trigger=  3.1 duration=119.3 uptime= 95.76%
+    prowl                     : start=  4.3 refresh=  0.0 interval=100.0 trigger=100.0 duration=  0.2 uptime=  0.01%  benefit=  2.51%
+    ravage                    : start= 32.1 refresh=  8.6 interval= 11.0 trigger=  8.6 duration=  3.6 uptime= 31.29%
+    rotting_voidfin           : start=  2.7 refresh=  0.3 interval= 82.7 trigger= 72.6 duration= 12.4 uptime=  9.51%
+    rune_of_burning_haste     : start= 14.0 refresh= 40.5 interval= 17.7 trigger=  6.5 duration= 21.0 uptime= 81.75%
+    savage_fury               : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.9 uptime= 26.34%
+    seriously_sharp_seashell  : start=  2.8 refresh=  0.3 interval= 82.5 trigger= 72.6 duration= 12.4 uptime=  9.60%
+    shadowmeld                : start=  3.3 refresh=  0.0 interval=125.0 trigger=125.0 duration=  0.6 uptime=  0.01%  benefit=  1.00%
+    slick_and_slimy_gralstone : start=  2.8 refresh=  0.3 interval= 81.9 trigger= 71.8 duration= 12.4 uptime=  9.61%
+    stalking_predator         : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  3.1 uptime= 10.29%
+    tattered_tortollan_scroll : start=  2.8 refresh=  0.3 interval= 83.3 trigger= 73.5 duration= 12.4 uptime=  9.62%
+    tigers_fury               : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration= 14.7 uptime= 49.00%  benefit= 50.45%
+    tigers_tenacity           : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.8 uptime= 25.79%
+    unseen_predators_craving  : start=  2.6 refresh= 72.1 interval= 90.9 trigger=  4.7 duration=134.3 uptime= 95.47%  benefit= 97.13%
+    venomcursed_ascendance    : start=  8.2 refresh=  3.9 interval= 41.6 trigger= 27.3 duration= 15.7 uptime= 35.82%
+    versatile_ritual          : start=  3.8 refresh=  0.7 interval= 71.9 trigger= 57.9 duration= 16.0 uptime= 17.08%
+    voracious_heart_of_ulatek : start=  3.7 refresh=  0.0 interval=118.3 trigger=118.3 duration= 19.4 uptime= 19.86%
+  Up-Times:
+     14.86% : Energy Cap                    
+  Procs:
+     15.34688 |  20.07820sec : Clearcasting (Wasted)
+     25.43375 |  13.54021sec : Ravage
+     20.89592 |  16.18393sec : delayed_aa_channel
+  Gains:
+      5732.6 : Clearcasting        (energy)       
+      5128.2 : Energy Regen        (energy)         (overflow=16.62%)
+       294.5 : Hunger for Battle   (energy)         (overflow=19.23%)
+        48.5 : Overflowing Power   (combo_points)   (overflow=9.02%)
+        38.2 : Panther's Guile     (combo_points)   (overflow=2.13%)
+        51.9 : Primal Fury         (combo_points)   (overflow=24.71%)
+      1027.1 : Soul of the Forest  (energy)         (overflow=9.49%)
+        31.6 : Tiger's Tenacity    (combo_points)   (overflow=7.80%)
+        26.7 : berserk_cat         (combo_points)   (overflow=27.80%)
+        11.6 : convoke_the_spirits (combo_points)   (overflow=70.14%)
+        24.9 : frantic_frenzy      (combo_points)   (overflow=31.24%)
+        56.4 : rake                (combo_points)   (overflow=1.85%)
+        79.1 : shred               (combo_points) 
+        35.2 : swipe_cat           (combo_points) 
+       433.0 : tigers_fury         (energy)         (overflow=27.45%)
+        76.7 : twin_claw           (energy)         (overflow=3.11%)
+  Waiting: 13.68%
+
+Player: Z_SANITY night_elf druid feral 90
+  DPS=185713.7046194025 DPS-Error=414.9450354481637/0.22% DPS-Range=54315.572258855056/29.25%
+  DPR=9458.135307187535 RPS-Out=19.713898874679238 RPS-In=19.687225305395504 Resource=energy Waiting=12.911001087421964 ApM=52.94244605281266
+  Talents: CcGADBD3hSPCL9Y9gz68WcKvMAAAAAAAmZYmZmZMzsZsNz2MzMzDMzAAAAwSwsYMMzomxsYmZmZZMzAAAAAAgBAAAAoZWmtZmZABWAzMALMYAAAMzGGA
+  Core Stats:    strength=265|265(265)  agility=2499|2420(2305)  stamina=40501|40501(38944)  intellect=620|620(620)  spirit=0|0(0)  health=810020|810020  mana=250000|250000
+  Generic Stats: mastery=46.52%|39.35%(537)  versatility=12.63%|12.63%(682)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=0|3047(0)  hit=15.00%|15.00%(0)  crit=22.67%|22.67%(583)  haste=36.67%|28.94%(1217)  speed=36.67%|28.94%  manareg=2560|2560(0)
+  Attack Stats:  power=2499|2420(0)  hit=7.50%|7.50%(0)  crit=22.67%|22.67%(583)  expertise=7.50%|7.50%(0)  haste=36.67%|28.94%(1217)  speed=36.67%|28.94%
+  Defense Stats: armor=1152|1152(1087) miss=3.00%|3.00%  dodge=16.94%|16.61%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=6.31%|6.31%(682)
+  Priorities (actions.precombat):
+    snapshot_stats/variable,name=regrowth,op=reset/variable,name=dotc_rake_threshold,op=set,value=99
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&talent.merciless_claws,value=5
+    variable,name=dotc_rake_threshold,op=set,if=talent.wild_slashes&!talent.merciless_claws,value=8
+    potion,pre_pot_time=12,if=potion.liquid_luster
+    variable,name=algethar_puzzle_box_precombat_cast,value=3,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff
+    use_item,name=algethar_puzzle_box,if=trinket.1.is.algethar_puzzle_box|!trinket.1.has_use_buff/cat_form,if=buff.cat_form.down/prowl
+  Priorities (actions.default):
+    prowl,if=buff.bs_inc.down&!buff.prowl.up&!buff.shadowmeld.up/cat_form,if=!buff.cat_form.up&!talent.fluid_form
+    invoke_external_buff,name=power_infusion,if=buff.bs_inc.up|!talent.berserk_heart_of_the_lion
+    auto_attack,if=!buff.prowl.up&!buff.shadowmeld.up
+    tigers_fury,if=(cooldown.bs_inc.remains<=1|cooldown.bs_inc.remains>10|variable.holdBerserk)&(cooldown.frantic_frenzy.remains<buff.tigers_fury.duration-1.5|cooldown.frantic_frenzy.remains>22|!talent.frantic_frenzy|spell_targets=1|fight_style.dungeonroute|fight_style.dungeonslice)
+    rake,if=buff.prowl.up|buff.shadowmeld.up/chomp,if=buff.chomp_enabler.up/call_action_list,name=cooldown
+    ferocious_bite,if=buff.apex_predators_craving.up/call_action_list,name=finisher,if=spell_targets=1
+    call_action_list,name=aoe_finisher,if=spell_targets>=2/call_action_list,name=builder,if=spell_targets=1&combo_points<=4
+    call_action_list,name=aoe_builder,if=spell_targets>1&combo_points<=4/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
+  Priorities (actions.aoe_builder):
+    prowl,target_if=dot.rake.refreshable,if=!buff.shadowmeld.up/shadowmeld,target_if=dot.rake.refreshable,if=!buff.prowl.up
+    rake,target_if=refreshable,if=(talent.doubleclawed_rake&(!talent.lunar_inspiration|!talent.panthers_guile|active_dot.rake<5))|hero_tree.wildstalker&(active_dot.rake<2+!talent.panthers_guile+talent.lunar_inspiration)
+    moonfire_cat,target_if=refreshable/shred,if=spell_targets=2&talent.panthers_guile&buff.clearcasting.react
+    swipe_cat,if=hero_tree.druid_of_the_claw&buff.bs_inc.up|buff.clearcasting.react&(hero_tree.druid_of_the_claw|spell_targets<7)
+    swipe_cat,if=buff.sudden_ambush.up&spell_targets.swipe_cat>=5+(2*hero_tree.wildstalker)
+    rake,target_if=refreshable,if=hero_tree.wildstalker|spell_targets.swipe_cat<=variable.dotc_rake_threshold
+    rake,target_if=min:pmultiplier,if=persistent_multiplier>pmultiplier&spell_targets=2/shred,if=spell_targets=2&talent.panthers_guile
+    swipe_cat,if=spell_targets>2|!talent.panthers_guile
+  Priorities (actions.aoe_finisher):
+    primal_wrath,target_if=min:remains,if=combo_points>=5&spell_targets.primal_wrath>1&(dot.primal_wrath.remains<6.5&!buff.bs_inc.up|dot.primal_wrath.refreshable)
+    ferocious_bite,if=buff.ravage.up&combo_points>=5&!talent.primal_wrath&spell_targets>=2+(3*!talent.rampant_ferocity)
+    rip,target_if=min:remains,if=combo_points>=5&!talent.primal_wrath&refreshable
+    ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5&(talent.rampant_ferocity|buff.ravage.up&spell_targets<8|dot.bloodseeker_vines.ticking&spell_targets<5)
+    primal_wrath,if=combo_points>=5/ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5
+  Priorities (actions.builder):
+    prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+    shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)/shred,if=buff.sudden_ambush.up&hero_tree.druid_of_the_claw
+    rake,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    moonfire_cat,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+    shred
+  Priorities (actions.cooldown):
+    call_action_list,name=cd_variable,if=!cooldown.bs_inc.remains|!cooldown.potion.remains|!trinket.1.cooldown.remains|!trinket.2.cooldown.remains
+    use_item,slot=trinket1,if=trinket.1.has_use_damage&(trinket.2.cooldown.remains>20|!trinket.2.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.1.is.font_of_venomous_rage|!buff.bs_inc.up)
+    use_item,slot=trinket2,if=trinket.2.has_use_damage&(trinket.1.cooldown.remains>20|!trinket.1.has_use_buff|(cooldown.tigers_fury.remains<25&cooldown.tigers_fury.remains>20))&(!trinket.2.is.font_of_venomous_rage|!buff.bs_inc.up)
+    berserking/potion,if=buff.bs_inc.up|fight_remains<32|buff.tigers_fury.up&!variable.holdPot/use_items
+    use_item,slot=trinket1,use_off_gcd=1,if=trinket.1.has_use_buff&(cooldown.tigers_fury.remains>=25|trinket.1.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&cooldown.tigers_fury.remains<2)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.1.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.1.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.1.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining+1&buff.potion.up|trinket.2.has_use_buff&(variable.secondLowestCDremaining>trinket.1.cooldown.duration&variable.lowestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.2.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.2.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket2,use_off_gcd=1,if=trinket.2.has_use_buff&(!trinket.1.has_use_buff|trinket.1.cooldown.remains>20)&(cooldown.tigers_fury.remains>=25|trinket.2.is.algethar_puzzle_box&(!raid_event.adds.up|raid_event.adds.remains>13)&(cooldown.tigers_fury.remains<2|buff.tigers_fury.up))&(buff.potion.up|variable.slot2CountRemaining!=variable.potCountRemaining)&((cooldown.bs_inc.remains<5|buff.bs_inc.remains>=14)&!variable.holdBerserk|cooldown.convoke_the_spirits.remains<10&talent.ashamanes_guidance&talent.convoke_the_spirits|variable.lowestCDremaining>trinket.2.cooldown.duration|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&(variable.highestCDremaining+3)>trinket.2.cooldown.duration|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.bs_inc.remains<?cooldown.convoke_the_spirits.remains)>trinket.2.cooldown.duration|variable.slot1CountRemaining=variable.potCountRemaining-1&buff.potion.up|trinket.1.has_use_buff&(variable.secondLowestCDremaining>trinket.2.cooldown.duration&variable.lowestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=1&(!talent.convoke_the_spirits|variable.convokeCountRemaining=1)&variable.potCountRemaining=1&variable.highestCDremaining>trinket.1.cooldown.remains|variable.zerkCountRemaining=variable.convokeCountRemaining&talent.convoke_the_spirits&variable.zerkCountRemaining!=variable.potCountRemaining&(cooldown.convoke_the_spirits.remains<?cooldown.bs_inc.remains)>trinket.1.cooldown.remains|variable.convokeCountRemaining=0&variable.zerkCountRemaining=0&variable.potCountRemaining=0))
+    use_item,slot=trinket1,if=fight_remains<=(21<?trinket.1.proc.any_dps.duration)
+    use_item,slot=trinket2,if=fight_remains<=(21<?trinket.2.proc.any_dps.duration)/berserk,if=buff.tigers_fury.up&!variable.holdBerserk
+    feral_frenzy,if=!talent.frantic_frenzy&combo_points<=2+(2*buff.bs_inc.up)
+    frantic_frenzy,if=(!fight_style.dungeonroute&!fight_style.dungeonslice|raid_event.adds.remains>5)&(buff.tigers_fury.up&spell_targets>=2|combo_points<=2+(2*buff.bs_inc.up))
+    convoke_the_spirits,if=(buff.bs_inc.up|talent.ashamanes_guidance&(cooldown.bs_inc.remains>45|variable.holdBerserk))&buff.tigers_fury.up&(prev_gcd.1.rip|prev_gcd.1.ferocious_bite|prev_gcd.1.primal_wrath|buff.tigers_fury.remains<=1+action.convoke_the_spirits.execute_time)|fight_remains<5
+  Priorities (actions.finisher):
+    rip,if=combo_points>=5&refreshable&(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)/pool_resource,for_next=1
+    ferocious_bite,max_energy=1,if=combo_points>=5
+  Actions:
+    berserk_cat                                     Count=   3.4|131.188sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    37  UpTime= 15.27%
+    cat_melee                                       Count= 434.0|  0.820sec  DPE=   8363| 5.41%  DPET=  12394  DPR=      0  pDPS=10120  Miss= 0.00%  Hit=  6480|  4139| 15434  Crit= 12949|  8279| 31847|29.11%
+    convoke_the_spirits                             Count=   6.1| 63.489sec  DPE=1021193| 0.00%  DPET= 341822  DPR=      0  pDPS=    0  TickCount=    65  UpTime=  4.49%
+    devour_morsel                                   Count=  30.4| 11.200sec  DPE=  14789| 0.67%  DPET=      0  DPR=      0  pDPS= 1246  Miss= 0.00%  Hit= 11764| 10851| 14946  Crit= 23519| 21702| 29892|28.95%
+    dreadful_wound_ferocious_bite                   Count=  89.6| 11.368sec  DPE=  43017| 5.74%  DPET=      0  DPR=      0  pDPS=10660  TickCount=   259  MissTick= 0.00%  Tick= 11519|     5| 30878  CritTick= 22977|    43| 59125|29.09%  UpTime=143.26%
+    dreadful_wound_ferocious_bite_convoke           Count=   7.0|108.703sec  DPE=  56385| 0.59%  DPET=      0  DPR=      0  pDPS= 1081  TickCount=    23  MissTick= 0.00%  Tick= 13541|    20| 29299  CritTick= 26958|   158| 53039|28.95%  UpTime= 12.56%
+    ferocious_bite                                  Count=  39.2|  8.905sec  DPE= 451593| 3.46%  DPET= 253016  DPR=  13676  pDPS= 6490  Miss= 0.00%  Hit= 69488| 20315|178936  Crit=138306| 45201|347973|28.82%
+    ferocious_bite_apex                             Count=   0.0|  0.000sec  DPE=      0| 1.83%  DPET=      0  DPR=      0  pDPS= 3392  Miss= 0.00%  Hit= 71959| 34359|180607  Crit=144033| 74215|360039|28.86%
+    ferocious_bite_convoke                          Count=  10.8| 31.133sec  DPE= 241746| 1.32%  DPET=      0  DPR=      0  pDPS= 2467  Miss= 0.00%  Hit= 75636| 36601|155814  Crit=151143| 73202|315334|28.80%
+    ferocious_bite_convoke_apex                     Count=   0.0|  0.000sec  DPE=      0| 0.28%  DPET=      0  DPR=      0  pDPS=  512  Miss= 0.00%  Hit= 84277| 43842|151386  Crit=168163| 87708|305175|29.39%
+    frantic_frenzy                                  Count=   8.3| 46.138sec  DPE=1006721|12.43%  DPET=1002300  DPR=  40270  pDPS=23022  Miss= 0.00%  Hit=  2848|  1655|  7834  Crit=  5687|  3310| 15668|29.18%  TickCount=   247  MissTick= 0.00%  Tick= 28816|    18|139312  CritTick= 57520|    35|278624|29.05%  UpTime= 58.88%
+    frantic_frenzy_convoke                          Count=   2.7|133.976sec  DPE= 706072| 2.83%  DPET=      0  DPR=      0  pDPS= 5162  Miss= 0.00%  Hit=  3919|  1747|  7954  Crit=  7803|  3494| 15908|29.16%  TickCount=    44  MissTick= 0.00%  Tick= 44043|    54|123859  CritTick= 87818|    30|240472|29.13%  UpTime=  9.06%
+    lunar_inspiration_convoke                       Count=   6.9| 52.239sec  DPE=  79152| 0.81%  DPET=      0  DPR=      0  pDPS= 1505  Miss= 0.00%  Hit=  5544|  2418| 11302  Crit= 11062|  4864| 21559|28.88%  TickCount=    70  MissTick= 0.00%  Tick=  5520|     3| 13342  CritTick= 11038|     7| 27440|29.08%  UpTime= 20.09%
+    potion                                          Count=   1.8|336.917sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    primal_wrath                                    Count=  22.9|  9.551sec  DPE= 515348|17.57%  DPET= 513054  DPR=  20613  pDPS=32470  Miss= 0.00%  Hit= 16939| 10758| 42143  Crit= 33797| 21516| 83051|29.12%  TickCount=   569  MissTick= 0.00%  Tick= 12959|     9| 44494  CritTick= 25859|    20| 85540|29.10%  UpTime=169.87%
+    prowl                                           Count=   4.3| 99.883sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rake                                            Count=  54.5|  6.529sec  DPE=  66996| 5.44%  DPET=  66697  DPR=   1914  pDPS=10151  Miss= 0.00%  Hit=  7706|  3842| 21940  Crit= 15360|  7735| 42513|29.05%  TickCount=   275  MissTick= 0.00%  Tick=  8764|     3| 29492  CritTick= 17524|     8| 56305|29.05%  UpTime=121.46%
+    rake_convoke                                    Count=   3.3| 39.400sec  DPE=  73033| 0.36%  DPET=      0  DPR=      0  pDPS=  661  Miss= 0.00%  Hit=  8820|  3984| 21729  Crit= 17664|  9245| 37567|29.25%  TickCount=    18  MissTick= 0.00%  Tick=  8934|     4| 23640  CritTick= 17850|    21| 48827|28.92%  UpTime=  7.61%
+    rampant_ferocity_ferocious_bite                 Count=  16.4| 12.845sec  DPE= 155462| 3.79%  DPET=      0  DPR=      0  pDPS= 6968  Miss= 0.00%  Hit= 30771| 11807|113255  Crit= 61430| 23614|226510|29.07%
+    rampant_ferocity_ferocious_bite_convoke         Count=   4.0| 31.537sec  DPE= 131833| 0.79%  DPET=      0  DPR=      0  pDPS= 1429  Miss= 0.00%  Hit= 24709| 11807| 47390  Crit= 49279| 23614| 85734|29.07%
+    rampant_ferocity_ravage_ferocious_bite          Count=  15.7| 13.793sec  DPE= 167828| 3.91%  DPET=      0  DPR=      0  pDPS= 7206  Miss= 0.00%  Hit= 34464| 11796|111277  Crit= 68850| 23592|222554|29.09%
+    rampant_ferocity_ravage_ferocious_bite_convoke  Count=   1.1| 85.278sec  DPE= 127289| 0.21%  DPET=      0  DPR=      0  pDPS=  383  Miss= 0.00%  Hit= 24569| 12622| 49885  Crit= 48884| 25244| 93550|29.20%
+    ravage_ferocious_bite                           Count=  30.5| 11.368sec  DPE= 381377| 5.13%  DPET=      0  DPR=  10784  pDPS= 9542  Miss= 0.00%  Hit= 50129| 10269|256580  Crit= 99398| 20539|476037|29.20%
+    ravage_ferocious_bite_apex                      Count=   0.0|  0.000sec  DPE=      0| 2.54%  DPET=      0  DPR=      0  pDPS= 4704  Miss= 0.00%  Hit= 36475| 10269|258380  Crit= 72783| 20539|465689|29.25%
+    ravage_ferocious_bite_convoke                   Count=   2.5|108.703sec  DPE= 404385| 0.57%  DPET=      0  DPR=      0  pDPS= 1065  Miss= 0.00%  Hit= 56006| 10604|223523  Crit=110853| 21209|432762|29.26%
+    ravage_ferocious_bite_convoke_apex              Count=   0.0|  0.000sec  DPE=      0| 0.14%  DPET=      0  DPR=      0  pDPS=  258  Miss= 0.00%  Hit= 45202| 11810|226357  Crit= 87844| 23619|443379|29.60%
+    regrowth_convoke                                Count=   4.3| 66.962sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    20  UpTime=  5.74%
+    rejuvenation_convoke                            Count=   4.2| 66.063sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    30  UpTime= 11.32%
+    rip                                             Count=   9.8| 28.236sec  DPE= 281831| 4.13%  DPET= 280593  DPR=  14092  pDPS= 7791  TickCount=   138  MissTick= 0.00%  Tick= 15556|     9| 36790  CritTick= 31055|    25| 71781|28.99%  UpTime= 41.43%
+    rune_of_unleashed_fire                          Count=  53.4|  6.584sec  DPE=   8313| 0.51%  DPET=      0  DPR=      0  pDPS=  948  Miss= 0.00%  Hit=  6374|  6113|  8420
+    rune_of_unleashed_fire_heal                     Count=   1.2| 98.962sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    rune_of_unleashed_fire_heal_lingering           Count=   1.2| 98.962sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0  TickCount=    10  UpTime=  2.65%
+    rune_of_unleashed_fire_lingering                Count=  53.4|  6.584sec  DPE=   1939| 0.15%  DPET=      0  DPR=      0  pDPS=  288  TickCount=   260  MissTick= 0.00%  Tick=   398|   382|   526  UpTime= 72.20%
+    shadowmeld                                      Count=   3.3|124.982sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    shred                                           Count=  77.6|  4.233sec  DPE=  35081| 4.06%  DPET=  34924  DPR=   1751  pDPS= 7642  Miss= 0.00%  Hit= 27192| 15250| 69424  Crit= 54314| 30501|135679|29.09%
+    shred_convoke                                   Count=  21.1| 15.823sec  DPE=  42309| 1.33%  DPET=      0  DPR=      0  pDPS= 2482  Miss= 0.00%  Hit= 32800| 15796| 63363  Crit= 65572| 34672|126725|29.01%
+    swipe_cat                                       Count=  30.9|  6.888sec  DPE= 103255| 4.76%  DPET= 102795  DPR=  11236  pDPS= 8815  Miss= 0.00%  Hit= 15857|  7000| 41947  Crit= 31654| 13999| 83895|29.06%
+    tigers_fury                                     Count=  11.9| 31.207sec  DPE=      0| 0.00%  DPET=      0  DPR=      0  pDPS=    0
+    twin_claw                                       Count=  27.4| 12.205sec  DPE=  29058| 1.19%  DPET=      0  DPR=      0  pDPS= 2225  Miss= 0.00%  Hit= 22474| 14393| 50956  Crit= 44916| 28786| 97279|29.34%
+    unseen_slash                                    Count=  61.5|  5.660sec  DPE=  52764| 4.84%  DPET=      0  DPR=      0  pDPS= 9108  Miss= 0.00%  Hit=  6787|     0| 15278  Crit= 13537|     1| 28399|29.10%  TickCount=   109  MissTick= 0.00%  Tick= 19404|     0| 84881  CritTick= 38835|    10|157185|29.02%  UpTime= 48.24%
+    unseen_swipe                                    Count=  15.8|  9.507sec  DPE= 134998| 3.18%  DPET=      0  DPR=      0  pDPS= 5839  Miss= 0.00%  Hit= 17063|     3| 40569  Crit= 34113|     7| 81137|29.20%
+    wrath_convoke                                   Count=   8.8| 35.176sec  DPE=   3279| 0.04%  DPET=      0  DPR=      0  pDPS=   81  Miss= 0.00%  Hit=  2577|  2129|  4020  Crit=  5144|  4258|  7985|28.61%
+
+  Constant Buffs:
+    cat_form/flask_of_the_magisters/harandar_celebration/lycaras_teachings_crit/voidtouched
+  Dynamic Buffs:
+    apex_predators_craving    : start= 22.0 refresh=  1.7 interval= 15.0 trigger= 13.9 duration=  0.9 uptime=  5.18%
+    arcanoweave_insight       : start=  6.7 refresh=  5.4 interval= 51.9 trigger= 27.2 duration= 26.4 uptime= 49.49%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 91.1 trigger= 73.1 duration= 21.1 uptime= 15.31%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 90.6 trigger= 73.9 duration= 21.0 uptime= 15.27%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 91.3 trigger= 73.7 duration= 21.1 uptime= 15.42%
+    arcanoweave_insight_ally  : start=  2.6 refresh=  0.4 interval= 91.4 trigger= 74.4 duration= 21.0 uptime= 15.27%
+    berserk_cat               : start=  3.4 refresh=  0.0 interval=131.2 trigger=131.2 duration= 24.1 uptime= 22.96%  benefit= 22.82%
+    clearcasting_cat          : start= 47.4 refresh= 18.8 interval=  7.4 trigger=  5.3 duration=  2.6 uptime= 34.25%  benefit= 55.54%
+    devoured_strength         : start=  3.7 refresh= 26.7 interval=117.7 trigger= 11.3 duration= 18.8 uptime= 19.28%
+    focus_of_ulatek           : start= 12.4 refresh= 24.2 interval= 19.2 trigger=  9.5 duration= 21.3 uptime= 73.25%
+    forestwalk                : start=  3.1 refresh=  1.2 interval=102.1 trigger= 65.6 duration=  6.3 uptime=  5.37%
+    frantic_momentum          : start= 19.4 refresh= 15.3 interval= 18.3 trigger= 10.1 duration=  8.3 uptime= 44.79%
+    frenzied_focus            : start=  9.4 refresh=  8.9 interval= 37.8 trigger= 18.6 duration= 20.9 uptime= 54.51%
+    halazzis_fury             : start=  3.1 refresh=  0.0 interval=128.3 trigger=128.3 duration= 50.7 uptime= 44.45%  benefit= 46.55%
+    hunger_for_battle         : start=  7.3 refresh= 29.1 interval= 34.4 trigger=  6.2 duration= 13.0 uptime= 24.89%  benefit= 17.44%
+    killing_strikes           : start= 18.8 refresh= 77.7 interval= 18.6 trigger=  3.6 duration= 11.2 uptime= 58.64%
+    liquid_luster             : start=  1.8 refresh=  0.0 interval=336.9 trigger=336.9 duration= 27.7 uptime= 14.00%
+    lustrous_gleam            : start=  1.8 refresh=  6.8 interval=336.9 trigger= 39.7 duration= 27.7 uptime= 14.00%
+    lycaras_teachings_haste   : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    overflowing_power         : start= 22.9 refresh= 48.0 interval= 15.3 trigger=  4.8 duration=  1.5 uptime=  9.60%
+    predatory_swiftness       : start=  2.9 refresh=112.9 interval=159.6 trigger=  3.1 duration=119.5 uptime= 95.72%
+    prowl                     : start=  4.3 refresh=  0.0 interval=100.1 trigger=100.1 duration=  0.2 uptime=  0.01%  benefit=  2.46%
+    ravage                    : start= 33.8 refresh=  9.5 interval= 10.4 trigger=  8.1 duration=  3.5 uptime= 32.40%
+    rune_of_burning_haste     : start= 14.0 refresh= 40.6 interval= 17.7 trigger=  6.4 duration= 21.0 uptime= 81.66%
+    savage_fury               : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.9 uptime= 26.32%
+    shadowmeld                : start=  3.3 refresh=  0.0 interval=125.0 trigger=125.0 duration=  0.5 uptime=  0.00%  benefit=  1.22%
+    stalking_predator         : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  3.1 uptime= 10.22%
+    tigers_fury               : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration= 14.8 uptime= 48.97%  benefit= 50.58%
+    tigers_tenacity           : start= 11.9 refresh=  0.0 interval= 31.2 trigger= 31.2 duration=  7.8 uptime= 25.70%
+    unseen_predators_craving  : start=  2.3 refresh= 73.7 interval= 95.2 trigger=  4.6 duration=149.9 uptime= 96.16%  benefit= 97.56%
+    venomcursed_ascendance    : start=  8.2 refresh=  3.8 interval= 41.4 trigger= 27.3 duration= 15.6 uptime= 35.76%
+    voracious_heart_of_ulatek : start=  3.7 refresh=  0.0 interval=118.4 trigger=118.4 duration= 19.4 uptime= 19.86%
+  Up-Times:
+     18.54% : Energy Cap                    
+  Procs:
+     18.79263 |  16.91022sec : Clearcasting (Wasted)
+     27.83307 |  12.40273sec : Ravage
+     22.22398 |  15.18809sec : delayed_aa_channel
+  Gains:
+      6214.0 : Clearcasting        (energy)       
+      5324.8 : Energy Regen        (energy)         (overflow=20.63%)
+       266.0 : Hunger for Battle   (energy)         (overflow=26.95%)
+        47.6 : Overflowing Power   (combo_points)   (overflow=8.56%)
+        41.3 : Panther's Guile     (combo_points)   (overflow=2.05%)
+        43.0 : Primal Fury         (combo_points)   (overflow=24.10%)
+      1016.1 : Soul of the Forest  (energy)         (overflow=12.24%)
+        31.4 : Tiger's Tenacity    (combo_points)   (overflow=8.32%)
+        27.2 : berserk_cat         (combo_points)   (overflow=27.42%)
+        11.8 : convoke_the_spirits (combo_points)   (overflow=69.84%)
+        24.9 : frantic_frenzy      (combo_points)   (overflow=31.44%)
+        56.2 : rake                (combo_points)   (overflow=1.78%)
+        86.0 : shred               (combo_points) 
+        36.6 : swipe_cat           (combo_points) 
+       402.3 : tigers_fury         (energy)         (overflow=32.56%)
+        78.7 : twin_claw           (energy)         (overflow=4.43%)
+  Waiting: 12.91%
+
+
+ *** Targets *** 
+
+Target: Dungeon humanoid enemy unknown 93
+
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|0  mana=0|0
+  Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=0.00%|7.00%(0)
+  Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=inf%|0.00%(0)  speed=inf%|0.00%  manareg=0|0(0)
+  Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=inf%|0.00%(0)  speed=inf%|0.00%
+  Defense Stats: armor=0|1470(1470) miss=0.00%|3.00%  dodge=0.00%|3.00%(0)  parry=0.00%|3.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=0.00%|0.00%(0)
+  Priorities (actions.precombat):
+    snapshot_stats
+  Priorities (actions.default):
+
+  Actions:
+
+  Dynamic Buffs:
+    BigAdd1-bleeding     : start=  4.5 refresh=  0.0 interval= 50.0 trigger=  0.0 duration= 27.9 uptime= 99.49%
+    BigAdd1-sabertooth   : start= 12.7 refresh= 12.3 interval= 15.4 trigger=  7.6 duration=  5.1 uptime= 51.29%
+    BigAdd1-sabertooth   : start= 12.7 refresh= 12.4 interval= 15.4 trigger=  7.5 duration=  5.1 uptime= 51.21%
+    BigAdd1-sabertooth   : start= 12.5 refresh= 12.0 interval= 15.6 trigger=  7.7 duration=  5.1 uptime= 50.24%
+    BigAdd1-sabertooth   : start= 12.3 refresh= 11.7 interval= 15.9 trigger=  7.9 duration=  5.1 uptime= 49.71%
+    BigAdd1-sabertooth   : start= 12.1 refresh= 11.4 interval= 16.1 trigger=  8.0 duration=  5.1 uptime= 49.03%
+    BigAdd2-bleeding     : start=  3.4 refresh=  0.0 interval= 59.9 trigger=  0.0 duration= 27.3 uptime= 97.22%
+    BigAdd2-sabertooth   : start=  0.6 refresh=  0.2 interval= 84.5 trigger= 35.8 duration=  1.7 uptime=  0.97%
+    BigAdd2-sabertooth   : start=  0.6 refresh=  0.2 interval= 86.1 trigger= 36.0 duration=  1.7 uptime=  1.02%
+    BigAdd2-sabertooth   : start=  0.6 refresh=  0.2 interval= 83.1 trigger= 33.5 duration=  1.8 uptime=  1.03%
+    BigAdd2-sabertooth   : start=  0.6 refresh=  0.2 interval= 87.3 trigger= 33.3 duration=  1.7 uptime=  0.95%
+    BigAdd2-sabertooth   : start=  0.5 refresh=  0.2 interval= 86.1 trigger= 34.9 duration=  1.7 uptime=  0.95%
+    BigAdd3-bleeding     : start=  1.6 refresh=  0.0 interval= 84.0 trigger=  0.0 duration= 27.3 uptime= 96.24%
+    BigAdd3-sabertooth   : start=  0.2 refresh=  0.0 interval= 93.4 trigger= 17.8 duration=  1.4 uptime=  0.43%
+    BigAdd3-sabertooth   : start=  0.1 refresh=  0.0 interval=102.7 trigger= 18.1 duration=  1.3 uptime=  0.41%
+    BigAdd3-sabertooth   : start=  0.1 refresh=  0.0 interval= 92.3 trigger= 20.3 duration=  1.4 uptime=  0.43%
+    BigAdd3-sabertooth   : start=  0.1 refresh=  0.0 interval=102.1 trigger= 17.3 duration=  1.4 uptime=  0.42%
+    BigAdd3-sabertooth   : start=  0.1 refresh=  0.0 interval=106.4 trigger= 16.7 duration=  1.4 uptime=  0.43%
+    Boss1-bleeding       : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=134.9 uptime= 99.93%
+    Boss1-sabertooth     : start= 14.0 refresh= 26.1 interval=  9.5 trigger=  3.3 duration=  7.2 uptime= 74.31%
+    Boss1-sabertooth     : start= 14.0 refresh= 26.0 interval=  9.5 trigger=  3.3 duration=  7.2 uptime= 74.36%
+    Boss1-sabertooth     : start= 14.1 refresh= 24.3 interval=  9.4 trigger=  3.4 duration=  6.9 uptime= 72.18%
+    Boss1-sabertooth     : start= 13.6 refresh= 23.4 interval=  9.4 trigger=  3.5 duration=  6.9 uptime= 69.36%
+    Boss1-sabertooth     : start= 13.6 refresh= 22.8 interval=  9.5 trigger=  3.6 duration=  6.8 uptime= 68.35%
+    SmallAdd1-bleeding   : start=  5.4 refresh=  0.0 interval= 45.1 trigger=  0.0 duration= 17.1 uptime= 97.90%
+    SmallAdd1-sabertooth : start=  7.3 refresh=  6.7 interval= 28.7 trigger= 14.0 duration=  4.8 uptime= 37.78%
+    SmallAdd1-sabertooth : start=  7.3 refresh=  6.6 interval= 29.0 trigger= 14.2 duration=  4.8 uptime= 37.49%
+    SmallAdd1-sabertooth : start=  7.7 refresh=  6.8 interval= 27.7 trigger= 13.9 duration=  4.7 uptime= 38.87%
+    SmallAdd1-sabertooth : start=  7.7 refresh=  6.9 interval= 27.9 trigger= 13.9 duration=  4.7 uptime= 38.77%
+    SmallAdd1-sabertooth : start=  7.7 refresh=  6.9 interval= 28.0 trigger= 13.9 duration=  4.7 uptime= 38.82%
+    SmallAdd2-bleeding   : start=  5.4 refresh=  0.0 interval= 45.1 trigger=  0.0 duration= 17.0 uptime= 97.87%
+    SmallAdd2-sabertooth : start=  0.9 refresh=  0.3 interval= 76.9 trigger= 38.8 duration=  1.8 uptime=  1.72%
+    SmallAdd2-sabertooth : start=  0.9 refresh=  0.3 interval= 80.7 trigger= 39.9 duration=  1.8 uptime=  1.69%
+    SmallAdd2-sabertooth : start=  0.9 refresh=  0.3 interval= 78.9 trigger= 41.5 duration=  1.7 uptime=  1.70%
+    SmallAdd2-sabertooth : start=  0.9 refresh=  0.2 interval= 79.2 trigger= 42.8 duration=  1.7 uptime=  1.63%
+    SmallAdd2-sabertooth : start=  0.9 refresh=  0.2 interval= 79.5 trigger= 42.2 duration=  1.7 uptime=  1.61%
+    SmallAdd3-bleeding   : start=  5.4 refresh=  0.0 interval= 45.1 trigger=  0.0 duration= 17.0 uptime= 97.88%
+    SmallAdd3-sabertooth : start=  0.5 refresh=  0.1 interval= 79.8 trigger= 39.2 duration=  1.3 uptime=  0.72%
+    SmallAdd3-sabertooth : start=  0.5 refresh=  0.1 interval= 83.5 trigger= 38.6 duration=  1.4 uptime=  0.72%
+    SmallAdd3-sabertooth : start=  0.5 refresh=  0.1 interval= 82.3 trigger= 36.0 duration=  1.4 uptime=  0.73%
+    SmallAdd3-sabertooth : start=  0.5 refresh=  0.1 interval= 81.2 trigger= 39.6 duration=  1.3 uptime=  0.72%
+    SmallAdd3-sabertooth : start=  0.5 refresh=  0.1 interval= 83.4 trigger= 40.9 duration=  1.3 uptime=  0.72%
+    SmallAdd4-bleeding   : start=  5.4 refresh=  0.0 interval= 45.1 trigger=  0.0 duration= 17.0 uptime= 97.86%
+    SmallAdd4-sabertooth : start=  0.4 refresh=  0.1 interval= 86.2 trigger= 36.7 duration=  1.2 uptime=  0.46%
+    SmallAdd4-sabertooth : start=  0.4 refresh=  0.1 interval= 82.0 trigger= 35.6 duration=  1.2 uptime=  0.46%
+    SmallAdd4-sabertooth : start=  0.3 refresh=  0.1 interval= 81.8 trigger= 37.2 duration=  1.3 uptime=  0.45%
+    SmallAdd4-sabertooth : start=  0.4 refresh=  0.1 interval= 84.2 trigger= 39.4 duration=  1.2 uptime=  0.45%
+    SmallAdd4-sabertooth : start=  0.3 refresh=  0.1 interval= 83.7 trigger= 39.3 duration=  1.3 uptime=  0.46%
+    SmallAdd5-bleeding   : start=  4.0 refresh=  0.0 interval= 55.2 trigger=  0.0 duration= 17.0 uptime= 97.82%
+    SmallAdd5-sabertooth : start=  0.2 refresh=  0.0 interval= 86.1 trigger= 29.7 duration=  1.2 uptime=  0.31%
+    SmallAdd5-sabertooth : start=  0.2 refresh=  0.0 interval= 79.1 trigger= 29.3 duration=  1.2 uptime=  0.31%
+    SmallAdd5-sabertooth : start=  0.2 refresh=  0.0 interval= 80.0 trigger= 30.6 duration=  1.2 uptime=  0.32%
+    SmallAdd5-sabertooth : start=  0.2 refresh=  0.0 interval= 77.0 trigger= 28.3 duration=  1.2 uptime=  0.32%
+    SmallAdd5-sabertooth : start=  0.2 refresh=  0.0 interval= 81.5 trigger= 31.0 duration=  1.2 uptime=  0.32%
+    SmallAdd6-bleeding   : start=  1.7 refresh=  0.0 interval= 84.2 trigger=  0.0 duration= 17.1 uptime= 97.56%
+    SmallAdd6-sabertooth : start=  0.1 refresh=  0.0 interval= 74.2 trigger= 15.7 duration=  1.1 uptime=  0.22%
+    SmallAdd6-sabertooth : start=  0.1 refresh=  0.0 interval= 91.3 trigger=  6.5 duration=  1.1 uptime=  0.24%
+    SmallAdd6-sabertooth : start=  0.1 refresh=  0.0 interval= 76.3 trigger=  7.8 duration=  1.1 uptime=  0.23%
+    SmallAdd6-sabertooth : start=  0.1 refresh=  0.0 interval=126.1 trigger= 14.2 duration=  1.2 uptime=  0.25%
+    SmallAdd6-sabertooth : start=  0.1 refresh=  0.0 interval=173.6 trigger=  6.1 duration=  1.1 uptime=  0.25%
+  Waiting:  0.00%
+
+
+Baseline Performance:
+  Networking    = disabled
+  RNG Engine    = xoshiro256+ (deterministic)
+  Iterations    = 5000 (1250, 1250, 1250, 1250)
+  TotalEvents   = 316297191
+  MaxEventQueue = 708
+  TargetHealth  = 0
+  SimSeconds    = 1798701.932
+  CpuSeconds    = 182.099367311
+  WallSeconds   = 47.162567013
+  InitSeconds   = 0.096998301
+  MergeSeconds  = 0.014333189
+  AnalyzeSeconds= 0.052956003
+  SpeedUp       = 9885
+  EndTime       = 2026-10-14 22:11:09+0000
+
+
+Waiting:
+    12.93% : A_now_ToxinStaff
+    12.91% : Z_SANITY
+    13.68% : F_owned_PikeHV
+    13.40% : FP_bis_A
+    13.70% : FP_bis_B_Bardiche
+
+Iteration data:
+.--------------------------------------------------------. .--------------------------------------------------------.
+| Low Iteration Data                                     | | High Iteration Data                                    |
++--------+-----------+----------------------+------------+ +--------+-----------+----------------------+------------+
+|  Iter# |    Metric |                 Seed |  Health(s) | |  Iter# |    Metric |                 Seed |  Health(s) |
++--------+-----------+----------------------+------------+ +--------+-----------+----------------------+------------+
+|    652 |  756693.4 |  2411562113502456093 |          0 | |    575 | 1297238.2 | 18237685960756243605 |          0 |
+|    634 |  798329.1 |  1732791228527549280 |          0 | |    465 | 1266241.7 |  2380543058634108350 |          0 |
+|    920 |  801919.2 | 17614111366272530037 |          0 | |    322 | 1229554.6 | 14792139577552895781 |          0 |
+|    750 |  809160.5 |  5944694411170208940 |          0 | |    507 | 1220165.2 |  5924743185753213981 |          0 |
+|    660 |  809168.9 |  8651304097221753622 |          0 | |    519 | 1214332.2 |  7797553028662036569 |          0 |
+|    678 |  809974.6 | 18223944850066240862 |          0 | |    687 | 1212198.3 |  3368079417607259662 |          0 |
+|    680 |  813308.0 | 15239415074451265673 |          0 | |    453 | 1212143.3 |  3603841979426669755 |          0 |
+|    808 |  813370.9 | 12550912690423924187 |          0 | |   1125 | 1210335.2 |  4011473369951590878 |          0 |
+|    638 |  816972.3 |  8714018982281873319 |          0 | |    421 | 1205925.8 |  8773831116039969458 |          0 |
+|    890 |  819422.9 |  5503450604359297836 |          0 | |    545 | 1202918.9 | 10857999033220495278 |          0 |
+|    774 |  823720.9 |   163344267944998147 |          0 | |   1233 | 1199142.6 | 17755734973562564378 |          0 |
+|    888 |  823766.5 | 16711759588693591960 |          0 | |    433 | 1197854.3 |  6742077452503590214 |          0 |
+|   1024 |  824677.0 |  4552078591671096127 |          0 | |    461 | 1194629.4 |  4912005287697071213 |          0 |
+|    834 |  825395.9 |  9505646064700865345 |          0 | |    465 | 1191686.0 |  9821785787387268319 |          0 |
+|   1022 |  825719.7 |  3231041996137567005 |          0 | |   1173 | 1188267.5 |  4533036238113534101 |          0 |
+|    754 |  829150.5 | 16040404200922766709 |          0 | |    389 | 1187841.8 |  3235193585977821187 |          0 |
+|    648 |  829476.6 |  7499379460614156511 |          0 | |   1191 | 1187166.3 |  4789354851572894590 |          0 |
+|    644 |  830181.5 |  1570927437637731911 |          0 | |    312 | 1186036.7 | 16764456019246084116 |          0 |
+|    780 |  830412.5 |   197467642119773711 |          0 | |    479 | 1183423.2 |  1851703324145510287 |          0 |
+|    872 |  831364.7 | 16135157582970685423 |          0 | |   1187 | 1183329.9 | 17278521639289638718 |          0 |
+|    650 |  831378.5 |  6691480948669146289 |          0 | |    585 | 1181709.7 |  7302184226200813719 |          0 |
+|    690 |  831734.8 | 18397650506202760863 |          0 | |    437 | 1179045.7 | 18017540770673883598 |          0 |
+|    636 |  832973.5 |  7643795438481488212 |          0 | |    545 | 1178468.1 |  7679841143525073528 |          0 |
+|    708 |  833432.5 |  3344712947629697103 |          0 | |    521 | 1178133.4 |   570951682479064975 |          0 |
+|    902 |  833932.0 |  9519594547829321583 |          0 | |   1059 | 1177726.2 | 11002630119500572284 |          0 |
+|   1090 |  834687.1 |  1916600966858180179 |          0 | |    435 | 1177103.4 | 14132527532782724677 |          0 |
+|   1208 |  836662.9 |  7747073558332081842 |          0 | |    473 | 1176833.1 | 12580179090515632490 |          0 |
+|    251 |  837391.0 |  4423327329333648140 |          0 | |    583 | 1175799.2 | 14318801021749116710 |          0 |
+|    151 |  839768.4 |  3763133951581639825 |          0 | |    879 | 1174499.7 | 17783030298628931446 |          0 |
+|    802 |  840563.7 |  9860276317316955936 |          0 | |    517 | 1172697.7 | 12138673719756553376 |          0 |
+|    646 |  840880.6 |  6433427906708844133 |          0 | |   1173 | 1171959.0 | 10144215829001843554 |          0 |
+|    740 |  841225.6 | 15337719537440238543 |          0 | |    342 | 1171435.3 | 14292280071661290816 |          0 |
+|    836 |  841285.1 | 14414067604609068214 |          0 | |    140 | 1171236.4 |  9950154130578681283 |          0 |
+|    920 |  843132.3 |  7160250499608295740 |          0 | |   1141 | 1171050.8 |   343895587239477973 |          0 |
+|    634 |  844019.3 | 17861643378639650294 |          0 | |    328 | 1170924.5 |  9407658452870749883 |          0 |
+|    726 |  844116.9 | 14026312118212642821 |          0 | |    581 | 1170733.0 |  8876303552592513060 |          0 |
+|    608 |  844213.2 | 13319501391979712468 |          0 | |   1163 | 1170728.5 |  5628132977500293000 |          0 |
+|    820 |  844303.0 | 17944778850850413573 |          0 | |    647 | 1170530.7 |  5786234505872479166 |          0 |
+|    916 |  845038.7 |  5826139094748689856 |          0 | |    745 | 1168904.8 |  5580674528150574345 |          0 |
+|    678 |  846212.8 |   731228149092982065 |          0 | |    301 | 1168800.1 |  5036826307027431545 |          0 |
+|   1061 |  847165.0 |  2318966395350061489 |          0 | |    521 | 1167368.6 | 15208694518947662209 |          0 |
+|    778 |  847167.9 |  2134643477758613798 |          0 | |   1221 | 1166103.5 |  6973194935459865196 |          0 |
+|    636 |  848325.5 |  4234340274501175528 |          0 | |    373 | 1165963.1 |  7207810785671693392 |          0 |
+|    145 |  848933.4 | 14258371090441883905 |          0 | |    651 | 1165371.3 | 16830195311235012597 |          0 |
+|    798 |  849166.9 | 17578349758940498206 |          0 | |    549 | 1165174.1 | 10554930682096330186 |          0 |
+|    926 |  849273.8 | 15546109489655797203 |          0 | |    443 | 1164782.1 |   906619313378369486 |          0 |
+|    786 |  849593.0 |  9286803327310705726 |          0 | |   1219 | 1164481.9 | 11681575398541205785 |          0 |
+|    628 |  851234.6 |  3904587419302038191 |          0 | |    503 | 1164286.4 | 12420299799975312428 |          0 |
+|    772 |  852819.1 |  1782999492135594284 |          0 | |   1123 | 1164056.6 | 11416852150554491537 |          0 |
+|     72 |  853490.0 |  7710226763857395924 |          0 | |    665 | 1163980.6 |   893370131555427675 |          0 |
+|    650 |  853834.5 | 12725621631122523261 |          0 | |    340 | 1163717.5 | 14528083891750145678 |          0 |
+|    686 |  853861.5 |  2141704684283936089 |          0 | |    449 | 1163475.7 | 13388503568469937513 |          0 |
+|    760 |  854209.9 |  9728040511669401936 |          0 | |    202 | 1163280.1 |  7709055449694326556 |          0 |
+|    984 |  854961.7 | 14305873035708326541 |          0 | |   1205 | 1162948.4 | 15976537062548020712 |          0 |
+|    686 |  855164.6 |  8198155619084929210 |          0 | |    599 | 1162914.5 | 10529945808114253467 |          0 |
+|    946 |  855172.6 | 16105682196739020441 |          0 | |   1087 | 1162732.8 | 10132121917258279282 |          0 |
+|    652 |  855774.8 |  2740632697926011185 |          0 | |   1154 | 1162468.6 |  8933758731641132452 |          0 |
+|    774 |  856039.4 |  5429665414754134373 |          0 | |    427 | 1162466.4 |  7633156824446116947 |          0 |
+|    175 |  857357.0 | 12825143500423571299 |          0 | |   1107 | 1162308.7 | 12276354771008369444 |          0 |
+|    752 |  857374.6 | 13701023450802439049 |          0 | |    279 | 1162042.4 | 15884189993412080098 |          0 |
+|    652 |  858026.0 | 17175561958874120142 |          0 | |    505 | 1161715.3 |  6338792645001915456 |          0 |
+|    670 |  858636.8 | 13712701864983368869 |          0 | |    378 | 1161150.1 |  9329215930872500107 |          0 |
+|    776 |  858687.2 |  3867520105080044404 |          0 | |    359 | 1160656.9 |  5335991437291948208 |          0 |
+|    706 |  858808.0 | 14929328445593089625 |          0 | |    467 | 1160186.5 | 16395820002141750627 |          0 |
+|    976 |  858961.1 | 17784759519849213439 |          0 | |    613 | 1159878.6 |  7553943688874435160 |          0 |
+|     73 |  859218.4 |  2564801854392198335 |          0 | |   1209 | 1159801.0 | 12651045410964628326 |          0 |
+|    512 |  859391.9 |  8464361787041810242 |          0 | |    446 | 1158994.4 |  1191710431609474184 |          0 |
+|    614 |  860035.9 |  8171690136486601177 |          0 | |    404 | 1158631.6 | 13297305740505129614 |          0 |
+|    916 |  860071.0 | 14715639275353681801 |          0 | |    633 | 1158519.6 |  9389652974156241798 |          0 |
+|    674 |  860530.4 | 17352668161542134887 |          0 | |    286 | 1157780.8 |  6935901286046979676 |          0 |
+|    972 |  860557.5 |  4311515938005072081 |          0 | |    287 | 1157405.5 |  3249466349490473932 |          0 |
+|   1130 |  860900.0 | 11429068113525512238 |          0 | |    591 | 1157050.6 | 18316123385572923508 |          0 |
+|    800 |  861104.1 | 15821389411376469455 |          0 | |    729 | 1156886.1 |  3859621475429391933 |          0 |
+|     25 |  861203.0 |  4612548787872287140 |          0 | |    411 | 1156462.6 |  9895411450523318218 |          0 |
+|    630 |  861237.4 | 14709189491162005531 |          0 | |    244 | 1156123.3 |  4746761268751589062 |          0 |
+|     15 |  862550.8 | 18225746483694476882 |          0 | |    461 | 1156040.0 | 16841085336850054862 |          0 |
+|    806 |  862631.5 |  6025521483839906258 |          0 | |    695 | 1155758.0 | 17567990967430227836 |          0 |
+|    874 |  862634.2 | 11987833068846291872 |          0 | |   1139 | 1155513.6 | 12616650800552890767 |          0 |
+|    892 |  862637.2 | 11987484776576294316 |          0 | |   1095 | 1155076.2 |  7481916996546280273 |          0 |
+|   1070 |  862840.6 |  9917909068266172247 |          0 | |    659 | 1154905.3 | 16947164827471962703 |          0 |
+|    976 |  862899.9 | 12060762183520637304 |          0 | |    312 | 1154541.9 | 14421772488816107201 |          0 |
+|    780 |  863121.3 |  4346933172469628087 |          0 | |    333 | 1154492.3 | 17401627082153982580 |          0 |
+|     89 |  863191.6 |  4344122683110719254 |          0 | |    551 | 1154038.8 |   512668145332789919 |          0 |
+|   1218 |  863503.8 | 15725668953792069550 |          0 | |    583 | 1153803.2 |  6611906563629141986 |          0 |
+|    283 |  863511.9 |  1187671620236538651 |          0 | |    671 | 1153225.9 | 13066664159808965808 |          0 |
+|    181 |  863650.0 |  8537450804716998747 |          0 | |    765 | 1152706.1 | 10597517049737475264 |          0 |
+|     14 |  863944.9 | 18286561195366038580 |          0 | |    423 | 1152631.0 | 12473034819632851993 |          0 |
+|    854 |  864145.6 |  3519234615485319924 |          0 | |    749 | 1152392.7 | 16908619783314748912 |          0 |
+|    632 |  864467.8 |  1905520737302258000 |          0 | |    491 | 1152298.6 |  9168077678833208264 |          0 |
+|    674 |  864503.2 | 14591981357522132651 |          0 | |    663 | 1151981.7 |  9618689835868297632 |          0 |
+|    868 |  865089.5 |   282350524831700804 |          0 | |    495 | 1150282.3 | 10723500856759685663 |          0 |
+|    684 |  865240.2 |  6586677160225277471 |          0 | |    477 | 1149899.9 | 13037255687198626768 |          0 |
+|    676 |  865357.9 |  8150262942171199304 |          0 | |   1195 | 1149470.4 | 13605885851698906352 |          0 |
+|    648 |  865414.1 | 15268413481994634377 |          0 | |    917 | 1149352.8 |  1838935910367589437 |          0 |
+|    518 |  865531.1 | 11280001398077088782 |          0 | |    463 | 1148829.8 |  7819230562265660444 |          0 |
+|    662 |  865968.6 |  6986544351869148522 |          0 | |   1077 | 1148434.5 |  6068954101851235629 |          0 |
+|    586 |  866229.6 |  9199082700283259567 |          0 | |    553 | 1148404.1 | 10722117169876162916 |          0 |
+|    702 |  866723.9 |  9590669155521796103 |          0 | |    404 | 1148376.9 |  3295784107652781669 |          0 |
+|    906 |  866944.5 |  8831042247400477402 |          0 | |    607 | 1147972.4 | 17856773820815353409 |          0 |
+|    502 |  866980.1 | 11180288784361898456 |          0 | |    479 | 1147233.6 |  2256785671034833929 |          0 |
+|    656 |  867462.3 |  8232186166413552050 |          0 | |    515 | 1147127.2 |  4300136976884594564 |          0 |
+|     65 |  867477.3 |  1193010071911077507 |          0 | |   1121 | 1146752.1 | 12976104797068343946 |          0 |
+|    828 |  867632.4 |  8236091763969505281 |          0 | |    587 | 1146473.2 | 14555108075771929242 |          0 |
+|    690 |  867668.9 |  5049316530660754605 |          0 | |    463 | 1146291.6 | 12721659062057262412 |          0 |
+|     41 |  868187.7 | 15037777029607803499 |          0 | |    365 | 1145256.2 |  2556578446577151863 |          0 |
+|   1034 |  868498.5 | 10310581354425027176 |          0 | |   1131 | 1144985.5 | 16997461053243408293 |          0 |
+|    640 |  868576.9 | 17269687139487356517 |          0 | |    291 | 1144818.1 |  3232201971819930310 |          0 |
+|    163 |  869015.4 |  4159198455024606360 |          0 | |    358 | 1144526.6 |   976960768060525297 |          0 |
+|    235 |  869089.6 | 14941480847749216965 |          0 | |    547 | 1144437.5 | 14405421916726982390 |          0 |
+|    862 |  869180.3 |  6917582476274844625 |          0 | |    445 | 1143937.4 | 14276950371453073238 |          0 |
+|     79 |  869668.3 |   529538726124863428 |          0 | |    386 | 1143831.3 |  4796178447132367557 |          0 |
+|    654 |  870193.2 |  6598306163022384206 |          0 | |    685 | 1143353.8 | 11828382269983587522 |          0 |
+|    602 |  870406.4 | 11722301651185377047 |          0 | |    995 | 1142459.4 | 10231873232118785183 |          0 |
+|    536 |  870463.0 |  7034276728217620183 |          0 | |   1079 | 1142279.2 |  4362114739222910686 |          0 |
+|    626 |  870538.2 |  4967609117610130463 |          0 | |    503 | 1142262.7 |  1897678277035847662 |          0 |
+|    966 |  871219.5 |  1111078843250658350 |          0 | |    561 | 1142061.9 | 15591249787774575975 |          0 |
+|   1128 |  871341.6 |  3204360482003821875 |          0 | |   1241 | 1141905.5 |  8754397098868330545 |          0 |
+|    752 |  871475.2 |   933239336581726451 |          0 | |    987 | 1141417.3 |  6262495981790588014 |          0 |
+|    796 |  871533.8 |  4640707072166058714 |          0 | |   1242 | 1141310.7 |   407188298585640845 |          0 |
+|    638 |  871559.3 |  6352647120068204431 |          0 | |   1095 | 1140450.4 | 13223784952578750793 |          0 |
+|    566 |  871612.9 | 16845691221037950562 |          0 | |    362 | 1140281.6 | 10304030767825673907 |          0 |
+|     21 |  871813.1 | 15807063220271779073 |          0 | |   1173 | 1140135.1 |  1837622130121528290 |          0 |
+|    758 |  872035.2 | 10822873454069134180 |          0 | |    248 | 1139941.9 | 17024347103214977198 |          0 |
+|    864 |  872041.0 |  5553267707809609621 |          0 | |    459 | 1139649.3 | 15775779364082617627 |          0 |
+|    978 |  872352.0 | 15027419836257751844 |          0 | |    471 | 1139578.9 | 12970960055334452474 |          0 |
+'--------+-----------+----------------------+------------' '--------+-----------+----------------------+------------'
+
+text report took 0.002595532 seconds.

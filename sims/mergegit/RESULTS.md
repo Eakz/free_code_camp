@@ -148,3 +148,14 @@ Feral owned best (Sandstone r1, Amani r2, Subjugator hands, Gebbo t2): +2.28 rai
 Zul'jin's Guillotine, Silken Voodoo Drape, Agent's Sneakers + owned Sandstone/Subjugator): +8.34 / +9.30.
 Neck: keep Aqirbane (Yoke −2.8/−3.5, Graft −1.1).
 Report: https://claude.ai/artifact/Ec9Lj94rp1KYRpedec93Xb
+
+## 2026-10-15 — Bear (priority) + cat M+ builds from owned gear with crafted weapon; projected BiS incl. Kith'ix
+SimC 8bd8f32, data 12.1.5.70391. `bear_owned_1015/`, `plan_1015/`. Bear: Patchwerk single actor; cat: DungeonSlice + Patchwerk.
+Weapon in full builds: Haste/Vers vs Crit/Vers — cat tie; bear −16.9% vs −18.3% dmg taken (user prefers Haste/Vers).
+Bear owned (Pike HV + Miststalker's Cinch + Subjugator + Gebbo t1): +2.1% DPS / −16.9% dmg taken vs now.
+Cat owned (Pike HV + Sandstone r1 + Amani r2 + Subjugator + Gebbo t2): +6.9% M+ / +5.9% raid.
+Bear BiS (adds Chestwrap of Palpable Terror + tier gauntlets, Twisted Horror's Tendril, Masterwork Sin'dorei Band CV,
+Apex Brute's Claw Ring): +2.5% / −22.5%. Cat BiS (Tendril, Font of Venomous Rage, Vile Alchemist's, Swarmcaller,
+Silken Voodoo, Sash of the Forlorn Vessel, Chestwrap): +17.1% M+ / +9.3% raid; Bardiche loses to the Pikestaff.
+Bear avoid: Lightbearer's Shield Fragment, Font, Zul'jin's, Swarmcaller, Bardiche (more dmg taken).
+Report v2: https://claude.ai/artifact/Ec9Lj94rp1KYRpedec93Xb
