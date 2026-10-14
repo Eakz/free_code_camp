@@ -138,3 +138,13 @@ Sigil Hunt +3.50/−8.31; Prismatic Focusing Iris +4.18/−7.04; no embellishmen
 (Stabilizing Gemstone Bandolier = no-emb -> not modelled). Twin-Strike Polearm 321 +0.15/−1.23.
 Phase 2 stats: HRS Crit/Vers +3.78/−10.85 (best); HRS Haste/Vers +3.69/−9.13; Sigil Hunt Crit/Vers +3.67/−10.24.
 Conclusion: Pikestaff + Hunter's Ritual Stone, Crit/Vers.
+
+## 2026-10-14 — Feral M+/raid gear and weapon for both specs (export Feral 2026-10-14 23:43)
+SimC 8bd8f32, data 12.1.5.70391 = client. `feral_weapon_1014/`, `feral_final_1014/`, report `report/`.
+Weapon (vs Toxin staff): Pikestaff HRS Mast/Crit +4.37 raid / +4.69 M+; Crit/Vers +3.88 / +4.04; Impetus ties Pikestaff;
+HRS ties Sigil Hunt. Bear: Crit/Vers −10.85 dmg taken vs Mast/Crit −8.68, same DPS.
+Feral owned best (Sandstone r1, Amani r2, Subjugator hands, Gebbo t2): +2.28 raid / +3.48 M+;
++ Pikestaff HRS Mast/Crit: +6.34 / +7.65. Projected BiS (murlok top-50 items: Bardiche, Vile Alchemist's Band,
+Zul'jin's Guillotine, Silken Voodoo Drape, Agent's Sneakers + owned Sandstone/Subjugator): +8.34 / +9.30.
+Neck: keep Aqirbane (Yoke −2.8/−3.5, Graft −1.1).
+Report: https://claude.ai/artifact/Ec9Lj94rp1KYRpedec93Xb

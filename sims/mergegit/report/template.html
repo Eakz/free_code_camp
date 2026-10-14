@@ -1,0 +1,124 @@
+<title>Mergegit Feral Gear Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: WoW character sheet — two item columns like the paperdoll, sets as tabs, numbers in a tooltip-style frame.
+   Single dark look on purpose (WoW tooltip world); every colour is still a token with an explicit body background. */
+:root{
+  --bg:#0d0f14; --panel:#151922; --frame:#3a3324; --frame-hi:#b8953f; --fg:#e8e2d0; --muted:#9b958a;
+  --epic:#c36bff; --rare:#3d9bff; --green:#3fd16b; --gold:#ffd25e; --changed:#2a2412; --bad:#ff6b5e;
+  --display:"Cinzel",Georgia,"Times New Roman",serif; --body:"Alegreya Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.45}
+.wrap{max-width:1080px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+header{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header .forms{display:flex;gap:6px}
+header .forms img{width:44px;height:44px;border:2px solid var(--frame-hi);border-radius:6px}
+h1{font-family:var(--display);font-size:clamp(24px,4vw,34px);margin:0;letter-spacing:.02em;color:var(--gold);text-wrap:balance}
+.lede{color:var(--muted);margin:2px 0 0;max-width:70ch}
+h2{font-family:var(--display);font-size:20px;margin:0 0 10px;color:var(--gold);letter-spacing:.03em}
+h3{font-family:var(--display);font-size:17px;margin:0;color:var(--fg)}
+.frame{background:var(--panel);border:1px solid var(--frame);border-radius:8px;padding:18px;box-shadow:inset 0 0 0 1px #00000060}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tab{font:600 14px var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--frame);border-radius:6px;padding:8px 12px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.tab[aria-selected="true"]{border-color:var(--frame-hi);background:var(--changed);color:var(--gold)}
+.tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.chip{font:500 12px var(--mono);color:var(--green)}
+.ph{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.ph p{margin:4px 0 0;color:var(--muted);max-width:60ch}
+.nums{display:flex;gap:18px}
+.nums div{display:flex;flex-direction:column;align-items:flex-end}
+.nums b{font:500 24px var(--mono);color:var(--green);font-variant-numeric:tabular-nums}
+.nums span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.doll{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.col{display:flex;flex-direction:column;gap:8px;min-width:0}
+.item{display:flex;gap:10px;align-items:flex-start;padding:8px;border-radius:6px;border:1px solid transparent;min-width:0}
+.item.changed{background:var(--changed);border-color:var(--frame-hi)}
+.ic{position:relative;flex:none}
+.ic img{width:46px;height:46px;border-radius:5px;border:2px solid var(--epic);display:block}
+.ilvl{position:absolute;right:-4px;bottom:-6px;font:500 11px var(--mono);background:#000c;color:var(--fg);padding:0 4px;border-radius:3px;border:1px solid var(--frame)}
+.meta{min-width:0}
+.slot{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.name{color:var(--epic);font-weight:700;overflow-wrap:anywhere}
+.sub{font-size:13px;color:var(--muted)}
+.ench{display:flex;gap:6px;align-items:center;color:var(--green);font-size:13px;margin-top:2px}
+.ench img{width:16px;height:16px;border-radius:3px}
+.gems{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-top:3px;font-size:13px;color:var(--fg)}
+.gem{width:16px;height:16px;border-radius:50%;border:1px solid var(--frame-hi)}
+.gemname{margin-right:6px}
+.gain{font:500 12px var(--mono);color:var(--green);margin-top:3px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--frame)}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+td:not(:first-child){font-family:var(--mono);font-size:13px}
+tbody tr:first-child td{color:var(--gold)}
+.reco{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.reco div{border-left:3px solid var(--frame-hi);padding-left:12px}
+.reco b{color:var(--gold)}
+ul.notes{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+a{color:var(--rare)}
+@media (max-width:720px){.doll{grid-template-columns:1fr}.nums b{font-size:20px}}
+@media (prefers-reduced-motion:no-preference){.tab{transition:border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="forms"><img src="{{CAT}}" alt="Cat Form"><img src="{{BEAR}}" alt="Bear Form"></div>
+    <div>
+      <h1>Mergegit · Feral &amp; Guardian</h1>
+      <p class="lede">Night Elf Druid, EU-Silvermoon. Simulated 2026-10-14 on SimulationCraft built from the midnight branch, game data 12.1.5.70391 (same build as your client). All gear compared at max upgrade with your enchants and gems.</p>
+    </div>
+  </header>
+
+  <section class="frame">
+    <h2>Feral Mythic+ gear</h2>
+    <div class="tabs" role="tablist">{{TABS}}</div>
+    {{PANELS}}
+  </section>
+
+  <section class="frame">
+    <h2>Crafted weapon for both specs</h2>
+    <div class="reco">
+      <div><b>Craft:</b> Aln'hara Pikestaff (Inscription) or Blood Knight's Impetus (Blacksmithing). They sim within 0.1%, so pick whichever you can get crafted. Quality 5 / 331, Berserker's Rage.</div>
+      <div><b>Embellishment:</b> Hunter's Ritual Stone. Best or tied-best for Feral in both modes and best for the bear. Darkmoon Sigil: Hunt is within error for Feral.</div>
+      <div><b>Stats:</b> Mastery/Crit if Feral is your main use (+0.5–0.65% over Crit/Vers). Crit/Vers if tanking matters: the bear takes 2.2% less damage than with Mastery/Crit at the same DPS.</div>
+    </div>
+    <h3 style="margin:16px 0 6px">Stat pair, vs your Toxin-Coated Warstaff</h3>
+    {{WEAPON}}
+    <h3 style="margin:16px 0 6px">Embellishment, Haste/Vers Pikestaff</h3>
+    {{EMB}}
+  </section>
+
+  <section class="frame">
+    <h2>How these numbers were made</h2>
+    <ul class="notes">
+      <li>Feral: Patchwerk (raid, 6,000–10,000 iterations, ±0.06–0.08%) and DungeonSlice (M+, 4,000–6,000 iterations, ±0.21–0.25%). Bear: Patchwerk, one tank per run, 10,000 iterations (DPS ±0.09%, damage taken ±0.35%).</li>
+      <li>Single-swap gains are shown on each changed item; set totals come from simming the whole set together.</li>
+      <li>Projected BiS items come from murlok.io's top-50 Feral M+ usage (read through web search; the site could not be opened here). Raid items are simmed at Myth 6/6 (334). Raid rings are simmed without a gem because their socket is not confirmed.</li>
+      <li>Icons are generic WoW slot, gem and enchant icons, not the exact item icons: the item-to-icon data lives on Wowhead and wago, which are blocked from the sim machine.</li>
+      <li>Costs: two-handers need 4 Sparks of Tides, armour 2, each 331 craft 80 Myth Mistcrests (you have 102). Hero upgrades cost 20 crests per step.</li>
+      <li>Sources: <a href="https://murlok.io/druid/feral/m+">murlok Feral M+</a>, <a href="https://stykasheets.com/midnight-season-2-loot-database/">Styka loot database</a>, <a href="https://www.method.gg/guides/guardian-druid/gearing">Method Guardian gearing</a>.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(k){
+    tabs.forEach(function(t){var on=t.dataset.k===k;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
+      document.getElementById('p-'+t.dataset.k).hidden=!on;});
+    try{localStorage.setItem('mg-tab',k)}catch(e){}
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.k)})});
+  var start='craft';
+  try{var s=localStorage.getItem('mg-tab');if(s&&document.getElementById('p-'+s))start=s}catch(e){}
+  if(location.hash&&document.getElementById('p-'+location.hash.slice(1)))start=location.hash.slice(1);
+  show(start);
+})();
+</script>
