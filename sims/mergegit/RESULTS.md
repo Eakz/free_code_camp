@@ -129,3 +129,12 @@ Guardian Druid aura (those two effects added -> no net change for Guardian), Nat
 Skyfire Heel (attribute flag). Balance: no spell changes.
 Live-vs-ptr sims (`ptr_1215/`) are NOT valid yet: SimC's PTR mode uses a different Balance APL (−2.4% is APL, not game)
 and still reads Bear Form effect indices from the old layout (Guardian DTPS ×3.4 is a SimC artifact).
+
+## 2026-10-14 — Guardian crafted weapon: embellishment + stats (export 2026-10-14 23:01)
+SimC midnight 8bd8f32, live data 12.1.5.70391 = client. Patchwerk single actor 10000 it (DPS ±0.09, DTPS ±0.35).
+Aln'hara Pikestaff 331 Q5 + Berserker's Rage vs Toxin-Coated Warstaff 321. Bear uses 1/2 embellishments (wrist).
+Phase 1 (Haste/Vers): Hunter's Ritual Stone +3.69/−9.13; Sigil Void +3.27/−8.87; Pango +3.14/−8.40;
+Sigil Hunt +3.50/−8.31; Prismatic Focusing Iris +4.18/−7.04; no embellishment +2.65/−6.84
+(Stabilizing Gemstone Bandolier = no-emb -> not modelled). Twin-Strike Polearm 321 +0.15/−1.23.
+Phase 2 stats: HRS Crit/Vers +3.78/−10.85 (best); HRS Haste/Vers +3.69/−9.13; Sigil Hunt Crit/Vers +3.67/−10.24.
+Conclusion: Pikestaff + Hunter's Ritual Stone, Crit/Vers.
