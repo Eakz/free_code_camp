@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """2026-10-15: optimise Balance (owned gear) + consumables for Balance, cat and bear on their M+ builds.
-SimC midnight 3dcabb9, live data 12.1.5.70391. Balance baseline = export 2026-10-15 10:58. Pikestaff = as crafted (Mastery/Crit, export 49/32)."""
+SimC midnight 3dcabb9, live data 12.1.5.70391. Balance baseline = export 2026-10-15 10:59 (correct talents). Pikestaff = as crafted (Mastery/Crit, export 49/32)."""
 CB = "12214/13667/12497/13751/14004/8960/13836"
 PIKE_HV = f"main_hand=,id=245771,bonus_id={CB}/13771,crafted_stats=49/32,crafting_quality=5,ilevel=331,enchant_id=7983"
 TH = "hands=,id=271529,ilevel=321"
