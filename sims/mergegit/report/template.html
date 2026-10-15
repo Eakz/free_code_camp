@@ -76,9 +76,15 @@ a{color:var(--rare)}
   </header>
 
   <section class="frame">
-    <h2>Mythic+ builds · bear first, cat for fun</h2>
+    <h2>Mythic+ builds · Balance, bear, cat</h2>
     <div class="tabs" role="tablist">{{TABS}}</div>
     {{PANELS}}
+  </section>
+
+  <section class="frame">
+    <h2>Consumables · Mythic+</h2>
+    <p class="lede" style="margin-bottom:10px">Simmed 2026-10-15 on each spec's M+ build. Every listed pick beats or ties every alternative. The Balance and cat runs had about ±0.25% error, the bear runs ±0.5% on damage taken.</p>
+    {{CONS}}
   </section>
 
   <section class="frame">
@@ -86,7 +92,7 @@ a{color:var(--rare)}
     <div class="reco">
       <div><b>Craft:</b> Aln'hara Pikestaff (Inscription) or Blood Knight's Impetus (Blacksmithing). They sim within 0.1%, so pick whichever you can get crafted. Quality 5 / 331, Berserker's Rage.</div>
       <div><b>Embellishment:</b> Hunter's Ritual Stone. Best or tied-best for Feral in both modes and best for the bear. Darkmoon Sigil: Hunt is within error for Feral.</div>
-      <div><b>Stats: Haste/Vers.</b> In the full builds the cat does the same damage with Haste/Vers or Crit/Vers. The bear takes 1.4% more damage with Haste/Vers than with Crit/Vers, a small cost.</div>
+      <div><b>Stats: you crafted Mastery/Crit.</b> That is fine. In the full builds the cat does the same damage with Haste/Vers or Crit/Vers. The bear takes 1.4% more damage with Haste/Vers than with Crit/Vers, a small cost.</div>
     </div>
     <h3 style="margin:16px 0 6px">Weapon stats inside the full builds</h3>
     {{WEAPON}}
@@ -118,7 +124,7 @@ a{color:var(--rare)}
     try{localStorage.setItem('mg-tab',k)}catch(e){}
   }
   tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.k)})});
-  var start='bear';
+  var start='balance';
   try{var s=localStorage.getItem('mg-tab');if(s&&document.getElementById('p-'+s))start=s}catch(e){}
   if(location.hash&&document.getElementById('p-'+location.hash.slice(1)))start=location.hash.slice(1);
   show(start);

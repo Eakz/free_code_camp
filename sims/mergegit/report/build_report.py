@@ -15,6 +15,7 @@ GEM_ICON = {"Indecipherable Eversong Diamond":"INV_Misc_Gem_Diamond_07","Flawles
   "Flawless Quick Lapis":"INV_Misc_Gem_Sapphire_02","Flawless Masterful Garnet":"INV_Misc_Gem_Ruby_01"}
 ICONS = {k: ic(v) for k, v in {**SLOT_ICON, **GEM_ICON}.items()}
 ICONS["_ench"] = ic("INV_Enchant_EssenceMagicLarge")
+ICONS["Off Hand"] = ic("Spell_Nature_StarFall"); ICONS["_moon"] = ic("Spell_Nature_StarFall")
 ICONS["_cat"] = ic("Ability_Druid_CatForm"); ICONS["_bear"] = ic("Ability_Racial_BearForm")
 
 # (slot, name, ilvl, track, enchant, gems, stats, note)
@@ -39,7 +40,7 @@ def swap(base, changes):
     d = {r[0]: r for r in base}
     for c in changes: d[c[0]] = c
     return [d[r[0]] for r in base]
-PIKE = ("Weapon","Aln'hara Pikestaff",331,"Crafted Q5 · 4 sparks + 80 Myth crests","Berserker's Rage · Embellishment: Hunter's Ritual Stone",[],"Haste / Vers","crafted weapon")
+PIKE = ("Weapon","Aln'hara Pikestaff",331,"Crafted Q5 · 4 sparks + 80 Myth crests","Berserker's Rage · Embellishment: Hunter's Ritual Stone",[],"Mastery / Crit (as crafted)","crafted weapon")
 BEAR_OWN = swap(CUR, [PIKE,
  ("Waist","Miststalker's Cinch",321,"Hero 6/6 · upgrade 305→321 (100 Hero crests)","",[],"Crit / Vers","−2.9% dmg taken alone"),
  ("Hands","Subjugator's Chilling Grips",321,"Hero 6/6","",[],"Crit / Vers","−1.7% dmg taken alone"),
@@ -69,7 +70,26 @@ FERAL_BIS = swap(FERAL_OWN, [
  ("Chest","Chestwrap of Palpable Terror",334,"Myth 6/6 · Kith'ix (new raid)","Mark of the Worldsoul",[],"Crit / Haste","+0.4% M+"),
  ("Hands","Enigmatic Dreamwatcher's Gauntlets",321,"Tier · owned, keeps 4pc","",[],"Tier","needed for 4pc"),
 ])
+BAL = [
+ ("Head","Enigmatic Dreamwatcher's Somnolent Stare",321,"Tier · Hero 6/6","Empowered Rune of Avoidance",[],"Haste / Vers",""),
+ ("Neck","Aqirbane Reliquary",334,"Myth 6/6","",["Indecipherable Eversong Diamond","Flawless Quick Amethyst"],"All four",""),
+ ("Shoulder","Enigmatic Dreamwatcher's Plumage",321,"Tier · Hero 6/6","Amirdrassil's Grace",[],"Crit / Mastery",""),
+ ("Back","Stylish Power Cape",321,"Hero 6/6","",[],"Crit / Haste",""),
+ ("Chest","Enigmatic Dreamwatcher's Lunar Raiment",321,"Tier · Hero 6/6","Mark of the Worldsoul",[],"Crit / Haste",""),
+ ("Wrist","Silvermoon Agent's Deflectors",331,"Crafted Q5","Embellishment: Arcanoweave Lining",[],"Vers / Crit",""),
+ ("Hands","Subjugator's Chilling Grips",321,"Hero 6/6","",[],"Crit / Vers",""),
+ ("Waist","Whirling Dervish Sash",321,"Hero 6/6","",[],"Haste / Mastery",""),
+ ("Legs","Enigmatic Dreamwatcher's Leggings",321,"Tier · Hero 6/6","Intellect spellthread (+Int & Stam)",[],"Crit / Haste",""),
+ ("Feet","Breakwater Boots",334,"Myth 6/6","Lynx's Dexterity",[],"Haste / Vers",""),
+ ("Ring 1","Charged Sandstone Band",321,"Hero 6/6","Eyes of the Eagle",["Flawless Quick Amethyst"],"Crit / Mastery",""),
+ ("Ring 2","Sickening Signet of Atroxus",321,"Hero 6/6","Eyes of the Eagle",["Flawless Masterful Garnet"],"Haste / Mastery",""),
+ ("Trinket 1","Vile Vial of Volatile Venom",321,"Hero 6/6","",[],"Primary (use)",""),
+ ("Trinket 2","Gebbo's Bottomless Bag",334,"Myth 6/6","",[],"Intellect",""),
+ ("Weapon","Jan'thrazet, the Soul Fang",334,"Myth 6/6","Rite of the Hash'ey",[],"Haste",""),
+ ("Off Hand","Aln'hara Lantern",331,"Crafted Q5","Embellishment: Hunter's Ritual Stone",[],"Mastery / Haste",""),
+]
 SETS = [
+ ("balance","Balance · your gear","Export 2026-10-15 10:59. Nothing in your bags beats this set. Raid: switch talents to ra s2 (+1.85%).", BAL, ("best","+1.85%","Gear: already optimal","Raid with ra s2 talents")),
  ("now","Equipped now","Your 2026-10-14 export (same gear on bear and cat), every piece at its track cap.", CUR, None),
  ("bear","Bear · your gear","Priority build. Crafted Pikestaff plus three swaps from your bags.", BEAR_OWN, ("−16.9%","+2.1%","Damage taken","DPS")),
  ("feral","Cat · your gear","Same Pikestaff plus four swaps from your bags. Keeps Whirling Dervish Sash.", FERAL_OWN, ("+6.9%","+5.9%","Mythic+","Raid")),
@@ -97,11 +117,11 @@ def item(r, changed=False):
             f'<span class="ilvl">{ilvl}</span></div><div class="meta"><div class="slot">{esc(slot)}</div>'
             f'<div class="name">{esc(name)}</div><div class="sub">{esc(track)} · {esc(stats)}</div>{e}'
             f'{"<div class=gems>"+g+"</div>" if g else ""}{n}</div></div>')
-LEFT = ["Head","Neck","Shoulder","Back","Chest","Wrist","Weapon"]
+LEFT = ["Head","Neck","Shoulder","Back","Chest","Wrist","Weapon","Off Hand"]
 RIGHT = ["Hands","Waist","Legs","Feet","Ring 1","Ring 2","Trinket 1","Trinket 2"]
 def doll(rows):
-    d = {r[0]: r for r in rows}; cur = {r[0]: r for r in CUR}
-    col = lambda slots: "".join(item(d[s], d[s][1] != cur[s][1]) for s in slots)
+    d = {r[0]: r for r in rows}; cur = {r[0]: r for r in (BAL if "Off Hand" in d else CUR)}
+    col = lambda slots: "".join(item(d[s], d[s][1] != cur[s][1]) for s in slots if s in d)
     return f'<div class="doll"><div class="col">{col(LEFT)}</div><div class="col">{col(RIGHT)}</div></div>'
 tabs = "".join(f'<button class="tab" role="tab" id="t-{k}" aria-controls="p-{k}" data-k="{k}">{esc(t)}'
                f'{f"<span class=chip>{g[0]}</span>" if g else ""}</button>' for k, t, _, _, g in SETS)
@@ -114,10 +134,17 @@ def table(head, rows):
     h = "".join(f"<th>{x}</th>" for x in head)
     b = "".join("<tr>" + "".join(f"<td>{esc(c)}</td>" for c in r) + "</tr>" for r in rows)
     return f'<div class="tw"><table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table></div>'
+CONS = [
+ ("Flask","Flask of the Magisters","Flask of the Magisters","Flask of Thalassian Resistance"),
+ ("Potion","Draught of Rampant Abandon","Draught of Rampant Abandon","Draught of Rampant Abandon"),
+ ("Food","Harandar Celebration (Royal Roast ties)","Harandar Celebration (Royal Roast ties)","Harandar Celebration, or Twilight Angler's Medley for −3% damage taken at −0.7% DPS"),
+ ("Augment rune","Void-Touched Augment Rune (+0.8%)","Void-Touched Augment Rune (+0.6%)","Void-Touched Augment Rune"),
+ ("Weapon oil","Thalassian Phoenix Oil","Thalassian Phoenix Oil","Thalassian Phoenix Oil"),
+]
 html = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html")).read()
 html = (html.replace("{{TABS}}", tabs).replace("{{PANELS}}", panels)
         .replace("{{WEAPON}}", table(["Pikestaff stats, whole build vs now","Cat M+","Cat raid","Bear DPS","Bear damage taken"], WEAPON))
         .replace("{{EMB}}", table(["Embellishment (Haste/Vers)","Feral raid","Feral M+","Bear DPS","Bear damage taken"], EMB))
-        .replace("{{CAT}}", ICONS["_cat"]).replace("{{BEAR}}", ICONS["_bear"]))
+        .replace("{{CONS}}", table(["Slot","Balance","Cat","Bear"], CONS)).replace("{{CAT}}", ICONS["_cat"]).replace("{{BEAR}}", ICONS["_bear"]))
 open(OUT, "w").write(html)
 print("wrote", OUT, len(html))

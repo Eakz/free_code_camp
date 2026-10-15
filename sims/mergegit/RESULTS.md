@@ -159,3 +159,13 @@ Apex Brute's Claw Ring): +2.5% / −22.5%. Cat BiS (Tendril, Font of Venomous Ra
 Silken Voodoo, Sash of the Forlorn Vessel, Chestwrap): +17.1% M+ / +9.3% raid; Bardiche loses to the Pikestaff.
 Bear avoid: Lightbearer's Shield Fragment, Font, Zul'jin's, Swarmcaller, Bardiche (more dmg taken).
 Report v2: https://claude.ai/artifact/Ec9Lj94rp1KYRpedec93Xb
+
+## 2026-10-15 — Balance (export 10:59, correct talents) gear/talents + M+ consumables for Balance, cat, bear
+SimC midnight 3dcabb9, data 12.1.5.70391. `opt3_1015/`. Balance DS 4000 it (±0.24) / PW 6000 (±0.10).
+Balance: equipped set is already the best owned set (all swaps tie or lose; Voracious −5%, Yoke −4%, Cane −1.5%).
+Talents: current = best M+ (m+ s2 ties); raid: ra s2 / Oct-7 21:24 string +1.85%; s2 ra2 −9..−11%, blitz −12..−17%.
+Consumables (each spec's M+ build): Balance + cat — Flask of the Magisters, Draught of Rampant Abandon, Harandar
+Celebration (Royal Roast ties), Void-Touched rune (+0.6..0.8%), Thalassian Phoenix Oil. Bear — Flask of Thalassian
+Resistance (Magisters +4.4% dmg taken, Blood Knights +3.0%), Draught, Harandar (Twilight Angler's Medley −3.0% dmg taken
+/ −0.7% DPS), Void-Touched, Phoenix Oil. Pikestaff simmed as crafted (Mastery/Crit).
+Report v3: https://claude.ai/artifact/Ec9Lj94rp1KYRpedec93Xb
