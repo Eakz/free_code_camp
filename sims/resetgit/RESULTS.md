@@ -24,3 +24,9 @@ Sanity actor Z_SANITY within error in every run. Inputs: `opt_1018/*_variants.si
 - Projected (Kith'ix 334): Twisted Horror's Tendril +4.02% M+; Zul'jin's Guillotine +2.33% raid; Cuisses of the Uncoiled Union +1.52/+1.61; Caustic Repose Greatbow loses to the Sprigshot.
 
 Currencies at export: Hero crest 105, Myth 25, Champion 148. Catalyst charges not readable from the export (3465:0).
+
+### Bonus roll targets (2026-10-18, from opt_1018 proj singles at 334; boss sources via WebSearch 2026-10-18)
+Coiled Altar (Zul'jin's Guillotine +1.21/+2.33, Cuisses +1.52/+1.61) > Entombed Sentinels (Keeper's Seething Core +0.82/+2.03)
+> Vashnik (Rancor +0.78/+1.06, Vile Alchemist's Band, chest token) > Sszorak (tier legs token). Kith'ix (Tendril +4.02/+2.18) first if
+Voidcores work there (not verified). Disputed sources: Boots of the Reckless Wayfarer (Lost Explorers vs Mor'zahi), Crown of the Eternal Fang
+(Nek'zali vs Sentinels). Report: `report/` (build_report.py + template.html -> resetgit_bm_report.html), https://claude.ai/artifact/QWtd5ndDusKTmKb6psqWn7
