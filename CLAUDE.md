@@ -261,6 +261,14 @@ comparisons must run on **Patchwerk**, and as **separate single-actor invocation
 in one raid is not a clean damage-taken model). Extract both numbers and rank by damage taken, not
 damage done — a build that sims higher can be the one that gets you killed.
 
+**Never model an M+ pull for a tank with `desired_targets=5`** (2026-10-21). Only the first enemy is a tank dummy
+that attacks; the other four just stand there. Guardian's Ursoc's Fury absorb scales with damage dealt to all five, so
+absorbs exceed incoming damage and DTPS collapses (49 vs 10,216 on 1 target): talent deltas came out at +80,000%.
+Model a pull as five attacking dummies instead (`bear_1021/gen_tal.py`):
+`tank_dummy=Mob1` / `tank_dummy_type=heroic` ... repeated for Mob1-Mob5, no `desired_targets`. Heroic x5 gave ~144k/s
+incoming, ~113k/s absorbed, DTPS ~30k on a ~1.0M HP bear (2026-10-21, 12.1.5.70448): a hard-key pull that nobody dies in.
+`dungeon` x5 is too weak (absorbs eat everything). The single-target default dummy (Mythic raid) is the "boss" model.
+
 ### 6. Known SimC 1210-01 quirks — check these before trusting a result
 
 - **`crafted_stats=` WORKS, but only with `crafting_quality=5` AND without the stat-setting
