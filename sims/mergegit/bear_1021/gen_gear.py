@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """2026-10-21: Guardian owned gear / enchants / gems at cap, single actor Patchwerk (CLAUDE.md s5).
 
-    python3 gen_gear.py <talent_string> <targets>
+    python3 gen_gear.py <talent_string> <pull|boss>
+
+pull = five heroic tank dummies all attacking (M+ pull, see CLAUDE.md s5); boss = default single Mythic dummy.
 
 Baseline char_guardian_2026-10-21.simc (export 17:31, the user's tank loadout, at cap). One file per variant in gruns/."""
 import os, sys
-tal, tg = sys.argv[1], int(sys.argv[2])
+tal, model = sys.argv[1], sys.argv[2]
+ENEMY = {"boss": "desired_targets=1\n", "pull": "".join(f"tank_dummy=Mob{i}\ntank_dummy_type=heroic\n" for i in range(1, 6))}[model]
 CB = "12214/13667/12497/13751/14004/8960/13836"
 TH = "hands=,id=271529,ilevel=321"
 CUR = {
@@ -68,8 +71,9 @@ for gid, n in GEMS.items():
                          f"{CUR['neck']},gem_id=240983/{gid}"]
 for gid, n in ((240967,"Powerful"),(240971,"Stoic"),(240969,"Telluric")):
     V[f"GEM_neckdia_{n}"] = [f"{CUR['neck']},gem_id={gid}/240900"]
-os.makedirs("gruns", exist_ok=True)
+D = f"gruns_{model}"
+os.makedirs(D, exist_ok=True)
 for n, lines in V.items():
-    open(f"gruns/{n}.simc", "w").write(f"threads=4\niterations=6000\ndeterministic=1\nfight_style=Patchwerk\ndesired_targets={tg}\n"
+    open(f"{D}/{n}.simc", "w").write(f"threads=4\niterations=3000\ndeterministic=1\nfight_style=Patchwerk\n{ENEMY}"
         f"input=../../char_guardian_2026-10-21.simc\ntalents={tal}\nname={n}\n" + "".join(l + "\n" for l in lines))
 print(len(V), "variants")
