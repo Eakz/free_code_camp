@@ -169,3 +169,17 @@ Celebration (Royal Roast ties), Void-Touched rune (+0.6..0.8%), Thalassian Phoen
 Resistance (Magisters +4.4% dmg taken, Blood Knights +3.0%), Draught, Harandar (Twilight Angler's Medley −3.0% dmg taken
 / −0.7% DPS), Void-Touched, Phoenix Oil. Pikestaff simmed as crafted (Mastery/Crit).
 Report v3: https://claude.ai/artifact/Ec9Lj94rp1KYRpedec93Xb
+
+## 2026-10-21 — Guardian: Band of the Swarmcaller + crafted belt/gloves/cloak (export 17:31 tank loadout)
+SimC 1210-01 midnight 7bc1071 (build string 2c56391), data 12.1.5.70448 (= client). Pull model: 5 heroic tank dummies all
+attacking (CLAUDE.md s5), single actor, 5000 it (DPS ±0.10, DTPS ±0.40). Inputs `bear_1021/craft/`.
+| Variant (vs tank loadout) | DPS | Dmg taken | Max HP |
+|---|---|---|---|
+| Swarmcaller 334 ring1 (Alacrity, Quick Lapis) | +0.51 | +4.42 | +4.6% (1.022M -> 1.069M) |
+| Crafted belt 331 Haste/Vers + Hunter's Ritual Stone | +1.60 | -4.45 | |
+| Swarmcaller + that belt | +2.13 | -0.72 | +5.4% |
+| Swarmcaller + crafted gloves H/V Ritual Stone | +2.13 | -0.58 | |
+| Swarmcaller + belt H/V without embellishment | +1.00 | +2.04 | |
+| Swarmcaller + crafted cloak (Courtly Cloak) C/V | +1.90 | +0.16 | |
+Swarmcaller loses Haste/Vers for Mastery: less Ironfur/rage, less Vers DR -> more damage taken, but mastery raises max HP,
+which DTPS does not count. Embellished belt is the real gain; only legal with the Bardiche (Pikestaff + wrist = 2 already).
