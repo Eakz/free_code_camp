@@ -183,3 +183,15 @@ attacking (CLAUDE.md s5), single actor, 5000 it (DPS ±0.10, DTPS ±0.40). Input
 | Swarmcaller + crafted cloak (Courtly Cloak) C/V | +1.90 | +0.16 | |
 Swarmcaller loses Haste/Vers for Mastery: less Ironfur/rage, less Vers DR -> more damage taken, but mastery raises max HP,
 which DTPS does not count. Embellished belt is the real gain; only legal with the Bardiche (Pikestaff + wrist = 2 already).
+
+## 2026-10-22 — Balance raid/M+ + Guardian M+ options and a shared both-spec set (exports 2026-10-21 17:19 / 17:31)
+SimC midnight 7bc1071, data 12.1.5.70448 (= client, hotfix 2026-10-20). Inputs/outputs: `bal_1021/`, `bear_1021/`, `final_1021/`.
+Report: `report_1021/` -> https://claude.ai/artifact/G4GbjqV1SXKVQbARPvh3RU
+- Balance raid (Patchwerk ±0.10): Swarmcaller 334 ring1 +1.11; + Fevered Defense hands + Masterful Peridot +1.23; same on Raider.IO talents +1.22.
+  Talents: current = Raider.IO (tie); ra s2 -0.80; m+ s2 -2.21.
+- Balance M+ (DungeonSlice ±0.25): m+ s2 talents +2.66 (talent run +2.95); + Swarmcaller +4.31; + Masterful Peridot + Shroud +4.30.
+- Guardian M+ (pull model, ±0.40 taken): current talents best (m+ s2 +33% taken, others +150-450%).
+  Craft belt H/V Ritual Stone -4.45 taken / +1.60 dealt; + Swarmcaller -0.72 / +2.13; Pikestaff -1.79 / -0.21.
+- Shared set F1 (Swarmcaller + Ritual Binder, Eyes of the Eagle, Quick Lapis, Agi kit, Cinch; trinkets/weapons per spec):
+  Balance raid -1.30, Balance M+ +2.31 (with m+ s2), bear +1.04 dealt / +5.33 taken. Trinkets and leg kit cannot be shared
+  (Keeper's on Balance -5.7..-7%; Vile Vial on bear +10..15% taken; Agi kit costs Balance ~1.2%, Int kit costs bear 7-9% taken).
