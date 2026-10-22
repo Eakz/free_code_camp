@@ -1,0 +1,153 @@
+<title>Mergegit Gear Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a WoW talent/character pane. Mode tabs on top, each mode a ranked column of option cards (gold rank seal,
+   big % in a tooltip frame, changed-item rows with slot icons). Moonlit-night palette: Balance violet, Guardian amber.
+   Single dark look on purpose (WoW tooltip world); every colour is a token and body has an explicit background. */
+:root{
+  --bg:#0b0d16; --panel:#131726; --panel-2:#181d30; --frame:#2e3350; --frame-hi:#c9a24a; --fg:#ebe6d6; --muted:#9a97a8;
+  --moon:#b9a4ff; --bear:#e8a33d; --both:#6fd3c1; --epic:#c36bff; --rare:#3d9bff; --good:#4fd67a; --bad:#ff7a6b; --gold:#ffd25e;
+  --display:"Cinzel",Georgia,"Times New Roman",serif; --body:"Alegreya Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.45}
+.wrap{max-width:1120px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:26px}
+header{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+header .forms{display:flex;gap:6px}
+header .forms img{width:48px;height:48px;border-radius:6px;border:2px solid var(--frame-hi)}
+header .forms img.b{border-color:var(--bear)} header .forms img.m{border-color:var(--moon)}
+header>div:last-child{flex:1;min-width:0}
+h1{font-family:var(--display);font-size:clamp(24px,4vw,34px);margin:0;color:var(--gold);letter-spacing:.02em;text-wrap:balance}
+.lede{color:var(--muted);margin:4px 0 0;max-width:76ch}
+h2{font-family:var(--display);font-size:20px;margin:0 0 8px;color:var(--gold);letter-spacing:.03em;display:flex;gap:10px;align-items:center}
+h2 img{width:24px;height:24px;border-radius:4px}
+h3{font-family:var(--display);font-size:17px;margin:0}
+.frame{background:var(--panel);border:1px solid var(--frame);border-radius:8px;padding:18px;box-shadow:inset 0 0 0 1px #00000060;min-width:0}
+.intro{color:var(--muted);margin:0 0 14px;max-width:76ch}
+/* do-this strip */
+.todo{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.todo div{background:var(--panel-2);border:1px solid var(--frame);border-radius:6px;padding:12px 14px;min-width:0}
+.todo b{display:block;font-family:var(--display);font-size:14px;letter-spacing:.04em;margin-bottom:4px}
+.todo .m b{color:var(--moon)} .todo .g b{color:var(--bear)} .todo .x b{color:var(--both)}
+.todo p{margin:0;font-size:14px}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{font:600 14px var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--frame);border-radius:6px;padding:8px 12px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.tab img{width:20px;height:20px;border-radius:4px}
+.tab[aria-selected="true"]{border-color:var(--frame-hi);background:var(--panel-2);color:var(--gold)}
+.tab:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.panel>p.intro{margin-top:0}
+.opts{display:flex;flex-direction:column;gap:12px}
+.opt{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;background:var(--panel-2);border:1px solid var(--frame);border-radius:8px;padding:14px}
+.opt.top{border-color:var(--frame-hi)}
+.opt.both{border-color:var(--both)}
+.seal{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:700 17px var(--display);color:var(--bg);background:var(--frame-hi)}
+.opt.both .seal{background:var(--both)}
+.ob{min-width:0}
+.ob h3{color:var(--fg)}
+.ob .why{margin:3px 0 8px;color:var(--muted);font-size:14px;max-width:70ch}
+.chg{display:flex;flex-direction:column;gap:6px}
+.row{display:flex;gap:10px;align-items:center;min-width:0}
+.row img{width:30px;height:30px;border-radius:4px;border:1px solid var(--epic);flex:none}
+.row .t{min-width:0;font-size:14px}
+.row .t b{color:var(--epic);font-weight:700}
+.row .t span{color:var(--muted)}
+.row .t em{font-style:normal;color:var(--good)}
+.nums{display:flex;gap:16px;text-align:right}
+.nums div{display:flex;flex-direction:column;align-items:flex-end;min-width:86px}
+.nums b{font:500 22px var(--mono);font-variant-numeric:tabular-nums}
+.nums b.up{color:var(--good)} .nums b.dn{color:var(--bad)} .nums b.eq{color:var(--fg)}
+.nums span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tw{overflow-x:auto;margin-top:16px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--frame);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+td.n{font:500 13px var(--mono);white-space:nowrap}
+td.n.up{color:var(--good)} td.n.dn{color:var(--bad)}
+td.c{color:var(--muted);font-size:14px}
+tbody tr.best td:first-child{color:var(--gold)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.split>div{min-width:0}
+.cost{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.cost div{border:1px solid var(--frame);border-radius:6px;padding:10px 12px}
+.cost b{font:500 20px var(--mono);color:var(--gold);display:block}
+.cost span{font-size:13px;color:var(--muted)}
+ul.notes{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:5px}
+a{color:var(--rare)}
+@media (max-width:760px){.opt{grid-template-columns:auto 1fr}.nums{grid-column:1/-1;justify-content:flex-start}.nums div{align-items:flex-start}.split{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.tab{transition:border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="forms"><img class="m" src="{{I_MOON}}" alt="Balance"><img class="b" src="{{I_BEAR}}" alt="Guardian"></div>
+    <div>
+      <h1>Mergegit · Balance &amp; Guardian</h1>
+      <p class="lede">Night Elf Druid, EU-Silvermoon. Exports of 2026-10-21 (Balance 17:19, Guardian tank loadout 17:31), simulated 2026-10-21/22 on SimulationCraft midnight 7bc1071, game data 12.1.5.70448 with the 2026-10-20 hotfixes, the same build as your client. Every item is at its upgrade cap; enchants and gems were free to change.</p>
+    </div>
+  </header>
+
+  <section class="frame">
+    <h2>Do this</h2>
+    <div class="todo">{{TODO}}</div>
+  </section>
+
+  <section class="frame">
+    <h2>Options by mode</h2>
+    <p class="intro">Ranked like a Top Gear result. Each card is one complete set simmed together. Balance is ranked by damage; Guardian by damage taken (lower is better), with damage dealt beside it. The teal "both specs" card is one shared armour, jewellery and trinket set; only the weapon differs between specs.</p>
+    <div class="tabs" role="tablist">{{TABS}}</div>
+    {{PANELS}}
+  </section>
+
+  <section class="frame">
+    <h2><img src="{{I_RING}}" alt="">Your plan: Swarmcaller ring + crafted belt</h2>
+    <p class="intro">Bear tank loadout, five-mob pull. Each row is simmed against your loadout as worn.</p>
+    <div class="tw" style="margin-top:0"><table>
+      <thead><tr><th>Change</th><th>Damage dealt</th><th>Damage taken</th><th>Max health</th></tr></thead>
+      <tbody>{{CRAFT}}</tbody>
+    </table></div>
+    <div class="cost">{{COST}}</div>
+  </section>
+
+  <section class="frame split">
+    <div>
+      <h2>Balance talents</h2>
+      <div class="tw" style="margin-top:0"><table style="min-width:0">
+        <thead><tr><th>Loadout</th><th>Raid</th><th>M+</th></tr></thead>
+        <tbody>{{TAL_B}}</tbody>
+      </table></div>
+    </div>
+    <div>
+      <h2>Guardian talents</h2>
+      <div class="tw" style="margin-top:0"><table style="min-width:0">
+        <thead><tr><th>Loadout</th><th>Taken, pull</th><th>Taken, boss</th><th>Dealt</th></tr></thead>
+        <tbody>{{TAL_G}}</tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="frame">
+    <h2>How these numbers were made</h2>
+    <ul class="notes">{{NOTES}}</ul>
+  </section>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(k){
+    tabs.forEach(function(t){var on=t.dataset.k===k;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
+      document.getElementById('p-'+t.dataset.k).hidden=!on;});
+    try{localStorage.setItem('mg2-tab',k)}catch(e){}
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.k)})});
+  var start='gmp';
+  try{var s=localStorage.getItem('mg2-tab');if(s&&document.getElementById('p-'+s))start=s}catch(e){}
+  if(location.hash&&document.getElementById('p-'+location.hash.slice(1)))start=location.hash.slice(1);
+  show(start);
+})();
+</script>
