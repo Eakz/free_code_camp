@@ -29,13 +29,14 @@ def num(v, label, good_low=False):
     cls = "eq" if abs(v) < 0.005 else (("up" if v < 0 else "dn") if good_low else ("up" if v > 0 else "dn"))
     return f'<div><b class="{cls}">{v:+.2f}%</b><span>{E(label)}</span></div>'
 
-SWARM = ("ring", "Band of the Swarmcaller", 281029, "ring 1 · Myth 6/6 334 (needs 100 Myth crests)")
+SWARM = ("ring", "Band of the Swarmcaller", 281029, "replaces Charged Sandstone Band · 334 · Eyes of the Eagle")
+SWARM_G = ("ring", "Band of the Swarmcaller", 281029, "replaces Alluring Bubbleband · 334 · Silvermoon's Alacrity · Quick Lapis")
 # Options per mode: (rank, title, why, [rows], nums[(value,label,good_low)], kind)
 MODES = [
  ("braid", "Balance · Raid", "moon", "Patchwerk, current talents. Error ±0.10%.", [
   ("1", "Swarmcaller + Fevered Defense + Masterful Peridot", "Best raid set. The two extras are inside the error bar, so the ring does the work.",
-   [row(*SWARM, gain="+1.11% alone"), row("hands", "Gauntlets of Fevered Defense", 251124, "hands · Hero 321", "+0.22% alone"),
-    row("gem", "Flawless Masterful Peridot", 0, "both rings + neck socket", "+0.19% alone")],
+   [row(*SWARM, gain="+1.11% alone"), row("hands", "Gauntlets of Fevered Defense", 251124, "replaces Subjugator's Chilling Grips · Hero 321", "+0.22% alone"),
+    row("gem", "Flawless Masterful Peridot", 0, "in both rings + neck 2nd socket", "+0.19% alone")],
    [(1.23, "Raid", False)], "top"),
   ("2", "Swarmcaller only", "Same result inside the error bar with one change. Keep Eyes of the Eagle and your gems.",
    [row(*SWARM)], [(1.11, "Raid", False)], ""),
@@ -50,7 +51,7 @@ MODES = [
    [row("talent", "m+ s2", 0, "saved loadout", "+2.66% alone"), row(*SWARM)], [(4.31, "M+", False)], "top"),
   ("2", "Option 1 + Masterful Peridot + Miststalker's Shroud", "Ties option 1. The extras are each under 0.25%.",
    [row("talent", "m+ s2", 0, "saved loadout"), row(*SWARM), row("gem", "Flawless Masterful Peridot", 0, "rings + neck"),
-    row("back", "Miststalker's Shroud", 272226, "back · Hero 321")], [(4.30, "M+", False)], ""),
+    row("back", "Miststalker's Shroud", 272226, "replaces Stylish Power Cape · Hero 321")], [(4.30, "M+", False)], ""),
   ("3", "m+ s2 talents only", "Free right now: no crests, no gear.",
    [row("talent", "m+ s2", 0, "saved loadout")], [(2.66, "M+", False)], ""),
   ("◆", "Both specs: shared set", "Shared set on m+ s2 talents. It gives back about 2% of option 1.",
@@ -59,16 +60,17 @@ MODES = [
  ]),
  ("gmp", "Guardian · M+", "bear", "Five heroic mobs all attacking. Ranked by damage taken (lower is better). Error ±0.40% taken, ±0.10% dealt.", [
   ("1", "Crafted belt: Haste/Vers + Hunter's Ritual Stone", "Biggest defensive gain. Only legal with the Bardiche (Pikestaff + wrist already use both embellishment slots).",
-   [row("belt", "Silvermoon Agent's Utility Belt", 244573, "waist · crafted 331 · Haste/Vers · Hunter's Ritual Stone")],
+   [row("belt", "Silvermoon Agent's Utility Belt", 244573, "replaces Miststalker's Cinch · crafted 331 · Haste/Vers · Hunter's Ritual Stone"),
+    row("ring2", "Rings unchanged", 0, "keep Alluring Bubbleband + Ritual Binder's Ring")],
    [(-4.45, "Taken", True), (1.60, "Dealt", False)], "top"),
   ("2", "Crafted belt + Swarmcaller", "Most damage. Swarmcaller trades haste and Vers for mastery: more damage taken, but +4.6% max health that this metric does not count.",
-   [row("belt", "Silvermoon Agent's Utility Belt", 244573, "Haste/Vers · Ritual Stone"), row(*SWARM)],
+   [row("belt", "Silvermoon Agent's Utility Belt", 244573, "replaces Miststalker's Cinch · Haste/Vers · Ritual Stone"), row(*SWARM_G)],
    [(-0.72, "Taken", True), (2.13, "Dealt", False)], ""),
   ("3", "Aln'hara Pikestaff instead of the Bardiche", "Best you can do today without crafting or crests.",
-   [row("weapon", "Aln'hara Pikestaff", 245771, "main hand · crafted 331 · as crafted")],
+   [row("weapon", "Aln'hara Pikestaff", 245771, "replaces Abyssal Broodfiend's Bardiche · as crafted")],
    [(-1.79, "Taken", True), (-0.21, "Dealt", False)], ""),
   ("◆", "Both specs: shared set", "One set of armour, rings and leg kit for both specs; trinkets and weapons stay per spec. Bear is the main, so the leg kit is Agility.",
-   [row("ring", "Band of the Swarmcaller", 281029, "ring 1 · 334 · Eyes of the Eagle · Quick Lapis"),
+   [row("ring", "Band of the Swarmcaller", 281029, "334 · Eyes of the Eagle · Quick Lapis"),
     row("ring2", "Ritual Binder's Ring", 159459, "ring 2 · 321 · Eyes of the Eagle · Quick Lapis"),
     row("belt", "Miststalker's Cinch", 272245, "waist · 321"),
     row("legs", "Agility & Stamina leg kit", 0, "on the tier legs"),
@@ -86,12 +88,43 @@ for k, label, icon, intro, opts in MODES:
     panels.append(f'<div class="panel" id="p-{k}" role="tabpanel" aria-labelledby="t-{k}"><p class="intro">{E(intro)}</p>'
                   f'<div class="opts">{"".join(cards)}</div></div>')
 
+
+def sw(icon, slot, off, on, on_id, eg="", cost=""):
+    on_html = f'<a href="{WH.format(on_id)}" target="_blank" rel="noopener">{E(on)}</a>' if on_id else f"<b>{E(on)}</b>"
+    offh = f'<span class="off">{E(off)}</span>' if off else '<span class="keep">keep as worn</span>'
+    return (f'<div class="sw"><img src="{I[icon]}" alt=""><div class="l"><span class="slot">{E(slot)}</span>{offh}'
+            f'<span class="on">→ {on_html}</span>' + (f'<span class="eg">{E(eg)}</span>' if eg else "") +
+            (f'<span class="cost">{E(cost)}</span>' if cost else "") + "</div></div>")
+SW_COST = "upgrade 318 → 334: 5 steps × 20 = 100 Myth crests (you have 289)"
+CARDS = [
+ ("m", "Balance · Raid", "+1.23% (ring alone +1.11%)", "Current talents or Raider.IO (tie).", [
+  sw("ring", "Ring", "Charged Sandstone Band", "Band of the Swarmcaller", 281029, "Enchant: Eyes of the Eagle · Gem: Flawless Masterful Peridot", SW_COST),
+  sw("ring2", "Ring", "", "Sickening Signet of Atroxus", 252258, "Enchant: Eyes of the Eagle · Gem: Flawless Masterful Peridot"),
+  sw("neck", "Neck", "", "Aqirbane Reliquary", 268265, "Gems: Indecipherable Eversong Diamond + Flawless Masterful Peridot"),
+  sw("hands", "Hands (optional, +0.22%)", "Subjugator's Chilling Grips", "Gauntlets of Fevered Defense", 251124, "", "from bags, 311 → 321: 3 steps × 20 = 60 Hero crests (you have 450)")]),
+ ("m", "Balance · M+", "+4.31%", "Switch to the m+ s2 talent loadout (+2.66% on its own).", [
+  sw("ring", "Ring", "Charged Sandstone Band", "Band of the Swarmcaller", 281029, "Enchant: Eyes of the Eagle · Gem: Flawless Masterful Peridot (your Quick Amethyst ties)", SW_COST),
+  sw("ring2", "Ring", "", "Sickening Signet of Atroxus", 252258, "Enchant: Eyes of the Eagle")]),
+ ("g", "Guardian · M+", "−4.45% dmg taken, +1.60% dmg", "Your tank loadout and talents. Swarmcaller is NOT part of the main pick.", [
+  sw("belt", "Waist", "Miststalker's Cinch", "Silvermoon Agent's Utility Belt (craft)", 244573, "Haste/Vers · Hunter's Ritual Stone · 331", "80 Myth crests + Sparks of Tides; keep the Bardiche (embellishment cap)"),
+  sw("ring", "Ring", "", "Alluring Bubbleband", 268266, "Enchant: Silvermoon's Alacrity · Gem: Flawless Quick Lapis"),
+  sw("ring2", "Ring", "", "Ritual Binder's Ring", 159459, "Enchant: Silvermoon's Alacrity · Gem: Flawless Quick Lapis"),
+  sw("ring", "Ring, only for more damage", "Alluring Bubbleband", "Band of the Swarmcaller", 281029, "Enchant: Silvermoon's Alacrity · Gem: Flawless Quick Lapis", "+2.13% dmg, −0.72% taken together with the belt")]),
+ ("x", "Both specs, one set", "Raid −1.30% · M+ +2.31% · bear +5.3% taken", "Only if you don't want to swap rings. Trinkets and weapons stay per spec.", [
+  sw("ring", "Ring", "Balance: Charged Sandstone Band · Bear: Alluring Bubbleband", "Band of the Swarmcaller", 281029, "Enchant: Eyes of the Eagle · Gem: Flawless Quick Lapis", SW_COST),
+  sw("ring2", "Ring", "Balance: Sickening Signet of Atroxus", "Ritual Binder's Ring", 159459, "Enchant: Eyes of the Eagle · Gem: Flawless Quick Lapis"),
+  sw("belt", "Waist", "Balance: Whirling Dervish Sash", "Miststalker's Cinch", 272245),
+  sw("legs", "Legs", "Balance: Intellect kit", "Agility & Stamina leg kit", 0, "on the tier legs")]),
+]
+sheet_html = "".join(f'<div class="card {c}"><h3>{E(t)} <small>{E(g)}</small></h3><p class="sub">{E(sub)}</p>{"".join(rows)}</div>'
+                     for c, t, g, sub, rows in CARDS)
+
 TODO = [
- ("m", "Balance, now", "Use the m+ s2 talents in M+ (+2.66%). In raid keep your current talents or Raider.IO (tie)."),
- ("m", "Balance, with crests", "Upgrade Band of the Swarmcaller to 334 and wear it in ring 1: +1.1% raid, +1.4% M+."),
- ("g", "Guardian, now", "Your current talents take the least damage by far. Swap the Bardiche for the Pikestaff if you want −1.8% damage taken today."),
- ("g", "Guardian, next week", "Craft the Haste/Vers belt with Hunter's Ritual Stone and keep the Bardiche: −4.5% damage taken, +1.6% damage."),
- ("x", "One set for both", "Possible, but it costs Balance 1.3% in raid and the bear 5% more damage taken. Keeping separate rings and leg kits is better: you already own both sets."),
+ ("m", "1 · Balance, now", "Use the m+ s2 talents in M+ (+2.66%). In raid keep your current talents or Raider.IO (tie)."),
+ ("m", "2 · Balance, with crests", "Upgrade Band of the Swarmcaller to 334 and wear it instead of Charged Sandstone Band, with Eyes of the Eagle: +1.1% raid, +1.4% M+."),
+ ("g", "3 · Guardian, now", "Your current talents take the least damage by far. Swap the Bardiche for the Pikestaff if you want −1.8% damage taken today."),
+ ("g", "4 · Guardian, next week", "Craft the Haste/Vers belt with Hunter's Ritual Stone and keep the Bardiche: −4.5% damage taken, +1.6% damage."),
+ ("x", "5 · One set for both", "Possible, but it costs Balance 1.3% in raid and the bear 5% more damage taken. Keeping separate rings and leg kits is better: you already own both sets."),
 ]
 todo = "".join(f'<div class="{c}"><b>{E(t)}</b><p>{E(p)}</p></div>' for c, t, p in TODO)
 
@@ -131,7 +164,7 @@ NOTES = [
 notes = "".join(f"<li>{n}</li>" for n in NOTES)
 
 tpl = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.html"), encoding="utf-8").read()
-for k, v in {"{{I_MOON}}": I["moon"], "{{I_BEAR}}": I["bear"], "{{I_RING}}": I["ring"], "{{TODO}}": todo, "{{TABS}}": "".join(tabs),
+for k, v in {"{{I_MOON}}": I["moon"], "{{I_BEAR}}": I["bear"], "{{I_RING}}": I["ring"], "{{TODO}}": todo, "{{SHEET}}": sheet_html, "{{TABS}}": "".join(tabs),
              "{{PANELS}}": "".join(panels), "{{CRAFT}}": craft, "{{COST}}": cost, "{{TAL_B}}": tal_b, "{{TAL_G}}": tal_g, "{{NOTES}}": notes}.items():
     tpl = tpl.replace(k, v)
 open(OUT, "w", encoding="utf-8").write(tpl)

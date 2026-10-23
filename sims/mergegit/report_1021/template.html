@@ -34,6 +34,24 @@ h3{font-family:var(--display);font-size:17px;margin:0}
 .todo b{display:block;font-family:var(--display);font-size:14px;letter-spacing:.04em;margin-bottom:4px}
 .todo .m b{color:var(--moon)} .todo .g b{color:var(--bear)} .todo .x b{color:var(--both)}
 .todo p{margin:0;font-size:14px}
+/* swap cheat sheet */
+.sheet{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.card{background:var(--panel-2);border:1px solid var(--frame);border-radius:8px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.card.m{border-top:3px solid var(--moon)} .card.g{border-top:3px solid var(--bear)} .card.x{border-top:3px solid var(--both)}
+.card h3{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.card h3 small{font:500 13px var(--mono);color:var(--good)}
+.card .sub{margin:-6px 0 0;color:var(--muted);font-size:13px}
+.sw{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding-top:10px;border-top:1px solid var(--frame)}
+.sw img{width:34px;height:34px;border-radius:5px;border:1px solid var(--epic)}
+.sw .l{min-width:0;font-size:14px;display:flex;flex-direction:column;gap:2px}
+.sw .slot{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.sw .off{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--bad)}
+.sw .on a{color:var(--epic);font-weight:700;text-decoration:none}
+.sw .on a:hover{text-decoration:underline}
+.sw .on b{color:var(--epic)}
+.sw .eg{color:var(--good);font-size:13px}
+.sw .keep{color:var(--fg)}
+.sw .cost{color:var(--gold);font-size:13px}
 /* tabs */
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .tab{font:600 14px var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--frame);border-radius:6px;padding:8px 12px;cursor:pointer;display:flex;gap:8px;align-items:center}
@@ -92,7 +110,13 @@ a{color:var(--rare)}
   </header>
 
   <section class="frame">
-    <h2>Do this</h2>
+    <h2><img src="{{I_RING}}" alt="">What to wear: rings and swaps</h2>
+    <p class="intro">For each mode, the exact item to take off, the item to put on, and its enchant and gem. Ring slot order does not matter in game: what matters is which ring comes off. Everything not listed stays as you wear it now.</p>
+    <div class="sheet">{{SHEET}}</div>
+  </section>
+
+  <section class="frame">
+    <h2>Do this, in order</h2>
     <div class="todo">{{TODO}}</div>
   </section>
 
