@@ -229,6 +229,13 @@ Each of these was made in a real session, cost the user several rounds, and is n
 
 ### 4. Run the comparison
 
+**SPEED RULE (2026-10-24): sweeps use PROFILESETS, not `copy=`.** `copy=` puts every variant in one raid, so cost grows
+with the raid and DungeonSlice mobs die N times faster (distorted). 78 copy= variants took ~2 h; 101 profilesets took
+7 min (Patchwerk, 5000 it, ±0.07%). Form: `profileset."NAME"+=<line>` (repeat the line per changed slot), run with
+`json2=out.json`, rank with `python3 tools/parse_ps.py out.json [prefix]`. Use `copy=` only for small final set runs.
+Screen at Patchwerk 5000 it / DungeonSlice 2000 it, then re-sim only the finalists. Never run two sims at once on 4 cores.
+
+
 One run, many variants, shared RNG, via `name=` / `copy=`:
 
 ```
