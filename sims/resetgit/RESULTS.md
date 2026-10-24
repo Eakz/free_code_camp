@@ -43,3 +43,15 @@ Patchwerk 5000 it (±0.07) in 7 min, DungeonSlice 2000 it (±0.57) in 5 min; fin
 - 2026-10-24 neck follow-up (`opt_1024/neck_*`), inside best sets, Indecipherable in both necks: raid Sentinel's 334 +0.74 over
   Flowform (+6.20 vs +5.46, ±0.06), Venomstone 340 +0.28 more; M+ Sentinel's 334 +0.06 (tie, ±0.29), 340 +0.44 over Flowform (borderline).
 - 2026-10-24 plan regenerated for unlimited Myth crests (user): Sentinel's 334 worn in both modes (M+ set +2.97), order by gain; Sparks are the only limit.
+
+## 2026-10-24 04:17 export — consumables/gems/enchants + "catalyse legs, craft shoulders?" (current talents both modes, per user)
+SimC midnight 3af1a75, data 12.1.5.70575 (client 70529). Profilesets, `opt_0417/`. Baseline FULL = worn at caps with the
+empty slots filled (Indecipherable in Sentinel's, Eyes of the Eagle + Deadly Amethyst on Vile, Agi&Stam kit on Cuisses).
+- As worn (no gem/enchants on the 3 new items) = -3.62% raid / -3.55% M+ vs FULL.
+- Consumables: keep Magisters / Recklessness / Silvermoon Parade / Phoenix Oil / Void-Touched (no other pick wins in both
+  modes; Blood Knights flask +1.41 raid alone but does not stack with Sickening Signet; rune -0.73 if dropped).
+- Raid (Patchwerk 10000, ±0.05): Sickening Signet for Hex Loop +1.53; + tier legs (catalysed Cuisses 334) + crafted shoulders
+  C/H 331 +2.54; + crafted bracers C/H +2.95; + Gebbo's Backup Blaster with Ritual Stone moved to the shoulders +3.58.
+- M+ (DungeonSlice 6000, ±0.14): Quick Peridot gems +0.15 (tie); + tier legs + shoulders H/M +1.11; + bracers H/M +1.49;
+  shoulders C/H + bracers H/M +1.60; Gebbo route +1.24.
+- Previous (03:18) plan on this gear: crafted Faulds + bracers = raid +0.28 / M+ -0.12 -> Cuisses beat the crafted legs; superseded.
