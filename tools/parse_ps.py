@@ -5,7 +5,8 @@
 
 Error column = combined 95% interval of baseline and profileset (sqrt(e_b^2 + e_p^2) / baseline, SimC mean_error).
 Optional prefix filters profileset names (e.g. GEM_)."""
-import json, math, sys
+import json, math, signal, sys
+signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 
 def main(path, prefix=""):
     d = json.load(open(path))

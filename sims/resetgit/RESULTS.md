@@ -30,3 +30,13 @@ Coiled Altar (Zul'jin's Guillotine +1.21/+2.33, Cuisses +1.52/+1.61) > Entombed 
 > Vashnik (Rancor +0.78/+1.06, Vile Alchemist's Band, chest token) > Sszorak (tier legs token). Kith'ix (Tendril +4.02/+2.18) first if
 Voidcores work there (not verified). Disputed sources: Boots of the Reckless Wayfarer (Lost Explorers vs Mor'zahi), Crown of the Eternal Fang
 (Nek'zali vs Sentinels). Report: `report/` (build_report.py + template.html -> resetgit_bm_report.html), https://claude.ai/artifact/QWtd5ndDusKTmKb6psqWn7
+
+## 2026-10-24 — Optimal gear, enchants, gems, talents from the start (export 2026-10-24 03:18, client 12.1.5.70529)
+SimC midnight 3af1a75, data 12.1.5.70575 (one build newer than client). PROFILESETS (`opt_1024/`): sweep 101 variants
+Patchwerk 5000 it (±0.07) in 7 min, DungeonSlice 2000 it (±0.57) in 5 min; finals Patchwerk 10000 / DungeonSlice 5000 in 2 min.
+- Free: leg kit Agi&Stam 8159 (or Armor 8163) +0.50 M+ / +0.51 raid; neck Indecipherable +0.20 / +0.18. Raid talents 'solos' +2.29 (M+ -27%).
+- M+ best (current talents): crafted legs Farstrider's Reinforced Faulds C/H 331 + crafted bracers H/M 331 + Vile Alchemist's Band 334 ring1
+  + free fixes = +3.05% (±0.37); without bracers +2.86; ring + free only +1.44; free only +0.70.
+- Raid best (solos): crafted legs C/H + bracers C/H + Sentinel's Vitriolic Chain 334 + Vile 334 + Deadly Peridot = +6.20% (±0.06);
+  neck + ring only +4.29; free + solos +3.14.
+- All owned weapons, trinkets, off-tier heads/hands and non-crafted belts lose. Report: https://claude.ai/artifact/QWtd5ndDusKTmKb6psqWn7
