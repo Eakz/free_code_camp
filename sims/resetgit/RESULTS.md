@@ -55,3 +55,7 @@ empty slots filled (Indecipherable in Sentinel's, Eyes of the Eagle + Deadly Ame
 - M+ (DungeonSlice 6000, ±0.14): Quick Peridot gems +0.15 (tie); + tier legs + shoulders H/M +1.11; + bracers H/M +1.49;
   shoulders C/H + bracers H/M +1.60; Gebbo route +1.24.
 - Previous (03:18) plan on this gear: crafted Faulds + bracers = raid +0.28 / M+ -0.12 -> Cuisses beat the crafted legs; superseded.
+- 2026-10-24 crafted stat grid (`opt_0417/stats_*`, 6x6 pairs in the plan): shoulders C/H + bracers C/H best raid (+2.90 ±0.07),
+  M+ best C/H + H/M +1.58 vs C/H + C/H +1.54 (±0.19, tie) -> craft both Crit/Haste.
+- Gems in the plan (`gems_*`): Flawless Masterful Peridot both rings +2.98 raid / +1.85 M+ (vs Deadly Amethyst +2.90 / +1.54);
+  neck Indecipherable best (others -0.17..-0.26). Report v4: https://claude.ai/artifact/QWtd5ndDusKTmKb6psqWn7

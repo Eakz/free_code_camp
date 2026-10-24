@@ -1,0 +1,157 @@
+<title>Resetgit Hunter Gear Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: WoW character sheet. Two-column paperdoll per set (tabs), then farm list, bonus-roll ladder, enchant table.
+   Single dark look on purpose (WoW tooltip world); every colour is a token and body has an explicit background. */
+:root{
+  --bg:#0c100d; --panel:#141a15; --frame:#36392a; --frame-hi:#a9b35a; --fg:#e7e4d2; --muted:#9a9a88;
+  --epic:#c36bff; --rare:#3d9bff; --green:#3fd16b; --gold:#ffd25e; --hunter:#aad372; --changed:#1d2414;
+  --display:"Cinzel",Georgia,"Times New Roman",serif; --body:"Alegreya Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.45}
+.wrap{max-width:1080px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+header{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header img{width:52px;height:52px;border:2px solid var(--hunter);border-radius:6px}
+header>div{min-width:0;flex:1}
+h1{font-family:var(--display);font-size:clamp(24px,4vw,34px);margin:0;letter-spacing:.02em;color:var(--hunter);text-wrap:balance}
+.lede{color:var(--muted);margin:2px 0 0;max-width:72ch}
+h2{font-family:var(--display);font-size:20px;margin:0 0 6px;color:var(--gold);letter-spacing:.03em;display:flex;gap:10px;align-items:center}
+h2 img{width:24px;height:24px;border-radius:4px}
+h3{font-family:var(--display);font-size:17px;margin:0;color:var(--fg)}
+h4{margin:0;font-size:16px;color:var(--gold)}
+.frame{background:var(--panel);border:1px solid var(--frame);border-radius:8px;padding:18px;box-shadow:inset 0 0 0 1px #00000060;min-width:0}
+.intro{color:var(--muted);margin:0 0 14px;max-width:72ch}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tab{font:600 14px var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--frame);border-radius:6px;padding:8px 12px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.tab[aria-selected="true"]{border-color:var(--frame-hi);background:var(--changed);color:var(--gold)}
+.tab:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.chip{font:500 12px var(--mono);color:var(--green)}
+.ph{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.ph>div:first-child{min-width:0;flex:1 1 320px}
+.ph p{margin:4px 0 0;color:var(--muted);max-width:62ch}
+.nums{display:flex;gap:18px}
+.nums div{display:flex;flex-direction:column;align-items:flex-end}
+.nums b{font:500 24px var(--mono);color:var(--green);font-variant-numeric:tabular-nums}
+.nums span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.doll{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.col{display:flex;flex-direction:column;gap:8px;min-width:0}
+.item{display:flex;gap:10px;align-items:flex-start;padding:8px;border-radius:6px;border:1px solid transparent;min-width:0}
+.item.changed{background:var(--changed);border-color:var(--frame-hi)}
+.ic{position:relative;flex:none}
+.ic img{width:46px;height:46px;border-radius:5px;border:2px solid var(--epic);display:block}
+.ilvl{position:absolute;right:-4px;bottom:-6px;font:500 11px var(--mono);background:var(--bg);color:var(--fg);padding:0 4px;border-radius:3px;border:1px solid var(--frame)}
+.meta{min-width:0}
+.slot{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.name{color:var(--epic);font-weight:700;overflow-wrap:anywhere;text-decoration:none}
+.name:hover{text-decoration:underline}
+.sub{font-size:13px;color:var(--muted)}
+.src{color:var(--hunter)}
+.ench{display:flex;gap:6px;align-items:center;color:var(--green);font-size:13px;margin-top:2px}
+.ench img{width:16px;height:16px;border-radius:3px}
+.gems{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:3px;font-size:13px}
+.gem-w{display:flex;gap:5px;align-items:center}
+.gem{width:16px;height:16px;border-radius:50%;border:1px solid var(--frame-hi)}
+.gain{font:500 12px var(--mono);color:var(--green);margin-top:3px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:620px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--frame);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+td.g{font:500 13px var(--mono);color:var(--green);white-space:nowrap}
+td.c{color:var(--muted);font-size:14px}
+td a{color:var(--epic);font-weight:700;text-decoration:none}
+td a:hover{text-decoration:underline}
+td.best{color:var(--gold);font-weight:700}
+.grid td,.grid th{text-align:center}
+.grid td:first-child,.grid th:first-child{text-align:left}
+.rolls{display:flex;flex-direction:column;gap:10px}
+.roll{display:flex;gap:14px;align-items:flex-start;padding:10px 12px;border:1px solid var(--frame);border-radius:6px}
+.roll:first-child{border-color:var(--frame-hi);background:var(--changed)}
+.roll>div{min-width:0}
+.rank{font:700 20px var(--display);color:var(--gold);width:22px;flex:none;text-align:center}
+.roll p{margin:3px 0 0;color:var(--muted)}
+.roll p.loot{color:var(--fg);font-size:14px}
+.skip{color:var(--muted);margin:12px 0 0}
+.two{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.two>div{min-width:0}
+ul.notes{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+a{color:var(--rare)}
+@media (max-width:760px){.doll,.two{grid-template-columns:1fr}.nums b{font-size:20px}}
+@media (prefers-reduced-motion:no-preference){.tab{transition:border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <img src="{{HUNTER}}" alt="Beast Mastery">
+    <div>
+      <h1>Resetgit · Beast Mastery</h1>
+      <p class="lede">{{LEDE}}</p>
+    </div>
+  </header>
+
+  <section class="frame">
+    <h2>Gear sets</h2>
+    <p class="intro">Changed slots are highlighted. Big numbers are the whole set simmed together against today's gear; the green note on an item is that change alone. M+ and raid use different talents: see the Talents table.</p>
+    <div class="tabs" role="tablist">{{TABS}}</div>
+    {{PANELS}}
+  </section>
+
+  <section class="frame">
+    <h2>Do this, in order</h2>
+    <p class="intro">{{ORDER_INTRO}}</p>
+    <div class="tw"><table>
+      <thead><tr><th>#</th><th>Do</th><th>Cost</th><th>M+ gain</th><th>Raid gain</th></tr></thead>
+      <tbody>{{ORDER}}</tbody>
+    </table></div>
+  </section>
+
+  <section class="frame">
+    <h2>Crafted stats: every pair tested</h2>
+    <p class="intro">{{GRID_INTRO}}</p>
+    <div class="tw"><table>
+      {{GRID}}
+    </table></div>
+  </section>
+
+  <section class="frame two">
+    <div>
+      <h2>Enchants and gems</h2>
+      <div class="tw"><table>
+        <thead><tr><th>Slot</th><th>Use</th><th>Alternatives</th><th>Action</th></tr></thead>
+        <tbody>{{ENCH}}</tbody>
+      </table></div>
+    </div>
+    <div>
+      <h2>Consumables</h2>
+      <div class="tw"><table style="min-width:0">
+        <thead><tr><th>Slot</th><th>Use</th><th>Why</th></tr></thead>
+        <tbody>{{TAL}}</tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="frame">
+    <h2>How these numbers were made</h2>
+    <ul class="notes">{{NOTES}}</ul>
+  </section>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(k){
+    tabs.forEach(function(t){var on=t.dataset.k===k;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
+      document.getElementById('p-'+t.dataset.k).hidden=!on;});
+    try{localStorage.setItem('rg3-tab',k)}catch(e){}
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.k)})});
+  var start='raid';
+  try{var s=localStorage.getItem('rg3-tab');if(s&&document.getElementById('p-'+s))start=s}catch(e){}
+  if(location.hash&&document.getElementById('p-'+location.hash.slice(1)))start=location.hash.slice(1);
+  show(start);
+})();
+</script>
