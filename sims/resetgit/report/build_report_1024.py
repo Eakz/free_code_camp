@@ -69,7 +69,11 @@ MPLUS = swap(FREE,
   Legs=CLEGS("Crit / Haste", f"{pct(SM['CR_Legs331_CH'])} M+ alone"),
   Wrist=it("Farstrider's Plated Bracers", 244584, 331, "Crafted Q5 · 80 Myth crests + Sparks", stats="Haste / Mastery",
            note=f"{pct(SM['CR_Wrist331_HM'])} M+ alone (tie)", changed=True, src="Craft"),
-  Ring_1=VILE("Flawless Deadly Amethyst", f"{pct(SM['R1_VileAlchemist334'])} M+ alone; replaces Hex Loop"))
+  Ring_1=VILE("Flawless Deadly Amethyst", f"{pct(SM['R1_VileAlchemist334'])} M+ alone; replaces Hex Loop"),
+  Neck=it("Sentinel's Vitriolic Chain", 268250, 334, "Myth, now 318 → 334: 100 Myth crests", gems=["Indecipherable Eversong Diamond"],
+          stats="Crit / Haste", note="M+ tie with Flowform (+0.06%); same neck as raid", changed=True, src="bags"))
+NK = {}
+for fs in ("Patchwerk", "DungeonSlice"): NK[fs] = load(f"out_neck_{fs}.json")
 RAID = swap(FREE,
   Legs=CLEGS("Crit / Haste", f"{pct(SR['CR_Legs331_CH'])} raid alone"),
   Wrist=it("Farstrider's Plated Bracers", 244584, 331, "Crafted Q5 · 80 Myth crests + Sparks", stats="Crit / Haste",
@@ -83,20 +87,20 @@ SETS = [
  ("now", "Today", NOW, "0.00%", "0.00%", "Your worn gear at its upgrade caps (hands 334, wrist 321 are counted as upgraded). The 0% line for this page."),
  ("free", "Free fixes", FREE, pct(FM["M1_free"]), pct(FR["R1_free"]),
   "Leg kit and neck diamond. No crests. Raid number includes the 'solos' talents (+2.29% alone); M+ keeps your current talents."),
- ("mplus", "Best M+", MPLUS, pct(FM["M4_vile+craftlegs+wrist"]), "–",
-  "Current talents. Two crafts and the Myth ring. Without the wrist craft: " + pct(FM["M3_vile+craftlegs"]) + "."),
+ ("mplus", "Best M+", MPLUS, pct(NK["DungeonSlice"]["M4_sentinel334"]), "–",
+  "Current talents. Two crafts, Myth ring and Myth neck (the neck ties Flowform in M+ but is the same neck you want for raid). Without the wrist craft: " + pct(FM["M3_vile+craftlegs"]) + "."),
  ("raid", "Best raid", RAID, "–", pct(FR["R4_myth+craft_legs+wrist"]),
-  "'solos' talents. Two crafts, Myth neck and ring. Without the crafts (neck + ring only): " + pct(FR["R3_myth_sentinel+vile"]) + "."),
+  "'solos' talents. Two crafts, Myth neck and ring. Without the crafts (neck + ring only): " + pct(FR["R3_myth_sentinel+vile"]) + ". Venomstone on the neck (340): " + pct(NK["Patchwerk"]["R4_sentinel340_venomstone"]) + "."),
 ]
 ORDER = [
  ("Leg kit: Agility kit → Agility & Stamina kit (8159). The Armor kit (8163) ties.", "free", SM["EN_le_AgiStamKit"], SR["EN_le_AgiStamKit"]),
  ("Neck gem: Powerful → Indecipherable Eversong Diamond.", "free", SM["GEM_neck_Indecipherable"], SR["GEM_neck_Indecipherable"]),
  ("Raid only: load the 'solos' talents. Never in M+.", "free", SM["TAL_solos"], SR["TAL_solos"]),
- ("Upgrade Skulking Viper's Hidepiercers 328 → 334 and Galerider's Mesh Wraps 305 → 321.", "40 Myth + 100 Hero crests", None, None),
- ("Craft Farstrider's Reinforced Faulds, Crit/Haste, 331 (replaces Galerider's Chausses).", "80 Myth crests + Sparks", SM["CR_Legs331_CH"], SR["CR_Legs331_CH"]),
- ("Upgrade Vile Alchemist's Band 318 → 334 and wear it instead of Hex Loop.", "100 Myth crests", SM["R1_VileAlchemist334"], SR["R1_VileAlchemist334"]),
- ("Raid: upgrade Sentinel's Vitriolic Chain 318 → 334 (replaces Flowform Choker).", "100 Myth crests", SM["NE_SentinelsVitriolic334"], SR["NE_SentinelsVitriolic334"]),
- ("Craft Farstrider's Plated Bracers 331 (Haste/Mastery for M+, Crit/Haste for raid).", "80 Myth crests + Sparks", SM["CR_Wrist331_HM"], SR["CR_Wrist331_CH"]),
+ ("Upgrade Skulking Viper's Hidepiercers 328 → 334 and Galerider's Mesh Wraps 305 → 321 (already counted in every number).", "40 Myth + 100 Hero crests", None, None),
+ ("Craft Farstrider's Reinforced Faulds, Crit/Haste, 331 (replaces Galerider's Chausses). Biggest gear gain.", "Sparks + 80 Myth crests", SM["CR_Legs331_CH"], SR["CR_Legs331_CH"]),
+ ("Upgrade Vile Alchemist's Band 318 → 334 and wear it instead of Hex Loop. Helps both modes.", "100 Myth crests", SM["R1_VileAlchemist334"], SR["R1_VileAlchemist334"]),
+ ("Upgrade Sentinel's Vitriolic Chain 318 → 334 (replaces Flowform Choker). Raid +0.74% inside the set; M+ tie, so wear it everywhere.", "100 Myth crests", SM["NE_SentinelsVitriolic334"], SR["NE_SentinelsVitriolic334"]),
+ ("Craft Farstrider's Plated Bracers 331 (Haste/Mastery for M+, Crit/Haste for raid). Smallest gain: only if you have Sparks to spare.", "Sparks + 80 Myth crests", SM["CR_Wrist331_HM"], SR["CR_Wrist331_CH"]),
 ]
 LOSE = [("Gebbo's Backup Blaster 334", "Weapon", "MH_GebbosBackupBlaster334"), ("Snakebite Recurve 321", "Weapon", "MH_SnakebiteRecurve321"),
         ("Crown of the Eternal Fang 321 + tier legs", "Head", "HE_CrownEternalFang321+TL"), ("Voidscarred Crown 321 + tier legs", "Head", "HE_VoidscarredCrown321+TL"),
@@ -130,7 +134,7 @@ NOTES = [
  "Every variant ran as its own profileset (not 100 copies in one raid). The whole job took about 15 minutes of simming.",
  "Caps: Champion 308, Hero 321, Myth 334, crafted 331. Venomstones (Hero 328 / Myth 340 on weapons, trinkets, necks) were not applied.",
  "Crafted pieces carry no embellishment: your belt (Arcanoweave) and bow (Hunter's Ritual Stone) already use the cap of 2.",
- "Crest costs: 20 per upgrade step; 80 Myth crests + 2-4 Sparks per 331 craft (single source). Your export shows 72 Myth, 275 Hero crests; Spark count is not in the export.",
+ "Plan assumes unlimited Myth crests (your call): every Myth-track item is used at 334. The real limits left are Sparks of Tides (2-4 per 331 craft, single source; not in the export) and 100 Hero crests for the wrist (you have 275).",
  'Sources: <a href="https://www.icy-veins.com/wow/news/these-five-mistcrests-decide-how-fast-your-gear-climbs-in-midnight-season-2/">Icy Veins crests</a>, <a href="https://expcarry.com/wow-midnight-season-2-crafting-guide">expcarry crafting</a>, <a href="https://www.method.gg/guides/how-to-unlock-ascendant-venomstones-in-wow-midnight-season-2-neck-weapon-trinket-upgrades">Method Venomstones</a>.',
  "Inputs and raw outputs: sims/resetgit/opt_1024 on branch claude/epic-cori-kqdhlt.",
 ]

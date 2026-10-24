@@ -42,3 +42,4 @@ Patchwerk 5000 it (±0.07) in 7 min, DungeonSlice 2000 it (±0.57) in 5 min; fin
 - All owned weapons, trinkets, off-tier heads/hands and non-crafted belts lose. Report: https://claude.ai/artifact/QWtd5ndDusKTmKb6psqWn7
 - 2026-10-24 neck follow-up (`opt_1024/neck_*`), inside best sets, Indecipherable in both necks: raid Sentinel's 334 +0.74 over
   Flowform (+6.20 vs +5.46, ±0.06), Venomstone 340 +0.28 more; M+ Sentinel's 334 +0.06 (tie, ±0.29), 340 +0.44 over Flowform (borderline).
+- 2026-10-24 plan regenerated for unlimited Myth crests (user): Sentinel's 334 worn in both modes (M+ set +2.97), order by gain; Sparks are the only limit.
