@@ -216,3 +216,9 @@ Single actor Patchwerk 5000 it; pull = 5 heroic dummies attacking (taken ±0.4),
   Balance (`bal_1028/`, export 10-21, raid current talents / M+ 'm+ s2'): Lantern stone worth -1.27% raid / -1.29% M+ if removed; wrist Arcanoweave
   -1.10 / -0.97; crafted Arcanoweave belt (Crit/Mastery or Haste/Mastery) with the Lantern's stone dropped = +0.14 / +0.30 (tie). Wearing
   all three (wrist, belt, Lantern stone) = +1.2..+1.5% but is 3 embellishments (cap 2).
+- 2026-10-28 (user: 2 Arcanoweaves allowed; belt per spec): Balance layouts, 6 belt pairs (`bal_1028/gen2.py`, raid 10000 it ±0.10 / M+ 'm+ s2' 6000 it ±0.24),
+  vs baseline = wrist Arcanoweave + Lantern stone + old belt (Whirling Dervish Sash) = 0.00:
+  W (belt+wrist Arc, Lantern recrafted plain): raid -0.20..+0.09, M+ -0.07..+0.17 (tie).
+  C (belt Arc + Lantern stone, wrist without Arc): raid best Haste/Mastery +0.47, Crit/Haste +0.31; M+ best Crit/Haste +0.61, Haste/Mastery +0.46.
+  Bear belt + wrist Arcanoweave (`bear_1028`, extra pairs): Mastery/Vers -3.3 pull / -2.7 boss, Haste/Mastery -2.8 / -1.4 (CV -4.5/-4.8, HV -4.3/-3.4, CH -4.1/-3.5).
+  Per-spec belts: Balance keeps old belt + wrist Arc + Lantern stone (baseline), bear wears the crafted Arcanoweave belt + wrist Arc: both at 2 embellishments.
