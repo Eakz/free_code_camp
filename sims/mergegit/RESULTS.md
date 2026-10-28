@@ -208,3 +208,11 @@ Single actor Patchwerk 5000 it; pull = 5 heroic dummies attacking (taken ±0.4),
 - Chest: redirect 281236 and 334 each matter (old 239048@321 = +4.9% taken, -1.1% dealt vs baseline).
 - Rings: Bubbleband + Ritual Binder best taken; Swarmcaller pairs +3.5..+4.3% taken, +4.6% max HP, +0.8..+1.0% dealt.
 - Best attainable (321): Crit/Vers belt + stone, nothing else changed = -4.7 pull / -4.8 boss; with Grips+Pall 321 no better.
+- 2026-10-28 follow-up (user: Hunter's Ritual Stone cannot go on a belt, only Arcanoweave): the 'stone' belt rows above are NOT achievable;
+  use the Arcanoweave rows (`bear_1028/gen3.py`, `E*`): belt + Arcanoweave on top of the wrist's = Crit/Vers -4.45 pull / -4.78 boss taken
+  (+1.30 dealt), Haste/Vers -4.30 / -3.41, Crit/Haste -4.05 / -3.53 -- same as the stone (-4.7/-4.8). SimC counts the 2nd Arcanoweave; game
+  duplicate rule UNVERIFIED. Moving the Arcanoweave from wrist to belt = no gain (belt no-emb -1.97/-1.71). Wrist Arcanoweave alone is worth
+  +2.2% taken / -0.8% dealt on the bear.
+  Balance (`bal_1028/`, export 10-21, raid current talents / M+ 'm+ s2'): Lantern stone worth -1.27% raid / -1.29% M+ if removed; wrist Arcanoweave
+  -1.10 / -0.97; crafted Arcanoweave belt (Crit/Mastery or Haste/Mastery) with the Lantern's stone dropped = +0.14 / +0.30 (tie). Wearing
+  all three (wrist, belt, Lantern stone) = +1.2..+1.5% but is 3 embellishments (cap 2).
