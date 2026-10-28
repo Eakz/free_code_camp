@@ -195,3 +195,16 @@ Report: `report_1021/` -> https://claude.ai/artifact/G4GbjqV1SXKVQbARPvh3RU
 - Shared set F1 (Swarmcaller + Ritual Binder, Eyes of the Eagle, Quick Lapis, Agi kit, Cinch; trinkets/weapons per spec):
   Balance raid -1.30, Balance M+ +2.31 (with m+ s2), bear +1.04 dealt / +5.33 taken. Trinkets and leg kit cannot be shared
   (Keeper's on Balance -5.7..-7%; Vile Vial on bear +10..15% taken; Agi kit costs Balance ~1.2%, Int kit costs bear 7-9% taken).
+
+## 2026-10-28 — Guardian bear: belt/gloves/chest/cloak/rings, PROVISIONAL baseline (no 10-28 export was supplied)
+SimC midnight 710c240, data 12.1.5.70575 (hotfix 2026-10-28). Baseline = `char_guardian_2026-10-28.simc` = 10-21 17:31 tank export
++ chest Lunar Raiment 334 redirect 281236 + Bardiche 341 (user-stated); everything else UNVERIFIED vs the real 10-28 gear.
+Single actor Patchwerk 5000 it; pull = 5 heroic dummies attacking (taken ±0.4), boss = 1 default dummy (±0.55). Inputs/outputs `bear_1028/`
+(`gen.py`, `gen2.py`, `run.sh`, `parse.py`, `table.txt` = full table). Sanity copy 0.00.
+- Ritual Stone is the belt: stone -2.0..-4.7% taken vs no stone -0.7..-2.2% (pull). Best pairs Crit/Vers, Haste/Vers (tie, ±0.4); Crit/Haste -4.2 pull / -3.4 boss but best dealt.
+- Crafted gloves equal the belt for the same stats (both can't carry the stone: cap 2 with wrist Arcanoweave).
+- Miststalker's Grips 321 = tie with Subjugator's (-0.3 ±0.4). Grips/cloak at 334 are NOT verified to exist (Hero track caps 321): -2.3 / -1.8% if they did.
+- Enchant 8730 (Eye of the Lynx) on the worn gloves has zero effect in SimC; its in-game value is unmodelled.
+- Chest: redirect 281236 and 334 each matter (old 239048@321 = +4.9% taken, -1.1% dealt vs baseline).
+- Rings: Bubbleband + Ritual Binder best taken; Swarmcaller pairs +3.5..+4.3% taken, +4.6% max HP, +0.8..+1.0% dealt.
+- Best attainable (321): Crit/Vers belt + stone, nothing else changed = -4.7 pull / -4.8 boss; with Grips+Pall 321 no better.

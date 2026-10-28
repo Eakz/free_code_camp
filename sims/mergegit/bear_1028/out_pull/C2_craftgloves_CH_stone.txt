@@ -1,0 +1,512 @@
+Implementation Not Yet Verified: Rune of Unleashed Fire: Procs are assumed to target the same unit that triggered them. Procs triggered by damage are assumed to proc damage. Procs triggered by healing/aura are assumed to proc heal.
+SimulationCraft 1210-01 for World of Warcraft 12.1.5.70575 Live (hotfix 2026-10-28/70575, git build midnight 2c56391, no-networking)
+
+Simulating... ( iterations=5000, threads=4, target_error=0.000, max_time=300, vary_combat_length=0.20, optimal_raid=1, fight_style=Patchwerk )
+
+Generating Baseline: 1/1 [....................] 50/5000 81.453 15secGenerating Baseline: 1/1 [....................] 102/5000 84.047 14secGenerating Baseline: 1/1 [>...................] 155/5000 86.215 14secGenerating Baseline: 1/1 [>...................] 206/5000 86.563 13secGenerating Baseline: 1/1 [>...................] 259/5000 87.142 13secGenerating Baseline: 1/1 [>...................] 311/5000 88.327 13secGenerating Baseline: 1/1 [>...................] 363/5000 88.472 13secGenerating Baseline: 1/1 [=>..................] 415/5000 88.319 12secGenerating Baseline: 1/1 [=>..................] 465/5000 88.406 12secGenerating Baseline: 1/1 [=>..................] 519/5000 89.125 12secGenerating Baseline: 1/1 [=>..................] 569/5000 89.701 12secGenerating Baseline: 1/1 [=>..................] 621/5000 89.746 12secGenerating Baseline: 1/1 [==>.................] 675/5000 89.548 12secGenerating Baseline: 1/1 [==>.................] 728/5000 89.835 11secGenerating Baseline: 1/1 [==>.................] 778/5000 89.711 11secGenerating Baseline: 1/1 [==>.................] 828/5000 89.634 11secGenerating Baseline: 1/1 [===>................] 879/5000 90.066 11secGenerating Baseline: 1/1 [===>................] 932/5000 90.362 11secGenerating Baseline: 1/1 [===>................] 985/5000 89.096 11secGenerating Baseline: 1/1 [===>................] 1037/5000 89.067 11secGenerating Baseline: 1/1 [===>................] 1088/5000 88.904 11secGenerating Baseline: 1/1 [====>...............] 1141/5000 88.967 10secGenerating Baseline: 1/1 [====>...............] 1193/5000 89.231 10secGenerating Baseline: 1/1 [====>...............] 1243/5000 89.467 10secGenerating Baseline: 1/1 [====>...............] 1295/5000 89.783 10secGenerating Baseline: 1/1 [====>...............] 1345/5000 89.976 10secGenerating Baseline: 1/1 [=====>..............] 1397/5000 90.328 9sec Generating Baseline: 1/1 [=====>..............] 1447/5000 90.502 9sec Generating Baseline: 1/1 [=====>..............] 1498/5000 90.664 9sec Generating Baseline: 1/1 [=====>..............] 1550/5000 90.936 9sec Generating Baseline: 1/1 [=====>..............] 1602/5000 91.132 9sec Generating Baseline: 1/1 [======>.............] 1652/5000 91.248 9sec Generating Baseline: 1/1 [======>.............] 1704/5000 91.301 9sec Generating Baseline: 1/1 [======>.............] 1754/5000 91.422 8sec Generating Baseline: 1/1 [======>.............] 1804/5000 91.587 8sec Generating Baseline: 1/1 [======>.............] 1856/5000 91.498 8sec Generating Baseline: 1/1 [=======>............] 1909/5000 91.526 8sec Generating Baseline: 1/1 [=======>............] 1964/5000 91.718 8sec Generating Baseline: 1/1 [=======>............] 2015/5000 91.788 8sec Generating Baseline: 1/1 [=======>............] 2068/5000 91.993 7sec Generating Baseline: 1/1 [=======>............] 2121/5000 92.068 7sec Generating Baseline: 1/1 [========>...........] 2173/5000 92.181 7sec Generating Baseline: 1/1 [========>...........] 2223/5000 92.134 7sec Generating Baseline: 1/1 [========>...........] 2276/5000 92.208 7sec Generating Baseline: 1/1 [========>...........] 2326/5000 92.312 7sec Generating Baseline: 1/1 [=========>..........] 2378/5000 92.397 7sec Generating Baseline: 1/1 [=========>..........] 2428/5000 92.502 6sec Generating Baseline: 1/1 [=========>..........] 2478/5000 92.579 6sec Generating Baseline: 1/1 [=========>..........] 2530/5000 92.649 6sec Generating Baseline: 1/1 [=========>..........] 2581/5000 92.763 6sec Generating Baseline: 1/1 [==========>.........] 2634/5000 92.748 6sec Generating Baseline: 1/1 [==========>.........] 2684/5000 92.781 6sec Generating Baseline: 1/1 [==========>.........] 2734/5000 92.759 6sec Generating Baseline: 1/1 [==========>.........] 2786/5000 92.828 5sec Generating Baseline: 1/1 [==========>.........] 2837/5000 92.903 5sec Generating Baseline: 1/1 [===========>........] 2889/5000 92.563 5sec Generating Baseline: 1/1 [===========>........] 2939/5000 92.285 5sec Generating Baseline: 1/1 [===========>........] 2989/5000 92.046 5sec Generating Baseline: 1/1 [===========>........] 3041/5000 91.894 5sec Generating Baseline: 1/1 [===========>........] 3093/5000 91.928 5sec Generating Baseline: 1/1 [============>.......] 3143/5000 91.694 5sec Generating Baseline: 1/1 [============>.......] 3195/5000 91.638 4sec Generating Baseline: 1/1 [============>.......] 3248/5000 91.640 4sec Generating Baseline: 1/1 [============>.......] 3299/5000 91.548 4sec Generating Baseline: 1/1 [============>.......] 3351/5000 91.524 4sec Generating Baseline: 1/1 [=============>......] 3401/5000 91.589 4sec Generating Baseline: 1/1 [=============>......] 3454/5000 91.654 4sec Generating Baseline: 1/1 [=============>......] 3506/5000 91.694 4sec Generating Baseline: 1/1 [=============>......] 3557/5000 91.687 3sec Generating Baseline: 1/1 [=============>......] 3610/5000 91.673 3sec Generating Baseline: 1/1 [==============>.....] 3661/5000 91.709 3sec Generating Baseline: 1/1 [==============>.....] 3712/5000 91.803 3sec Generating Baseline: 1/1 [==============>.....] 3764/5000 91.890 3sec Generating Baseline: 1/1 [==============>.....] 3814/5000 91.936 3sec Generating Baseline: 1/1 [==============>.....] 3866/5000 92.021 3sec Generating Baseline: 1/1 [===============>....] 3917/5000 92.097 2sec Generating Baseline: 1/1 [===============>....] 3970/5000 92.160 2sec Generating Baseline: 1/1 [===============>....] 4021/5000 92.225 2sec Generating Baseline: 1/1 [===============>....] 4073/5000 92.289 2sec Generating Baseline: 1/1 [===============>....] 4124/5000 92.339 2sec Generating Baseline: 1/1 [================>...] 4179/5000 92.288 2sec Generating Baseline: 1/1 [================>...] 4229/5000 92.276 2sec Generating Baseline: 1/1 [================>...] 4279/5000 92.325 1sec Generating Baseline: 1/1 [================>...] 4332/5000 92.351 1sec Generating Baseline: 1/1 [=================>..] 4383/5000 92.315 1sec Generating Baseline: 1/1 [=================>..] 4435/5000 92.280 1sec Generating Baseline: 1/1 [=================>..] 4488/5000 92.323 1sec Generating Baseline: 1/1 [=================>..] 4542/5000 92.354 1sec Generating Baseline: 1/1 [=================>..] 4593/5000 92.390 1sec Generating Baseline: 1/1 [==================>.] 4643/5000 92.437      Generating Baseline: 1/1 [==================>.] 4693/5000 92.276      Generating Baseline: 1/1 [==================>.] 4744/5000 92.267      Generating Baseline: 1/1 [==================>.] 4794/5000 92.323      Generating Baseline: 1/1 [==================>.] 4844/5000 92.348      Generating Baseline: 1/1 [===================>] 4894/5000 92.405      Generating Baseline: 1/1 [===================>] 4945/5000 92.455      Generating Baseline: 1/1 [===================>] 5000/5000 92.420 13.430
+Merging data from thread-1 ...
+Merging data from thread-2 ...
+Merging data from thread-3 ...
+Analyzing actor data ...
+
+Generating reports...
+
+
+Raid Events:
+  raid_event=/heal,name=tank_heal,amount=187500,cooldown=5.0,duration=0,player_if=role.tank
+  raid_event+=/heal,name=tank_heal,amount=187500,cooldown=5.0,duration=0,player_if=role.tank
+  raid_event+=/heal,name=tank_heal,amount=187500,cooldown=5.0,duration=0,player_if=role.tank
+  raid_event+=/heal,name=tank_heal,amount=187500,cooldown=5.0,duration=0,player_if=role.tank
+  raid_event+=/heal,name=tank_heal,amount=187500,cooldown=5.0,duration=0,player_if=role.tank
+
+
+DPS Ranking:
+ 322730 100.0%  Raid
+ 322730  100.0%  C2_craftgloves_CH_stone
+
+HPS Ranking:
+ 139266 100.0%%  Raid
+ 139354  100.0%  C2_craftgloves_CH_stone
+
+Player: C2_craftgloves_CH_stone night_elf druid guardian 90
+  DPS=322730.02998583426 DPS-Error=313.81752316296985/0.10% DPS-Range=44948.54422434859/13.93%
+  HPS=12312.686277656316 HPS-Error=21.792727427768575/0.18% HPS-Range=2917.2497515176246/23.69%
+  DTPS=27321.051628623896 DTPS-Error=112.86683502352906/0.41% DTPS-Range=15462.966208140633/56.60%
+  DPR=12913.89461627905 RPS-Out=24.97719590982756 RPS-In=25.08837197883246 Resource=rage Waiting=0 ApM=96.6873942613469
+  Talents: CgGADBD3hSPCL9Y9gz68WcKvMAAAAAAAAAAAAgZmxsYmZMziZxMmZZZgZxwoJyMzyMzMzsMzMAAAAAAMjNDYZbmBjZbAMFAAAYDzMALGDDYxCAzMAG
+  Core Stats:    strength=265|265(265)  agility=2628|2553(2553)  stamina=46616|44396(40656)  intellect=638|620(620)  spirit=0|0(0)  health=932320|1041685  mana=250000|250000
+  Generic Stats: mastery=18.72%|17.32%(494)  versatility=21.81%|18.76%(689)  leech=0.00%|0.00%(0)  runspeed=8.23%|8.23%(65)
+  Spell Stats:   power=0|4145(0)  hit=18.00%|18.00%(0)  crit=21.93%|21.93%(549)  haste=35.70%|28.02%(1177)  speed=35.70%|28.02%  manareg=2560|2560(0)
+  Attack Stats:  power=3497|3185(0)  hit=7.50%|7.50%(0)  crit=21.93%|21.93%(549)  expertise=10.50%|10.50%(0)  haste=35.70%|28.02%(1177)  speed=35.70%|28.02%
+  Defense Stats: armor=1177|1177(1110) miss=3.00%|3.00%  dodge=25.20%|24.94%(0)  parry=0.00%|0.00%(0)  block=0.00%|0.00%(0) crit=-6.00%|-6.00%  versatility=10.91%|9.38%(689)
+  Priorities (actions.precombat):
+    snapshot_stats/bear_form,if=buff.bear_form.down&!talent.heart_of_the_wild.enabled
+    cat_form,if=buff.bear_form.down&talent.heart_of_the_wild.enabled
+    variable,name=trinket_sync_slot,value=1,if=trinket.1.has_cooldown&trinket.1.has_stat.any_dps&(!trinket.2.has_stat.any_dps|trinket.1.cooldown.duration>=trinket.2.cooldown.duration)|!trinket.2.has_cooldown
+    variable,name=trinket_sync_slot,value=2,if=trinket.2.has_cooldown&trinket.2.has_stat.any_dps&(!trinket.1.has_stat.any_dps|trinket.2.cooldown.duration>trinket.1.cooldown.duration)|!trinket.1.has_cooldown
+  Priorities (actions.default):
+    retarget,target_if=max:target.health,line_cd=5,if=fight_style.dungeonroute/auto_attack/call_action_list,name=cooldowns
+    call_action_list,name=items/call_action_list,name=bear
+  Priorities (actions.bear):
+    bear_form,if=!buff.bear_form.up&!buff.feline_potential.up&!talent.fluid_form.enabled/mangle,if=buff.cat_form.up
+    ironfur,use_off_gcd=1,if=buff.gory_fur_ironfur.up
+    ironfur,use_off_gcd=1,if=rage>=40&!talent.killing_blow.enabled&!buff.answered_calling.up&!buff.dream_conduit.up
+    ironfur,use_off_gcd=1,if=rage>=80&!talent.killing_blow.enabled&buff.answered_calling.up
+    ironfur,use_off_gcd=1,if=(!buff.ironfur.up|buff.bs_inc.up)&!buff.answered_calling.up&talent.killing_blow.enabled&!buff.ravage.up&!buff.dream_conduit.up
+    ironfur,use_off_gcd=1,if=(!buff.ironfur.up|buff.bs_inc.up)&rage>=80&buff.answered_calling.up&talent.killing_blow.enabled&!buff.ravage.up&!buff.dream_conduit.up
+    thrash,target_if=refreshable|(dot.thrash.stack<5&talent.flashing_claws.rank=2|dot.thrash.stack<4&talent.flashing_claws.rank=1|dot.thrash.stack<3&!talent.flashing_claws.enabled)
+    mangle,if=buff.answered_calling.up&(active_enemies=1|(buff.bs_inc.up&active_enemies=3))&talent.fount_of_strength.enabled
+    thrash,if=talent.lunar_calling.enabled|set_bonus.midnight_season_2_4pc&(active_enemies>1|buff.answered_calling.up)
+    maul,if=buff.dream_conduit.up&!talent.fount_of_strength.enabled&!buff.answered_calling.up
+    maul,if=rage>=55&talent.killing_blow.enabled&!buff.answered_calling.up/maul,if=rage>=80&talent.killing_blow.enabled&buff.answered_calling.up
+    maul,if=buff.gory_fur_maul.up&talent.raze.enabled/maul,if=buff.gory_fur_maul.up&!talent.raze.enabled&active_enemies<3
+    thrash,if=active_enemies>=3&talent.fount_of_strength.enabled
+    mangle,if=dot.red_moon.ticking|(buff.gorestained_claws.up|buff.answered_calling.up)&talent.fount_of_strength.enabled
+    call_action_list,name=heart_of_the_wild/call_action_list,name=feline_potential
+    red_moon,if=cooldown.mangle.up&!dot.red_moon.ticking&(!talent.convoke_the_spirits.enabled|talent.convoke_the_spirits.enabled&cooldown.convoke_the_spirits.remains>=5)
+    maul,if=!buff.ravage.up&rage>=90&talent.fount_of_strength.enabled&!talent.raze.enabled
+    mangle,if=buff.bs_inc.up|talent.red_moon.enabled&(cooldown.red_moon.remains>3&(((rage<88)&!talent.fount_of_strength.enabled)|((rage<83)&!talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)|((rage<108)&talent.fount_of_strength.enabled)|((rage<103)&talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)))
+    mangle,if=!talent.red_moon.enabled&(((rage<88)&!talent.fount_of_strength.enabled)|((rage<83)&!talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled)|((rage<108)&talent.fount_of_strength.enabled)|((rage<103)&talent.fount_of_strength.enabled&talent.soul_of_the_forest.enabled))
+    thrash
+    moonfire,if=talent.lunation.enabled&buff.bear_form.up&!talent.red_moon.enabled&(buff.galactic_guardian.up|active_enemies<3|refreshable)
+    swipe_bear,if=!talent.lunation.enabled|(talent.lunation.enabled&talent.red_moon.enabled)|talent.lunation.enabled&active_enemies>3
+  Priorities (actions.heart_of_the_wild):
+    cat_form,if=!buff.cat_form.up&!talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&talent.heart_of_the_wild.enabled&(active_enemies<=5&talent.moonkin_form.enabled|!talent.moonkin_form.enabled)&(rage<30&!talent.fount_of_strength.enabled|talent.fount_of_strength.enabled)
+    rake,if=!buff.cat_form.up&talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&talent.heart_of_the_wild.enabled&(active_enemies<=5&talent.moonkin_form.enabled|!talent.moonkin_form.enabled)
+    moonkin_form,if=!buff.moonkin_form.up&cooldown.heart_of_the_wild.up&active_enemies>=6&talent.moonkin_form.enabled
+  Priorities (actions.items):
+    potion,if=buff.lunar_beam.up/use_item,name=voracious_heart_of_ulatek,use_off_gcd=1,if=buff.bs_inc.remains>=20
+    use_item,name=vile_vial_of_volatile_venom,use_off_gcd=1,if=buff.bs_inc.remains>=15
+    use_item,name=freightrunners_flask,use_off_gcd=1,if=buff.bs_inc.remains>=15
+    use_items,slots=trinket1,if=(variable.trinket_sync_slot=1&(buff.bs_inc.up|(!talent.ursocs_guidance.enabled&!cooldown.bs_inc.up))|(variable.trinket_sync_slot=2&(!trinket.2.cooldown.ready|(!buff.bs_inc.up&!cooldown.bs_inc.ready)))|!variable.trinket_sync_slot)
+    use_items,slots=trinket2,if=(variable.trinket_sync_slot=2&(buff.bs_inc.up|(!talent.ursocs_guidance.enabled&!cooldown.bs_inc.up))|(variable.trinket_sync_slot=1&(!trinket.1.cooldown.ready|(!buff.bs_inc.up&!cooldown.bs_inc.ready)))|!variable.trinket_sync_slot)
+  Priorities (actions.cooldowns):
+    blood_fury/berserking/fireblood/ancestral_call
+    bristling_fur,if=!target.cooldown.pause_action.remains&cooldown.mangle.remains&cooldown.thrash.remains&(rage<60&talent.killing_blow.enabled|rage<40&!talent.killing_blow.enabled)&!buff.ravage.up
+    barkskin,if=buff.bear_form.up/lunar_beam
+    heart_of_the_wild,if=(active_enemies<=5&talent.moonkin_form.enabled&buff.cat_form.up|!talent.moonkin_form.enabled&buff.cat_form.up)|buff.moonkin_form.up&active_enemies>=6&talent.moonkin_form.enabled
+    convoke_the_spirits,if=buff.bear_form.up
+    sundering_roar,if=(dot.thrash.stack>4&talent.flashing_claws.rank=2|dot.thrash.stack>3&talent.flashing_claws.rank=1|dot.thrash.stack>2&!talent.flashing_claws.enabled)&!cooldown.thrash.up
+    berserk,if=(!cooldown.heart_of_the_wild.up&(talent.heart_of_the_wild.enabled)|!talent.ravage.enabled|!talent.heart_of_the_wild.enabled)&(!cooldown.thrash.up|(buff.cat_form.up&!talent.convoke_the_spirits.enabled))&(!raid_event.adds.up|raid_event.adds.remains>=15)
+    wild_guardian,if=!buff.answered_calling.up&buff.lunar_beam.up
+  Actions:
+    Matted Fur (absorb)                    Count=   9.3| 34.200sec  DPE=361586| 8.03%  DPET=     0  DPR=    0  pDPS= 11214  Miss= 0.00%  Hit= 39032|     0|338809
+    Ursocs Fury (absorb)                   Count=1346.2|  1.101sec  DPE= 25765|83.05%  DPET=     0  DPR=    0  pDPS=115739  Miss= 0.00%  Hit= 39637|     0|339102
+    after_the_wildfire                     Count=  24.4| 12.079sec  DPE= 13695| 0.80%  DPET=     0  DPR=    0  pDPS=  1109  Miss= 0.00%  Hit= 11545|     0|105473  Crit= 20758|     0|202477|23.31%
+    barkskin                               Count=   9.3| 34.200sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+    bear_form                              Count=   1.9|124.434sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+    bear_melee                             Count= 178.5|  2.012sec  DPE= 10931| 2.02%  DPET=  6146  DPR=    0  pDPS=  6506  Miss= 0.00%  Hit=  8881|  7012| 14567  Crit= 17711| 14025| 29553|23.22%
+    cat_form                               Count=   2.9|124.454sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+    cat_melee                              Count=   3.0|119.378sec  DPE=  6080| 0.02%  DPET=  9387  DPR=    0  pDPS=    61  Miss= 0.00%  Hit=  4722|  3703|  6214  Crit=  9478|  7405| 12341|28.57%
+    flashing_claws                         Count=  25.8| 11.258sec  DPE=332917| 8.86%  DPET=     0  DPR=    0  pDPS= 28603  Miss= 0.00%  Hit= 42673| 28260| 85557  Crit= 85140| 56521|168757|23.17%  TickCount=   118  MissTick= 0.00%  Tick= 12473|  5636| 25573  CritTick= 24845| 11271| 50610|23.19%  UpTime= 84.09%
+    galactic_guardian                      Count=  62.7|  4.771sec  DPE=119289| 7.73%  DPET=     0  DPR=    0  pDPS= 24923  Miss= 0.00%  Hit= 12731|  5146| 49911  Crit= 25369| 10292|102040|23.17%  TickCount=   718  MissTick= 0.00%  Tick=  6234|     3| 11402  CritTick= 12449|     7| 22618|23.22%  UpTime=337.93%
+    heart_of_the_wild                      Count=   2.9|125.891sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+    heart_of_the_wild_cat                  Count=   2.9|125.891sec  DPE=909556| 2.72%  DPET=     0  DPR=    0  pDPS=  8834  TickCount=    32  MissTick= 0.00%  Tick= 68076|    72|163834  CritTick=135692|   136|326918|22.92%  UpTime=  8.00%
+    incarnation_guardian_of_ursoc          Count=   3.7| 90.730sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+    ironfur                                Count= 183.0|  1.616sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+    lunar_beam                             Count=   7.9| 40.340sec  DPE=982423| 8.06%  DPET=900383  DPR=    0  pDPS= 26014  Miss= 0.00%  Hit= 12162|  9727| 17666  Crit= 24262| 19454| 34867|23.22%  TickCount=    86  MissTick= 0.00%  Tick= 16164| 13025| 22965  UpTime= 28.58%
+    lunar_beam_heal                        Count=  85.7|  3.393sec  DPE= 37528| 7.70%  DPET=     0  DPR=    0  pDPS= 10726  Miss= 0.00%  Hit= 30504|     0| 43015  Crit= 60689|     0| 84560|23.17%
+    mangle                                 Count=  92.8|  3.217sec  DPE= 95397| 9.15%  DPET= 89804  DPR=    0  pDPS= 29553  Miss= 0.00%  Hit= 35903| 19145|106245  Crit= 71578| 38290|212939|23.11%
+    maul                                   Count=   3.6| 97.016sec  DPE= 34044| 0.13%  DPET= 32274  DPR=  851  pDPS=   408  Miss= 0.00%  Hit= 27619| 19044| 35962  Crit= 55143| 39087| 70012|23.34%
+    moonfire                               Count=  31.8|  8.270sec  DPE=-37934| 4.59%  DPET=-34312  DPR=    0  pDPS= 14774  Miss= 0.00%  Hit= 28911|  5586| 53448  Crit= 57741| 11338|103782|23.23%  TickCount=   288  MissTick= 0.00%  Tick=  6112|     4| 11542  CritTick= 12198|    15| 22390|23.26%  UpTime=141.09%
+    natures_guardian                       Count=  24.4| 12.079sec  DPE=  5891| 0.34%  DPET=     0  DPR=    0  pDPS=   478  Miss= 0.00%  Hit=  5891|     0|166973
+    potion                                 Count=   1.3|322.797sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+    rampant_thorn                          Count= 358.8|  0.832sec  DPE= 15515| 5.75%  DPET=     0  DPR=    0  pDPS= 18564  Miss= 0.00%  Hit=  2522|  1559|  6829  Crit=  5032|  3118| 13713|23.14%
+    rune_of_unleashed_fire                 Count=  50.6|  5.820sec  DPE= 10467| 0.39%  DPET=     0  DPR=    0  pDPS=  1247  Miss= 0.00%  Hit=  7399|  6719|  8593
+    rune_of_unleashed_fire_lingering       Count=  50.6|  5.820sec  DPE=  3067| 0.16%  DPET=     0  DPR=    0  pDPS=   517  TickCount=   336  MissTick= 0.00%  Tick=   462|   420|   537  UpTime=111.88%
+    spirits_wrath                          Count=  95.9|  2.996sec  DPE= 40432| 4.01%  DPET=     0  DPR=    0  pDPS= 12939  Miss= 0.00%  Hit= 32888| 24765| 52859  Crit= 65629| 49530|103226|23.11%
+    starsurge_cascade                      Count=  51.7|  5.761sec  DPE= 30447| 1.63%  DPET=     0  DPR=    0  pDPS=  5250  Miss= 0.00%  Hit= 24757| 18502| 44600  Crit= 49333| 37004| 87074|23.22%
+    swipe_bear                             Count=  35.0|  7.293sec  DPE= 49016| 1.77%  DPET= 44108  DPR=    0  pDPS=  5712  Miss= 0.00%  Hit=  7965|  6480| 13861  Crit= 15898| 12960| 27817|23.17%
+    the_light_of_elune                     Count=   7.7| 34.910sec  DPE=239279| 1.01%  DPET=     0  DPR=    0  pDPS=  3252  Miss= 0.00%  Hit=  2602|  1459|  8213  Crit=  5198|  2917| 15759|23.25%
+    the_light_of_elune_boundless           Count=   7.6| 34.862sec  DPE=112972| 0.88%  DPET=     0  DPR=    0  pDPS=  2856  Miss= 0.00%  Hit= 18353| 13339| 32263  Crit= 36656| 27456| 62890|23.18%
+    thrash                                 Count= 103.6|  2.895sec  DPE=500708|37.36%  DPET=470640  DPR=    0  pDPS=120552  Miss= 0.00%  Hit= 42942| 28260| 88571  Crit= 85642| 56521|173385|23.12%  TickCount=   578  MissTick= 0.00%  Tick= 12370|  2788| 26329  CritTick= 24694|  5576| 53519|23.20%  UpTime=412.56%
+    vicious_brambles                       Count= 204.2|  1.524sec  DPE= 17855| 3.77%  DPET=     0  DPR=    0  pDPS= 12165  TickCount=   306  MissTick= 0.00%  Tick= 11906|  1315| 41964  UpTime=204.14%
+    wild_guardian                          Count=   3.6| 96.975sec  DPE=     0| 0.00%  DPET=     0  DPR=    0  pDPS=     0
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/blessing_of_the_bronze/flask_of_thalassian_resistance/harandar_celebration/mark_of_the_wild/power_word_fortitude
+    skyfury/voidtouched
+  Dynamic Buffs:
+    50lb_midnight_salmon          : start=  2.5 refresh=  0.2 interval= 74.8 trigger= 65.0 duration= 12.3 uptime= 10.35%
+    after_the_wildfire            : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=297.0 uptime= 98.99%
+    answered_calling              : start= 14.9 refresh=  0.0 interval= 20.2 trigger= 20.2 duration=  7.9 uptime= 39.23%  benefit= 41.72%
+    answered_calling_summon       : start= 14.9 refresh=  0.0 interval= 20.2 trigger= 20.2 duration=  7.9 uptime= 39.23%
+    arcanoweave_insight           : start=  5.9 refresh=  5.2 interval= 49.7 trigger= 25.0 duration= 26.8 uptime= 52.51%
+    barkskin                      : start=  9.3 refresh=  0.0 interval= 34.2 trigger= 34.2 duration= 13.6 uptime= 42.23%
+    bear_form                     : start=  2.9 refresh=  0.0 interval=125.8 trigger=125.8 duration=102.5 uptime= 98.98%
+    bloodlust                     : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration= 40.0 uptime= 13.51%
+    brittle_torga_totem           : start=  2.5 refresh=  0.3 interval= 76.9 trigger= 64.8 duration= 15.0 uptime= 12.62%
+    cat_form                      : start=  2.9 refresh=  0.0 interval=125.7 trigger=124.4 duration=  1.0 uptime=  1.02%  benefit=  1.66%
+    critical_ritual               : start=  3.5 refresh=  0.7 interval= 65.6 trigger= 52.0 duration= 16.0 uptime= 18.61%
+    draught_of_rampant_abandon    : start=  1.3 refresh=  0.0 interval=322.8 trigger=322.8 duration= 27.1 uptime= 11.67%
+    dream_conduit                 : start=  3.6 refresh=  0.0 interval= 97.0 trigger= 97.0 duration=  2.1 uptime=  2.44%
+    dream_guide                   : start=  5.3 refresh=  7.4 interval= 60.1 trigger= 22.8 duration= 38.9 uptime= 68.60%
+    focus_of_ulatek               : start= 10.5 refresh= 23.1 interval= 19.6 trigger=  8.7 duration= 22.4 uptime= 78.05%
+    frenzied_focus                : start=  8.1 refresh=  8.7 interval= 36.6 trigger= 16.9 duration= 21.5 uptime= 58.08%
+    fury_of_elune                 : start=  7.2 refresh=  0.5 interval= 37.7 trigger= 35.0 duration=  3.1 uptime=  7.40%
+    galactic_guardian             : start= 32.4 refresh= 30.2 interval=  9.2 trigger=  4.8 duration=  5.5 uptime= 59.49%  benefit= 48.42%
+    gift_of_an_ancient_guardian   : start=  2.9 refresh=  0.0 interval=124.0 trigger=124.0 duration=101.1 uptime= 97.52%
+    gore                          : start= 71.9 refresh= 43.2 interval=  4.2 trigger=  2.6 duration=  1.9 uptime= 46.68%
+    gorestained_claws             : start= 24.1 refresh=  1.8 interval= 12.1 trigger= 11.3 duration=  1.4 uptime= 10.93%  benefit= 25.82%
+    hasty_ritual                  : start=  3.5 refresh=  0.7 interval= 66.3 trigger= 52.5 duration= 16.0 uptime= 18.54%
+    incarnation_guardian_of_ursoc : start=  3.7 refresh=  0.0 interval= 90.7 trigger= 90.7 duration= 33.6 uptime= 41.68%
+    ironfur                       : start=  2.9 refresh=180.1 interval= 56.6 trigger=  1.6 duration=101.1 uptime= 97.52%  benefit= 93.47%
+    lunar_beam                    : start=  7.9 refresh=  0.0 interval= 40.3 trigger= 40.3 duration= 11.3 uptime= 29.92%  benefit= 32.32%
+    lycaras_teachings_crit        : start=  2.9 refresh=  0.0 interval=125.7 trigger=124.4 duration=  1.0 uptime=  1.02%
+    lycaras_teachings_haste       : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+    lycaras_teachings_vers        : start=  2.9 refresh=  0.0 interval=125.8 trigger=125.8 duration=102.5 uptime= 98.98%
+    masterful_ritual              : start=  3.5 refresh=  0.7 interval= 65.8 trigger= 52.5 duration= 15.9 uptime= 18.55%
+    matted_fur                    : start=  9.3 refresh=  0.0 interval= 34.2 trigger= 34.2 duration= 10.7 uptime= 33.02%
+    persistence                   : start=  1.9 refresh=  0.0 interval=124.4 trigger=124.4 duration=  1.1 uptime=  0.71%
+    rampant_thorn                 : start=100.3 refresh= 29.1 interval=  3.0 trigger=  2.3 duration=  1.0 uptime= 32.31%
+    rotting_voidfin               : start=  2.5 refresh=  0.3 interval= 75.0 trigger= 64.9 duration= 12.4 uptime= 10.41%
+    rune_of_masterful_cunning     : start= 11.6 refresh= 38.9 interval= 18.8 trigger=  5.8 duration= 22.5 uptime= 87.08%
+    seriously_sharp_seashell      : start=  2.5 refresh=  0.2 interval= 75.3 trigger= 65.3 duration= 12.4 uptime= 10.38%
+    slick_and_slimy_gralstone     : start=  2.5 refresh=  0.2 interval= 74.7 trigger= 65.0 duration= 12.3 uptime= 10.33%
+    tattered_tortollan_scroll     : start=  2.6 refresh=  0.2 interval= 74.3 trigger= 64.7 duration= 12.3 uptime= 10.51%
+    ursocs_fury                   : start= 36.6 refresh=1309.6 interval=  8.1 trigger=  0.2 duration=  7.4 uptime= 90.45%
+    venomcursed_ascendance        : start=  7.3 refresh=  3.8 interval= 39.2 trigger= 24.8 duration= 15.8 uptime= 38.73%
+    venomcursed_mastery           : start=  7.3 refresh=  3.8 interval= 39.3 trigger= 24.9 duration= 15.8 uptime= 38.71%
+    versatile_ritual              : start=  3.5 refresh=  0.7 interval= 66.8 trigger= 52.9 duration= 16.0 uptime= 18.59%
+    wild_guardian                 : start=  3.7 refresh=  0.0 interval= 90.7 trigger= 90.7 duration= 19.3 uptime= 13.05%
+  Up-Times:
+      0.05% : Rage Cap                      
+     52.88% : Atmospheric Exposure          
+  Procs:
+     62.67154 |   4.77004sec : Galactic Guardian
+     30.20076 |   9.74460sec : Skyfury (Main Hand)
+  Gains:
+        72.4 : Bear Form                    (rage)         
+      2092.1 : Blood Frenzy                 (rage)         
+         0.0 : Energy Regen                 (energy)         (overflow=100.00%)
+    3355623.6 : Matted Fur (absorb)          (health)       
+       240.4 : Moon Guardian                (rage)         
+       229.0 : Rage from being attacked     (rage)         
+    34683851.4 : Ursocs Fury (absorb)         (health)       
+    334291.6 : after_the_wildfire           (health)         (overflow=82.42%)
+       713.7 : bear_melee                   (rage)         
+       128.6 : flashing_claws               (rage)         
+       132.2 : fury_of_elune                (rage)         
+       237.9 : galactic_guardian_twin       (rage)           (overflow=1.67%)
+         5.0 : heart_of_the_wild_cat        (combo_points)   (overflow=65.42%)
+      1863.6 : mangle                       (rage)         
+       254.2 : moonfire                     (rage)         
+       254.2 : moonfire_twin                (rage)         
+    143823.0 : natures_guardian             (health)         (overflow=85.97%)
+       745.6 : spirits_wrath                (rage)           (overflow=2.87%)
+        45.4 : the_light_of_elune_boundless (rage)         
+       518.0 : thrash                       (rage)         
+  Waiting:  0.00%
+
+
+ *** Targets *** 
+
+Target: Mob1 humanoid tank_dummy unknown 93
+  DPS=4924.072433664652 DPS-Error=0/0.00% DPS-Range=4500.5493175418815/91.40%
+  DTPS=96295.45369700265 DTPS-Error=88.76334424927023/0.09% DTPS-Range=11151.802204544452/11.58%
+  DPR=0.0516744963836545 RPS-Out=95611.57046403392 RPS-In=0 Resource=health Waiting=46.46086111217293 ApM=3.371107871889331
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|34686124  mana=0|0
+  Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=7.00%|7.00%(0)
+  Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%  manareg=0|0(0)
+  Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=5.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%
+  Defense Stats: armor=1470|1470(1470) miss=3.00%|3.00%  dodge=3.00%|3.00%(0)  parry=3.00%|3.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=0.00%|0.00%(0)
+  Priorities (actions.precombat):
+    snapshot_stats
+  Priorities (actions.default):
+    auto_attack,damage=625000,range=12500,attack_speed=2,aoe_tanks=1/melee_nuke,damage=1250000,range=25000,attack_speed=2,cooldown=30,aoe_tanks=1
+    spell_dot,damage=62500,range=1250,tick_time=2,cooldown=60,aoe_tanks=1,dot_duration=60,bleed=1
+    pause_action,duration=30,cooldown=30,if=time>=30
+  Actions:
+    melee_main_hand_C2_craftgloves_CH_stone  Count=  77.5|  3.752sec  DPE= 8965|46.88%  DPET= 4482  DPR=  0  pDPS=2306  Miss= 0.00%  Hit= 11471|     0|269849  Dodge=21.85%
+    melee_nuke_C2_craftgloves_CH_stone       Count=   5.5| 59.566sec  DPE=55908|20.62%  DPET=27892  DPR=  0  pDPS=1019  Miss= 0.00%  Hit= 55905|     0|533700
+    pause_action                             Count=   4.5| 60.013sec  DPE=    0| 0.00%  DPET=    0  DPR=  0  pDPS=   0
+    spell_dot_C2_craftgloves_CH_stone        Count=   5.3| 61.013sec  DPE=90219|32.51%  DPET=89817  DPR=  0  pDPS=1599  TickCount=   145  MissTick= 0.00%  Tick=  3327|     0| 46202  UpTime= 96.53%
+    tank_heal                                Count= 302.5|  5.000sec  DPE=    0| 0.00%  DPET=    0  DPR=  0  pDPS=   0
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/bleeding/chaos_brand/hunters_mark/mark_of_the_wild/mortal_wounds/mystic_touch/power_word_fortitude/skyfury
+  Dynamic Buffs:
+    atmospheric_exposure : start= 10.3 refresh=222.0 interval= 30.3 trigger=  1.3 duration= 15.4 uptime= 52.88%
+  Procs:
+      4.99920 |  60.01351sec : delayed_aa_cast
+  Waiting: 46.46%
+
+Target: Mob2 humanoid tank_dummy unknown 93
+  DPS=5014.390087012162 DPS-Error=0/0.00% DPS-Range=4968.690325187335/99.09%
+  DTPS=62216.32736995284 DTPS-Error=74.8016956187301/0.12% DTPS-Range=11369.811063281097/18.27%
+  DPR=0.08195830181882037 RPS-Out=61320.2279322391 RPS-In=0 Resource=health Waiting=46.46079439745833 ApM=3.371187929546856
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|22700660  mana=0|0
+  Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=7.00%|7.00%(0)
+  Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%  manareg=0|0(0)
+  Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=5.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%
+  Defense Stats: armor=1470|1470(1470) miss=3.00%|3.00%  dodge=3.00%|3.00%(0)  parry=3.00%|3.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=0.00%|0.00%(0)
+  Priorities (actions.precombat):
+    snapshot_stats
+  Priorities (actions.default):
+    auto_attack,damage=625000,range=12500,attack_speed=2,aoe_tanks=1/melee_nuke,damage=1250000,range=25000,attack_speed=2,cooldown=30,aoe_tanks=1
+    spell_dot,damage=62500,range=1250,tick_time=2,cooldown=60,aoe_tanks=1,dot_duration=60,bleed=1
+    pause_action,duration=30,cooldown=30,if=time>=30
+  Actions:
+    melee_main_hand_C2_craftgloves_CH_stone  Count=  77.5|  3.752sec  DPE= 8958|46.05%  DPET= 4479  DPR=  0  pDPS=2307  Miss= 0.00%  Hit= 11476|     0|270232  Dodge=21.94%
+    melee_nuke_C2_craftgloves_CH_stone       Count=   5.5| 59.566sec  DPE=60526|21.94%  DPET=30197  DPR=  0  pDPS=1105  Miss= 0.00%  Hit= 60526|     0|544633
+    pause_action                             Count=   4.5| 60.013sec  DPE=    0| 0.00%  DPET=    0  DPR=  0  pDPS=   0
+    spell_dot_C2_craftgloves_CH_stone        Count=   5.3| 61.013sec  DPE=90370|32.01%  DPET=89967  DPR=  0  pDPS=1603  TickCount=   145  MissTick= 0.00%  Tick=  3333|     0| 46202  UpTime= 96.53%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/bleeding/chaos_brand/mark_of_the_wild/mortal_wounds/mystic_touch/power_word_fortitude/skyfury
+  Dynamic Buffs:
+    atmospheric_exposure : start= 10.3 refresh=136.2 interval= 30.3 trigger=  2.0 duration= 15.4 uptime= 52.88%
+    hunters_mark         : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+  Procs:
+      4.99920 |  60.01349sec : delayed_aa_cast
+  Waiting: 46.46%
+
+Target: Mob3 humanoid tank_dummy unknown 93
+  DPS=5555.833489662176 DPS-Error=0/0.00% DPS-Range=5410.679553269991/97.39%
+  DTPS=62175.23802516356 DTPS-Error=74.48041507376604/0.12% DTPS-Range=11356.004761224332/18.26%
+  DPR=0.09049383022479822 RPS-Out=61451.311881387104 RPS-In=0 Resource=health Waiting=46.46079439745833 ApM=3.3710678430605685
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|22150533  mana=0|0
+  Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=7.00%|7.00%(0)
+  Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%  manareg=0|0(0)
+  Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=5.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%
+  Defense Stats: armor=1470|1470(1470) miss=3.00%|3.00%  dodge=3.00%|3.00%(0)  parry=3.00%|3.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=0.00%|0.00%(0)
+  Priorities (actions.precombat):
+    snapshot_stats
+  Priorities (actions.default):
+    auto_attack,damage=625000,range=12500,attack_speed=2,aoe_tanks=1/melee_nuke,damage=1250000,range=25000,attack_speed=2,cooldown=30,aoe_tanks=1
+    spell_dot,damage=62500,range=1250,tick_time=2,cooldown=60,aoe_tanks=1,dot_duration=60,bleed=1
+    pause_action,duration=30,cooldown=30,if=time>=30
+  Actions:
+    melee_main_hand_C2_craftgloves_CH_stone  Count=  77.5|  3.752sec  DPE= 8964|41.64%  DPET= 4482  DPR=  0  pDPS=2307  Miss= 0.00%  Hit= 11481|     0|270581  Dodge=21.92%
+    melee_nuke_C2_craftgloves_CH_stone       Count=   5.5| 59.566sec  DPE=89662|29.37%  DPET=44732  DPR=  0  pDPS=1642  Miss= 0.00%  Hit= 89662|     0|531833
+    pause_action                             Count=   4.5| 60.013sec  DPE=    0| 0.00%  DPET=    0  DPR=  0  pDPS=   0
+    spell_dot_C2_craftgloves_CH_stone        Count=   5.3| 61.013sec  DPE=90541|28.98%  DPET=90154  DPR=  0  pDPS=1606  TickCount=   145  MissTick= 0.00%  Tick=  3339|     0| 46056  UpTime= 96.53%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/bleeding/chaos_brand/mark_of_the_wild/mortal_wounds/mystic_touch/power_word_fortitude/skyfury
+  Dynamic Buffs:
+    atmospheric_exposure : start= 10.3 refresh=136.2 interval= 30.3 trigger=  2.0 duration= 15.4 uptime= 52.88%
+    hunters_mark         : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+  Procs:
+      4.99920 |  60.01349sec : delayed_aa_cast
+  Waiting: 46.46%
+
+Target: Mob4 humanoid tank_dummy unknown 93
+  DPS=5871.097921300877 DPS-Error=0/0.00% DPS-Range=5120.468744739515/87.21%
+  DTPS=51087.09112066913 DTPS-Error=61.0153802836933/0.12% DTPS-Range=8640.182171788954/16.91%
+  DPR=0.11786191073124733 RPS-Out=49857.86288794647 RPS-In=0 Resource=health Waiting=46.46072768274372 ApM=3.371147900718093
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|18799047  mana=0|0
+  Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=7.00%|7.00%(0)
+  Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%  manareg=0|0(0)
+  Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=5.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%
+  Defense Stats: armor=1470|1470(1470) miss=3.00%|3.00%  dodge=3.00%|3.00%(0)  parry=3.00%|3.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=0.00%|0.00%(0)
+  Priorities (actions.precombat):
+    snapshot_stats
+  Priorities (actions.default):
+    auto_attack,damage=625000,range=12500,attack_speed=2,aoe_tanks=1/melee_nuke,damage=1250000,range=25000,attack_speed=2,cooldown=30,aoe_tanks=1
+    spell_dot,damage=62500,range=1250,tick_time=2,cooldown=60,aoe_tanks=1,dot_duration=60,bleed=1
+    pause_action,duration=30,cooldown=30,if=time>=30
+  Actions:
+    melee_main_hand_C2_craftgloves_CH_stone  Count=  77.5|  3.752sec  DPE=  9031|39.70%  DPET= 4516  DPR=  0  pDPS=2322  Miss= 0.00%  Hit= 11579|     0|272104  Dodge=21.99%
+    melee_nuke_C2_craftgloves_CH_stone       Count=   5.5| 59.566sec  DPE=105202|32.62%  DPET=52486  DPR=  0  pDPS=1929  Miss= 0.00%  Hit=105207|     0|539715
+    pause_action                             Count=   4.5| 60.014sec  DPE=     0| 0.00%  DPET=    0  DPR=  0  pDPS=   0
+    spell_dot_C2_craftgloves_CH_stone        Count=   5.3| 61.014sec  DPE= 91376|27.68%  DPET=90969  DPR=  0  pDPS=1620  TickCount=   145  MissTick= 0.00%  Tick=  3370|     0| 46202  UpTime= 96.53%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/bleeding/chaos_brand/mark_of_the_wild/mortal_wounds/mystic_touch/power_word_fortitude/skyfury
+  Dynamic Buffs:
+    atmospheric_exposure : start= 10.3 refresh=136.2 interval= 30.3 trigger=  2.0 duration= 15.4 uptime= 52.88%
+    hunters_mark         : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+  Procs:
+      4.99920 |  60.01350sec : delayed_aa_cast
+  Waiting: 46.46%
+
+Target: Mob5 humanoid tank_dummy unknown 93
+  DPS=5955.657696983918 DPS-Error=0/0.00% DPS-Range=5442.630971690863/91.39%
+  DTPS=50955.91977304657 DTPS-Error=61.098009833101855/0.12% DTPS-Range=8028.660217372228/15.76%
+  DPR=0.1168838338845684 RPS-Out=50938.059414762574 RPS-In=10725.0861851402 Resource=health Waiting=46.46059425331451 ApM=3.3710678430605685
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|18165228  mana=0|0
+  Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=7.00%|7.00%(0)
+  Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%  manareg=0|0(0)
+  Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=5.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%
+  Defense Stats: armor=1470|1470(1470) miss=3.00%|3.00%  dodge=3.00%|3.00%(0)  parry=3.00%|3.00%(0)  block=0.00%|0.00%(0) crit=0.00%|0.00%  versatility=0.00%|0.00%(0)
+  Priorities (actions.precombat):
+    snapshot_stats
+  Priorities (actions.default):
+    auto_attack,damage=625000,range=12500,attack_speed=2,aoe_tanks=1/melee_nuke,damage=1250000,range=25000,attack_speed=2,cooldown=30,aoe_tanks=1
+    spell_dot,damage=62500,range=1250,tick_time=2,cooldown=60,aoe_tanks=1,dot_duration=60,bleed=1
+    pause_action,duration=30,cooldown=30,if=time>=30
+  Actions:
+    melee_main_hand_C2_craftgloves_CH_stone  Count=  77.5|  3.752sec  DPE=  9132|39.62%  DPET= 4566  DPR=  0  pDPS=2353  Miss= 0.00%  Hit= 11705|     0|270312  Dodge=22.00%
+    melee_nuke_C2_craftgloves_CH_stone       Count=   5.5| 59.566sec  DPE=107532|32.90%  DPET=53648  DPR=  0  pDPS=1972  Miss= 0.00%  Hit=107530|     0|541052
+    pause_action                             Count=   4.5| 60.014sec  DPE=     0| 0.00%  DPET=    0  DPR=  0  pDPS=   0
+    spell_dot_C2_craftgloves_CH_stone        Count=   5.3| 61.014sec  DPE= 91885|27.47%  DPET=91475  DPR=  0  pDPS=1630  TickCount=   145  MissTick= 0.00%  Tick=  3388|     0| 46202  UpTime= 96.53%
+
+  Constant Buffs:
+    arcane_intellect/battle_shout/bleeding/chaos_brand/mark_of_the_wild/mortal_wounds/mystic_touch/power_word_fortitude/skyfury
+  Dynamic Buffs:
+    atmospheric_exposure : start= 10.3 refresh=136.2 interval= 30.3 trigger=  2.0 duration= 15.4 uptime= 52.88%
+    hunters_mark         : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  0.0 uptime=  0.00%
+  Up-Times:
+      0.05% : Health Cap                    
+  Procs:
+      4.99920 |  60.01351sec : delayed_aa_cast
+  Gains:
+    3215208.6 : external_healing (health)       
+  Waiting: 46.46%
+
+
+Baseline Performance:
+  Networking    = disabled
+  RNG Engine    = xoshiro256+ (deterministic)
+  Iterations    = 5000 (1250, 1250, 1250, 1250)
+  TotalEvents   = 83863793
+  MaxEventQueue = 135
+  TargetHealth  = 34686124
+  SimSeconds    = 1498919.700
+  CpuSeconds    = 53.59328312
+  WallSeconds   = 13.667266928
+  InitSeconds   = 0.026062183
+  MergeSeconds  = 0.002802921
+  AnalyzeSeconds= 0.005434686
+  SpeedUp       = 27991
+  EndTime       = 2026-10-28 23:12:46+0000
+
+
+Waiting:
+    All players active 100% of the time.
+
+Iteration data:
+.--------------------------------------------------------------------------------------------------------. .--------------------------------------------------------------------------------------------------------.
+| Low Iteration Data                                                                                     | | High Iteration Data                                                                                    |
++--------+-----------+----------------------+------------------------------------------------------------+ +--------+-----------+----------------------+------------------------------------------------------------+
+|  Iter# |    Metric |                 Seed |                                                  Health(s) | |  Iter# |    Metric |                 Seed |                                                  Health(s) |
++--------+-----------+----------------------+------------------------------------------------------------+ +--------+-----------+----------------------+------------------------------------------------------------+
+|    442 |  288015.7 |  4016368428751121285 |   26933031,   16693107,   17224351,   13162752,   13469616 | |   1030 |  377912.8 |  7860031728612576689 |   26230176,   16754675,   16648837,   13540326,   13387242 |
+|    194 |  288656.3 |  7083212335074315668 |   29232732,   19225564,   19635521,   15153352,   15415893 | |   1146 |  369082.7 |  7573559761662445551 |   24637362,   16203315,   16548827,   12771253,   12992523 |
+|    594 |  288836.2 | 14094401901802251556 |   26157962,   17119324,   16704455,   14176988,   13699004 | |     22 |  362825.7 |  7780055159059056758 |   28880667,   17900253,   18469914,   14114604,   14443659 |
+|    862 |  290777.6 | 15607478479316074058 |   26008250,   17104910,   17469648,   13481879,   13715461 | |     58 |  362409.1 | 14978475380118732279 |   28636864,   18741665,   18287480,   15520493,   14997212 |
+|   1215 |  291095.7 | 10022305432918127712 |   34616921,   21455586,   22138392,   16918035,   17312446 | |     80 |  361464.9 |  2151558873725726507 |   29783018,   19587472,   20005146,   15438603,   15706087 |
+|   1153 |  291549.4 | 11604770192576672217 |   35734795,   23501791,   24002933,   18523821,   18844759 | |    830 |  361135.5 |  2805621339124658332 |   25066505,   16405010,   16007452,   13585445,   13127405 |
+|    427 |  291632.1 |  5643363312243707723 |   30962784,   19190749,   19801480,   15132179,   15484957 | |    650 |  359939.1 |  5542476886221061010 |   27031589,   17777932,   18157021,   14012346,   14255119 |
+|    445 |  291716.8 | 11192845605469201640 |   32317230,   21254153,   21707367,   16752260,   17042504 | |      9 |  359323.9 |  2620352075942778232 |   29024422,   17989352,   18561848,   14184860,   14515552 |
+|    459 |  291881.3 |  9278102988976751056 |   33712309,   21533930,   21397902,   17402692,   17205939 | |    540 |  359315.3 |   794703610180512930 |   26478582,   16411439,   16933720,   12940653,   13242340 |
+|    394 |  292363.9 |  2189487025398448862 |   27082925,   17724675,   17295136,   14678296,   14183410 | |   1120 |  358416.7 | 15086253594345467575 |   24762866,   16285856,   16633128,   12836310,   13058707 |
+|    520 |  293544.8 | 13078300235349466701 |   27659108,   18190634,   18578523,   14337633,   14586042 | |    133 |  358192.1 |  9310151156204831223 |   30811184,   20263668,   20695761,   15971572,   16248290 |
+|   1245 |  293630.1 |  7476532760440840725 |   36178885,   23793858,   24301227,   18754024,   19078950 | |    974 |  357657.8 |  7520228258150696542 |   24466025,   15164055,   15646638,   11957073,   12235829 |
+|    438 |  293714.2 |  6317553493564396196 |   26879434,   17591498,   17165186,   14568008,   14076840 | |   1238 |  355750.4 | 11923180623378502725 |   23179580,   15170094,   14802463,   12562776,   12139216 |
+|    578 |  294063.9 | 10265876811613141573 |   26231959,   17167752,   16751710,   14217093,   13737756 | |    820 |  355745.4 |  9573294981294811935 |   27285413,   17428713,   17318618,   14085052,   13925809 |
+|   1105 |  294081.2 |  8687110501701310132 |   35503096,   23349409,   23847301,   18403715,   18722572 | |    198 |  355699.0 |  6764482018024393802 |   30410925,   19425152,   19302445,   15698478,   15520993 |
+|    805 |  294313.1 |  9945785853379496445 |   35450938,   22644489,   22501446,   18300192,   18093293 | |     32 |  355610.9 | 15591859499380812854 |   30014718,   19739854,   20160778,   15558709,   15828273 |
+|   1181 |  294449.9 | 13235557901226109867 |   34367012,   22491814,   21946748,   18626096,   17998108 | |    920 |  355591.1 |  7223708961289563458 |   26782919,   17107743,   16999675,   13825659,   13669348 |
+|    533 |  294573.7 |  1426018340045682361 |   31454330,   19495410,   20115836,   15372409,   15730786 | |    986 |  355562.3 |  2089736158576138187 |   24345034,   15932837,   15546721,   13194424,   12749568 |
+|    206 |  294867.2 | 15380351590003486995 |   29174808,   19187468,   19596613,   15123325,   15385346 | |    684 |  355482.3 | 14076904042916229333 |   25741729,   16846916,   16438649,   13951399,   13481021 |
+|    354 |  294877.2 | 15771648248275961125 |   27267918,   17845746,   17413272,   14778558,   14280291 | |     72 |  355316.6 | 15268216085096622639 |   28648806,   17756545,   18321633,   14001288,   14327701 |
+|   1145 |  294912.6 | 12809239120925650841 |   34200518,   22382851,   21840426,   18535861,   17910915 | |    934 |  355295.4 | 18302622253701022094 |   24585524,   16090228,   15700298,   13324765,   12875513 |
+|   1041 |  294972.6 | 17390677282632337540 |   35194163,   23146233,   23639792,   18243574,   18559656 | |    631 |  355082.3 |  7402086784831200224 |   31908779,   19777078,   20406467,   15594507,   15958063 |
+|    460 |  295180.7 |  8988251777179521612 |   26777688,   17524910,   17100211,   14512864,   14023556 | |    858 |  355067.7 |   999843564027826192 |   25003943,   15497457,   15990651,   12219966,   12504850 |
+|    398 |  295185.1 |  6030117394385221350 |   27137069,   16819569,   17354839,   13262470,   13571659 | |    150 |  354731.3 |  2735039260980828735 |   30652122,   19579218,   19455538,   15822987,   15644095 |
+|    350 |  295187.1 |  8745649120314363251 |   27286417,   17857853,   17425086,   14788584,   14289979 | |     42 |  354706.1 |  4053008458014155989 |   31194815,   19925866,   19799996,   16103131,   15921072 |
+|    440 |  295232.7 | 18079524195667455050 |   26870184,   17585445,   17159280,   14562995,   14071996 | |    543 |  354510.4 |  6778957444914127762 |   31416379,   20560745,   20062476,   17026924,   16452852 |
+|    532 |  295903.5 | 15570198653368601362 |   26515680,   16434432,   16957445,   12958784,   13260893 | |   1078 |  354493.5 |  5632023533896795950 |   23983753,   14865142,   15338213,   11721376,   11994638 |
+|    348 |  295958.4 | 16413652179722175134 |   27295667,   17863906,   17430993,   14793597,   14294823 | |    396 |  354329.2 | 15308132801224272704 |   29415987,   18789630,   18670937,   15184879,   15013202 |
+|   1177 |  295959.4 |  9942150514938662940 |   37320215,   23838500,   23687915,   19265135,   19047326 | |    874 |  354260.1 | 14144333963070018402 |   24929748,   15451470,   15943201,   12183704,   12467744 |
+|    314 |  296000.9 |  8636672750133502668 |   27452911,   17966816,   17531408,   14878819,   14377172 | |   1010 |  354034.5 |  4257987895668393712 |   25293844,   16635065,   16989784,   13111552,   13338719 |
+|   1198 |  296071.9 | 12941560421405878323 |   25385987,   16215444,   16113013,   13104546,   12956388 | |   1152 |  353800.9 |  3108039006490781193 |   23577314,   15430395,   15056456,   12778339,   12347511 |
+|   1031 |  296085.2 | 17283714569633719118 |   35145893,   23114487,   23607369,   18218552,   18534201 | |      1 |  353797.5 |   797612336800003993 |   28987324,   17966358,   18538123,   14166729,   14496999 |
+|    688 |  296262.4 | 12745339882772712516 |   26848160,   17657296,   18033812,   13917262,   14158388 | |     86 |  353676.0 |  5140491932269163956 |   28507369,   18656916,   18204785,   15450310,   14929395 |
+|   1149 |  296343.6 |  5062929035455162266 |   35715487,   23489093,   23989964,   18513812,   18834576 | |   1116 |  353654.0 |  4191630161391686450 |   25798032,   16478640,   16374546,   13317248,   13166685 |
+|   1228 |  296365.7 |  1012516120001330377 |   23225828,   15200362,   14831997,   12587842,   12163436 | |    708 |  353552.2 | 11838657116403141948 |   26751619,   17593804,   17968966,   13867218,   14107477 |
+|    420 |  296413.7 | 13639048867231222515 |   27035050,   16756338,   17289595,   13212611,   13520637 | |    486 |  353410.6 |  5550051495805299697 |   28963743,   18500756,   18383888,   14951426,   14782387 |
+|    432 |  296430.8 | 15184813431910931669 |   29235089,   18674080,   18556118,   15091498,   14920876 | |   1008 |  353326.8 |  6300306317920497183 |   25303498,   16641414,   16996268,   13116557,   13343810 |
+|     45 |  296571.0 |  4952250963159847008 |   29191362,   18092821,   18668611,   14266447,   14599042 | |    984 |  353144.2 |  5289675992030923961 |   26461323,   16902321,   16795551,   13659647,   13505213 |
+|    276 |  296669.4 | 16708527556477933874 |   27628654,   18081832,   17643638,   14974068,   14469209 | |   1224 |  353020.1 |  9536364114788226213 |   25255338,   16131991,   16030087,   13037103,   12889708 |
+|    574 |  296723.9 |  8728767446902363305 |   26320917,   16313718,   16832889,   12863599,   13163489 | |    884 |  352221.7 |  8527374947362656123 |   26963817,   17223292,   17114494,   13919040,   13761674 |
+|    322 |  296738.2 | 12741851425219690679 |   29787832,   19027148,   18906955,   15376830,   15202982 | |    217 |  352165.9 | 18176959525707296721 |   29988965,   18587176,   19178698,   14656253,   14997935 |
+|    370 |  296801.9 |  4070236383369271877 |   29546635,   18873082,   18753863,   15252322,   15079881 | |    945 |  351841.1 |  6873247874629937080 |   33364869,   20679563,   21337673,   16306130,   16686276 |
+|    802 |  296853.8 |  2620420682582904645 |   25196000,   16489759,   16090147,   13655628,   13195221 | |      4 |  351837.4 | 11056621107017950882 |   30149876,   19828744,   20251563,   15628770,   15899549 |
+|    104 |  296956.7 | 17087209558275468445 |   28500415,   17664572,   18226732,   13928766,   14253489 | |    798 |  351831.4 |  3843420609302887759 |   25282177,   15669906,   16168589,   12355944,   12643999 |
+|    444 |  297046.1 |   867132161396492110 |   29174790,   18635564,   18517845,   15060371,   14890100 | |     76 |  351761.9 | 15693824676353983302 |   28553617,   18687183,   18234319,   15475376,   14953615 |
+|    702 |  297095.2 |  6165050155439612792 |   25658482,   16792435,   16385488,   13906282,   13437424 | |    958 |  351588.4 | 11622216166875521571 |   25544851,   16800146,   17158384,   13241667,   13471088 |
+|    174 |  297152.1 |  3812289925469271581 |   29329274,   19289056,   19700367,   15203396,   15466804 | |    200 |  351457.8 |  6508031504134670948 |   28055241,   17388653,   17942032,   13711200,   14030850 |
+|    589 |  297239.5 |  6224814180714156576 |   31714015,   19656363,   20281911,   15499322,   15860659 | |    234 |  351430.4 | 10566981563794598021 |   27822896,   18208956,   17767681,   15079342,   14570935 |
+|     99 |  297272.2 | 16514129025647690475 |   29441772,   18248026,   18828754,   14388828,   14724276 | |    546 |  351430.4 |  2854372176068559565 |   28662246,   18308173,   18192523,   14795790,   14628511 |
+|   1053 |  297298.9 | 13282068611093081514 |   33865690,   20989972,   21657961,   16550892,   16936744 | |    152 |  351321.5 | 11510804901263155604 |   30642072,   19572798,   19449159,   15817799,   15638965 |
+|   1149 |  297314.1 | 12437018561703951814 |   34310864,   21265891,   21942661,   16768458,   17159382 | |    216 |  351255.0 |  9727787616406342168 |   30320476,   19367377,   19245035,   15651787,   15474831 |
+|    272 |  297486.7 | 12385740287030659167 |   30039079,   19187633,   19066427,   15506527,   15331213 | |    581 |  350976.5 | 13645494410081239969 |   32973711,   21685903,   22148323,   17092560,   17388700 |
+|    577 |  297711.9 |  1165948073570655464 |   31658368,   19621873,   20246323,   15472126,   15832829 | |    129 |  350857.9 |   581206599802453154 |   30791876,   20250970,   20682792,   15961564,   16238108 |
+|    388 |  297755.5 | 14746883887058676549 |   27110674,   17742836,   17312857,   14693335,   14197942 | |    922 |  350649.2 |  3047376359484728181 |   24641022,   16126549,   15735739,   13354843,   12904578 |
+|    453 |  297778.8 | 17315439850308158166 |   32355846,   21279550,   21733305,   16772278,   17062869 | |    882 |  350632.0 |  1898739415999863446 |   24826015,   16247619,   15853875,   13455105,   13001459 |
+|    369 |  297914.7 | 13573239659809622875 |   30611660,   20034089,   19548584,   16590786,   16031419 | |   1220 |  350629.4 |  7558409214814813798 |   24280159,   15968393,   16308895,   12586089,   12804152 |
+|    368 |  297938.3 |  6286348245427924166 |   27203171,   17803371,   17371925,   14743466,   14246383 | |    940 |  350490.3 |   626209146774044804 |   24557776,   16072067,   15682577,   13309725,   12860981 |
+|     78 |  298129.1 | 17781458692270271966 |   29792672,   19593821,   20011631,   15443607,   15711178 | |    162 |  350437.4 |  5613886743058795856 |   28231455,   17497871,   18054726,   13797320,   14118978 |
+|    525 |  298142.2 |  7983166822494306810 |   34043955,   21745771,   21608405,   17573891,   17375203 | |    645 |  350319.9 | 11237113120181253776 |   34646948,   22130936,   21991137,   17885163,   17682956 |
+|    802 |  298152.0 | 15584431274171633733 |   26297874,   17295388,   17664187,   13632011,   13868194 | |    638 |  350191.3 |  3249309614948711293 |   28199952,   18012880,   17899095,   14557148,   14392567 |
+|    626 |  298222.3 |  6074766233935597356 |   28260251,   18051397,   17937368,   14588275,   14423342 | |    423 |  350181.0 | 15282973542099710156 |   30944235,   19179253,   19789617,   15123114,   15475680 |
+|    292 |  298223.5 | 17511558543907718648 |   28759680,   18914450,   19317773,   14908135,   15166429 | |    888 |  350076.7 |  7697868337146600487 |   26943718,   17210453,   17101737,   13908665,   13751416 |
+|    376 |  298226.3 | 14946299453792202149 |   29516486,   18853824,   18734726,   15236758,   15064494 | |    950 |  350044.1 | 11162518508436991586 |   24577318,   15233034,   15717814,   12011465,   12291489 |
+|    909 |  298226.7 |  6519325135928540684 |   35973531,   22978298,   22833147,   18569961,   18360012 | |    808 |  350013.7 |  1977595283017728713 |   25168251,   16471599,   16072427,   13640589,   13180689 |
+|    220 |  298398.1 | 16604274139038557229 |   27887644,   18251331,   17809028,   15114434,   14604843 | |    173 |  350010.5 | 11431139196048546825 |   29705196,   19440845,   18969716,   16099504,   15556701 |
+|    641 |  298403.0 |  2977059412563278916 |   31869611,   20857367,   20351910,   17272565,   16690211 | |   1216 |  349879.6 | 12558549588162204227 |   24299467,   15981091,   16321865,   12596098,   12814334 |
+|    380 |  298537.5 |  8426828246963921250 |   27147673,   17767050,   17336484,   14713387,   14217318 | |    332 |  349871.3 | 17420069104682560628 |   29737583,   18995051,   18875061,   15350891,   15177336 |
+|   1217 |  298571.2 | 16802190158873762201 |   34533505,   22600777,   22053071,   18716331,   18085301 | |    970 |  349788.6 |  6931516892718878369 |   26531673,   16947257,   16840203,   13695962,   13541118 |
+|    262 |  298636.4 |  3452958400796516066 |   27767732,   17210455,   17758164,   13570689,   13887063 | |    952 |  349744.5 |  5910211096216065514 |   25573814,   16819194,   17177838,   13256680,   13486361 |
+|    910 |  298733.3 | 12351743230946249320 |   26833169,   17139840,   17031569,   13851598,   13694994 | |   1142 |  349672.1 | 16278598846336245372 |   23686970,   14681196,   15148413,   11576332,   11846212 |
+|    300 |  298833.7 |  6855248447885538539 |   28721063,   18889053,   19291834,   14888118,   15146064 | |    644 |  349537.7 | 17102420209080750680 |   27060551,   17796980,   18176475,   14027359,   14270392 |
+|    302 |  298837.0 |  7090398893943383838 |   27582243,   17095489,   17639539,   13480036,   13794297 | |    840 |  349533.9 | 17488498771063425391 |   25020257,   16374743,   15977918,   13560379,   13103184 |
+|   1040 |  298842.3 |  9647667079803516060 |   24095294,   15769392,   15387237,   13059071,   12618778 | |    614 |  349410.4 |  9343789584287065639 |   26135427,   16198751,   16714264,   12772946,   13070723 |
+|    522 |  299001.3 | 10259525017250909737 |   27649454,   18184285,   18572038,   14332628,   14580950 | |    904 |  349300.6 |  7306261183130292316 |   24724269,   16181030,   15788900,   13399961,   12948174 |
+|    436 |  299092.7 |  3379053076609349299 |   26888683,   17597552,   17171093,   14573021,   14081685 | |    146 |  349298.9 |  9498699795259033164 |   29464432,   19377946,   19791152,   15273457,   15538080 |
+|    258 |  299302.2 |  9099353316334445683 |   27711900,   18136314,   17696799,   15019185,   14512806 | |    940 |  349294.3 | 10518991877906056275 |   24623690,   15261776,   15747470,   12034128,   12314680 |
+|    478 |  299326.8 |  6466976250695402624 |   29003942,   18526434,   18409404,   14972177,   14802904 | |    872 |  349291.4 |   379760008567612987 |   24872263,   16277887,   15883409,   13480170,   13025679 |
+|    640 |  299330.2 | 15964978538855443830 |   25945221,   16980094,   16568599,   14061687,   13587590 | |     70 |  349288.6 |  7674342961720781929 |   28581366,   18705344,   18252039,   15490415,   14968148 |
+|    453 |  299349.8 |  3368298687762834760 |   31000145,   20288337,   19796670,   16801335,   16234870 | |    328 |  349278.8 |  2379143161044328347 |   27388163,   17924441,   17490061,   14843728,   14343264 |
+|   1131 |  299411.8 | 16678795755650169890 |   34227394,   21214156,   21889280,   16727664,   17117637 | |     11 |  349250.7 |  2181013073819846037 |   29033696,   17995100,   18567779,   14189393,   14520191 |
+|    526 |  299491.5 | 10809626150972536371 |   28762745,   18372368,   18256311,   14847668,   14679803 | |    138 |  349192.3 | 16815519772750396806 |   30712421,   19617734,   19493811,   15854114,   15674870 |
+|   1171 |  299650.1 |  8588077415197951112 |   34320763,   22461547,   21917214,   18601031,   17973887 | |     26 |  349185.1 |  7087368580953306454 |   31275214,   19977222,   19851027,   16144634,   15962106 |
+|    424 |  299752.8 | 12670918232221562970 |   29275289,   18699758,   18581633,   15112249,   14941393 | |   1240 |  349180.7 |  1264983045394083194 |   24183618,   15904900,   16244049,   12536045,   12753240 |
+|   1164 |  299775.9 |  1477244375626919254 |   23521817,   15394074,   15021015,   12748260,   12318446 | |    325 |  349137.0 |   576284299094381782 |   30489786,   18897585,   19498986,   14901015,   15248403 |
+|    550 |  299785.6 | 10089341026166825488 |   26361454,   17252502,   16834405,   14287276,   13805573 | |    178 |  349088.3 | 15497312189463614625 |   30511424,   19489346,   19366234,   15750357,   15572286 |
+|    389 |  299798.4 |  1781206834006927287 |   30704157,   20094624,   19607652,   16640917,   16079860 | |   1020 |  349050.7 |  1651105247801027552 |   24187790,   15829927,   15446305,   13109202,   12667219 |
+|    676 |  299803.1 | 15952058699475586754 |   28009004,   17890911,   17777896,   14458578,   14295112 | |   1128 |  348956.3 | 14462408773062310009 |   24724250,   16260459,   16607189,   12816292,   13038343 |
+|    800 |  299909.7 |  2298183857360992410 |   26307528,   17301737,   17670672,   13637015,   13873286 | |    166 |  348947.0 |  5040611512175670605 |   28212906,   17486374,   18042864,   13788255,   14109701 |
+|    727 |  300033.0 |  1967856332707578227 |   32353953,   20052997,   20691167,   15812073,   16180701 | |    244 |  348930.6 | 14615764118936838087 |   27851202,   17262190,   17811545,   13611482,   13928808 |
+|    340 |  300153.8 |  5032778922296079573 |   27332666,   17888120,   17454620,   14813649,   14314199 | |    224 |  348753.8 | 11854017230600318181 |   27943947,   17319673,   17870857,   13656809,   13975191 |
+|   1043 |  300163.3 |   734256052362234223 |   35203817,   23152582,   23646277,   18248579,   18564747 | |     96 |  348652.2 | 13548594879866797886 |   28537512,   17687565,   18250457,   13946897,   14272042 |
+|   1121 |  300201.3 |  2791330516713629246 |   34181021,   21185415,   21859623,   16705001,   17094446 | |    117 |  348646.0 | 15601256951612268522 |   31993780,   20436210,   20307116,   16515567,   16328844 |
+|    624 |  300216.5 |   193029985522327472 |   26019218,   17028522,   16615853,   14101792,   13626343 | |    996 |  348608.8 |  1140401964896585428 |   26401024,   16863805,   16757278,   13628520,   13474438 |
+|    792 |  300283.1 | 16795113473174871437 |   25310000,   15687151,   16186382,   12369542,   12657914 | |    986 |  348536.2 | 14737061369246687045 |   26451274,   16895902,   16789172,   13654459,   13500084 |
+|   1122 |  300367.2 |  9710923713651192232 |   23716059,   15521198,   15145058,   12853535,   12420172 | |   1242 |  348532.1 | 17309133908899439410 |   23161081,   15157987,   14790649,   12552750,   12129528 |
+|   1202 |  300371.4 |  8467462057723868464 |   23408736,   14508747,   14970476,   11440353,   11707063 | |    461 |  348474.1 | 13972792793920685343 |   33722359,   21540349,   21404281,   17407879,   17211069 |
+|    421 |  300416.4 |  9053071311825716460 |   30934960,   19173504,   19783686,   15118581,   15471042 | |    566 |  348261.4 | 17822431356976831400 |   26358014,   16336711,   16856614,   12881729,   13182042 |
+|    626 |  300425.7 |  7875434709431737191 |   26079781,   16164262,   16678676,   12745750,   13042893 | |    532 |  348235.6 | 13939448965913011396 |   26444701,   17306983,   16887566,   14332393,   13849170 |
+|   1089 |  300513.4 | 15140656849732913574 |   34032630,   21093442,   21764723,   16632479,   17020233 | |     93 |  348123.8 |  1482716007101957628 |   29335211,   19198705,   18733444,   15898981,   15362939 |
+|    620 |  300521.7 | 13762218076356347527 |   28290401,   18070655,   17956505,   14603839,   14438730 | |   1178 |  348035.5 |  8273230304510870303 |   24482896,   16101727,   16445073,   12691182,   12911065 |
+|    529 |  300523.7 | 15436579010592276962 |   32722704,   21520822,   21979722,   16962446,   17256331 | |     14 |  348014.9 | 15047034059401726652 |   28917765,   17923246,   18493639,   14132735,   14462212 |
+|    408 |  300548.9 |  8336150575753341720 |   28199740,   18546193,   18941663,   14617880,   14871144 | |   1038 |  347935.6 | 17816103917564836948 |   26189977,   16728997,   16623322,   13519575,   13366725 |
+|   1189 |  300565.3 | 14370618038438329172 |   37380514,   23877017,   23726188,   19296262,   19078102 | |    329 |  347731.5 |  8108689476462614111 |   31757290,   20885896,   21331257,   16462005,   16747219 |
+|    527 |  300570.8 | 11094426883544543562 |   32713050,   21514473,   21973237,   16957441,   17251240 | |    113 |  347667.5 | 16103832001010975672 |   29427707,   19259240,   18792512,   15949112,   15411379 |
+|    634 |  300600.6 |  9360835682099536873 |   25972969,   16998254,   16586319,   14076726,   13602122 | |   1184 |  347617.5 |  4706904511259931129 |   23492206,   14560482,   15023857,   11481147,   11748808 |
+|    241 |  300625.2 | 16826060561560864881 |   32616873,   20834214,   20702606,   16837214,   16646855 | |    234 |  347507.0 | 11881028439709268751 |   30230027,   19309602,   19187625,   15605096,   15428668 |
+|    612 |  300630.4 |  2554231558001822519 |   26074715,   17064843,   16651294,   14131870,   13655407 | |    242 |  347504.6 |  1748013255379151170 |   27785898,   18184742,   17744054,   15059290,   14551558 |
+|   1211 |  300651.5 |  1720876439232213451 |   34598372,   21444089,   22126530,   16908970,   17303169 | |    145 |  347482.2 |  4344534669808742723 |   29655085,   18380237,   18965173,   14493079,   14830957 |
+|   1155 |  300664.0 |  4671337101233112599 |   34338687,   21283136,   21960455,   16782056,   17173297 | |   1210 |  347471.8 |  4057902175407115361 |   23371638,   14485754,   14946751,   11422223,   11688510 |
+|    128 |  300689.0 |  8165725231406774661 |   28313127,   18529792,   18080742,   15345035,   14827670 | |     39 |  347321.8 |  2249817594647036284 |   30357440,   19965253,   20390983,   15736365,   16009008 |
+|    455 |  300743.8 | 17692452920344719038 |   33692209,   21521091,   21385144,   17392316,   17195681 | |    906 |  347292.8 | 18160270504275414351 |   24715019,   16174977,   15782993,   13394948,   12943330 |
+|    474 |  300788.2 | 14980017102576711161 |   29024042,   18539272,   18422162,   14982553,   14813162 | |    777 |  347291.8 | 14864255883327999775 |   33919817,   22308130,   22783819,   17582992,   17887629 |
+|    905 |  300860.5 |  3067512393825983302 |   34537682,   22714483,   23198836,   17903275,   18213460 | |   1042 |  347285.2 | 17565959058754367860 |   24086044,   15763338,   15381330,   13054058,   12613934 |
+|    514 |  300867.6 |  2504838606979649918 |   27688070,   18209682,   18597977,   14352646,   14601315 | |    529 |  347277.1 |  4547177891819178531 |   34064055,   21758609,   21621162,   17584267,   17385462 |
+|   1245 |  300907.2 |  1688757290199859123 |   34663000,   22685526,   22135766,   18786514,   18153118 | |    916 |  347251.9 | 17719119492706344099 |   26803019,   17120581,   17012432,   13836035,   13679607 |
+|    239 |  300915.7 |  1797418064660442657 |   32606823,   20827794,   20696227,   16832026,   16641726 | |   1024 |  347194.1 |  2121619977190011832 |   24234163,   15020347,   15498357,   11843757,   12119872 |
+|    791 |  301049.3 | 13743325924196282694 |   35380589,   22599553,   22456794,   18263877,   18057389 | |    165 |  347139.7 |  1180099509450580090 |   29668198,   19416631,   18946089,   16079452,   15537325 |
+|    339 |  301088.6 |  1848004255458416409 |   31805560,   20917642,   21363680,   16487027,   16772675 | |    112 |  347137.3 | 14065132892145731593 |   29628552,   19485883,   19901392,   15358532,   15624629 |
+|    593 |  301163.7 |  6788981438594841150 |   31732564,   19667860,   20293773,   15508387,   15869935 | |    623 |  347119.2 |  3010853613738830737 |   34536399,   22060322,   21920969,   17828096,   17626535 |
+|    510 |  301217.0 |  3575264747223613629 |   28843144,   18423723,   18307342,   14889171,   14720837 | |    221 |  347052.0 | 10093813202353321183 |   30007514,   18598673,   19190561,   14665318,   15007212 |
+|    315 |  301232.0 | 15826597839047856165 |   31689711,   20841451,   21285864,   16426974,   16711582 | |     91 |  346961.3 | 13091280509869059216 |   31863132,   20352757,   20224191,   16448124,   16262165 |
+|   1133 |  301321.7 | 10284719201497129192 |   34145020,   22346530,   21804985,   18505782,   17881850 | |   1210 |  346915.4 | 14755149045218441733 |   23309075,   15254843,   14885158,   12632960,   12207033 |
+|   1167 |  301350.2 |  6088317343381187039 |   35802374,   23546236,   24048325,   18558852,   18880396 | |    856 |  346787.8 |  1791047666519633659 |   26037212,   17123958,   17489102,   13496892,   13730734 |
+|    470 |  301365.7 |  5236987088582964209 |   26803188,   16612630,   17141314,   13099295,   13404680 | |    497 |  346723.2 |  4192640657926067111 |   32568237,   21419234,   21875968,   16882375,   17174873 |
+|    534 |  301368.9 |  8164739455701790647 |   26506406,   16428684,   16951514,   12954251,   13256255 | |    556 |  346521.6 | 11599525529684811299 |   26404387,   16365453,   16886270,   12904392,   13205233 |
+'--------+-----------+----------------------+------------------------------------------------------------' '--------+-----------+----------------------+------------------------------------------------------------'
+
+text report took 0.000767035 seconds.
