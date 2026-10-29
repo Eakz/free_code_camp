@@ -222,3 +222,13 @@ Single actor Patchwerk 5000 it; pull = 5 heroic dummies attacking (taken ±0.4),
   C (belt Arc + Lantern stone, wrist without Arc): raid best Haste/Mastery +0.47, Crit/Haste +0.31; M+ best Crit/Haste +0.61, Haste/Mastery +0.46.
   Bear belt + wrist Arcanoweave (`bear_1028`, extra pairs): Mastery/Vers -3.3 pull / -2.7 boss, Haste/Mastery -2.8 / -1.4 (CV -4.5/-4.8, HV -4.3/-3.4, CH -4.1/-3.5).
   Per-spec belts: Balance keeps old belt + wrist Arc + Lantern stone (baseline), bear wears the crafted Arcanoweave belt + wrist Arc: both at 2 embellishments.
+
+## 2026-10-29 — Guardian + Balance optimal gear/gems/enchants and shared set (exports Guardian 02:00, Balance 02:03)
+SimC midnight 710c240, data 12.1.5.70575 (= client). Items at caps (Hero 321, Myth 334, crafted 331, user's Venomstoned 341s as worn). Inputs/outputs `opt_1029/`
+(`gen_bear.py` 88-variant bear screen, `gen_bal.py` 103-profileset Balance screen, `gen_rings*.py` 15-pair x 2-enchant grid, `gen_final.py`). Report v1:
+https://claude.ai/artifact/ERNTeehpX9DgamL5yy6GXS
+- Guardian optimum = worn + Lunar Raiment 334 (Chestwrap redirect 281236) + Worldsoul: -4.2% pull / -3.4% boss taken, +2.0% dealt (±0.33). Nothing else clears the noise.
+- Balance optimum (gear) = chest Worldsoul (+1.45 raid/+1.44 M+) + Charged Sandstone Band for Sickening (+0.8/+0.4) + Miststalker's 334 (tie): +2.8% raid / +2.3% M+.
+  Talents moved with the patch: Raider.IO +3.6% raid, ra s2 +2.9% M+ vs the equipped build; bear talents unchanged (current best by +29..+528% taken).
+- Shared set (Eyes variant): chest, Miststalker's 334, Agi&Stam leg kit, Ritual Binder + Amani Warlord, Eyes of the Eagle, Quick Lapis: bear -2.8% pull / -3.9% boss, +2.7% dealt;
+  Balance -2.1% raid / -1.4% M+ vs worn (own optimum +2.8/+2.3). Alacrity variant: bear -3.4/-3.9, Balance -3.4/-2.6. Belt/trinkets/weapons stay per spec (embellishment cap).

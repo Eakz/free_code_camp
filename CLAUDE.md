@@ -268,6 +268,10 @@ comparisons must run on **Patchwerk**, and as **separate single-actor invocation
 in one raid is not a clean damage-taken model). Extract both numbers and rank by damage taken, not
 damage done — a build that sims higher can be the one that gets you killed.
 
+**Profilesets cannot model the 5-dummy tank pull** (2026-10-29): profileset lines are applied to the `tank_dummy` enemies too and abort with
+"Slot 'chest': Invalid type". Tank sweeps stay single-actor invocations (~12 s each at 3000 it; screen with pull only, then pull+boss for finalists).
+Single-target DPS specs (Balance, Hunter) use profilesets as above.
+
 **Never model an M+ pull for a tank with `desired_targets=5`** (2026-10-21). Only the first enemy is a tank dummy
 that attacks; the other four just stand there. Guardian's Ursoc's Fury absorb scales with damage dealt to all five, so
 absorbs exceed incoming damage and DTPS collapses (49 vs 10,216 on 1 target): talent deltas came out at +80,000%.
